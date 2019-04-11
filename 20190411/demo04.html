@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			
+			// replace(正则表达式,字符串)
+			var string = "GPS的前身是美国军方研制的一种子午仪卫星定位系统(Transit)，1958年研制，1964年正式投入使用。该系统用5到6颗卫星组成的星网工作，每天最多绕过地球13次，并且无法给出高度信息，在定位精度方面也不尽如人意。然而，子午仪系统使得研发部门对卫星定位取得了初步的经验，并验证了由卫星系统进行定位的可行性，为GPS的研制埋下了铺垫。由于卫星定位显示出在导航方面的巨大优越性及子午仪系统存在对潜艇和舰船导航方面的巨大缺陷。美国海陆空三军及民用部门都感到迫切需要一种新的卫星导航系统。";
+			
+			var reg = /GPS/g;
+			var newString = string.replace(reg,"<a href='#'>GPS</a>");
+			// document.write(newString);
+			
+			
+			// splite(正则表达式,limit)
+			var string2 = "sertyuiop$dfghjkl&dfghjkl;@ghjkl*fghjk"
+			var arr = string2.split(/\$|&|@|\*/);
+			console.log(arr);
+			
+			
+		</script>
+	</body>
+</html>

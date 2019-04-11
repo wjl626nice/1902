@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text"/>
+		<button onclick="checkClientId()">按钮</button>
+		<div></div>
+		
+		<script type="text/javascript">
+			function checkClientId(){
+				// 获取身份账号
+				var cid = document.querySelector("input").value;
+				/*
+					从第1位到第17位的系数分别为: 7-9-10-5-8-4-2-1-6-3-7-9-10-5-8-4-2
+					这17位数字和系数相乘的结果相加
+				*/ 
+				var xs = "7-9-10-5-8-4-2-1-6-3-7-9-10-5-8-4-2";
+			    var xsArray = xs.split("-");
+				var total = 0;
+				for(var i = 0; i < xsArray.length; i++){
+					total += xsArray[i] * cid[i];
+				}
+				console.log(total);
+				//  加出来和除以11,看余数是多少?
+				var reste = total % 11;
+				/*
+					其分别对应的最后1位身份证的号码应该为 1-0-X-9-8-7-6-5-4-3-2。
+					使用 余数 从上面数字中取出 身份证号中最后一位数字
+				*/ 
+			    var results = "1-0-X-9-8-7-6-5-4-3-2";
+				var lastNumArray = results.split("-"); 
+				var lastNum = lastNumArray[reste];
+			    // 判断 计算的身份证号最后一位 和 获取的身份号最后是否相同
+				if(lastNum == cid[cid.length - 1]){
+					console.log("身份证号为真");
+				}else{
+					console.log("身份证号为假");
+				} 
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.js"></script>
+	</head>
+	<body>
+		
+		<label for="un">用户名</label>
+		<input type="text" name="username" id="un" placeholder="请输入用户名" />
+		<br>
+		
+		<label for="pwd">密码</label>
+		<input type="password" name="password" id="pwd" placeholder="请输入密码" />
+		<br>
+		
+		<label for="cc">验证码</label>
+		<input type="text" name="checkcode" id="cc" placeholder="请输入验证码" />
+		<p id="ccode" onclick="createRandomNum()">1234</p>
+		
+		<input type="button" value="注册" />
+		
+		<a href="./login.html">登录</a>
+
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			// 真实的验证码
+			var ccode = "";
+			var registerBtn = document.querySelector("[type='button']");
+			
+			registerBtn.onclick = function(e){
+				// 用户名
+				var un = document.querySelector("#un").value;
+				// 密码
+				var pwd = document.getElementById("pwd").value;
+				//  验证码
+				var cc = document.querySelector("#cc").value;
+				
+				var result = checkUsernameAndPassword(un, pwd, cc);
+				// 用户名或密码不符合要求,阻止提交
+				if(!result.enabled){
+					alert(result.msg);
+				}else{
+					var url = preUrl + regUrl;
+					var param = {username:un,password:pwd};
+					
+					$.post(url, param, function(d){
+						console.log(d);
+						if(d.result == 1){
+							// 成功
+							location.href = './login.html';
+						}else{
+							// 失败
+							alert(d.message);
+						}
+					});
+					
+				}
+			};
+			
+			
+			createRandomNum();
+		</script>
+	</body>
+</html>

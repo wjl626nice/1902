@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>主页面</title>
+		<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.js"></script>
+	</head>
+	<body>
+		<button onclick="logout()">注销</button>
+		
+		
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			// 注销
+			function logout(){
+				var url = preUrl + logoutUrl;
+				var param = {token: sessionStorage.token};
+				$.post(url, param, function(d){
+					if(d.result == 1){
+						// 删除本地token
+						sessionStorage.removeItem("token");
+					}
+				});
+			}
+		</script>
+	</body>
+</html>

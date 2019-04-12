@@ -1,0 +1,53 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.header{
+	height: 100px;
+	background-color: aqua;
+}
+
+.logined{
+	display: none;
+}
+
+.unlogin{
+	display: none;
+}
+
+.show{
+	display: block;
+}
+
+.content{
+	
+}
+.left{
+	width: 20%;
+	float: left;
+	background-color: antiquewhite;
+}
+
+.right{
+	width: 80%;
+	float: right;
+	background-color: cadetblue;
+	height: 500px;
+}
+
+.footer{
+	clear: both;
+	height: 80px;
+	background-color: chocolate;
+}
+
+.right{
+	position: relative;
+}
+.right>div{
+	position: absolute;
+	display: none;
+}
+.right>.visibility{
+	display: block;
+}

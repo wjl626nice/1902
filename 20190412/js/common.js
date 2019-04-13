@@ -2,7 +2,7 @@ function checkUsernameAndPassword(un, pwd, checkCode){
 	// 用户名 字母开头，后面可以包含字母数字下划线 长度 6-10
 	var unReg = /^[a-zA-Z]\w{5,9}$/;
 	// 密码 以大写字母开头，后面可以包含字母数字下划线 长度 8-15
-	var pwdReg = /^[A-Z]\w{7,14}$/;
+	var pwdReg = /^\d{7,14}$/;
 	
 	if(!unReg.test(un) || !pwdReg.test(pwd) || checkCode != ccode){
 		return {
@@ -35,3 +35,7 @@ var regUrl = "blog/reg_user/";
 var loginUrl = "blog/login_user/";
 var logoutUrl = "blog/logout_user/";
 var allBlog = "blog/query_blog/";
+var myBlog = "blog/query_self_blog/";
+var publicBlog = "blog/add_blog/";
+var deleteBlog = "blog/del_blog/";
+var myfollows = "blog/query_user_blog/";

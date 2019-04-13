@@ -76,9 +76,125 @@
 					var index = arr.indexOf(e.target);
 					// console.log(index);
 					
-					$(".right div").removeClass("visibility");
-					$(".right div").eq(index).addClass("visibility");
+					$(".right>div").removeClass("visibility");
+					$(".right>div").eq(index).addClass("visibility");
+					
+					
+					if(index == 0){
+						getAllWb();
+					}else if(index == 1){
+						getMyWb();
+					}else if(index == 2){
+						$(".myfollows").html("");
+						myFollows.forEach(function(ele, index){
+							$(".myfollows").append("<button>" + ele + "</button>");
+						});
+					}
 				});
+				
+				// 所有人的微博
+				function getAllWb(){
+					var url = preUrl + allBlog;
+					$.get(url,{},function(d){
+						console.log(d);
+// 						<div class="item">
+// 							<img src="" alt="">
+// 							<span class="un"></span>
+// 							<span class="nn"></span>
+// 							<p class="wbContent"></p>
+// 						</div>
+						loadWb(d.datas, ".allwb");
+					});
+				}
+				getAllWb();
+				
+				// 获取我的微博
+				function getMyWb(){
+					var url = preUrl + myBlog;
+					
+					$.get(url,{token:sessionStorage.token},function(d){
+						console.log(d);
+						loadWb(d.datas, ".mywb");
+					});
+				}
+				
+				function loadWb(datas, selector){
+					$(".item").remove();
+					datas.forEach(function(obj,index){
+// 							console.log(obj);
+// 							console.log(index);
+						var itemDiv = $("<div class='item' id='" + obj.id + "'></div>");
+						itemDiv.appendTo($(selector));
+						itemDiv.append("<img src='"+ obj.portrait + "'>");
+						itemDiv.append("<span class='un'>" + obj.username + "</span>");
+						itemDiv.append("<span class='nn'>" + obj.nickname + "</span>");
+						itemDiv.append("<p class='wbContent'>" + obj.content + "</p>");
+						itemDiv.append("<button class='delete'>删除</button>");
+					});
+				}
+				
+				
+				// 发布微博
+				$(".publicwb").on("click","button",function(){
+					if(sessionStorage.token){
+						var url = preUrl + publicBlog;
+						var param = {
+							token: sessionStorage.token,
+							content:$(".publicwb>textarea").val(),
+							nickname:$(".publicwb>input").val(),
+							portrait:"https://b-ssl.duitang.com/uploads/item/201706/22/20170622131955_h4eZS.thumb.700_0.jpeg"
+						};
+						
+						$.post(url, param, function(d){
+							console.log(d);
+							// 重新获取我的微博
+							getMyWb();
+						});
+					}else{
+						alert("未登录");
+					}
+				});
+				
+				// 删除微博
+				$(".mywb").on("click",".delete",function(e){
+					// console.log(e);
+					var url = preUrl + deleteBlog;
+					// $(e.target) 把原生的 js 对象,转化成jq对象
+					var wbid = $(e.target).parent()[0].id;
+					// console.log(wbid);
+					var param = {
+						id:wbid,
+						token:sessionStorage.token,
+					};
+					$.post(url, param, function(d){
+						if(d.result == 1){
+							$(e.target).parent().remove();
+						}else{
+							alert(d.message);
+						}
+					});
+				});
+				
+				
+				
+				// 获取我的关注
+				var myFollows = [];
+				$(".allwb").on('click',".un",function(){
+					// console.log(this);
+					if(myFollows.indexOf(this.innerHTML) == -1){
+						myFollows.push(this.innerHTML);
+					}
+				});
+				
+				$(".myfollows").on('click','button',function(){
+					// console.log(this.innerHTML);
+					var url = preUrl  + myfollows;
+					var param = {username:$(this).html()};
+					$.get(url,param,function(d){
+						loadWb(d.datas, ".myfollows");
+					});
+				});
+				
 				
 			});
 
@@ -107,9 +223,26 @@
 					</ul>
 				</div>
 				<div class="right">
-					<div class="allwb">a</div>
-					<div class="mywb">b</div>
-					<div class="myfollows">c</div>
+					<div class="allwb visibility">
+						<!-- <div class="item">
+							<img src="" alt="">
+							<span class="un"></span>
+							<span class="nn"></span>
+							<p class="wbContent"></p>
+						</div> -->
+					</div>
+					<div class="mywb">
+						<div class="publicwb">
+							<input type="text" placeholder="请输入昵称">
+							<br>
+							<textarea name="" id="" cols="100" rows="10"></textarea>
+							<button>发布</button>
+						</div>
+						
+					</div>
+					<div class="myfollows">
+						
+					</div>
 				</div>
 			</div>
 			<div class="footer"></div>

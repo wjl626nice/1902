@@ -32,7 +32,7 @@
 	width: 80%;
 	float: right;
 	background-color: cadetblue;
-	height: 500px;
+	/* height: 500px; */
 }
 
 .footer{
@@ -45,9 +45,28 @@
 	position: relative;
 }
 .right>div{
-	position: absolute;
+	/* position: absolute; */
 	display: none;
 }
 .right>.visibility{
+	display: block;
+}
+.right .item{
+	background-color: skyblue;
+	margin-bottom: 5px;
+}
+.right .item>img{
+	width: 50px;
+	height: 50px;
+}
+
+
+.un{
+	margin-right: 20px;
+}
+.delete{
+	display: none;
+}
+.mywb>.item>.delete{
 	display: block;
 }

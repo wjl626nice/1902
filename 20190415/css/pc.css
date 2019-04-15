@@ -1,4 +1,23 @@
+html{
+	/* 1rem 为300px */
+	font-size: 200px;
+}
+body{
+	font-size: 0.08rem;
+}
+
 div{
 	width: 400px;
 	height: 400px;
+	font-size: 0.2rem;
 }
+
+p{
+	width: 0.5rem;
+	background-color: pink;
+}
+
+/* 
+	rem是相对单位，相对于html字体大小 
+	使用rem来布局和设置样式
+*/

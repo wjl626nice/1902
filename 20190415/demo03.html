@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>帧动画</title>
+		<style>
+			div{
+				width: 200px;
+				height: 200px;
+				background-color: khaki;
+			}
+			
+			/* 帧动画，需要先声明再使用 */
+			/* 
+				声明帧动画
+				@keyframes 动画名称{
+					from/0%{
+						开始样式
+					}
+					to/100%{
+						结束样式
+					}
+				}
+			 */
+			@keyframes move{
+				0%{
+					/* 变化：x轴平移 */
+					transform: translateX(0px);
+				}
+				100%{
+					/* 变化：x轴平移 */
+					transform: translateX(1200px);
+				}
+			} 
+			
+			div{
+				/* 动画名称 */
+				animation-name: move;
+				/* 动画持续时间 */
+				animation-duration: 2s;
+				/* 动画速率 ease ease-in ease-in-out linear */
+				animation-timing-function: linear;
+				/* 动画延迟时间 */
+				animation-delay: 1s;
+				
+				/* 动画执行的次数 */
+				animation-iteration-count: infinite;
+				/* 动画方向 
+					normal(0% - 100%) 
+					reverse(100% - 0%) 
+					alternate(奇数次 0% - 100%) 
+					alternate-reverse (偶数次 100% - 0%)
+				*/
+				animation-direction: normal;
+				
+				/* 动画状态 */
+				animation-play-state: running;
+					
+				
+				/* 
+					animation-fill-mode
+				 
+					forwards
+						animation-direction		animation-iteration-count	last keyframe encountered
+						normal						even or odd					100% or to
+						reverse						even or odd					0% or from
+						alternate					even						0% or from
+						alternate					odd							100% or to
+						alternate-reverse			even						100% or to
+						alternate-reverse			odd							0% or from
+						
+					backwards
+						animation-direction						first relevant keyframe
+							normal or alternate							0% or from
+							reverse or alternate-reverse				100% or to	
+				 */
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div></div>
+		
+		<button>按钮</button>
+		<script type="text/javascript">
+			document.querySelector("button").onclick = function(){
+				console.log(document.querySelector("div").style.animationPlayState);
+				if(document.querySelector("div").style.animationPlayState == "running"){
+					document.querySelector("div").style.animationPlayState = "paused";
+				}else{
+					document.querySelector("div").style.animationPlayState = "running";
+				}
+			}
+		</script>
+	</body>
+</html>

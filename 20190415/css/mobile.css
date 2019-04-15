@@ -1,4 +1,21 @@
+html{
+	/* 1rem 为100px */
+	font-size: 100px;
+}
+
+body{
+	font-size: 0.16rem;
+}
+
 div{
 	width: 200px;
 	height: 200px;
+	
+	/* font-size: 20px; */
+	font-size: 0.2rem;
+}
+
+p{
+	width: 0.5rem;
+	background-color: pink;
 }

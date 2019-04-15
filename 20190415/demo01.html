@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>响应式布局-媒体查询</title>
+		
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+			}
+			/* 使用媒体查询，根据不同的屏幕，显示不同的颜色 */
+			/* 
+				@media 设备名称 条件{
+					具体样式
+				}
+			 */
+			@media screen and (max-width:320px) {
+				div{
+					background-color: pink;
+				}
+			}
+			
+			@media screen and (min-width:320px) and (max-width:768px) {
+				div{
+					background-color: orange;
+				}
+			}
+			@media screen and (min-width:768px){
+				div{
+					background-color: green;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>

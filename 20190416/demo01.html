@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>wow.js使用方法</title>
+		<!-- 引入 animate.css -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+		<!-- 引入 wow.js https://www.delac.io/wow/dist/wow.min.js -->
+		<script type="text/javascript" src="https://www.delac.io/wow/dist/wow.min.js"></script>
+		<script>
+			window.onload = function(){
+				new WOW().init();
+			};
+		</script>
+		<style>
+			div{
+				width: 200px;
+				height: 200px;
+				border-radius: 50%;
+				border: 1px solid black;
+			}
+			
+			div:nth-of-type(4n+1){
+				background-color: antiquewhite;
+			}
+			div:nth-of-type(4n+2){
+				background-color: brown;
+			}
+			div:nth-of-type(4n+3){
+				background-color: pink;
+			}
+			div:nth-of-type(4n+4){
+				background-color: khaki;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wow tada"></div>
+		<div class="wow flash"></div>
+		<div class="wow slideOutUp"></div>
+		<div class="wow rubberBand"></div>
+		<div class="wow jello"></div>
+		<div class="wow fadeOutLeftBig"></div>
+		<div class="wow flipInX"></div>
+		<div class="wow hinge"></div>
+		<div class="wow zoomIn"></div>
+		<div class="wow slideInLeft"></div>
+	</body>
+</html>

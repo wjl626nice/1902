@@ -1,0 +1,39 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	/* 溢出部分隐藏 */
+	overflow: hidden;
+}
+
+body{
+	background-image: url(../res/bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.header{
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+.content{
+	width: 80%;
+	height: 70%;
+	margin: 20px auto;
+	/* background-color: pink; */
+}
+
+.content>div img:nth-of-type(1):hover{
+	animation: pulse 1s;
+}
+.content>div img:nth-of-type(2):hover{
+	animation: swing 1s;
+}
+.content>div img:nth-of-type(3):hover{
+	animation: zoomInUp 1s;
+}

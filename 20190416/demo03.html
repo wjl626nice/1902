@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>自定义字体</title>
+		<link rel="stylesheet" href="css/font1902.css">
+		<style>
+			
+			div::before{
+				/* 使用字体 */
+				font-family: "FontAwesome";
+				content: "\f0c9";
+			}
+			div::after{
+				font-family: "FontAwesome";
+				content: "\f054";
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			hello
+		</div>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>htmlCollection,nodeList</title>
+	</head>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+		</ul>
+		<script type="text/javascript">
+			var lis1 = document.querySelectorAll("li");
+			console.log(lis1);
+			
+			var ul = document.querySelector("ul");
+			var lis2 = ul.children;
+			console.log(lis2);
+			
+			console.log("-------删除第3个li--------")
+			var li3 = document.querySelector("li:nth-of-type(3)");
+			li3.remove();
+			console.log(lis1);
+			console.log(lis2);
+			
+			/*
+				NodeList 是一个静态集合	querySelectorAll()
+				HTMLCollection 是一个动态集合 		children()
+			*/ 
+			
+// 			ul.children.forEach(function(ele, index){
+// 				console.log(ele);
+// 			});
+			[].forEach.call(ul.children,function(ele, index){
+				console.log(ele);
+			});
+			
+		</script>
+	</body>
+</html>

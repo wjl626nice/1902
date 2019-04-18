@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+		</ul>
+		
+		<script type="text/javascript">
+			var lis = document.querySelectorAll("li");
+			for (var i = 0; i < lis.length; i++) {
+				lis[i].onclick = function(){
+					// 获取点击的 li 的索引
+						// 第一种方式
+						// 把 lis 转化成数组
+						var arr = Array.from(lis);
+						// 使用数组的 indexOf 获取索引
+						// var index = arr.indexOf(this);
+						
+						// 第二种方式,使用call/apply
+						var index = [].indexOf.call(lis, this);
+					console.log(index);
+				};
+			}
+			
+			
+			
+			/*
+				map,逐个把数组中的内容，传递到函数中，使用函数的返回值形成一个新的数组
+			*/
+			var arr2 = [1,2,3];
+			var arr3 = arr2.map(function(o){
+				return Math.pow(o,2);
+			});
+			console.log(arr3);
+			
+			console.log(lis);
+			[].map.call(lis,function(ele){
+				ele.className = "new";
+			});
+			console.log(lis);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>变量作用域</title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			
+			/*
+				变量作用域
+			*/ 
+		   var color = "red";
+		   function changeColor(){
+			   var anotherColor = "blue";
+			   function swapColor(){
+				   var tempColor = anotherColor;
+				   anotherColor = color;
+				   color = tempColor;
+			   }
+			   swapColor();
+		   }
+		   changeColor();
+		   console.log(color);
+		   /*
+				函数在执行的时候，有一个对应的执行环境，在当前执行环境中存储相关的变量和方法（函数），
+				
+				在上面的例子中，函数执行的过程中，有三个执行环境，
+				分别是 1.全局执行环境（一直存在），2.changColor对应的执行环境,3.swapColor对应的执行环境
+				在全局执行环境中，存在 color 和 changeColor 函数，
+				在changColor对应的执行环境中，存在 anotherColor 和 swapColor 函数
+				在swapColor对应的执行环境中，存在 tempColor
+				
+				在函数中使用变量，首先在当前执行环境中寻找，如果找不到，在上级执行环境中寻找，一直到全局执行环境
+		   */ 
+		   
+		   
+			/*
+				js中没有块级作用域
+			*/ 
+			if(true){
+				var a = 100;
+				console.log(a);
+			}
+			console.log(a);
+			
+			console.log("------------------");
+			
+			
+			// 变量的声明会上浮,上浮到变量所在执行环境的最顶部
+			console.log(x);
+			var x = 10;
+			console.log(x);
+			
+			// 函数名称也会上浮
+			fn1();
+			function fn1(){
+				console.log('阿斯蒂芬规划局快乐');
+			}
+			fn1();
+			
+			
+			// 函数表达式,注意变量声明上浮
+			// fn2();
+			var fn2 = function(){
+				console.log("大表哥真帅");
+			};
+			fn2();
+			
+			
+			
+			/*
+				思考题
+			*/ 
+			function fn3(b){
+				console.log(b);
+				var b = 2;
+				function b(){
+					console.log("hello,b");
+				}
+				console.log(b);
+				b();
+			}
+			fn3(1);
+			
+			/*
+				函数的执行过程
+				function fn3(b){
+					var b;
+					function b(){
+						
+					}
+					console.log(b);
+					b = 2;
+					console.log(b);
+					b();
+				}
+			*/ 
+			
+			
+			
+			
+		   
+		</script>
+	</body>
+</html>

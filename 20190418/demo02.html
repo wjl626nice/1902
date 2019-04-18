@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>变量赋值规则</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 变量
+			/*
+				基本数据类型，在赋值的过程中是，值赋值
+			*/ 
+			var a = 10;
+			b = a;
+			a += 8;
+			console.log(a);
+			console.log(b);
+			
+			console.log("------------------------");
+			
+			
+			/*
+				引用类型在赋值的时候，是内存地址的赋值
+			*/ 
+			var arr = ["小明", "小鹏"];
+			arr2 = arr;
+			arr.push("小李");
+			console.log(arr);
+			console.log(arr2);
+			
+			console.log("------------------------");
+			/*
+				变量作为参数传递到函数中，也遵循上面的规则
+				
+			*/ 
+			function fn1(arg1){
+			   arg1 = arg1 + 1;
+			   console.log(arg1);
+			}
+			var c = 99;
+			console.log(c);
+			fn1(c);
+			console.log(c);
+			
+			console.log("------------------------");
+			
+			function fn2(arg2){
+				arg2.pop();
+			}
+			var arr3 = [1,2,3,4,5,6,7];
+			console.log(arr3);
+			fn2(arr3);
+			console.log(arr3);
+			
+			
+			console.log("------------------------");
+			function fn3(arg3){
+				// 删除对象中属性
+				delete arg3.age;
+			}
+			var obj = {
+				name:"小丽",
+				age:"28",
+				sex:"female"
+			};
+			console.log(obj);
+			fn3(obj);
+			console.log(obj);
+						
+		</script>
+	</body>
+</html>

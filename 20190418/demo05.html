@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>函数的方法</title>
+	</head>
+	<body>
+		<script>
+			// 函数的方法 call, apply
+			var name = "ls";
+			var obj = {
+				name: "zs",
+				fn1:function(){
+					console.log(this.name);
+				},
+				
+				fn2:function(arg1, arg2){
+					console.log(this.name + "," + arg1 + "," + arg2);
+				}
+			};
+			
+			// 不带参数的函数
+			obj.fn1();
+			
+			obj.fn1.call(null);
+			obj.fn1.call(window);
+			obj.fn1.call(this);
+			
+			var cp = {
+				name:"长朋"
+			};
+			obj.fn1.call(cp);
+			
+			console.log("------------------------------");
+			
+			// 带参数的函数
+			obj.fn2(18,"180cm");
+			obj.fn2.call(null, 18, "168cm");
+			obj.fn2.call(cp,18, "188cm");
+			/*
+				fn.call(函数的调用者, 实参1, 实参2, ...., 实参n)
+				
+				fn.apply(函数的调用者, [实参1, 实参2, ...., 实参n])
+			*/ 
+		   var param = [18,"190cm"];
+		   obj.fn2.apply(cp, param);
+			
+						
+		</script>
+	</body>
+</html>

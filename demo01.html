@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>闭包</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+				闭包：可以访问另一个函数私有变量的函数
+					1.闭包是一个函数
+					2.可以访问另一个函数的私有变量
+			*/
+			function fn1(){
+				var n = 666;
+				var r = function(){
+					alert(n);
+				}
+				return r;
+			}
+			
+			var fn2 = fn1();
+			// fn2();
+			
+			/*
+				闭包注意事项
+			*/ 
+			function fn5(){
+				var x = 8;
+				return x;
+			}
+			fn5();
+		   
+			function fn3(){
+			   var m = 5;
+			   var r = function(){
+				   m = m + 1;
+				   return m;
+			   };
+			   return r;
+			}
+			console.log("------------fn3------------")
+			console.log(fn3);
+			
+			var fn4 = fn3();
+			
+			console.log("------------fn4------------")
+			console.log(fn4);
+			
+			console.log("------------ 第一次调用fn4------------")
+			var result1 = fn4();
+			console.log(result1);
+			console.log("------------ 第二次调用fn4------------")
+			var result2 = fn4();
+			console.log(result2);
+			
+			var fn6 = fn3();
+			console.log("------------ 第一次调用fn6------------")
+			var result3 = fn6();
+			console.log(result3);
+			
+			fn6 = null;
+			/*
+				每一次函数的调用,都会有一个全新的函数执行环境,在这个执行环境中,有一份全新的变量
+			*/ 
+		   
+		   /*
+				闭包在使用的过程中，会造成一定的内存占用，
+				解决方法：在合适的地方，把闭包函数置空
+				fn4 = null;
+		   */ 
+		   
+		   
+		   
+			
+			
+		</script>
+	</body>
+</html>

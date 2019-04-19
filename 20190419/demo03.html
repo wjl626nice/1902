@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+		</ul>
+		
+		<script type="text/javascript">
+			/*
+				点击li,输出li，或者是li的索引
+			*/ 
+			// this	或者 事件对象
+			var lis = document.querySelectorAll("li");
+// 			for (var i = 0; i < lis.length; i++) {
+// 				lis[i].onclick = function(e){
+// 					console.log(e)
+// 					console.log(e.target);
+// 					console.log(this);
+// 				};
+// 			}
+			
+			// 闭包函数
+// 			for (var i = 0; i < lis.length; i++) {
+// 				lis[i].onclick = function(li_index){
+// 					return function(){
+// 						console.log(lis[li_index]);
+// 					}
+// 				}(i)
+// 			}
+
+			// forEach  能够使用forEach 的对象为 数组 或者 NodeList
+// 			lis.forEach(function(ele,index){
+// 				ele.onclick = function(){
+// 					console.log(ele);
+// 				};
+// 			});
+			
+			// children 是 HTMLCollection 不能直接使用 forEach
+// 			document.querySelector("ul").children.forEach(function(ele,index){
+// 				ele.onclick = function(){
+// 					console.log(ele);
+// 				};
+// 			});
+	
+			// 通过使用call,调用数组的 forEach
+			[].forEach.call(document.querySelector("ul").children,function(ele, index){
+				ele.onclick = function(){
+					console.log(ele);
+				};
+			});
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

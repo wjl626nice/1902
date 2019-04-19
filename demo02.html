@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+			/* 
+				function fn1(){
+					var arr = [];
+					for (var i = 0; i < 10; i++) {
+						arr[i] = function(){
+							return i;
+						};
+					}
+					return arr;
+				}
+				var results = fn1();
+				
+				console.log(results[0]());			
+				console.log(results[1]());			
+				console.log(results[8]());	
+			 */		
+			
+			function fn1(){
+				var arr = [];
+				for (var i = 0; i < 10; i++) {
+					arr[i] = function asdf(num){
+						return function(){
+							return num;
+						}
+					}(i);
+				}
+				return arr;
+			}
+			
+			var fn2 = fn1();
+			console.log(fn2[0]());			
+			console.log(fn2[1]());			
+			console.log(fn2[8]());	
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+				每一个构造函数都有一个 prototype 属性，指的是 构造函数的原型对象，
+				在这个原型对象中 有一个函数 constructor 指向 构造函数
+				
+				在构造函数的原型对象上添加的属性和方法，可以达到共享
+			*/
+			// 自定义构造函数
+			function Person(){}
+			console.log(Person.prototype);
+			
+			Person.prototype.country ="china";
+			Person.prototype.study = function(){
+				console.log("少壮不努力，....");
+			};
+			
+			var p1 = new Person();
+			var p2 = new Person();
+			console.log(p1);
+			console.log(p2);
+// 			console.log(p1.country == p2.country);
+// 			console.log(p1.__proto__ == p2.__proto__);
+			
+			
+			// 获取对象的原型对象 (Object.getPrototypeOf(对象))
+			var prototype1 = Object.getPrototypeOf(p1);
+			var prototype2 = Object.getPrototypeOf(p2);
+			
+			// 由于 p1 和 p2 都是 Person 创建的对象,那么 他们的原型对象是同一个
+// 			console.log(prototype1);
+// 			console.log(prototype2);
+			
+			/*
+				从对象中删除属性   
+				delete 对象.属性   
+				只能删除 当前对象上的属性和方法,
+				不能删除,对象的原型对象上的属性和方法
+			*/ 
+			p1.name = "zs";
+			p1.age = "28";
+			console.log(p1);
+			
+			delete p1.age;
+			console.log(p1);
+			
+			delete p1.country;
+			console.log(p1);
+			
+			/*
+				in
+				判断某一个对象是否拥有某一个属性或者方法，这个属性或者方法 可以是自己的，也可以是原型对象的
+			*/ 
+		   
+			p2.name = "李四";
+			console.log("输出persons中所有对象的名字");
+			var persons = [p1,p2];
+			for (var i = 0; i < persons.length; i++) {
+				// name是当前对象自己的属性
+				if("name" in persons[i]){
+					console.log(persons[i].name);
+				}
+				
+				// country是当前对象的原型对象的属性
+				if("country" in persons[i]){
+					console.log(persons[i].country);
+				}
+			}
+			
+			/* 
+				判断属性是否是当前对象自己的
+				对象.hasOwnProperty(属性名称)
+			 */
+			console.log(p1.hasOwnProperty("name"));
+			console.log(p1.hasOwnProperty("country"));
+		</script>
+	</body>
+</html>

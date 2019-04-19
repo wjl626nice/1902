@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原型继承</title>
+		
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 原型继承
+			
+			function SuperType(){
+				this.a = 888;
+				this.c = 1000;
+			}
+			SuperType.prototype.getC = function(){
+				return this.c;
+			}
+			
+			function SubType(){
+				this.a = 666;
+				this.b = 999;
+			}
+			// 创建一个 SuperType 类型的对象
+			var supObj = new SuperType();
+			// SubType 的原型对象 为 supObj
+			SubType.prototype = supObj;
+			SubType.prototype.getB = function(){
+				return this.b;
+			}
+			
+			
+			
+			var subObj = new SubType();
+			console.log(subObj.b);
+			console.log(subObj.a);
+			console.log(subObj.c);
+			
+			
+			console.log(subObj.getB());
+			console.log(subObj.getC());
+			console.log(subObj.getD());
+			
+			
+			
+		</script>
+	</body>
+</html>

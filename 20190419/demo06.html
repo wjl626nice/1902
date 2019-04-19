@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var p1 = {
+				name: "郭靖",
+				sex: "男",
+				kongfu:function(){
+					console.log("降龙十八掌");
+				},
+				dx:"黄蓉"
+			};
+			
+			var p2 = {
+				name: "杨过",
+				sex:"男",
+				kongfu:function(){
+					console.log("黯然销魂掌");
+				},
+				dx:"左手"
+			};
+			
+			//  工厂方法生成对象
+			function createObject(n,s,kf,dx){
+				var obj = {
+					name: n,
+					sex: s,
+					kongfu: kf,
+					dx: dx
+				};
+				return obj;
+			}
+			
+			var p3 = createObject("李寻欢","男","飞刀","右手");
+			console.log(p3);
+			
+			var arr = new Array();
+			console.log(arr);
+			
+			
+			
+			
+			
+			
+			
+		</script>
+		
+	</body>
+</html>

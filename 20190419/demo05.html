@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 字面量的方式定义对象
+			var person = {
+				name:"小明",
+				age:18,
+				sex:"boy",
+				study:function(){
+					console.log("好好学习");
+				}
+			};
+			// 访问对象的方式
+			// 1.链式语法
+			console.log(person.name);
+			// 2.使用 []
+			console.log(person["sex"]);
+			
+			/*
+				上面两种方式的区别
+				链式语法后不能跟变量
+				[] 可以使用变量取出 一个对象的属性值
+			*/ 
+			var a = "age";
+			console.log(person.a);
+			console.log(person[a]);
+			
+			/*
+				面向对象编程：把现实生活中的各种复杂关系抽象成一个对象，用对象来处理业务逻辑
+				
+				
+				对象的特点：
+					封装：把各种数据和方法封装在一起，形成一个独立的作用域空间
+					继承：在一个对象中使用另一个对象的属性和方法。
+					
+					对象是一个无序的数据集合，使用键值对的方式
+					对象中可以有属性和方法（函数）
+				
+			*/ 
+		   
+		   var zs = {
+			   name:"张三"
+		   };
+		   var ls = {
+			   name:"李四"
+		   };
+		    
+			
+		</script>
+		
+	</body>
+</html>

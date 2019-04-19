@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>组合继承</title>
+		
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+				组合继承
+				
+				有以下三个构造函数：
+					Person()
+						属性	name,sex,age
+						方法	introduce
+						
+					Enginner()
+						属性 name,sex,age,job
+						方法 coding
+					
+					WebEnginner()
+						属性 name,sex,age,job,skills
+						方法 doSomething
+						
+				WebEnginner 继承于 Enginner，Enginner 继承于 Person
+			*/ 
+			function Person(n,s,a){
+				this.name = n;
+				this.sex = s;
+				this.age = a;
+			}
+			Person.prototype.introduce = function(){
+				console.log("我的名字：" + this.name + " 性别：" + this.sex + " 年龄：" + this.age);
+			};
+			
+			function Enginner(n,s,a,job){
+				Person.call(this, n,s,a);
+				this.job = job;
+			}
+			var p1 = new Person();
+			Enginner.prototype = p1;
+			Enginner.prototype.coding = function(){
+				console.log("正在编写bug。。。");
+			};
+			
+			function WebEnginner(n,s,a,job,skills){
+				Enginner.apply(this,arguments);
+				this.skills = skills;
+			}
+			var e1 = new Enginner();
+			WebEnginner.prototype = e1;
+			WebEnginner.prototype.doSomething = function(){
+				console.log("带着二哈，流浪天涯");
+			};
+			
+			
+			var zs = new WebEnginner("张三", "女", 19, "烧饼工程师",["html","css","python","和面"]);
+			console.log(zs);
+			zs.introduce();
+			zs.coding();
+			zs.doSomething();
+			
+		   
+		   
+		   /*
+				练习
+					Animal
+						属性 name,age,sex,leg
+						方法	run,eat
+					
+					Cat 属性 breed(品种) skinColor(毛色)
+						方法 sleep(睡) climbTree
+					
+					Tiger 属性 weight(体重),height(体长)
+						 方法 hunt(捕猎)
+		   */ 
+		</script>
+	</body>
+</html>

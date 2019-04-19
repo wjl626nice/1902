@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>构造函数继承</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function Person(n,a,s,fs){
+				this.name = n;
+				this.age = a;
+				this.sex = s;
+				this.friends = fs;
+			}
+			var p1 = new Person("zs",18,"男",["二狗","胖丫"]);
+			console.log(p1);
+			
+			function Enginner(n,a,s,fs,skills){
+// 				this.name = n;
+// 				this.age = a;
+// 				this.sex = s;
+// 				this.friends = fs;
+				// 下面这句代码,是window来调用的 Person 函数
+				// Person(n,a,s,fs);
+				// 下面这句代码,是 this(将要返回的 Enginner 类型的空对象) 来调用的 Person 函数
+				Person.call(this, n,a,s,fs);
+				this.skills = skills
+			}
+			var e1 = new Enginner("ls",18,"男",["二狗","胖丫"],["javascript","python","C++"]);
+			console.log(e1);
+			
+		</script>
+	</body>
+</html>

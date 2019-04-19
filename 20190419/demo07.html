@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>构造函数</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+				构造函数
+					1.函数
+					2.专门用来生成对象的函数
+					3.声明构造函数的时候，首字母要大写 
+					4.构造函数要使用new调用 
+					5.函数的返回值是一个对象
+			*/ 
+		   // 自带构造函数
+		    var cp = new Object();
+			cp.name = "可爱鹏";
+			cp.age = 18;
+			console.log(cp);
+			
+			
+			/* 
+				function createObject(n,s,kf,dx){
+					var obj = {
+						name: n,
+						sex: s,
+						kongfu: kf,
+						dx: dx
+					};
+					return obj;
+				} 
+			 */
+			// 自定义构造函数
+			function CreateObject(n,s,kf,dx){
+				this.name = n;
+				this.sex = s;
+				this.kongfu = kf;
+				this.dx = dx;
+			}
+			
+			var p1 = new CreateObject("乔峰","男","降龙十八掌","小姨子");
+			console.log(p1);
+			
+			var name = "苏晨";
+			var sex = "女";
+			var kongfu = "葵花宝典";
+			
+			console.log(name);
+			console.log(sex);
+			console.log(kongfu);
+			
+			// var p2 = CreateObject("段誉","男","六脉神剑","妹妹们");
+			// console.log(p2);
+			
+			console.log(name);
+			console.log(sex);
+			console.log(kongfu);
+			
+			/*
+				
+				使用new调用，构造函数执行的过程：
+					1.创建一个构造函数类型的新的空对象
+					2.把 this 指向 空对象
+					3.修改 this 上的属性和方法
+					4.将 新对象作为返回值 返回
+				不使用new调用构造函数的执行过程：
+					1.把 this 指向 函数的调用者
+					2.修改 this(函数的调用者) 上的属性和方法
+			
+				不使用new调用构造函数会污染 函数的调用者对象 作用域中的 数据（属性和方法）
+			*/ 
+			
+			function kf(){
+				console.log("二天一流");
+			}
+			
+			var p4 = new CreateObject("宫本武藏","男",kf,"双刀");
+			var p5 = new CreateObject("孙悟空","猴",kf,"紫霞仙子");
+			console.log(p4);
+			console.log(p5);
+			
+			/*
+				利用构造函数创建的对象，属性和方法不能共享，可以使用原型的方式达到属性和方法的共享
+			*/ 
+			
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

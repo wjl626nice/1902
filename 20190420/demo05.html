@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>javascript插件</title>
+		<!-- css -->
+		<link rel="stylesheet" href="bs/css/bootstrap.min.css">
+		<!-- jq -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+		<!-- js -->
+		<script src="bs/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.fat{
+				/* font-size: 50px; */
+			}
+		</style>
+		<script type="text/javascript">
+			
+			// jq中文档加载完成之后
+			$(function(){
+				$('.btn').button('toggle').addClass('fat');
+				
+				
+// 				$('#myModal').on('shown.bs.modal', function () {
+// 				  $('#myInput').focus()
+// 				})
+			});
+		</script>
+	</head>
+	<body>
+		<!-- 模态框 -->
+		<!-- Button trigger modal
+			data-toggle="modal"				触发模态框		modal不能更改
+			
+			data-target="#myModal"			目标
+			data-target取值跟模态框的id相同
+			
+			可选尺寸		modal-dialog modal-*  
+			 
+			禁止动画		去除 fade 类名
+		 -->
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+		  Launch demo modal
+		</button>
+
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog modal-sm" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+			  </div>
+			  <div class="modal-body">
+				大表哥真帅，你说的很对
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	</body>
+</html>

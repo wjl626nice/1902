@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- css -->
+		<link rel="stylesheet" href="bs/css/bootstrap.min.css">
+		<!-- jq -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+		<!-- js -->
+		<script src="bs/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<style>
+			.btn-3{
+				position: relative;
+				z-index: 100000;
+			}
+		</style>
+		<script type="text/javascript">
+			$(function(){
+				$(".btn-1").click(function(){
+					
+					// 将页面中的某块内容作为模态框激活。接受可选参数 object。
+					
+						$('#myModal').modal({
+							backdrop: false,
+							show: true,
+							keyboard: true
+						});
+					
+					
+					// 切换 模态框 显示或隐藏
+					// $('#myModal').modal('toggle');
+				});
+				
+// 				$(".btn-2").click(function(){
+// 					// 切换 模态框 显示
+// 					$('#myModal').modal('show');
+// 				});
+// 				$(".btn-3").click(function(){
+// 					// 切换 模态框 隐藏
+// 					$('#myModal').modal('hide');
+// 				});
+				
+				$('#myModal').on('hidden.bs.modal', function (e) {
+					console.log("已经隐藏");
+				})
+				$('#myModal').on('hide.bs.modal', function (e) {
+					console.log("将要隐藏");
+				})
+				$('#myModal').on('shown.bs.modal', function (e) {
+					console.log("已经显示");
+				})
+				$('#myModal').on('show.bs.modal', function (e) {
+					console.log("将要显示");
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog modal-sm" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+			  </div>
+			  <div class="modal-body">
+				大表哥真帅，你说的很对
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		
+		<button class="btn btn-info btn-sm btn-1">按钮</button>
+		<button class="btn btn-info btn-sm btn-2">显示</button>
+		<button class="btn btn-info btn-sm btn-3">隐藏</button>
+		
+	</body>
+</html>

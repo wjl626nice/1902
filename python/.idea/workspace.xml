@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee0e6573-4f9e-446a-a83d-0eb4c7aa9f0b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/20190425/demo06.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190425/demo07.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190425/demo08.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20190425/demo08.py" beforeDir="false" afterPath="$PROJECT_DIR$/20190425/demo08.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,8 +54,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/20190425/demo08.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="99" column="17" selection-start-line="99" selection-start-column="17" selection-end-line="99" selection-end-column="17" />
+            <state relative-caret-position="222">
+              <caret line="107" column="7" selection-start-line="107" selection-start-column="7" selection-end-line="107" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -200,12 +197,12 @@
       <workItem from="1555912269097" duration="6042000" />
       <workItem from="1555921208367" duration="2037000" />
       <workItem from="1555980368615" duration="18720000" />
-      <workItem from="1556153625570" duration="15649000" />
+      <workItem from="1556153625570" duration="17022000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42448000" />
+    <option name="totallyTimeSpent" value="43821000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="23" width="1238" height="629" extended-state="0" />
@@ -405,8 +402,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/20190425/demo08.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="99" column="17" selection-start-line="99" selection-start-column="17" selection-end-line="99" selection-end-column="17" />
+        <state relative-caret-position="222">
+          <caret line="107" column="7" selection-start-line="107" selection-start-column="7" selection-end-line="107" selection-end-column="7" />
         </state>
       </provider>
     </entry>

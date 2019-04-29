@@ -4,7 +4,7 @@ def register():
 
     un = input("请输入用户名:")
     pwd = input("请输入密码:")
-    role = input("请输入你的角色")
+    role1 = input("请输入你的角色")
 
     # 判断用户名和密码是否符合要求
     # 判断用户名是否存在
@@ -34,6 +34,7 @@ def register():
     else:
         # 用户名存在，那么提示用户名已存在，注册失败
         print("用户名已存在，注册失败")
+
 
 # 登录
 def login():

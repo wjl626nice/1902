@@ -55,24 +55,24 @@ def login():
     with open("./db/user_info.txt", "r") as f:
         users = f.readlines()
 
-        # 判断用户名和密码是否正确
-        for u in users:
-            user_list = u.split("|")
-            pwd_md5 = hashlib.md5(pwd.encode('utf-8')).hexdigest()
-            if user_list[0] == un and user_list[1] == pwd_md5:
-                if user_list[2] == "1":
-                    print("恭喜你，登录成功")
-                    global isLogin
-                    isLogin = True
+    # 判断用户名和密码是否正确
+    for u in users:
+        user_list = u.split("|")
+        pwd_md5 = hashlib.md5(pwd.encode('utf-8')).hexdigest()
+        if user_list[0] == un and user_list[1] == pwd_md5:
+            if user_list[2] == "1":
+                print("恭喜你，登录成功")
+                global isLogin
+                isLogin = True
 
-                    global usernameOfLogined
-                    usernameOfLogined = un
-                    return
-                else:
-                    print("你的账户已经被冻结，请线下联系管理员")
-                    return
+                global usernameOfLogined
+                usernameOfLogined = un
+                return
+            else:
+                print("你的账户已经被冻结，请线下联系管理员")
+                return
 
-        print("登录失败，用户名或者密码不正确")
+    print("登录失败，用户名或者密码不正确")
 
 
 # 是否有用户登录
@@ -94,19 +94,19 @@ def findPwd():
     with open("./db/user_info.txt", "r") as f:
         users = f.readlines()
 
-        # 判断用户名和密码是否正确
-        newStr = ""
-        for u in users:
+    # 判断用户名和密码是否正确
+    newStr = ""
+    for u in users:
 
-            user_list = u.split("|")
-            pwd_md5 = hashlib.md5(pwd.encode('utf-8')).hexdigest()
-            if user_list[0] == un:
-                newStr += un + "|" + pwd_md5 + "|" + "1" + "|" + "1" + "\n"
-            else:
-                newStr += u
+        user_list = u.split("|")
+        pwd_md5 = hashlib.md5(pwd.encode('utf-8')).hexdigest()
+        if user_list[0] == un:
+            newStr += un + "|" + pwd_md5 + "|" + "1" + "|" + "1" + "\n"
+        else:
+            newStr += u
 
-        with open("./db/user_info.txt", "w") as f:
-            f.write(newStr)
+    with open("./db/user_info.txt", "w") as f:
+        f.write(newStr)
 
 
 # 注销登录
@@ -128,21 +128,42 @@ def freezeUser():
     with open("./db/user_info.txt", "r") as f:
         users = f.readlines()
 
-        # 判断用户名和密码是否正确
-        newStr = ""
-        for u in users:
-            user_list = u.split("|")
-            if user_list[0] == un:
-                newStr += un + "|" + user_list[1] + "|" + "0" + "|" + "1" + "\n"
-            else:
-                newStr += u
+    # 判断用户名和密码是否正确
+    newStr = ""
+    for u in users:
+        user_list = u.split("|")
+        if user_list[0] == un:
+            newStr += un + "|" + user_list[1] + "|" + "0" + "|" + "1" + "\n"
+        else:
+            newStr += u
 
-        with open("./db/user_info.txt", "w") as f:
-            f.write(newStr)
+    with open("./db/user_info.txt", "w") as f:
+        f.write(newStr)
 
+
+def addBook():
+    b_name = input("请输入书名:")
+    b_price = input("请输入书的价格:")
+    b_total = input("请输入书的总数:")
+    b_reste = input("请输入剩余书数量:")
+
+    # 判断用户名是否存在
+    with open("./db/books_lib.txt", "r") as f:
+        books = f.readlines()
+
+
+
+
+    pass
+
+def modifyBook():
+    pass
+
+def deleteBook():
+    pass
 
 menu3 = (("退出系统", 3),)
-menu2 = (("密码找回", 2), ("退出系统", 3), ("冻结用户", 4))
+menu2 = (("密码找回", 2), ("退出系统", 3), ("冻结用户", 4), ("添加图书", 5), ("修改图书", 6), ("下架图书", 7))
 menu1 = (("会员注册", 0), ("会员登录", 1), ("退出系统", 3))
 
 while True:

@@ -2,26 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee0e6573-4f9e-446a-a83d-0eb4c7aa9f0b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/20190430/demo01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190430/demo02.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190430/demo03.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190430/demo04.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190430/demo05.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190430/demo06.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190430/模块/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190430/模块/a/a1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190430/模块/a/a2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190430/模块/a/a3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190430/模块/a/a4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190430/模块/b/randomcc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190430/模块/demo06.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190430/模块/demo07.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190430/模块/demo08.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190430/模块/demo09.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190430/模块/demo10.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190430/练习/LibManage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190430/练习/homework.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20190430/练习/LibManage.py" beforeDir="false" afterPath="$PROJECT_DIR$/20190430/练习/LibManage.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,8 +19,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/20190427/homework/VIPManage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="71" lean-forward="true" selection-end-line="71" />
+            <state relative-caret-position="1562">
+              <caret line="71" selection-end-line="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/20190430/练习/db/user_info.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="11" selection-start-column="11" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -47,19 +38,10 @@
         <entry file="file://$PROJECT_DIR$/20190430/练习/homework.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="35">
-                <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+              <first_editor relative-caret-position="308">
+                <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
               </first_editor>
               <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/20190430/练习/db/user_info.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -67,8 +49,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/20190430/练习/LibManage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="169" column="20" lean-forward="true" selection-start-line="169" selection-start-column="20" selection-end-line="169" selection-end-column="20" />
+            <state relative-caret-position="287">
+              <caret line="151" column="8" selection-start-line="151" selection-start-column="8" selection-end-line="151" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -136,8 +118,8 @@
         <option value="$PROJECT_DIR$/20190430/模块/demo09.py" />
         <option value="$PROJECT_DIR$/20190430/模块/b/randomcc.py" />
         <option value="$PROJECT_DIR$/20190430/模块/demo10.py" />
-        <option value="$PROJECT_DIR$/20190430/练习/homework.md" />
         <option value="$PROJECT_DIR$/20190430/练习/db/user_info.txt" />
+        <option value="$PROJECT_DIR$/20190430/练习/homework.md" />
         <option value="$PROJECT_DIR$/20190430/练习/LibManage.py" />
       </list>
     </option>
@@ -153,6 +135,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -203,7 +186,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -250,18 +232,18 @@
       <workItem from="1556153625570" duration="36567000" />
       <workItem from="1556329715942" duration="12494000" />
       <workItem from="1556498259142" duration="11341000" />
-      <workItem from="1556585185536" duration="20061000" />
+      <workItem from="1556585185536" duration="21365000" />
+      <workItem from="1557016780502" duration="811000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107262000" />
+    <option name="totallyTimeSpent" value="109377000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="629" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7745098" visible="true" weight="0.16235864" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7745098" visible="true" weight="0.16478191" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32960895" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -275,7 +257,7 @@
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32901135" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="13" visible="true" weight="0.24208567" />
+      <window_info anchor="bottom" id="Terminal" order="13" visible="true" weight="0.24394786" />
       <window_info anchor="bottom" id="Python Console" order="14" weight="0.32960895" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -627,13 +609,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/20190427/homework/VIPManage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="71" lean-forward="true" selection-end-line="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/20190430/demo06.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="704">
@@ -641,18 +616,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/20190427/homework/VIPManage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1562">
+          <caret line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/20190430/练习/db/user_info.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="38" />
+        <state>
+          <caret column="11" selection-start-column="11" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/20190430/练习/homework.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="35">
-            <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+          <first_editor relative-caret-position="308">
+            <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
           </first_editor>
           <second_editor />
         </state>
@@ -660,8 +642,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/20190430/练习/LibManage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="169" column="20" lean-forward="true" selection-start-line="169" selection-start-column="20" selection-end-line="169" selection-end-column="20" />
+        <state relative-caret-position="287">
+          <caret line="151" column="8" selection-start-line="151" selection-start-column="8" selection-end-line="151" selection-end-column="29" />
         </state>
       </provider>
     </entry>

@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee0e6573-4f9e-446a-a83d-0eb4c7aa9f0b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/20190509/libraryManage/LibManage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190509/libraryManage/dbHandler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190509/libraryManage/randomcc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190509/libraryManage/sendEmail.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190509/sendEmail.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/20190508/demo02.py" beforeDir="false" afterPath="$PROJECT_DIR$/20190508/demo02.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20190509/libraryManage/userManage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20190509/libraryManage/libManage.py" beforeDir="false" afterPath="$PROJECT_DIR$/20190509/libraryManage/libManage.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,15 +16,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/20190509/libraryManage/dbHandler.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-225">
-              <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/20190430/练习/LibManage.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -52,13 +38,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/20190509/libraryManage/LibManage.py">
+        <entry file="file://$PROJECT_DIR$/20190509/libraryManage/libManage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="141" column="6" selection-start-line="141" selection-start-column="6" selection-end-line="141" selection-end-column="6" />
+            <state relative-caret-position="220">
+              <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/20190509/libraryManage/userManage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3212">
+              <caret line="146" column="16" selection-start-line="146" selection-start-column="16" selection-end-line="146" selection-end-column="16" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/20190509/libraryManage/library.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -114,9 +118,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/20190426/练习/demo03.py" />
-        <option value="$PROJECT_DIR$/20190426/练习/demo04.py" />
-        <option value="$PROJECT_DIR$/20190426/练习/demo05.py" />
         <option value="$PROJECT_DIR$/20190426/练习/demo06.py" />
         <option value="$PROJECT_DIR$/20190426/练习/demo07.py" />
         <option value="$PROJECT_DIR$/20190426/练习/demo08.py" />
@@ -165,6 +166,9 @@
         <option value="$PROJECT_DIR$/20190508/demo02.py" />
         <option value="$PROJECT_DIR$/20190509/libraryManage/sendEmail.py" />
         <option value="$PROJECT_DIR$/20190509/libraryManage/LibManage.py" />
+        <option value="$PROJECT_DIR$/20190509/libraryManage/library.sql" />
+        <option value="$PROJECT_DIR$/20190509/libraryManage/userManage.py" />
+        <option value="$PROJECT_DIR$/20190509/libraryManage/libManage.py" />
       </list>
     </option>
   </component>
@@ -336,18 +340,18 @@
       <workItem from="1556585185536" duration="21365000" />
       <workItem from="1557016780502" duration="811000" />
       <workItem from="1557304963619" duration="1675000" />
-      <workItem from="1557371321153" duration="11034000" />
+      <workItem from="1557371321153" duration="11512000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122086000" />
+    <option name="totallyTimeSpent" value="122564000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="629" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7745098" visible="true" weight="0.16962843" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7745098" visible="true" weight="0.16962843" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32960895" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -361,7 +365,7 @@
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32901135" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="13" visible="true" weight="0.21601489" />
+      <window_info anchor="bottom" id="Terminal" order="13" visible="true" weight="0.21042831" />
       <window_info anchor="bottom" id="Python Console" order="14" weight="0.32960895" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -386,29 +390,10 @@
           <line>18</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/20190509/libraryManage/dbHandler.py</url>
-          <line>48</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/20190430/demo05.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="36" selection-start-line="36" selection-end-line="42" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20190427/demo01.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/20190425/homework.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -649,13 +634,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/20190509/libraryManage/LibManage.py">
+    <entry file="file://$PROJECT_DIR$/20190509/libraryManage/library.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="141" column="6" selection-start-line="141" selection-start-column="6" selection-end-line="141" selection-end-column="6" />
+        <state relative-caret-position="165">
+          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20190509/libraryManage/userManage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3212">
+          <caret line="146" column="16" selection-start-line="146" selection-start-column="16" selection-end-line="146" selection-end-column="16" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20190509/libraryManage/libManage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
         </state>
       </provider>
     </entry>

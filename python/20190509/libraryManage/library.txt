@@ -1,0 +1,37 @@
+-- 用户信息表
+CREATE TABLE `user_info` (
+  `u_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `u_name` varchar(11) NOT NULL DEFAULT '',
+  `u_pwd` varchar(80) NOT NULL DEFAULT '',
+  `u_pri` int(11) NOT NULL DEFAULT '0' COMMENT '0为普通会员，1为超级管理员，2为普通管理员',
+  `u_enabled` tinyint(4) NOT NULL DEFAULT '1' COMMENT '1表示用户可用，0表示禁用用户',
+  `u_email` varchar(30) NOT NULL DEFAULT '',
+  PRIMARY KEY (`u_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- 插入 默认超级管理员 admin ,密码: 123456
+insert into user_info
+values
+(1, "admin", "e10adc3949ba59abbe56e057f20f883e", 1, 1, "wangjl626@163.com");
+
+
+-- 图书信息表
+CREATE TABLE `book` (
+  `b_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `b_name` varchar(30) DEFAULT NULL,
+  `b_price` float DEFAULT NULL,
+  `b_total` int(11) DEFAULT NULL,
+  `b_reste` int(11) DEFAULT NULL,
+  PRIMARY KEY (`b_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+-- 借阅记录表
+CREATE TABLE `borrow_record` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `br_id` int(11) DEFAULT NULL,
+  `u_id` int(11) DEFAULT NULL,
+  `b_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

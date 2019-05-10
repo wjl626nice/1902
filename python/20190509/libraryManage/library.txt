@@ -18,10 +18,11 @@ values
 -- 图书信息表
 CREATE TABLE `book` (
   `b_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `b_name` varchar(30) DEFAULT NULL,
-  `b_price` float DEFAULT NULL,
-  `b_total` int(11) DEFAULT NULL,
-  `b_reste` int(11) DEFAULT NULL,
+  `b_name` varchar(30) DEFAULT NULL COMMENT '书名',
+  `b_price` float DEFAULT NULL COMMENT '书的价格',
+  `b_total` int(11) DEFAULT NULL COMMENT '书的总数',
+  `b_reste` int(11) DEFAULT NULL COMMENT '书的剩余数量',
+  `b_status` tinyint(11) DEFAULT NULL COMMENT '书状态 0:表示上架，1:表示下架',
   PRIMARY KEY (`b_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

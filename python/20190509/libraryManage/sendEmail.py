@@ -19,6 +19,7 @@ sender = '779646692@qq.com'
 def sendCheckCodeFromEmail(receiver):
     receivers = [receiver]  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
 
+    # 验证码
     checkcode = randomcc.checkCode()
 
     ccstring = "图书馆系统会员找回密码 验证码：" + checkcode

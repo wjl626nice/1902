@@ -30,9 +30,8 @@ CREATE TABLE `book` (
 
 -- 借阅记录表
 CREATE TABLE `borrow_record` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `br_id` int(11) DEFAULT NULL,
-  `u_id` int(11) DEFAULT NULL,
-  `b_id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `br_id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '借阅记录id',
+  `u_id` int(11) NOT NULL COMMENT '用户id',
+  `b_id` int(11) NOT NULL COMMENT '书籍id',
+  PRIMARY KEY (`br_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

@@ -57,7 +57,7 @@ def register():
             rows = cursor2.execute(sqlstr)
             # 提交修改
             dbconnect2.commit()
-            print(rows)
+            # print(rows)
         except (pymysql.Error,):
 
             dbconnect2.rollback()
@@ -88,7 +88,7 @@ def findPwd():
             # 使用cursor()方法获取操作游标
             cursor = dbconnect.cursor()
             sqlstr = "select * from user_info where u_name = '{}' and u_email = '{}'".format(un, em)
-            print(sqlstr)
+            # print(sqlstr)
 
             user = None
             try:
@@ -119,14 +119,14 @@ def findPwd():
         # 使用cursor()方法获取操作游标
         cursor = dbconnect.cursor()
         sqlstr = "update user_info set u_pwd = '{}' where u_email = '{}'".format(pwd_md5, em)
-        print(sqlstr)
+        # print(sqlstr)
 
         rows = 0
         try:
             rows = cursor.execute(sqlstr)
             # 提交修改
             dbconnect.commit()
-            print(rows)
+            # print(rows)
         except (pymysql.Error,):
             dbconnect.rollback()
         finally:
@@ -140,13 +140,6 @@ def findPwd():
     else:
         print("你输入的验证码有误")
 
-
-# 退出系统
-def logout():
-    print("注销登录")
-
-    # assert 断言，停止程序执行
-    assert False
 
 
 # 0为普通会员，1为超级管理员，2为普通管理员
@@ -167,7 +160,7 @@ def login():
             cursor = dbconnect.cursor()
             sqlstr = "select * from user_info where u_email = '{}' and u_enabled = 1 and u_pwd = '{}'".format(em,
                                                                                                               pwd_md5)
-            print(sqlstr)
+            # print(sqlstr)
 
             user = None
             try:
@@ -180,8 +173,8 @@ def login():
                 dbconnect.close()
 
             if user:
-                print(user)
-                print("'{}','{}'登录成功".format(privileges[user[3]][0], user[1]))
+                # print(user)
+                # print("'{}','{}'登录成功".format(privileges[user[3]][0], user[1]))
                 return user
             else:
                 print("登录失败")
@@ -208,7 +201,7 @@ def shouquan():
             # 使用cursor()方法获取操作游标
             cursor = dbconnect.cursor()
             sqlstr = "update user_info set u_pri = {}  where u_email = '{}'".format(pri, em)
-            print(sqlstr)
+            # print(sqlstr)
 
             row = 0
             try:
@@ -252,7 +245,7 @@ def changeUserStatus():
             # 使用cursor()方法获取操作游标
             cursor = dbconnect.cursor()
             sqlstr = "update user_info set u_enabled = {}  where u_email = '{}'".format(st, em)
-            print(sqlstr)
+            # print(sqlstr)
 
             try:
                 row = cursor.execute(sqlstr)

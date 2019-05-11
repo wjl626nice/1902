@@ -25,8 +25,8 @@ def sendCheckCodeFromEmail(receiver):
     ccstring = "图书馆系统会员找回密码 验证码：" + checkcode
 
     message = MIMEText(ccstring, 'plain', 'utf-8')
-    message['From'] = Header("图书馆系统", 'utf-8')
-    message['To'] = Header("找回密码", 'utf-8')
+    message['From'] = sender
+    message['To'] = ';'.join(receivers)
 
     subject = '图书管理系统，找回密码'
     message['Subject'] = Header(subject, 'utf-8')

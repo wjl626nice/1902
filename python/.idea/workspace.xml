@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee0e6573-4f9e-446a-a83d-0eb4c7aa9f0b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/20190509/sendEmail.py" beforeDir="false" afterPath="$PROJECT_DIR$/20190509/sendEmail.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/20190509/sendEmail2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/20190509/libraryManage/sendEmail.py" beforeDir="false" afterPath="$PROJECT_DIR$/20190509/libraryManage/sendEmail.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,20 +66,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/20190509/libraryManage/sendEmail.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="14" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="14" />
+            <state relative-caret-position="252">
+              <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+              <folding>
+                <element signature="e#20#34#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/20190509/sendEmail.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+            <state relative-caret-position="346">
+              <caret line="27" selection-start-line="27" selection-end-line="28" selection-end-column="35" />
               <folding>
                 <element signature="e#20#34#0" expanded="true" />
               </folding>
@@ -153,13 +154,13 @@
         <option value="$PROJECT_DIR$/20190508/demo02.py" />
         <option value="$PROJECT_DIR$/20190509/libraryManage/LibManage.py" />
         <option value="$PROJECT_DIR$/20190509/libraryManage/library.sql" />
-        <option value="$PROJECT_DIR$/20190509/libraryManage/sendEmail.py" />
         <option value="$PROJECT_DIR$/20190509/libraryManage/library.txt" />
         <option value="$PROJECT_DIR$/20190509/libraryManage/borrowRecordManage.py" />
         <option value="$PROJECT_DIR$/20190509/libraryManage/libManage.py" />
         <option value="$PROJECT_DIR$/20190509/libraryManage/userManage.py" />
         <option value="$PROJECT_DIR$/20190509/libraryManage/bookManage.py" />
         <option value="$PROJECT_DIR$/20190509/sendEmail2.py" />
+        <option value="$PROJECT_DIR$/20190509/libraryManage/sendEmail.py" />
       </list>
     </option>
   </component>
@@ -336,12 +337,12 @@
       <workItem from="1556585185536" duration="21365000" />
       <workItem from="1557016780502" duration="811000" />
       <workItem from="1557304963619" duration="1675000" />
-      <workItem from="1557371321153" duration="43148000" />
+      <workItem from="1557371321153" duration="43244000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154200000" />
+    <option name="totallyTimeSpent" value="154296000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="720" extended-state="0" />
@@ -641,13 +642,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/20190509/libraryManage/sendEmail.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/email/mime/text.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -674,8 +668,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/20190509/sendEmail.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+        <state relative-caret-position="346">
+          <caret line="27" selection-start-line="27" selection-end-line="28" selection-end-column="35" />
+          <folding>
+            <element signature="e#20#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20190509/libraryManage/sendEmail.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
           <folding>
             <element signature="e#20#34#0" expanded="true" />
           </folding>

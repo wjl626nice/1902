@@ -3,7 +3,7 @@
 import smtplib
 from email.mime.text import MIMEText
 from email.header import Header
-import randomcc
+import randmcc
 
 # 第三方 SMTP 服务
 # mail_host = "smtp.XXX.com"  # 设置服务器
@@ -14,6 +14,7 @@ mail_user = "779646692@qq.com"  # 用户名
 mail_pass = "esqljpjmbfzwbehi"  # 口令不是自己的登录密码，而是授权码
 
 sender = '779646692@qq.com'
+
 
 
 def sendCheckCodeFromEmail(receiver):

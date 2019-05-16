@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="referrer" content="origin" />
+    <title>理解OSI参考模型 - 鱼的记忆只有七秒 - 博客园</title>
+<meta property="og:description" content="在一个视频网站上不小心搜到网络知识的视频，突然以前大学的没有真正接受的知识点，一下子豁然开朗，赶紧整理了下笔记。 一、OSI参考模型 自下而上：物理层（物理介质，比特流）、数据链路层（网卡、交换机）、" />
+    <link type="text/css" rel="stylesheet" href="/bundles/blog-common.css?v=svlZeZMvc3He7PqOD4T7SOuQn0_kIfLBYiy3idqd35Y1"/>
+<link id="MainCss" type="text/css" rel="stylesheet" href="/skins/CodingLife/bundle-CodingLife.css?v=g4Oce5UBaUn_FUwadcT09ICEg5NkULQGtUpNhTtrI8U1"/>
+<link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/CodingLife/bundle-CodingLife-mobile.css?v=nSeK_P8BAqpQ4UDLpcwd6yl-jVYCXnR833BwkQ30uqQ1"/>
+    <link title="RSS" type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/evablogs/rss"/>
+    <link title="RSD" type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/evablogs/rsd.xml"/>
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/evablogs/wlwmanifest.xml"/>
+    <script src="//common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script>var currentBlogId=347367;var currentBlogApp='evablogs',cb_enable_mathjax=false;var isLogined=false;</script>
+    <script src="/bundles/blog-common.js?v=OFBZTzkHKauV7mtIFLF9jlqrX-sesK9-mY9KjurLrq01" type="text/javascript"></script>
+</head>
+<body>
+<a name="top"></a>
+
+
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a id="lnkBlogLogo" href="https://www.cnblogs.com/evablogs/"><img id="blogLogo" src="/Skins/custom/images/logo.gif" alt="返回主页" /></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="https://www.cnblogs.com/evablogs/">小蜗牛</a></h1>
+<h2>我要一步一步往上爬，在最高点乘着叶片往前飞。小小的天流过的泪和汗，总有一天我有属于我的天。</h2>
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">博客园</a></li>
+<li><a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/evablogs/">首页</a></li>
+<li><a id="blog_nav_newpost" class="menu" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+<li><a id="blog_nav_contact" class="menu" rel="nofollow" href="https://msg.cnblogs.com/send/%E9%B1%BC%E7%9A%84%E8%AE%B0%E5%BF%86%E5%8F%AA%E6%9C%89%E4%B8%83%E7%A7%92">联系</a></li>
+<li><a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/evablogs/rss">订阅</a>
+<!--<a id="blog_nav_rss_image" class="aHeaderXML" href="https://www.cnblogs.com/evablogs/rss"><img src="//www.cnblogs.com/images/xml.gif" alt="订阅" /></a>--></li>
+<li><a id="blog_nav_admin" class="menu" rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+</ul>
+		<div class="blogStats">
+			
+			<div id="blog_stats">
+<span id="stats_post_count">随笔 - 76&nbsp; </span>
+<span id="stats_article_count">文章 - 0&nbsp; </span>
+<span id="stats-comment_count">评论 - 7</span>
+</div>
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+        <div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class = "post">
+		<h1 class = "postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/evablogs/p/6709707.html">理解OSI参考模型</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body" class="blogpost-body"><p>在一个视频网站上不小心搜到网络知识的视频，突然以前大学的没有真正接受的知识点，一下子豁然开朗，赶紧整理了下笔记。</p>
+<p><strong>一、OSI参考模型</strong></p>
+<p>自下而上：物理层（物理介质，比特流）、数据链路层（网卡、交换机）、网络层（IP协议）、传输层（TCP/UDP协议）、会话层（创建/建立/断开连接）、表示层（翻译，编码，压缩，加密）、应用层（HTTP协议）</p>
+<p>简化为<strong>TCP/IP模型</strong>：网络层（物理层、数据链路层、网络层）、传输层，会话层，应用层（表示层，应用层）</p>
+<p><img src="https://images2018.cnblogs.com/blog/1143450/201803/1143450-20180320155033391-601656450.png" alt="" /></p>
+<p><strong>1.物理层</strong></p>
+<p>主要设备：中继器、集线器</p>
+<p>物理层中双绞线的传输距离是有限的，信号会缩减，影响数据的传输。为了使传输的数据能够准确的传输，<strong>中继器</strong>是可以放大传输信号，保持原数据的准确。</p>
+<p>比如，双绞线的传输距离是100m，而超过100m则信号会衰减</p>
+<p>&nbsp;<img src="https://images2015.cnblogs.com/blog/1143450/201704/1143450-20170414145811626-544233553.png" alt="" width="280" height="91" /></p>
+<p>在两台pc中间加上一个中继器，则相当于两台pc到中继器的距离均为100m，有助于信号的增强。</p>
+<p><img src="https://images2015.cnblogs.com/blog/1143450/201704/1143450-20170414150001126-1952004665.png" alt="" width="441" height="93" /></p>
+<p>&nbsp;</p>
+<p>集线器和中继器的区别是：中继器只有两个以太网接口，而集线器相当于多个端口的中继器。</p>
+<p>&nbsp;知识点：冲突域、广播域</p>
+<p>冲突域：当两个比特流在同一介质上同时传输就是产生冲突，冲突域是指发送数据给一个单一目标（单播）所影响的<strong>范围</strong></p>
+<p>广播域：发送数据给一个不明确的目标所影响的<strong>范围</strong></p>
+<p>&nbsp;集线器有一个冲突域和一个广播域</p>
+<p><img src="https://images2015.cnblogs.com/blog/1143450/201704/1143450-20170414150655705-1309488450.png" alt="" width="308" height="251" /></p>
+<p>IP地址192.168.1.1ping1.2：</p>
+<p>&gt;ping 192.168.1.2（ping命令所用的协议有ICMP/ARP协议）</p>
+<p>返回数据说明两者是相通的，可以发送信息</p>
+<p>当1.1想向1.2发送数据时，发送报文时，将包发送到集线器，集线器将包广播发送给所有连接在集线器上的其他端口，当1.3，1.4发现该包不是发送给他们的，就将拒绝接收，而1.2发现是发送给它时，就做出应答，返回一个应答包，应答包先发到集线器，集线器又进行<strong>广播</strong>，然后再发送到1.1上。</p>
+<p><span style="background-color: #ffffff; color: #ff0000;">但是！！数据包向所有的端口发送，不安全，且所有的机器共享带宽，更容易产生拥塞，所以不能用于较大的网络</span></p>
+<p>集线器是物理设备，不是智能的，所以不具备学习能力，故每次发送数据只能使用广播的方式。</p>
+<p><strong>2.数据链路层</strong></p>
+<p>功能：完成网络之间相邻结点的<strong>可靠</strong>传输，通过<strong>Mac地址</strong>负责主机之间的数据的可靠传输。</p>
+<p>物理层传输的是比特流，而数据链路层传输的是帧。</p>
+<p>主要设备：网卡、网桥、交换机</p>
+<p><strong>网卡</strong>：网络适配器，连接计算机与网络的硬件设备，整理计算机发往网线的数据，将数据分解成大小的数据包之后向网络上发送</p>
+<p><strong>Mac地址与IP地址的区别：</strong></p>
+<p>Mac地址：是厂商烧录在只读存储器上的，出厂厂商的唯一标识，且不可更改</p>
+<p>IP地址：网络地址，相当于门牌号</p>
+<p>查看网卡的Mac地址(十六进制)命令：</p>
+<p>ipconfig /all</p>
+<p>Pysical Address :xx-xx-xx-xx-xx-xx</p>
+<p><strong>网桥</strong>：将两个LAN链接在一起，变成一个LAN,并按Mac地址转发；分割冲突域；</p>
+<p>例如：如何分割冲突域</p>
+<p>每个PC机网卡的Mac地址：AA-AA-AA-AA-AA-AA、BB....</p>
+<p><img src="https://images2015.cnblogs.com/blog/1143450/201704/1143450-20170414154503720-419433118.png" alt="" width="403" height="294" /></p>
+<p>网桥更具Mac地址学习能力，目标Mac地址转发</p>
+<p>IP地址192.168.1.1ping1.2：</p>
+<p>&gt;ping 192.168.1.2（ping命令所用的协议有ICMP/ARP地址解析协议）</p>
+<p>&nbsp;过程：</p>
+<p>1.1第一次发送ICMP数据包到集线器，集线器发给1.2和网桥，网桥接收到数据包后（工作原理是根据原Mac地址（1.1的Mac地址）学习，目标Mac地址（1.2Mac地址）进行转发，Eth0/1端口学到Mac地址），学到1.1Mac地址，网桥把包传输到下一个集线器，集线器会把包发给1.3,1.4，这两个会扔掉不属于它们的包，1.2接收到后会返回数据给集线器，集线器发送给网桥，这时网桥会学到1.2的Mac地址，由于网桥已经记录了1.1的Mac地址，则会直接发送给1.1而不会又进行广播发给1.3和1.4。</p>
+<p>通过第一次发送数据包和接受目标的应答，网桥的每个端口都将学到也就是记录到两个Mac地址，原Mac地址和目标的Mac地址。</p>
+<p><strong>交换机</strong>：工作过程和网桥类似</p>
+<p>交换机有三种转发方式：</p>
+<p>&nbsp;（1）对已知单播帧只往对应端口进行转发</p>
+<p>&nbsp;（2）对未知单播帧，即交换机还没有学习到的Mac进行广播转发，所有端口进行广播</p>
+<p>&nbsp;（3）对广播帧或组播帧进行广播</p>
+<p><img src="https://images2015.cnblogs.com/blog/1143450/201704/1143450-20170414160436783-1106095000.png" alt="" width="308" height="217" /></p>
+<p>IP地址192.168.1.1ping1.2：</p>
+<p>&gt;ping 192.168.1.2（ping命令所用的协议有ICMP/ARP地址解析协议）</p>
+<p>工作过程：</p>
+<p>工作过程与网桥一致，交换机的端口通过原Mac地址发送数据学到Mac地址，接收应答的数据包学到目标Mac地址，最终每个端口都学到Mac地址记录在交换机Mac地址表中</p>
+<p>可以通过命令查找交换机的Mac地址表：</p>
+<p>show mac-address-tables</p>
+<p>交换机有几个端口就有几个冲突域，且只有一个广播域</p>
+<p><strong>交换机和网桥的区别：</strong></p>
+<p>网桥只有两个端口，交换机至少有四个端口也有8个、16个等端口，网桥基于软件转发，交换机基于硬件转发，可以通过命令查看Mac地址表，而网桥不行。且交换机的造价比网桥低。</p>
+<p>交换机分类：</p>
+<p>（1）传统二层交换机</p>
+<p>（2）VLAN交换机，有网管功能</p>
+<p>（3）三层交换机：VLAN交换机+路由器，属于网络层的设备，而不是数据链路层的设备</p>
+<p><strong>3.网络层</strong></p>
+<p>完成网络中主机间的报文传输（物理层比特流，数据链路层帧），网络层识别的地址是IP地址。</p>
+<p>涉及的协议：IP/IPX</p>
+<p>主要设备：路由器</p>
+<p><strong>路由器</strong>：通信中转站，例如快递的中转站，将不同网络和网段进行数据翻译，使其可以相互理解，构成一个大的网络。</p>
+<p>&nbsp;<img src="https://images2015.cnblogs.com/blog/1143450/201704/1143450-20170414162602142-2032863361.png" alt="" width="310" height="232" /></p>
+<p>&nbsp;</p>
+<p>IP地址192.168.1.1ping1.2：</p>
+<p>&gt;ping 192.168.1.2</p>
+<p>1.2与1.1属于同一个网段，可以接收数据和应答</p>
+<p>IP地址192.168.1.1ping2.2：</p>
+<p>&gt;ping 192.168.2.2</p>
+<p>显示超时，没有返回任何数据，两者不属于同一个网段，不能通信</p>
+<p>如何使两者进行通信？有两种方法：</p>
+<p>（1）添加一个路由器：</p>
+<p><img src="https://images2015.cnblogs.com/blog/1143450/201704/1143450-20170414162537673-258789332.png" alt="" width="305" height="249" /></p>
+<p>工作原理：</p>
+<p>路由器之所以可以翻译不同网段之间的通信是因为其本身具备丰富的协议，可以连接不同的网段和网络。路由器可以判断网络地址以及选择路径的功能。</p>
+<p>（2）修改子网掩码，这点后面IP地址再补充</p>
+<p>物理层、数据链路层、网络层之间的区别：</p>
+<p><img src="https://images2015.cnblogs.com/blog/1143450/201704/1143450-20170414163933923-1598841485.png" alt="" width="410" height="213" /></p>
+<p><strong>4.传输层</strong></p>
+<p>&nbsp;是整个网络关键的部分，是<span style="color: #ff0000;">实现两个用户进程间端到端的可靠通信</span>，处理数据包的错误等传输问题。是向下通信服务最高层，向上用户功能最底层。即向网络层提供服务，向会话层提供独立于网络层的传送服务和可靠的透明数据传输。</p>
+<p>主要协议：TCP传输控制协议/UDP用户数据报协议，涉及服务使用的端口号，主机根据端口号识别服务，区分会话。</p>
+<p>TCP协议：解决数据是否完整传输，是否正确</p>
+<p>UDP协议：UDP协议实现了端口，从而使数据包传送到IP地址的基础上，还可以进一步将其送到具体的某一个端口上。</p>
+<p>UDP传输与IP传输相似，但IP协议是ip地址之间的通信，但通信需要多个通信通道，将每个通道分配给每一个进程使用，UDP则是实现端口的通信。</p>
+<p>服务与以及相对应的端口文件：C:\Windows\System32\drivers\etc\servies</p>
+<p>例如：www服务端口号为80</p>
+<p><strong>5.会话层</strong>：主要功能是在两个结点间<span style="color: #ff0000;">建立</span>、维护和释放面向用户的<span style="color: #ff0000;">连接</span>，并对会话进行管理和控制，保证会话数据可靠传送。</p>
+<p>例如：你通过秘书与对方建立联系，则你发出建立联系的请求相当于一个会话，秘书相当于传输层，然后秘书进行拨号联系对方，当对方接通对话，则会话的连接建立。</p>
+<p><strong>6.表示层</strong>：主要负责数据格式的转换，即<span style="color: #ff0000;">翻译</span>，压缩与解压缩，加密与解密。</p>
+<p>例如：你想下午两点出发去上海，你对上海的朋友说下午两点过来，朋友的理解却是你下午两点到上海，两个人两种理解，而表示层则是进行格式转换和信息的表示。</p>
+<p><strong>7.应用层</strong>：应用层是网络体系中最高的一层，也是唯一<span style="color: #ff0000;">面向用户的一层</span>，也可视为为用户提供常用的应用程序，例如电子邮件，上网浏览等网络服务都是应用层程序。</p>
+<p>对于这三层的定义还是不能理解，上网搜了以上比较通俗的解释。</p>
+<p>应用层的主要协议：HTTP,HTTPS,FTP（上传，下载）,SMTP（邮件）</p>
+<p>HTTP协议：超文本传输协议，包括url地址，域名，源地址，发送的数据方法（Get，Post等），浏览器信息等</p>
+<p><strong>OSI模型的总结</strong></p>
+<p>OSI模型上层（会话层，表示层，应用层）处理用户接口、数据格式、应用访问。</p>
+<p>OSI模型下层（物理层，数据链路层，网络层，传输层）处理数据在网络介质中的传送。</p>
+<p>二、数据封装过程</p>
+<p>封装：</p>
+<p>应用层：发送数据---------表示层：数据格式转换，加密，压缩等----------会话层：建立连接-----------传输层：差错校验，流量控制，TCP/UDP传输，添加端口号信息（源端口，目标端口）+数据------------网络层：分组，数据包（IP地址+数据）--------数据链路层：帧（帧头（帧头包含Mac地址）+帧数据）------------物理层：比特流（0,1）</p>
+<p>解封装：</p>
+<p>物理层：比特流（0,1）---------数据链路层：帧（帧头（帧头包含Mac地址）+帧数据）--------网络层：分组，数据包（IP地址+数据）-------传输层：差错校验，流量控制等；UDP/TCP(传送和接收端口信息+数据)---------会话层：建立连接-----------表示层：数据格式转换，解密，解压缩等-----------应用层：接收的数据</p>
+<p>图解：（网上找的）</p>
+<p><img src="https://images2018.cnblogs.com/blog/1143450/201803/1143450-20180320164333249-562818393.png" alt="" /></p>
+<p>&nbsp;</p></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory"></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info">
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"></div>
+</div>
+
+
+		</div>
+		<div class = "postDesc">posted @ <span id="post-date">2017-04-14 21:22</span> <a href='https://www.cnblogs.com/evablogs/'>鱼的记忆只有七秒</a> 阅读(<span id="post_view_count">...</span>) 评论(<span id="post_comment_count">...</span>)  <a href ="https://i.cnblogs.com/EditPosts.aspx?postid=6709707" rel="nofollow">编辑</a> <a href="#" onclick="AddToWz(6709707);return false;">收藏</a></div>
+	</div>
+	<script type="text/javascript">var allowComments=true,cb_blogId=347367,cb_entryId=6709707,cb_blogApp=currentBlogApp,cb_blogUserGuid='ed494131-991d-e711-9fc1-ac853d9f53cc',cb_entryCreatedDate='2017/4/14 21:22:00';loadViewCount(cb_entryId);var cb_postType=1;var isMarkdown=false;</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id='comment_form' class='commentform'>
+<a name='commentform'></a>
+<div id='divCommentShow'></div>
+<div id='comment_nav'><span id='span_refresh_tips'></span><a href='javascript:void(0);' onclick='return RefreshCommentList();' id='lnk_RefreshComments' runat='server' clientidmode='Static'>刷新评论</a><a href='#' onclick='return RefreshPage();'>刷新页面</a><a href='#top'>返回顶部</a></div>
+<div id='comment_form_container'></div>
+<div class='ad_text_commentbox' id='ad_text_under_commentbox'></div>
+<div id='ad_t2'></div>
+<div id='opt_under_post'></div>
+<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+</script>
+<script>
+  googletag.cmd.push(function() {
+        googletag.defineSlot('/1090369/C1', [300, 250], 'div-gpt-ad-1546353474406-0').addService(googletag.pubads());
+        googletag.defineSlot('/1090369/C2', [468, 60], 'div-gpt-ad-1539008685004-0').addService(googletag.pubads());
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+  });
+</script>
+<div id='cnblogs_c1' class='c_ad_block'>
+    <div id='div-gpt-ad-1546353474406-0' style='height:250px; width:300px;'></div>
+</div>
+<div id='under_post_news'></div>
+<div id='cnblogs_c2' class='c_ad_block'>
+    <div id='div-gpt-ad-1539008685004-0' style='height:60px; width:468px;'></div>
+</div>
+<div id='under_post_kb'></div>
+<div id='HistoryToday' class='c_ad_block'></div>
+<script type='text/javascript'>
+ if(enablePostBottom()) {
+    codeHighlight();
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverT2();
+    deliverC1();
+    deliverC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);  
+}
+</script>
+</div>
+
+    
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">公告</h3>
+	<div id="blog-news"></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="blog-calendar" style="display:none"></div><script type="text/javascript">loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		
+<!--done-->
+Copyright &copy;2019 鱼的记忆只有七秒
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+</body>
+</html>

@@ -1,8 +1,10 @@
-
+#采集需要的条件：正则、re模块、urllib模块、requests模块、爬虫scrapy框架
+#
 strs = 'aaa'
 # print(strs + 12)
 print(strs * 3)
 print('bbb' + '12')
+
 
 def get(aa, bb, cc, ab=44, ac=45, *args, **kwargs):
     print(aa, bb, cc, ab, ac)

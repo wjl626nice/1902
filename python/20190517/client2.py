@@ -16,4 +16,4 @@ while True:
     result = sk.recv(msg_len)
     print(result.decode())
 # 关闭套接字
-sk.close()
+sk.close() 

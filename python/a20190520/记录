@@ -1,0 +1,21 @@
+1、密码设置：
+    用明文的方式保存：如果数据库丢了，账户密码就丢失了
+    用hash算法对指定的明文密码进行哈希生成唯一的字符串（该字符串不可逆），保存到数据库
+    通过对明文密码+salt(盐)的方式，再次进行hash（增加了用户密码长度，也增加了破解的难度），保存到数据库
+    通过约束一个私钥（双方规定的随机的，必须是一个双方都需要知道）
+
+2、 可以设置指定的模块目录
+    import sys
+    sys.path.insert(0, '/etx/asdfasdf/asdfasfa')
+
+    pycharm报错，而python解释器运行不报错。
+    # pycharm软件会从sys.path中找 sys.path = ['/Users/qingyun/1902/python', '/Applications/PyCharm.app/Contents/helpers/pycharm_display', '/Library/Frameworks/Python.framework/Versions/3.7/lib/python37.zip', '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7', '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload', '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages', '/Applications/PyCharm.app/Contents/helpers/pycharm_matplotlib_backend']
+    # 当python解释器运行起来时，会把当前文件所在的目录放入到sys.path =['/Users/qingyun/1902/python/20190520', '/Users/qingyun/1902/python', '/Applications/PyCharm.app/Contents/helpers/pycharm_display', '/Library/Frameworks/Python.framework/Versions/3.7/lib/python37.zip', '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7', '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload', '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages', '/Applications/PyCharm.app/Contents/helpers/pycharm_matplotlib_backend']
+    import moduless
+
+
+3、当import 一个模块时，该模块会被执行一次
+    模块内__name__（当python解释器运行时会自动创建）的值：
+            __main__ ：当前模块直接运行（python解释器直接运行当前文件（模块））
+            当前模块名 ：当前模块被别的python文件导入
+4、

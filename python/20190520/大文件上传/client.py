@@ -10,9 +10,11 @@ sk = socket.socket()
 sk.connect(('', 8888))
 
 # 定义包头
-fileHead = {'filename':'mysql-5.7.20-macos10.12-x86_64.dmg', 'filesize': None, 'filePath': r'/Users/qingyun/Downloads'}
+fileHead = {'filename':'mysql-5.7.20-macos10.12-x86_64.dmg',
+ 'filesize': None, 'filePath': r'/Users/qingyun/Downloads'}
 # 拼接文件路径
-file_path = os.path.join(fileHead['filePath'], fileHead['filename'])
+file_path = os.path.join(fileHead['filePath'], 
+    fileHead['filename'])
 # 根据文件路径获取文件大小字节
 filesize = os.path.getsize(file_path)
 # 把文件大小放入包头中

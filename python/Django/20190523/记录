@@ -1,0 +1,30 @@
+1、Django安装：
+    终端通过pip命令安装：
+        pip3 install Django==2.2
+        pip install -i https://pypi.tuna.tsinghua.edu.cn/simple Django==2.2
+    Pycharm安装：
+       PyCharm-->preferences-->project-->project interpreter-->选择系统pythont解释器（对应版本）--->下边的加号-->输入要下载的模块
+
+2、新建Django项目
+    终端创建：
+        1、cd 到你要创建Django项目的目录
+        2、django-admin | django-admin.py startproject 项目名
+    PyCharm直接新建项目时选择Django（注意：项目存放的目录，解释器的选择）
+
+
+3、Django项目文件的介绍：
+    templates   PyCharm帮咱们自己创建的
+    manage.py   Django项目的统一入口，也叫管理入口
+    以项目名为名称的一个文件夹    项目的配置文件夹
+        settings.py    配置文件
+        urls.py        uri和函数的对应关联的文件
+        wsgi.py        跟socket有关系
+
+4、Django项目的启动：
+    1、在终端中启动：
+        1、cd 到django项目目录下
+            python3 manage.py runserver    ---> 默认ip和端口（8000）
+            python3 manage.py runserver 8080    ---> 指定端口
+            python3 manage.py runserver ip:8899    ---> 指定ip:端口
+
+    2、PyCharm启动

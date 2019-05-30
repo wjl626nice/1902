@@ -1,0 +1,21 @@
+    4、登录流程form表单需要的结构：
+        1、form表单自身需要属性，action="地址" 把表单数据提交到哪里。method='post|get' 规定怎么提交
+        2、各种输入控件都需要放入到form表单的标签内，并且都需要带name属性
+        3、提交form表单时 使用 type="submit":自动提交整个form表单
+
+        <form aciton="uri" method="post">
+            用户名：<input name="username" type="text" /><br>
+            密  码：<input name="password" type="password" /><br>
+            <input type="submit" value="登录" />
+        </form>
+    5、HTTP的get和post区别：
+        get从服务器获取数据，post把本地的数据传送给服务器
+        get明文可见的传参，post是不可见传参。
+    6、配置Django项目：
+        1、setting项目配置文件
+            1、templates文件夹路径（模板路径）
+            2、静态文件路径
+                  STATIC_URL  ----> 静态文件路径 别名
+                  STATICFILES_DIRS ---> 静态文件（css|js|image等）真实路径（物理）
+            3、当post提交时 需要先注释掉中间件(csrf）（django.middleware.csrf.CsrfViewMiddleware）
+

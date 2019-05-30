@@ -1,0 +1,20 @@
+Django
+    1、安装
+        1、Django版本选择：2.2
+        2、安装方法
+            1、终端  -----> Python双环境时 注意安装方式
+            2、PyCharm安装
+    2、创建Django项目
+        1、命令创建
+            1、cd到你要创建项目的目录
+            2、django-admin startproject 项目名  ---->在当前文件夹内创建了项目
+        2、PyCharm创建
+            新建项目时选择Django
+    3、启动Django
+        1、终端启动：
+              1、cd到Django的根目录
+              2、执行  python3 manager.py runserver
+                      python3 manager.py runserver  8080
+                      python3 manager.py runserver  ip:8080
+        2、在pycharm右上角点击绿色小三角
+

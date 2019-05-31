@@ -19,3 +19,22 @@
                   STATICFILES_DIRS ---> 静态文件（css|js|image等）真实路径（物理）
             3、当post提交时 需要先注释掉中间件(csrf）（django.middleware.csrf.CsrfViewMiddleware）
 
+    7、Django项目 web请求流程：
+        1、启动Django项目，等待客户端链接
+        2、客户端发起请求，链接Django
+        3、Django在urls.py文件中找到 uri对应的函数
+        4、执行改函数
+        5、返回响应
+
+    8、views.py文件
+        1、存放uri对应的函数
+            1、基本的配置
+                from django.shortucts import Httpresponse,render,redirect
+
+                Httpresponse(响应正文)
+                render(request,'模板文件',字典)  ---> 获取模板内容，根据第三个参数替换模板内的标签，返回html内容
+                redirect('url')  ---> 重定向（让浏览器跳转到另外一个页面）
+            2、request
+                request.method  ---> 获取http请求方法
+                request.POST  ----> 获取http 发送的post 参数
+

@@ -2,15 +2,15 @@ import socketserver
 
 
 def zongyuan():
-    return '<h1 style="color:#000">宗元</h1>'
+    return '<h1 style="color:#000">我是一个在黑暗中大雪纷飞的人哪</h1>'
 
 
 def yu():
-    return '瑜说我想静静！（既生瑜何生亮！）'
+    return '你再不来'
 
 
 def r404():
-    return '页面跑丢了！'
+    return '我就下雪了'
 
 
 class MyServer(socketserver.BaseRequestHandler):

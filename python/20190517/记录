@@ -1,0 +1,71 @@
+HTTP：由两部分组成：
+    request（请求）请求行、请求头、请求主体
+    response（响应） 响应行、响应头、响应主体
+
+XML:结构性的标记语言,可以自定义标签，可以用于不同语言不同项目之间传递数据
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<class>
+	<name>py1902</name>
+	<students>
+		<person>
+			<number>01</number>
+			<name>王冬冬</name>
+		</person>
+		<person>
+			<number>01</number>
+			<name>王冬冬</name>
+		</person>
+		<person>
+			<number>01</number>
+			<name>王冬冬</name>
+		</person>
+		<person>
+			<number>01</number>
+			<name>王冬冬</name>
+		</person>
+		<person>
+			<number>01</number>
+			<name>王冬冬</name>
+		</person>
+	</students>
+</class>
+
+JSON:是一种轻量级的数据交换格式
+json 模块：load、loads、dump、dumps
+json字符串格式：{"name":"段书园","age":18,"sex":"男"}
+
+黏包场景：
+    1、连续发送比较小的数据时会发生黏包，并且一起发送的时间比较短
+    2、两个recv接收数据时，一个接收的比较小
+    3、执行远程命令时，返回的c数据很大
+       ifconfig ---> 4096字节
+       4096-1024 ---> 3072字节
+       pwd ----> 100字节
+       3072 + 100 ---> 3172字节
+       3172-1024 ----> 2148字节
+       ....黏包
+第一个和第二个问题
+本质上是咱们不知道发送方发送的字节大小，造成接收时接收不完整，发生黏包
+
+解决方法：
+    通过睡眠增加两次发送的时间间隔（不推荐）
+    在发送数据之前先把该数据的长度发送给接收端，接收端先接收数据的大小，在根据大小接收数据（struct模块）
+
+
+网络发送的所有数据都叫数据包
+包里的数据都叫 报文
+所有的报文都有 包头
+
+我也可以自定义包头：
+    比如我想发送一个文件，那么可以定义个包头：
+        文件名称
+        文件大小
+        文件类型
+        文件存储的位置
+
+定义包头：
+    fileHeader = {'filename':'mysql-5.7.20-macos10.12-x86_64.dmg','filesize':3550000,'fileType':'dmg','filePath':'/Users/qingyun/Downloads'}
+
+发送包头                      接收方 接收4个字节
+send(fileHeader) 发送包头     接收方 根据4个字节转换接收包头
+send(报文)                   接收方 根据包头中的文件大小来接收

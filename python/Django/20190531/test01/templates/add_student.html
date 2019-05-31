@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加学生信息</title>
+</head>
+<body>
+    <h2>添加学生信息</h2>
+    <a href="/students_list">返回列表页</a>
+    <form action="/add_student" method="post">
+        <input type="text" name="student_name"><span style="color: red;">{{ msg }}</span><br>
+        <input type="submit" value="添加">
+    </form>
+</body>
+</html>

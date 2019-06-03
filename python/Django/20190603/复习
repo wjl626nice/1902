@@ -1,0 +1,66 @@
+views(视图)，一般在app应用下，用来定义uri对应的处理函数
+9、Django中的app(子系统):
+    app属于django项目，一个项目可以有多个app,目录为了实现不同业务代码的分离
+    app创建方式：
+        1、终端创建
+            1、cd到项目根目录
+            2、终端输入 python3  manage.py startapp app名字
+               通过终端创建的app跟django项目没有关系，需要安装：
+                   在项目配置文件setting.py中配置
+                   INSTALLED_APPS = [
+                        'django.contrib.admin',
+                        'django.contrib.auth',
+                        'django.contrib.contenttypes',
+                        'django.contrib.sessions',
+                        'django.contrib.messages',
+                        'django.contrib.staticfiles',
+                        'manager.apps.ManagerConfig',
+                        'app名字'
+                        或者
+                        'app名字.apps.app名字Config'  # 推荐
+                    ]
+        2、PyCharm创建app 创建项目时创建
+
+10、ORM 对象关系模型
+    让程序员通过操作对象的方式来操作数据库，无需会sql
+
+    1、ORM本质
+        类    ---->    表
+        对象  ---->     数据行
+        属性  ---->     表中的字段
+
+
+    2、ORM可以做的事：
+
+        操作数据表   ----->    创建表/删除表/修改表
+
+        操作数据行   ----->    数据的增删改查
+
+        不能创建数据库，需要手动创建。
+
+        使用django的ORM创建表的流程：
+            1、手动的创建一个数据库
+            2、在setting.py中配置数据库的链接信息
+                DATABASES = {
+                    'default': {
+                        'ENGINE': 'django.db.backends.mysql',
+                        'NAME': 'press',
+                        'HOST': '127.0.0.1',
+                        'USER': 'root',
+                        'PASSWORD': '123456',
+                        'PORT': 3306
+                    }
+                }
+            3、DJango1.1版本中自带链接数据库的模块，不支持python3，需要通过第三方模块替换MysqlDB(默认)
+               Django2.2版本中链接数据库的模块版本太低，链接不上，需要更新。pip3 install mysqlclient
+            4、在app应用下models.py模型文件中定义模型类，这个类必须继承models.Model（系统基模型）
+                class 类名(models.Model):
+                    ......
+            5、模型类写好后，需要执行才能在数据库中创建对应的表和字段：
+                1、cd项目根目录
+                2、python3 manage.py makemigrations  # 检测所有app中的所有models是否被更改，更改则记录（在当前的migrations文件夹下创建日志文件）
+                   python3 manage.py migrate  同步模型中的更改或者创建到数据库中
+
+
+
+

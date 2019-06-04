@@ -29,4 +29,9 @@ urlpatterns = [
     path('book_add', book_add),
     path('book_del', book_del),
     path('book_edit', book_edit),
+    # 作者管理
+    path('author_list', author_list),
+    path('author_add', author_add),
+    path('author_del', author_del),
+    path('author_edit', author_edit),
 ]

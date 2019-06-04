@@ -25,3 +25,12 @@ class Books(models.Model):
     # on_delete 两个表之间有关系了。那么其中一个表中的数据删除了 另外一个表怎么办呢
     # DO_NOTHING 什么事也不做
     press = models.ForeignKey(to="Press", on_delete=models.DO_NOTHING, default=1)
+
+    def __str__(self):
+        return "<books books_name--{}".format(self.books_name)
+# 作者模型
+class Author(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=35, null=False)
+    # 作者和书表建立多对多的关系
+    bookss = models.ManyToManyField(Books)

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>书列表</title>
+    <title>作者列表</title>
     <link rel="stylesheet" href="/static/css/bootstrap.css" />
     <style>
         *{
@@ -26,14 +26,12 @@
     </div>
     <div class="row" style="padding-top: 15px;">
         <div class="col-lg-3" style="margin-left: -15px;">
-
-            {% include "menu.html" with sign="book"%}
-
+            {% include 'menu.html' with sign="author" %}
         </div>
         <div class="col-lg-9">
             <div class="row">
                  <div class="col-lg-1">
-                    <a href="/book_add" class="btn btn-success">添加</a>
+                    <a href="/author_add" class="btn btn-success">添加</a>
                  </div>
                  <div class="col-lg-11">
                      <form>
@@ -46,20 +44,24 @@
                 <tr>
                   <th>序号</th>
                   <th>编号</th>
-                  <th>图书名称</th>
-                  <th>出版社</th>
+                  <th>作者名称</th>
+                  <th>作品</th>
                   <th>操作</th>
                 </tr>
               </thead>
               <tbody>
-                {% for book in books %}
-                <tr>
-                  <th scope="row">{{ forloop.counter }}</th>
-                  <td>{{ book.id }}</td>
-                  <td>{{ book.books_name }}</td>
-                  <td>{{ book.press.press_name }}</td>
-                  <td><a href="/book_edit?id={{ book.id }}">修改</a> <a href="/book_del?id={{ book.id }}">删除</a></td>
-                </tr>
+                {% for author in authors %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ author.id }}</td>
+                        <td>{{ author.name }}</td>
+                        <td>
+                            {% for book in author.bookss.all %}
+                                {{ book.books_name }}&nbsp;
+                            {% endfor %}
+                        </td>
+                        <td><a href="/author_edit?id={{ author.id }}">修改</a> <a href="/author_del?id={{ author.id }}">删除</a></td>
+                    </tr>
                 {% endfor %}
               </tbody>
             </table>

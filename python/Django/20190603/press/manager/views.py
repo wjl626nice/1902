@@ -230,3 +230,81 @@ def book_edit(request):
     # 获取所有出版社
     presss = Press.objects.all().order_by('-id')
     return render(request, 'book_edit.html', {'book': book_obj, 'presss': presss, 'error_msg': error_msg})
+
+def author_list(request):
+    """
+    作者管理
+    :param request:
+    :return:
+    """
+    # 获取所有的作者
+    authors = Author.objects.all().order_by('-id')
+    print(authors)
+    return render(request, 'author_list.html', {"authors": authors})
+
+def author_add(request):
+    if request.method == 'POST':
+        # 获取作者名字
+        author_name = request.POST.get('author_name')
+
+        # 获取作品的id
+        book_id = request.POST.get('book')
+
+        # 获取书的对象
+        # book = Books.objects.getlist(id=book_id)
+
+        # 获取选择书的id
+        booklist = request.POST.getlist('book')  # ['3','4'] 书的id
+
+        # 向作者表添加作者
+        author_obj = Author.objects.create(name=author_name)
+        # 通过关联关系器 bookss  让 作者对象和书对象建立关联
+        author_obj.bookss.set(booklist)  # booklist 可以有两种类型的值：对象列表  id列表
+        # 添加成功以后返回到列表
+        return  redirect('/author_list')
+    # 获取所有书
+    book_objs = Books.objects.all().order_by('-id')
+    return render(request, 'author_add.html', {"books": book_objs})
+
+def author_del(request):
+    """
+    删除作者
+    :param request:
+    :return:
+    """
+    id = request.GET.get('id')
+    if id:
+        # 删除作者
+        Author.objects.get(id=id).delete()
+        return redirect('/author_list')
+    else:
+        return HttpResponse('要删除的作者不存在！')
+
+def author_edit(request):
+    if request.method == 'POST':
+        # 获取要修改的作者id
+        id = request.POST.get('id')
+        # 获取作者的名字
+        new_name = request.POST.get('author_name')
+        # 获取作品idlist
+        idlist = request.POST.getlist('book')
+        # 获取作者对象
+        author = Author.objects.get(id=id)
+        # 改变旧的名字
+        author.name = new_name
+        # 执行当前作者的更新操作
+        author.save()
+        # 更新当前作者的对应的作品
+        author.bookss.set(idlist)
+        # 跳转到作者列表
+        return redirect('/author_list')
+
+    id = request.GET.get('id')
+    # 根据id获取作者信息
+    author = Author.objects.get(id=id)
+    # 获取所有书
+    book_objs = Books.objects.all().order_by('-id')
+    # print(book_objs)
+    # for book in book_objs:
+    #     print(book,book.books_name)
+    return render(request, 'author_edit.html', {'books': book_objs, 'author': author})

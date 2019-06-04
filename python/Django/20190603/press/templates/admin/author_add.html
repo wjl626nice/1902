@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加作者</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.css" />
+    <link rel="stylesheet" href="/static/css/bootstrap-select.css" />
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12"><h1>添加作者</h1><a href="/author_list">返回列表</a></div>
+    </div>
+    <div class="row">
+
+        <form class="form-inline" method="post" action="">
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label for="exampleInputName2">作品:</label>
+                    <select class="selectpicker" name="book" multiple>
+                        <option value="0" selected>请选择</option>
+                        {% for book in books %}
+                        <option value="{{ book.id }}">{{ book.books_name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group {% if error_msg %}has-error{% endif %}">
+                    <label for="exampleInputName2">作者名字:</label>
+                    <input type="text" name="author_name" class="form-control" placeholder="请输入作者名字！">
+                    <span>{{ error_msg }}</span>
+                </div>
+                <button type="submit" class="btn btn-default">添加</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.js"></script>
+<script src="/static/js/bootstrap.js"></script>
+<script src="/static/js/bootstrap-select.js"></script>
+<script src="/static/js/i18n/defaults-zh_CN.js"></script>
+<script>
+    $('.selectpicker').selectpicker('val','请选择');
+</script>
+</body>
+</html>

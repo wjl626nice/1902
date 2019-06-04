@@ -61,6 +61,12 @@ views(视图)，一般在app应用下，用来定义uri对应的处理函数
                 2、python3 manage.py makemigrations  # 检测所有app中的所有models是否被更改，更改则记录（在当前的migrations文件夹下创建日志文件）
                    python3 manage.py migrate  同步模型中的更改或者创建到数据库中
 
+11、出版社管理系统
+    出版社   id  press_name  describles
+    书      id  books_name  describles
+    作者     id  name  describles
 
+    出版社和书     --->    一  对 多
 
+    书和作者      ---->    多  对 多
 

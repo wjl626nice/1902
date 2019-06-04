@@ -27,4 +27,6 @@ urlpatterns = [
     # 图书管理
     path('book_list', book_list),
     path('book_add', book_add),
+    path('book_del', book_del),
+    path('book_edit', book_edit),
 ]

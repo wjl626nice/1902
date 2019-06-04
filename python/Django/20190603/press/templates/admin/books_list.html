@@ -59,7 +59,7 @@
                   <th scope="row">{{ forloop.counter }}</th>
                   <td>{{ book.id }}</td>
                   <td>{{ book.books_name }}</td>
-                  <td>1111</td>
+                  <td>{{ book.press.press_name }}</td>
                   <td><a href="/book_edit?id={{ book.id }}">修改</a> <a href="/book_del?id={{ book.id }}">删除</a></td>
                 </tr>
                 {% endfor %}

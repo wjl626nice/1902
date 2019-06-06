@@ -1,0 +1,5 @@
+<ul class="nav nav-pills nav-stacked nav-pills-stacked-example">
+  <li role="presentation" {% if sign == 'press' %}class="active"{% endif %}><a href="/press_list">出版社管理</a></li>
+  <li role="presentation" {% if sign == 'book' %}class="active"{% endif %}><a href="/book_list">图书管理</a></li>
+  <li role="presentation" {% if sign == 'author' %}class="active"{% endif %}><a href="/author_list">作者管理</a></li>
+</ul>

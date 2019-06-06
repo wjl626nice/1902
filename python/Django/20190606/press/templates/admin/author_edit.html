@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改作者</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.css" />
+    <link rel="stylesheet" href="/static/css/bootstrap-select.css" />
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12"><h1>修改作者</h1><a href="/author_list">返回列表</a></div>
+    </div>
+    <div class="row">
+
+        <form class="form-inline" method="post" action="/author_edit">
+            <input type="hidden" name="id" value="{{ author.id }}">
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label for="exampleInputName2">作品:</label>
+                    <select class="selectpicker" name="book" multiple>
+                        {% for book in books %}
+                            <!--作者写的书的列表集合对象 ---- author.bookss.all -->
+                            <!--查book对象 在作者写的书的列表集合对象中是否存在-->
+                           {% if book in author.bookss.all %}
+                               <option value="{{ book.id }}" selected>{{ book.books_name }}</option>
+                           {% else %}
+                                <option value="{{ book.id }}">{{ book.books_name }}</option>
+                           {% endif %}
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group {% if error_msg %}has-error{% endif %}">
+                    <label for="exampleInputName2">作者名字:</label>
+                    <input type="text" name="author_name" value="{{ author.name }}" class="form-control" placeholder="请输入作者名字！">
+                    <span>{{ error_msg }}</span>
+                </div>
+                <button type="submit" class="btn btn-default">修改</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.js"></script>
+<script src="/static/js/bootstrap.js"></script>
+<script src="/static/js/bootstrap-select.js"></script>
+<script src="/static/js/i18n/defaults-zh_CN.js"></script>
+</body>
+</html>

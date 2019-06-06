@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改图书</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.css" />
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12"><h1>修改图书</h1><a href="/book_list">返回列表</a></div>
+    </div>
+    <div class="row">
+
+        <form class="form-inline" method="post" action="/book_edit">
+            <input type="hidden" name="id" value="{{ book.id }}">
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label for="exampleInputName2">出版社:</label>
+                    <select class="form-control" name="press">
+                        {% for press in presss %}
+                        <option value="{{ press.id }}" {% if press.id == book.press_id %}selected{% endif %} >{{ press.press_name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group {% if error_msg %}has-error{% endif %}">
+                    <label for="exampleInputName2">图书名字:</label>
+                    <input type="text" name="book_name" value="{{ book.books_name }}" class="form-control" placeholder="请输入图书名字！">
+                    <span>{{ error_msg }}</span>
+                </div>
+                <button type="submit" class="btn btn-default">修改</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

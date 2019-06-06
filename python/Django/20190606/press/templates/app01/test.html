@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试模板标签</title>
+</head>
+<body>
+{{ a }}{{ name }}{{ name_english }}{{ age }}
+<br>
+{{ name_list }} {{ name_list.0 }}
+<br>
+{{ dicts }}  {{ dicts.name }} {{ dicts.color.1 }}
+{{ adsad }}
+<br>
+{{ xiaonai }}
+可爱的{{ xiaonai.name }}，今年{{ xiaonai.age }}岁了
+{{ dogs }}
+{{ dogs.0.name }}
+<br>
+{% for dog in dogs %}
+    {{ dog.name }}
+{% endfor %}
+
+{% autoescape off %}
+    {{ body }}
+{% endautoescape %}
+<hr> <!--Django内置过滤器-->
+{{ name_english|upper }}
+<!--default是一个函数，接收竖杠前边的值，和冒号后边的值 作为参数。-->
+<br>
+{{ abcd|default:'变量不存在！' }}
+</body>
+</html>

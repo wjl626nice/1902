@@ -2,28 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92878f23-67f6-4ebf-9d9d-b266b4295509" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/20190523/.idea/20190523.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190523/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190523/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190523/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190523/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190523/abcd/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190523/abcd/aaa.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190523/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190523/test01/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190523/test01/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190523/test01/.idea/test01.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190523/test01/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190523/test01/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190523/test01/templates/admin/dengshuai.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190523/test01/templates/admin/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190523/test01/testPath测试.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190523/复习" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20190523/记录" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/dataSources/b399036e-87ad-4dfc-a1d7-001c73c2d481.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20190531/test01/sudo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20190521/3访问不同的url通过函数处理响应不同内容----web服务器.py" beforeDir="false" afterPath="$PROJECT_DIR$/../20190521/3访问不同的url通过函数处理响应不同内容----web服务器.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20190521/6wsgiref操作浏览器----web服务器.py" beforeDir="false" afterPath="$PROJECT_DIR$/../20190521/6wsgiref操作浏览器----web服务器.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20190521/template/yu.html" beforeDir="false" afterPath="$PROJECT_DIR$/../20190521/template/yu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20190531/test01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/20190531/test01/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20190603/press/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/20190603/press/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,6 +73,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -120,16 +104,17 @@
       <updated>1558591330579</updated>
       <workItem from="1558591336934" duration="1189000" />
       <workItem from="1558594458828" duration="1945000" />
+      <workItem from="1559800293559" duration="2000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3134000" />
+    <option name="totallyTimeSpent" value="3136000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2536349" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25767368" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />

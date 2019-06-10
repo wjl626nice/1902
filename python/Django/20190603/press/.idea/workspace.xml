@@ -4,100 +4,8 @@
     <list default="true" id="69bd9842-8b4c-4239-b0ff-3ed413ea6e7a" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/../../../.idea/dataSources/b399036e-87ad-4dfc-a1d7-001c73c2d481.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../20190531/test01/sudo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/migrations/0011_auto_20190604_0614.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/css/bootstrap-select.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/css/bootstrap-select.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/css/bootstrap-select.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/fonts/icomoon.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/bootstrap-select" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/bootstrap-select.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/bootstrap-select.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/bootstrap-select.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-ar_AR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-ar_AR.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-bg_BG.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-bg_BG.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-cs_CZ.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-cs_CZ.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-da_DK.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-da_DK.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-de_DE.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-de_DE.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-en_US.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-en_US.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-es_CL.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-es_CL.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-es_ES.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-es_ES.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-et_EE.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-et_EE.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-eu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-eu.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-fa_IR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-fa_IR.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-fi_FI.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-fi_FI.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-fr_FR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-fr_FR.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-hr_HR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-hr_HR.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-hu_HU.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-hu_HU.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-id_ID.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-id_ID.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-it_IT.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-it_IT.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-ja_JP.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-ja_JP.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-kh_KM.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-kh_KM.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-ko_KR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-ko_KR.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-lt_LT.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-lt_LT.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-nb_NO.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-nb_NO.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-nl_NL.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-nl_NL.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-pl_PL.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-pl_PL.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-pt_BR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-pt_BR.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-pt_PT.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-pt_PT.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-ro_RO.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-ro_RO.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-ru_RU.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-ru_RU.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-sk_SK.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-sk_SK.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-sl_SI.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-sl_SI.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-sv_SE.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-sv_SE.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-tr_TR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-tr_TR.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-ua_UA.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-ua_UA.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-vi_VN.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-vi_VN.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-zh_CN.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-zh_CN.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-zh_TW.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap3/js/i18n/defaults-zh_TW.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/author_add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/author_edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/author_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/menu.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../20190531/test01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190531/test01/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/973132bb-8910-4afd-8282-5183d2d330cb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/973132bb-8910-4afd-8282-5183d2d330cb.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/manager/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/manager/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/press/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/press/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/books_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/books_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/press_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/press_list.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -243,53 +151,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="press" type="b2602c69:ProjectViewProjectNode" />
-              <item name="press" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="press" type="b2602c69:ProjectViewProjectNode" />
-              <item name="press" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="press" type="b2602c69:ProjectViewProjectNode" />
-              <item name="press" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap3" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="press" type="b2602c69:ProjectViewProjectNode" />
-              <item name="press" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap3" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="press" type="b2602c69:ProjectViewProjectNode" />
-              <item name="press" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap3" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="press" type="b2602c69:ProjectViewProjectNode" />
-              <item name="press" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="press" type="b2602c69:ProjectViewProjectNode" />
-              <item name="press" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -362,12 +224,20 @@
       <updated>1559522737533</updated>
       <workItem from="1559522741962" duration="20551000" />
       <workItem from="1559608644698" duration="6946000" />
-      <workItem from="1559628154241" duration="11103000" />
+      <workItem from="1559628154241" duration="11756000" />
     </task>
+    <task id="LOCAL-00001" summary="第四讲 完善出版社管理系统">
+      <created>1559639824597</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1559639824597</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38600000" />
+    <option name="totallyTimeSpent" value="39253000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="714" extended-state="6" />
@@ -377,7 +247,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32475883" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32475883" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -424,6 +294,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="第四讲 完善出版社管理系统" />
+    <option name="LAST_COMMIT_MESSAGE" value="第四讲 完善出版社管理系统" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

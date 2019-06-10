@@ -25,9 +25,58 @@
     {{ body }}
 {% endautoescape %}
 <hr> <!--Django内置过滤器-->
-{{ name_english|upper }}
+{{ name_english|upper|lower|length }}
 <!--default是一个函数，接收竖杠前边的值，和冒号后边的值 作为参数。-->
 <br>
-{{ abcd|default:'变量不存在！' }}
+{{ abcd|default:'变量不存在！' }} default(abcd,'变量不存在！')
+{{ name_english|length }}  length(name_english)
+<br>
+{{ filesize|filesizeformat }}
+<br>
+{{ name_list|slice:"1:3" }}
+<br>
+{{ dt|date:'Y-m-d H:i:s' }}
+<br>
+{{ dtt|date:'Y-m-d H:i:s' }}
+{{ strs|safe }}
+<br>
+<!--{{ alertstr|safe }}-->
+{{ describles|truncatechars:6 }}
+{{ words|truncatewords:3 }}
+{{ zhwords|truncatewords:2 }}
+<br>
+{{ zhwords|cut:' ' }}
+{{ name_list|join:'和' }}
+{{ starttime|timesince:endtime }}
+<br>
+{% load myFilter %}
+{{ name|aabb }}
+{{ zhwords|rp:"衰,帅" }}
+<br>
+<!--内置标签-->
+{% for name in name_list %}
+    {{ name }}
+{% endfor %}
+<br>
+{% for name in name_lists %}
+    {{ name }}
+{% empty %}
+    暂无数据
+{% endfor %}
+<br>
+{{ zhangpengxiang }}
+{% with  zpx=zhangpengxiang %}
+    {{ zpx }} {{ zpx|length }}
+{% endwith %}
+{# 模板标签注释 #}
+<form action="" method="post">
+    {% csrf_token %}
+    <input type="text" name="ab">
+    <input type="submit" value="提交">
+</form>
+<br>
+{{ names }}
+{{ names.name }}
+{{ names.get }}
 </body>
 </html>

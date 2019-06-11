@@ -145,7 +145,8 @@ iterable 可迭代的
 					<img src="{{ myabc }}" style="width: 50px;height: 50px;">
 					<img src="{{ myabc }}" style="width: 50px;height: 50px;">
 					<img src="{{ myabc }}" style="width: 50px;height: 50px;">
-
+				自定义标签：simple_tag
+				自定义包含标签：inclusion_tag
 
 
 

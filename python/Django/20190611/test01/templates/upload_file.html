@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="/upload_file" method="post" enctype="application/x-www-form-urlencoded">
+        <input name="username" type="text"><br>
+        <input name="pwd" type="password"><br>
+        <input type="submit" value="提交">
+    </form>
+    <form action="/upload_file" method="post" enctype="multipart/form-data">
+        <input type="file" name="upload">
+        <input type="file" name="upload1">
+        <input type="file" name="upload2">
+        <input type="file" name="upload3">
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>

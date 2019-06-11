@@ -78,5 +78,27 @@
 {{ names }}
 {{ names.name }}
 {{ names.get }}
+<br>
+{# 自定义标签 #}
+{% load myTags %}
+
+{% pi %}
+{% pis 'a' '4' 'c' '3' "4" 'ab' %}
+<br>
+{% piss 'a' '4' 'c' '3' "4" 'ab' name='亚坤' age='17' sex='男' %}
+<br>
+{% tab %}
+{% tabs 5 6 %}
+{% tabs 9 9 %}
+<img src="/static/images/1.jpg" style="width: 50px;height: 50px;">
+{% load static %}
+<img src="{% static 'images/1.jpg' %}" style="width: 50px;height: 50px;">
+
+{% static 'images/1.jpg' as myabc %}
+<img src="{{ myabc }}" style="width: 50px;height: 50px;">
+<img src="{{ myabc }}" style="width: 50px;height: 50px;">
+<img src="{{ myabc }}" style="width: 50px;height: 50px;">
+<img src="{{ myabc }}" style="width: 50px;height: 50px;">
+<img src="{{ myabc }}" style="width: 50px;height: 50px;">
 </body>
 </html>

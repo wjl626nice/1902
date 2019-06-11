@@ -1,0 +1,12 @@
+测试包含标签
+<table border="1px">
+    {% for row in lists %}
+        <tr>
+            {% for column in row %}
+                <td>
+                    {{ column }}
+                </td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>

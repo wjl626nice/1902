@@ -116,4 +116,46 @@ iterable 可迭代的
 			注意：在Django模板中不支持 {% if 3>1<3 %} 连续判断
 				 字典的方法名和属性名重复时，并且在模板中被调用了。那么属性的优先级大于方法。
 
+
+			母版：
+				1、先定义母版，在母版中定义整体布局结构，然后定义块
+				2、子模板继承母版，{% extends '母版名称' %}
+				3、子模板中定义当前模板的内容块。通过 块名查找方式，替换掉母版中对应的块。
+			
+			块（block)：
+				必须在母版中定义块，{% block 块名%}内容(可以有 也可以没有){% endblock%}
+				然后在子模板中定义相同的块，然后替换母版中有同样名称的块。
+				{% block title %}
+				    出版社管理
+				{% endblock %}
+
+			组件 (include): 
+				可以布局页面，把一个页面的各个部分 拆分到各个独立的子页面中。哪个模板需要就引入那些子页面。
+				{% include '组件路径' %}
+
+			静态文件
+				单文件路径处理
+					{% load static %}
+					<img src="{% static 'images/1.jpg' %}" style="width: 50px;height: 50px;">
+				多文件路径处理
+					{% load static %}
+					{% static 'images/1.jpg' as myabc %}
+					<img src="{{ myabc }}" style="width: 50px;height: 50px;">
+					<img src="{{ myabc }}" style="width: 50px;height: 50px;">
+					<img src="{{ myabc }}" style="width: 50px;height: 50px;">
+					<img src="{{ myabc }}" style="width: 50px;height: 50px;">
+					<img src="{{ myabc }}" style="width: 50px;height: 50px;">
+
+
+
+
+
+
+
+
+
+
+
+
+
 15、模型

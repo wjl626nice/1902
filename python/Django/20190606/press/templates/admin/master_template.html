@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}母版{% endblock %}</title>
+
+    {# 静态文件的引入方式 #}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        ul{
+            padding: 0px;
+            margin: 0px;
+        }
+        li{
+            padding: 0px;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12" style="height:100px;background-color: pink;"><h1>出版社管理系统</h1></div>
+    </div>
+    <div class="row" style="padding-top: 15px;">
+        <div class="col-lg-3" style="margin-left: -15px;">
+            {# 组件的使用， with 后边跟着 关键词变量，传递到menu.html模板中。 #}
+           {% include 'menu.html' with sign="press" %}
+        </div>
+        <div class="col-lg-9">
+            <div class="row">
+                 <div class="col-lg-1">
+
+                    <a href="/press_add" class="btn btn-success">添加</a>
+                 </div>
+                 <div class="col-lg-11">
+                     <form>
+                         <input type="text"  style="width: 200px;display: inline" name="kw" class="form-control" placeholder="关键词！">
+                         <input type="submit" class="btn btn-default" value="查询">
+                     </form>
+                 </div>
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>序号</th>
+                  <th>编号</th>
+                  <th>出版社名称</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% block page_main %}
+                    <tr>
+                        <td align="center" colspan="5">暂无内容</td>
+                    </tr>
+                {% endblock %}
+              </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+</div>
+</body>
+</html>

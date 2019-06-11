@@ -131,5 +131,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     # "/User/qingyun/1902/python/Django/20190603/press/static/bootstrap3"
-    os.path.join(BASE_DIR, 'static', 'bootstrap3')
+    os.path.join(BASE_DIR, 'static', 'bootstrap3'),
+    os.path.join(BASE_DIR, 'static', 'admin')
 ]

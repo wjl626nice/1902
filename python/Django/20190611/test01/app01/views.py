@@ -1,10 +1,14 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
 from django.views import View
+from django import urls
 # JsonResponse 响应json字符串
 from django.http import JsonResponse, HttpResponse as Response
 import json
 # 引入django数据库操作类
 from django.db import connection
+
+# 导入app02中的模型
+from app02.models import *
 
 # Create your views here.
 # request请求对象
@@ -24,6 +28,11 @@ class add_books(View):
     def get(self, request):
         return  render(request, 'add_book.html')
     def post(self, request):
+        print(request.POST)
+        username = request.POST.get('username')
+        print(username)
+        print(request.POST.getlist('username'))
+
         return HttpResponse('类的post请求！')
 
 def get_attr_by_request(request):
@@ -112,6 +121,7 @@ def request_method(request):
     return HttpResponse(json.dumps(dicts))
 
 def response_json(request):
+    print(request.is_ajax(), 'sss')
     # connection 链接对象（Django启动时已经自动创建）
     with connection.cursor() as cursor:
         # cursor 实际要操作的对象。
@@ -119,7 +129,7 @@ def response_json(request):
         cursor.execute("SELECT * FROM manager_press ")
         # 从结果集中取出所有数据
         row = cursor.fetchall()
-    # JsonResponse 自动把数据转换成json字符串
+    # JsonResponse 自动把数据转换成json字符串，转换的数据非 字典时需要设置 safe=False
     return JsonResponse(row, safe=False)
 
 def test_ajax(request):
@@ -157,6 +167,55 @@ def get_response(request):
         my_data = f.read()
     response = Response(my_data, content_type='application/vnd.ms-excel')
     response['Content-Disposition'] = 'attachment; filename="foo.xls"'
-
+    # 设置编码
+    # response.charset = 'utf-8 '
 
     return response
+
+def get_render(request):
+    # return render(request, 'test_ajax.html')
+
+    # 上边和下边执行的结果一样
+
+    # 引入django的模板引擎中的模块 loader
+    from django.template import loader
+    # 获取模板的内容,模板引擎对象
+    content = loader.get_template('test_ajax.html')
+    print(content, type(content))
+    print(content.render)
+    print(help(content.render))
+
+    # 获取html内容，并且把html内的标签给解析替换，最终返回html内容。
+    content = content.render(context={'name': 111}, request=request)
+    # print(content)
+    return HttpResponse(content)
+
+def get_redirect(request):
+    # 重定向
+    # return redirect('/get_render')
+    # return redirect(Student)  模型名
+    # return redirect(get_render) 视图名
+
+    # 上下结果一样。都能实现重定向
+
+    # 实例化一个响应对象
+    # response = Response()
+    # response.status_code = 307
+    # response['Location'] = '/get_render'
+    # return response
+
+    # import app01
+    # urls.path('/zbc', app01.views.get_render)
+    # return redirect('zbc')
+
+    # 通过视图名找到视图对应的uri
+    print(urls.reverse(get_attr_by_request))
+
+
+    # 获取所有数据
+    infors = Student.objects.filter(id=1)
+    print(infors)
+    # 获取当前项目的uri跟视图映射的文件
+    print(urls.get_urlconf())
+
+    return HttpResponse('aaa')

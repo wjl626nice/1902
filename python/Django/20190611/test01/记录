@@ -55,7 +55,77 @@ ajax请求流程：
             get_host()    获取主机名（域名）
             get_full_path 获取完整路径 （uri+参数）
             is_secure()   判断是否是https 请求    http False，https True
-            is_ajax()     判断是否是ajax请求
+            is_ajax()     判断是否是ajax请求。如果请求是通过XMLHttpRequest发起的，并且
+                          请求头中包含 X-Requested-With：XMLHttpRequest，则is_ajax判断
+                          为True。大部分的js框架封装的ajax都自带本key:value。原生ajax是不会
+                          发送这个key:value。需要自己添加。
+            getlist()     获取一个name的多个值：request.POST.getlist()
+    上传图片案例：
+        print(request.FILES)
+        # 获取上传的文件信息
+        print(dir(request.FILES))
+        # 获取文件对象
+        print(request.FILES['upload'], type(request.FILES['upload']))
+        # 获取上传文件的名字
+        print(request.FILES['upload'].name)
+        # 获取上传文件的大小
+        print(request.FILES['upload'].size)
+        # 获取文件类型
+        print(request.FILES['upload'].content_type)
+
+        filename = request.FILES['upload'].name
+        # 自己写一些逻辑，比如 只允许上传图类
+
+        with open(filename, 'ab') as f:
+            for chunk in request.FILES['upload'].chunks(): # chunks 每循环一次从内存中区一小块
+                # 把从内存中读取的块保存到文件中。
+                f.write(chunk)
+
+
+    response对象:
+        request对象Django自动根据HttpRequest类创建的，而response对象是我们自己手动创建的。
+        使用：
+            传递字符串：
+                from django.http import HttpResponse as hr
+                return hr('字符串')
+            设置或者删除响应头
+                response = hr()
+                response['content_type'] = 'image/png'
+                del response['content_type']
+                return response
+            属性
+                response.content: 设置响应正文
+                response.status_code: 设置响应状态码
+                response.charset: 设置响应内容的编码
+    JsonResponse对象：
+        JsonResponse是HttpResponse的子类，专门用来生成json数据，用于前后端分离。
+        from django.http import JsonResponse
+        return JsonResponse({'name':13,'age':23})
+
+        默认情况下（JsonResponse）只能传字典，如果非要传非字典类型的值时，设置参数
+        safe=False.
+        from django.http import JsonResponse
+        return JsonResponse([2,3,4,5], safe=False)
+
+    Django shortcut functions
+
+        render()
+            结合一个给定的模板，在把参数传递到模板中，并返回一个渲染后的HttpResponse对象
+            参数：
+                request: 用于生成响应对象
+                template_name: 模板路径
+                context: 传递到模板中的字典。默认空
+                content_type: 响应正文的内容类型。xml  image text/html
+                status: 响应状态码
+                using:  用于加载模板的模板引擎名称
+
+        redirect()
+            重定向
+            参数：
+                to:
+                    一个模型：内部会自动调用模型本身的get_absolute_url()
+                    一个视图：可以带参数，自动调用urls.reverse(视图名) 方法
+                    一个url: 比如：/add_books 或者是一个完整的url
 
 
 

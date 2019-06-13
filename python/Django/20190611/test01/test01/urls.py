@@ -34,5 +34,10 @@ urlpatterns = [
     path('get_response', views.get_response),
     # 测试ajax请求
     path('test_ajax', views.test_ajax),
+    # 测试响应结果
     path('response_json', views.response_json),
+    # 测试 render
+    path('get_render', views.get_render),
+    # 测试重定向
+    path('get_red', views.get_redirect),
 ]

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试ajax</title>
+</head>
+<body>
+asdfa
+asdfasdfasdfas地方
+as dfasdf按位
+asdfas的
+的
+<div id="table"></div>
+<input type="button" onclick="check()" value="提交">
+<script>
+    function check() {
+        //创建一个ajax对象
+        xhr = new XMLHttpRequest()
+        //设置请求方法和请求地址 (就像浏览器地址栏输入地址)
+        xhr.open('get', '/response_json')
+        //在请求状态改变时触发。
+        var i =  1
+        xhr.onreadystatechange = function (e) {
+            /*console.log(e)
+            console.log(i)
+            i += 1*/
+            // 判断是否请求成功
+            if(e.target.readyState == 4 && e.target.status == 200){
+                //获取响应内容（响应主体）
+                console.log(e.target.response)
+                data = e.target.response;
+                //把json字符串转换成json对象
+                presss = JSON.parse(data);
+                // presss.length 获取 元素个数
+                var table = '<table><tr><td>编号</td><td>出版社名字</td></tr>'
+                for(var i =0; i < presss.length; i++){
+                    press = presss[i];
+                    table = table + '<tr><td>'+ press[0] +'</td><td>'+ press[1] +'</td></tr>';
+                }
+                table = table + '</table>';
+
+                // 获取标签容器
+                divc = document.getElementById('table');
+                // 把拼接的table内容放入到页面的div容器中。
+                divc.innerHTML = table;
+            }
+
+        }
+        //发送请求  （相当于浏览器地址回车）
+        xhr.send()
+    }
+</script>
+</body>
+</html>

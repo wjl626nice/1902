@@ -32,4 +32,7 @@ urlpatterns = [
     path('request_method', views.request_method),
     # 测试响应对象
     path('get_response', views.get_response),
+    # 测试ajax请求
+    path('test_ajax', views.test_ajax),
+    path('response_json', views.response_json),
 ]

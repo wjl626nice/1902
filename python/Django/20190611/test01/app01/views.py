@@ -1,7 +1,10 @@
 from django.shortcuts import render, HttpResponse
 from django.views import View
-from django.http import HttpResponse as Response
+# JsonResponse 响应json字符串
+from django.http import JsonResponse, HttpResponse as Response
 import json
+# 引入django数据库操作类
+from django.db import connection
 
 # Create your views here.
 # request请求对象
@@ -107,6 +110,20 @@ def request_method(request):
     }
     # json.dumps(dicts) 把字典转换成 json字符串
     return HttpResponse(json.dumps(dicts))
+
+def response_json(request):
+    # connection 链接对象（Django启动时已经自动创建）
+    with connection.cursor() as cursor:
+        # cursor 实际要操作的对象。
+        # 获取出版社的所有信息
+        cursor.execute("SELECT * FROM manager_press ")
+        # 从结果集中取出所有数据
+        row = cursor.fetchall()
+    # JsonResponse 自动把数据转换成json字符串
+    return JsonResponse(row, safe=False)
+
+def test_ajax(request):
+    return render(request, 'test_ajax.html')
 
 def get_response(request):
     # 第一种创建response对象

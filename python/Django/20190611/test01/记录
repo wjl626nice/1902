@@ -1,0 +1,63 @@
+ajax请求流程：
+    1、在浏览器中呈现一个页面，在页面中实现ajax代码：
+        //创建一个ajax对象
+        xhr = new XMLHttpRequest()
+        //设置请求方法和请求地址 (就像浏览器地址栏输入地址)
+        xhr.open('get', '/response_json')
+        //在请求状态改变时触发。
+        var i =  1
+        xhr.onreadystatechange = function (e) {
+            // 判断是否请求和响应成功
+            if(e.target.readyState == 4 && e.target.status == 200){
+                // 写自己的业务逻辑
+                // e.target.response  代表服务器响应的正文
+            }
+        }
+        //发送请求  （相当于浏览器地址回车）
+        xhr.send()
+    2、创建一个接收ajax请求的后端视图，在视图中实现要传递的数据，并且以json格式返回
+
+
+
+
+12、路由系统
+13、视图系统（views）
+    一个视图函数（类）,称为视图，其实就是python的一个简单函数（类）。
+    视图的功能：接收web的请求并且处理以后响应
+
+    响应：一个网页（text/html）、一个404错误、一个字符串文档、或者是一张图片等
+
+    无论在视图中写任何的业务逻辑，视图必须响应。视图文件可以在项目目录下随便放，只要在urls.py文件中能引入就可以。
+
+    views.py的文件名，可以随便起。之所以叫views 是我们之间的约定。
+
+    CBV 和 FBV
+        CBV（class base views）：基于类的视图
+        FBV（function base views）：基于函数的视图
+
+    request对象和response对象
+        request对象：当一个页面被请求时，Django会创建一个包含本次请求的http结构信息的HttpRequest对象。
+        Django会将这个对象传递给视图函数，一般视图函数约定使用 request变量来接收这个对象。
+
+        请求对象相关的属性：
+            path_info     客户端访问的资源 uri
+            method        请求方法
+            GET           获取get请求的所有参数，放入字典
+            POST          获取post请求的所有参数，放入字典
+            body          请求体，byte类型，request.POST的数据是从body中提取的（如果想测试body 必须是post请求）。前后端分离时会用
+            COOKIES       获取所有cookie
+            FILES         获取上传文件（要form表单 必须是post请求，并且enctype格式必须是multipart/form-data）
+            SESSION       获取所有的session
+            META          获取请求头（HTTP_REFERER # 来源页
+                                    HTTP_USER_AGENT # 可以判断用户访问用的设备
+                                    REMOTE_ADDR # ip地址，可以获取用户所在的城市）
+        方法：
+            get_host()    获取主机名（域名）
+            get_full_path 获取完整路径 （uri+参数）
+            is_secure()   判断是否是https 请求    http False，https True
+            is_ajax()     判断是否是ajax请求
+
+
+
+14、模板
+15、模型

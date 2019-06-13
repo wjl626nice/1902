@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee0e6573-4f9e-446a-a83d-0eb4c7aa9f0b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Django/20190606/记录" beforeDir="false" afterPath="$PROJECT_DIR$/Django/20190606/记录" afterDir="false" />
-    </list>
+    <list default="true" id="ee0e6573-4f9e-446a-a83d-0eb4c7aa9f0b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +83,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Django/20190606/记录">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="352">
@@ -96,15 +93,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Django/20190606/press/app01/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
-              <caret line="41" selection-start-line="16" selection-start-column="4" selection-end-line="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Django/20190606/press/app01/templatetags/myTags.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
@@ -116,8 +104,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Django/20190606/press/templates/app01/test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="69" column="13" lean-forward="true" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
+            <state relative-caret-position="1518">
+              <caret line="69" column="13" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -448,6 +436,7 @@
       <workItem from="1559800840496" duration="2618000" />
       <workItem from="1560158350017" duration="2165000" />
       <workItem from="1560223171963" duration="714000" />
+      <workItem from="1560245469254" duration="920000" />
     </task>
     <task id="LOCAL-00001" summary="网络编程">
       <created>1557826349044</created>
@@ -547,11 +536,18 @@
       <option name="project" value="LOCAL" />
       <updated>1560223225759</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Django 第六讲视图 request对象">
+      <created>1560245497083</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1560245497083</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="311784000" />
+    <option name="totallyTimeSpent" value="312704000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -563,10 +559,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="712" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="714" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7745098" visible="true" weight="0.27705976" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7745098" visible="true" weight="0.28109854" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32960895" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.5008104" />
@@ -647,7 +643,8 @@
     <MESSAGE value="Django 第五讲模板" />
     <MESSAGE value="Django 第六讲模板 标签 过滤器 自定义标签 自定义过滤器" />
     <MESSAGE value="Django 第六讲模板 自定义标签 包含标签 内置标签  母版 块 静态文件 组件" />
-    <option name="LAST_COMMIT_MESSAGE" value="Django 第六讲模板 自定义标签 包含标签 内置标签  母版 块 静态文件 组件" />
+    <MESSAGE value="Django 第六讲视图 request对象" />
+    <option name="LAST_COMMIT_MESSAGE" value="Django 第六讲视图 request对象" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -989,24 +986,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Django/20190606/记录">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Django/20190606/press/templates/app01/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="69" column="13" lean-forward="true" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Django/20190606/press/app01/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="41" selection-start-line="16" selection-start-column="4" selection-end-line="41" />
+        <state relative-caret-position="1518">
+          <caret line="69" column="13" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1014,6 +997,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="20" column="23" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django/20190606/press/app01/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="28" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django/20190606/记录">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
         </state>
       </provider>
     </entry>

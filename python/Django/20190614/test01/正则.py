@@ -106,10 +106,24 @@ result = re.findall('href="(.*)"\s', html, re.M)
 print(result, type(result))
 
 
+#注意 findall优先级问题
+
 result = re.findall('www.(baidu|taobao).com', 'www.baidu.comwww.taobao.com')
-print(result,type(result))
+print(result, type(result))  # ['baidu', 'taobao']  # 因为findall会优先把大原子匹配的结果返回，如果想返回整体正则匹配的结果呢？取消小括号作用。
 
+result = re.findall('www.(?:baidu|taobao).com', 'www.baidu.comwww.taobao.com')
+print(result, type(result)) # ['www.baidu.com', 'www.taobao.com']
 
+# split优先级问题
+
+ret = re.split('[a-z]', '1a2b3c5d6')
+print(ret)  # ['1', '2', '3', '5', '6']
+
+ret = re.split('([a-z])', '1a2b3c5d6')
+print(ret)  # ['1', 'a', '2', 'b', '3', 'c', '5', 'd', '6']
+
+# 通过split拆分的字符串，根据正则规则中有没有小括号 执行的结果也不一样
+# 如果有小括号 会把 被拆分的字符一起放入列表返回。
 
 
 

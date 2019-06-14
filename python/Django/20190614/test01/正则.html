@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+    var  pattern = /13633822725/;
+    var str = "asabca3rr123633822725sdf8y9q3wsbbrnjkssbbdNbnjkf"
+    console.log(str.search(pattern))   // -1不存在
+    str = str.replace(/sbb/,'bbs')
+    console.log(str)
+    str = str.replace(/sbb/,'bbs')
+    console.log(str)
+    console.log(str.replace(/nb/i,'sb'))  // 不区分大小写
+
+    // 通过字符组匹配手机号
+    var  pattern = /1[345789][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]/;
+    //var  pattern = /(1[345789][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9])/;
+    var str = "asabca3rr13633822725sdf8y9q3wsbbrnjkssbbdNbnjkf"
+    console.log(str.search(pattern))
+    var str = 'a1b4c6d'
+    // 检测是否存在数字
+    console.log(str.search(/[0-9]/g))
+
+    console.log(/a([0-9])/.exec(str))
+    // 查找字符串中所有的数字
+    // console.log(str.match(/[0-9]/g))
+    console.log(str.match(/\d/g))
+    var str = "asabca3rr13633822725sdf8y9q3wsbbrnjkssbbdNbnjkf"
+    // 匹配手机号
+    console.log(str.match(/1[3456789]\d*/))
+
+    var str = "asabca3rr21363382272533sdf8y9q3wsbbrnjkssbbdNbnjkf"
+    // 匹配手机号
+    console.log(str.match(/1[3456789]\d{9}/))
+
+    console.log('13sss24sssaa152ba'.match(/1[3456789]2*/g))
+    console.log('13sss24sssaa152ba162223222'.match(/1[3456789]2*/g))
+
+    var str = 'adfasdfa34543@xuxin2019@126.cnsdfadfgad#W$%dsfdfg@dsf4'
+    // [a-zA-Z0-9_] == \w
+    console.log(str.match(/[a-zA-Z0-9_]+@\w+\.(com|org|cn)/))
+
+    console.log('恒大恒河恒星恒竖'.match(/恒./g))
+    console.log('恒大恒河恒星恒 '.match(/恒.$/g))
+    console.log('牛超和牛群和牛魔王和牛墩仔 '.match(/牛.?/g))
+    console.log('牛超和牛群和牛魔王和牛墩仔 '.match(/牛.*/g))
+</script>
+</body>
+</html>

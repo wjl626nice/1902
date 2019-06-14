@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3968bf96-34cd-42ee-8747-24b324e3c67b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app02/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app02/migrations/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app01/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app01/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/add_book.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/add_book.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/test_ajax.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/test_ajax.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test01/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/test01/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test01/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/test01/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/记录" beforeDir="false" afterPath="$PROJECT_DIR$/记录" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,19 +51,16 @@
         <entry file="file://$PROJECT_DIR$/test01/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="506">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test01/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="36" column="12" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="36" selection-end-column="12" />
-              <folding>
-                <element signature="e#630#662#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-167">
+              <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -79,7 +68,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app01/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
+            <state relative-caret-position="4312">
               <caret line="196" column="32" selection-start-line="196" selection-start-column="22" selection-end-line="196" selection-end-column="32" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
@@ -91,7 +80,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/django/shortcuts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
+            <state relative-caret-position="880">
               <caret line="48" column="16" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="16" />
             </state>
           </provider>
@@ -118,10 +107,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/记录">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
+            <state relative-caret-position="340">
               <caret line="127" column="52" selection-start-line="127" selection-start-column="52" selection-end-line="127" selection-end-column="52" />
             </state>
           </provider>
@@ -150,18 +139,19 @@
         <option value="$PROJECT_DIR$/templates/upload_file.html" />
         <option value="$PROJECT_DIR$/templates/add_book.html" />
         <option value="$PROJECT_DIR$/templates/test_ajax.html" />
-        <option value="$PROJECT_DIR$/test01/urls.py" />
         <option value="$PROJECT_DIR$/test01/settings.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/django/shortcuts.py" />
         <option value="$PROJECT_DIR$/app02/models.py" />
         <option value="$PROJECT_DIR$/app01/views.py" />
         <option value="$PROJECT_DIR$/记录" />
+        <option value="$PROJECT_DIR$/test01/urls.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
+    <option name="x" value="179" />
+    <option name="y" value="127" />
     <option name="width" value="1280" />
     <option name="height" value="712" />
   </component>
@@ -171,7 +161,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -198,6 +187,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -266,20 +256,20 @@
       <workItem from="1560232236078" duration="10303000" />
       <workItem from="1560388610436" duration="7683000" />
       <workItem from="1560405580888" duration="11162000" />
+      <workItem from="1560475013365" duration="1455000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29148000" />
+    <option name="totallyTimeSpent" value="30603000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="709" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="712" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25767368" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26171243" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="manage.py@test01" weight="0.32903227" />
-      <window_info anchor="bottom" id="Database Console" weight="0.32903227" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.31442463" />
@@ -293,6 +283,8 @@
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.32903227" />
+      <window_info anchor="bottom" id="manage.py@test01" order="14" weight="0.32903227" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -364,13 +356,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/django/urls/conf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="75" selection-start-line="75" selection-end-line="75" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/16b3ae14-129c-44d9-bd79-37d02b9a2cc1/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -411,33 +396,6 @@
           <folding>
             <element signature="e#0#198#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/test_ajax.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="25" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="25" />
-          <folding>
-            <element signature="e#650#1396#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test01/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="36" column="12" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="36" selection-end-column="12" />
-          <folding>
-            <element signature="e#630#662#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test01/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
@@ -489,9 +447,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test01/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app01/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4312">
+          <caret line="196" column="32" selection-start-line="196" selection-start-column="22" selection-end-line="196" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/django/shortcuts.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
+        <state relative-caret-position="880">
           <caret line="48" column="16" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="16" />
         </state>
       </provider>
@@ -503,20 +478,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app01/views.py">
+    <entry file="file://$PROJECT_DIR$/templates/test_ajax.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="196" column="32" selection-start-line="196" selection-start-column="22" selection-end-line="196" selection-end-column="32" />
+        <state relative-caret-position="66">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="25" />
           <folding>
-            <element signature="e#0#59#0" expanded="true" />
+            <element signature="e#650#1396#0#HTML" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/记录">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
+        <state relative-caret-position="340">
           <caret line="127" column="52" selection-start-line="127" selection-start-column="52" selection-end-line="127" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/django/urls/conf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="75" column="4" selection-start-line="75" selection-end-line="75" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test01/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-167">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
         </state>
       </provider>
     </entry>

@@ -42,3 +42,14 @@ def dictfetchall(cursor):
 
 def test(request, aaaa):
     return HttpResponse(aaaa)
+
+
+def add_book(reqeust):
+    if reqeust.method == 'POST':
+        return HttpResponse('我是post提交')
+
+    return HttpResponse('我是get提交')
+
+def add_books(request):
+    print(request.META)
+    return HttpResponse('测试')

@@ -19,6 +19,8 @@ from app01.views import *
 urlpatterns = [
     # path('admin/', admin.site.urls),
     path('abc/', abc),
+    path('add_book',add_book),
+    path('add_books',add_books),
     # path('news/11.html', abc),
     # path('news/12.html', abc),
     # path('news/13.html', abc),

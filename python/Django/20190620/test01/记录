@@ -1,0 +1,385 @@
+四种标量类型：整数(int,integer) 、浮点（float）、布尔 (bool,boolean)，字符串（string）
+根据time模块时间转换：时间戳   结构化时间   字符串时间
+				   时间戳----->结构化时间---->字符串时间
+				   mktime() 把指定的时间转成 时间戳
+				   gmtime() 获取当前的结构化时间
+				   strftime() 把字符串时间 转换成 结构化时间
+datetime模块
+
+iterator 迭代器
+iterable 可迭代的
+
+
+
+
+12、路由系统
+	URL配置（URLconf）是核心，支撑整个网站的请求。路由的本质是uri和uri调用的视图函数之间的映射.
+	URLconf配置：
+		from django.urls import path, re_path
+		urlpatterns = [
+			path('精准路由|地址转换路由', views视图函数, 参数, 别名),
+			re_path('正则表达式', views视图函数, 参数, 别名),
+		]
+		注：Django1.* 跟2.0版本的路由配置不一样
+		简单使用：
+			urlpatterns = [
+				# 精准路由
+				path('login/', views.login),
+				path('add_author/', views.add_author),
+				path('news/1/3234.html', views.news_show),
+				path('news/1/3692.html', views.news_show),
+				path('news/1/3691.html', views.news_show),
+				path('news/1/3690.html', views.news_show),
+				path('news/2016/2/10.html', views.news_shows),
+				path('news/2017/2/10.html', views.news_shows),
+				path('news/2018/4/9.html', views.news_shows),
+				path('news/2014/11/13.html', views.news_shows),
+				# 地址转换路由
+				path('news/1/<int:id>.html', views.news_show),  # 视图定义  def news_show(request, id),
+				path('news/<int:year>/<int:month>/<int:id>.html', views.news_shows),  # 视图定义  def news_shows(request, year, month, id),
+
+				# 正则路由
+				#re_path('^news/1/\d\d\d\d.html$',views.news_show),
+				# 分组捕获
+				re_path('^news/1/(\d+).html$',views.news_show)  # 视图定义  def news_show(request, id),
+				re_path('^news/(\d{4})/(\d{2})/(\d+).html$', views.news_shows),
+				# news_1_3693.html
+				re_path('^news_1_(\d+).html$', views.news_shows),
+				# pingguo/s11
+				re_path(r'^pingguo/s(\d+)$', views.news_shows),
+				re_path(r'^pingguo/s(?P<id>\d+)$', views.news_shows), # 视图定义  def news_show(request, id),
+			]
+			注：
+			  1、urlpatterns中的元素安照写的顺序从上往下一条一条的匹配，一旦匹配上则停止。
+			  2、正则可以通过分组的形式捕获uri中的参数，传递给视图
+			  3、每个主机名后边都会有个斜杠，例如：http://www.58pingguo.com 其实访问的是
+			  http://www.58pingguo.com/。所有的匹配都是从斜杠后边开始匹配
+			  4、如果是正则匹配建议最前边加上r,(保持原始)
+
+			通过include 引入其他应用的URLconf
+			命名URL(别名)和URL的泛解析
+			命令空间模式
+				视图：
+					from django.urls ipmort reverse
+					在函数内调用：
+						url = reverse('lpg', kwargs={'id':222})
+						url = reverse('rl')
+					在模板中调用：
+						{% url 'lpg' id=124 %}
+						{% url 'rt:l'%}  #注意在路由中要写一个 app_name="当前应用名"
+														    urlpatterns = [
+
+														    ]
+
+
+13、视图系统
+	Django视图（views.py）
+		一个视图函数（类），称为视图 其实就是一个简单的Python函数（类）,功能：接收web（http）请求并且响应web，一次请求必须有一次响应
+
+		响应：处理完http请求后 向浏览器返回内容，一个网页，一张图片，一个重定向，一个404错误，一个文档等
+
+		无论视图本身包含什么逻辑，都要有返回响应。视图文件可以随便放任何目录（只能在项目内部），只要在urls.py中引入正确就可以。还有视图文件views.py,也没有对它有规定，可以起别的名字，之所以起views 是程序员之间的约定。
+
+		CBV 和 FBV
+			CBV(class base views): 基于类的视图
+			FBV(function base views)：基于函数的视图
+
+		request对象和response对象
+
+		Request对象
+			当一个页面被请求时，Django会自动创建一个包含本次请求的http结构信息的HttpRequest对象。
+			Django会将这个对象传递给视图函数（类），一个视图函数约定使用request变量来接收这个对象。
+
+			请求相关的常用属性：
+				request.属性
+
+				path_info(request.path_info)  返回用户访问的uri
+				method						  获取请求方法
+				GET							  获取get请求时的所有参数  放入字典
+				POST						  获取post请求时的所有参数  放入字典
+				body						  请求主体，bety类型，request.POST
+				COOKIES						  获取所有的cookies
+				FILES 					      获取上传文件
+				session						  获取所有session
+				META				          获取请求头
+
+			方法：
+				request.方法（）
+
+				get_host()					  获取主体名
+				get_full_path()				  获取完整路径
+				is_secure()					  判断当前请求是否是https请求 True  False
+				is_ajax()					  判断是否是ajax请求
+				getlist()					  获取多个值时使用：request.POST.getlist('')
+
+
+
+
+14、模板
+    Django模板
+        常用的用法： 包在花括号中的都是标签
+            只需要记住两类：{{ 变量相关操作 }} 、{%  逻辑相关操作 %}
+        变量：
+        	可以传多种类型的值。一般获取子元素在不模板中通常通过点”.“ 的方式获取。
+        	如果变量的值不存在，那么会被模板引擎设置为空！
+      	filter过滤：
+      		通过使用filter来改变变量的值，然后输出。
+      		语法：{{ value|filter_name:参数 }}
+      		|管道符，把前边的内容作为参数交给后边处理
+      		1、过滤器可以链式写{{ value|filter_name1:参数| filter_name2:参数|filter_name3:参数 ...}}
+      		2、{{ value|filter_name:参数 }}  等同于  filter_name(value,参数)
+      		3、管道符左右两侧不允许加空格
+
+
+      	Django内置过滤函数：
+      		1、default
+      			value 为空或者为false时，使用指定的默认值。否则使用value的值
+      			{{ value|default:'默认值' }}
+      		2、length
+      			返回value的长度
+      			{{ value|length}}
+      		3、filesizeformat
+      			将字节处理成一般人都能看的懂的格式 **.kb  **.mb **.GB
+      			{{ value|filesizeformat }}
+      		4、slice
+      			切片
+      			{{ value|slice:"1:3" }}
+      		5、date
+      			格式化时间   value必须是datetime对象
+      			{{ value|date:'Y-m-d H:i:s' }}
+      		6、safe
+      			Django的模板引擎会自动对标签值进行处理，把特殊符号转义，有的时候不想转义
+      			可以使用safe函数：
+      			{{ value|safe }}
+      		7、truncatechars
+      			根据指定的字符数对value进行截取，后边以...拼接
+      			{{ value|truncatechars:3 }}
+      		8、truncatewords
+      			根据指定的单词数对value进行截取，后边以...拼接
+				{{ value|truncatewords:2 }}
+			9、cut
+				删除指定的字符从value中
+				{{ value|cut:'' }
+			10、join
+				把可迭代的对象拆分成字符串
+				{{ value|join:'' }
+			11、timesince
+				计算两个时间的差，以友好的方式展示出来 几分  几天
+				{{ 时间1|timesince:时间2}}
+		Django自定义过滤函数：
+			1、在对应的app应用目录下创建一个 templatetags文件夹
+			2、在该文件夹下创建filter过滤器文件
+			3、在该文件中引入 from django import template
+			4、实例化一个注册对象  register = template.Library()
+			5、定义个过滤器函数，然后在函数上边通过@register.filter(name="过滤器名字(在模板中使用的名字)") 装饰。
+			6、在要使用的模板文件中引入过滤器文件。{% load 自定义过滤器名字 %}
+			7、之间在映入下边使用自定义过滤器，重启整个django项目
+
+		Django内置标签：
+			for循环：
+				{% for 临时变量 in 可迭代对象 %}
+					{{ forloop }}
+					{{ 临时变量 }}
+				{% endfor %}
+			for ... empty
+
+				{% for 临时变量 in 可迭代对象 %}
+					{{ forloop }}
+					{{ 临时变量 }}
+				{% empty %}
+					可迭代对象为空时输出
+				{% endfor %}
+
+			if,elif和else
+				{% if aab == 1 %}
+					111
+				{% elif aab == 2 %}
+					222
+				{% else %}
+					没值了
+				{% endif %}
+			with
+				给复杂的变量起一个别名，等号左右两侧不能有空格
+				{% with  zpx=zhangpengxiang %}
+				    {{ zpx }} {{ zpx|length }}
+				{% endwith %}
+				或
+				{% with  zhangpengxiang as zpx %}
+				    {{ zpx }} {{ zpx|length }}
+				{% endwith %}
+
+			csrf_token
+				预防csrf攻击：本质就是生成一个随机的散列值，放到一个form表单的隐藏input内
+				使用：在form表单中直接写 {% csrf_token %}
+			注释：
+				{# 注释内容 #}
+
+			注意：在Django模板中不支持 {% if 3>1<3 %} 连续判断
+				 字典的方法名和属性名重复时，并且在模板中被调用了。那么属性的优先级大于方法。
+
+
+			母版：
+				1、先定义母版，在母版中定义整体布局结构，然后定义块
+				2、子模板继承母版，{% extends '母版名称' %}
+				3、子模板中定义当前模板的内容块。通过 块名查找方式，替换掉母版中对应的块。
+
+			块（block)：
+				必须在母版中定义块，{% block 块名%}内容(可以有 也可以没有){% endblock%}
+				然后在子模板中定义相同的块，然后替换母版中有同样名称的块。
+				{% block title %}
+				    出版社管理
+				{% endblock %}
+
+			组件 (include):
+				可以布局页面，把一个页面的各个部分 拆分到各个独立的子页面中。哪个模板需要就引入那些子页面。
+				{% include '组件路径' %}
+
+			静态文件
+				单文件路径处理
+					{% load static %}
+					<img src="{% static 'images/1.jpg' %}" style="width: 50px;height: 50px;">
+				多文件路径处理
+					{% load static %}
+					{% static 'images/1.jpg' as myabc %}
+					<img src="{{ myabc }}" style="width: 50px;height: 50px;">
+					<img src="{{ myabc }}" style="width: 50px;height: 50px;">
+					<img src="{{ myabc }}" style="width: 50px;height: 50px;">
+					<img src="{{ myabc }}" style="width: 50px;height: 50px;">
+					<img src="{{ myabc }}" style="width: 50px;height: 50px;">
+				自定义标签：simple_tag
+				自定义包含标签：inclusion_tag
+
+
+15、模型
+    1、Django项目链接mysql数据库
+        1、手动创建一个数据库
+        2、在settings文件内找到DATABASES配置中修改
+        3、Django1.*版本如果建立在python3上的话自带的mysqlDB就不支持。需要用pymysql
+           Django2.*版本建立在python3上的话，需要更新mysqlclient模块
+        4、在app/models.py中定义模型类，类一定要继承models.Model
+        5、执行两条命令：
+            1、cd 到项目根目录  ---> python3 manage.py makemigrations  --->  python3 manage.py migrate
+            2、Tools-->run manage.py Task ... ----> makemigrations---->migrate
+    2、表与表之间的关系
+        1、一对多 （班级模型和学生模型）
+            class = models.ForeignKey(to="Class",on_delete=models.CASCADE)
+            在数据库学生表内没有 class这个字段，会自动生成一个class_id字段
+        2、多对多 （学科模型和学生模型）
+            course = models.ManyToManyField(to='Student',on_delete=models.DO_NOTHING)
+            会在数据库中创建一个第三方表保存两个模型之间的关联关系（course_student）
+    3、增删改查
+        1、表数据增删改查
+            增：
+                Category.objects.create(cate_name=cate_name, describles=describles)
+            查：
+                Category.objects.all()
+                Category.objects.filter(id=1)
+                Category.objects.get(id=1)  # 如果数据不存在报异常
+                Category.objects.get(cate_name="MySQL")
+            删：
+                Category.objects.get(id=1).delete()
+            改：
+                category = Category.objects.get(id=1)
+                category.cate_name = 'aaaa'
+                category.save()
+        2、外键的增删改查
+                增 删 改 同上
+
+                查
+                artile = Article.objects.get(id=1)
+                print(artile)
+                print(artile.title)
+                print(artile.category)
+                print(artile.category.cate_name)
+        3、多对多操作
+        	查询
+        		author = Author.objects.get(id=3)  # 查询一个作者
+        		author.bookss.all()	# 查询当前作者写的所有书
+        	修改
+        		author = Author.objects.get(id=3)
+        		author.bookss.set([4,5,6])
+        		author.bookss.set([4书对象,5书对象,6书对象])
+
+       	ORM:
+
+       		Object Relational Mapping，简称ORM ,对象关系模型
+       		是一种为了解决面向对象和关系型数据库之间互相操作的一种技术。
+       		ORM在业务逻辑和数据库之间充当桥梁。
+
+       		Model:在Django中model是你从数据库获取信息的来源。它里边包含了存储的数据和字段。
+       		模型类  	    ------->   表
+       		模型类属性	------->   表字段
+       		模型类对象   -------->   表内的数据
+
+       		咱们可以通过一个model对应一个表。
+
+       			1、每个模型都是一个python类，必须要继承django.models.Model
+       			2、每个模型中的属性，对应表中的字段
+
+       				# 作者模型
+					class Author(models.Model):
+					    id = models.AutoField(primary_key=True)
+					    name = models.CharField(max_length=35, null=False)
+
+					上边模型跟下边表结构类似
+					"""
+					create table 应用名_Author(
+						id int auto_increment primary key,
+						name varchar(35) not null
+					)
+					"""
+					总结：
+						1、应用名_Author这个表名是自动生成，如果想自定义表名需要在模型类中添加Meta类，并且指定db_table参数，建议表名小写。
+						2、模型类中如果没有定义id,orm会自动帮你在表中创建一个id,并且是主键 自增。
+						如果一个模型类中有个字段已经指定主键，primary_key=True.Django不会再帮你创建id主键。
+						3、Django 支持mysql5.5及以上。
+
+			1、ORM常用字段
+				1、AutoField     ----> 自增字段
+				   AutoField(primary_key=True)
+				     ---> int 自增，必须传入参数 primary_key=True
+				2、CharField	    -----> varchar(n)
+				3、ForeignKey	-----> 外键	（一对多关联）
+			    4、ManyToManyField  ----> 多对多关联
+			    5、IntegerField ----->int
+			    	--> 整形（有符号） -2147483648 to 2147483647 
+			    6、DateField    ----> date
+			    7、DateTimeField  ---> 日期时间 datetime
+
+			2、ORM不常用字段 
+				BigAutoField(BigIntegerField)
+					-->bigint自增列，必须传参数 primary_key=True
+				SmallIntegerField()
+					-->smallint 小整形 -32768 -- 32767
+
+				PositiveSmallIntegerField()
+					-->smallint 小正整形  0 -- 32767
+				PositiveIntegerField()
+					-->正整形（无符号的）0-2147483647
+				BigIntegerField()
+					-->整形（有符号） -9223372036854775808 to 9223372036854775807
+				
+
+
+				https://docs.djangoproject.com/zh-hans/2.2/ref/models/fields/#positiveintegerfield
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

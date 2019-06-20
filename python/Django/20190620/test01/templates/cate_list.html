@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>栏目列表</title>
+</head>
+<body>
+
+<table border="1">
+    <tr>
+        <td>编号</td>
+        <td>id</td>
+        <td>栏目名称</td>
+        <td>栏目描述</td>
+    </tr>
+    {% for category in categorys %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ category.id }}</td>
+            <td>{{ category.cate_name }}</td>
+            <td>{{ category.describles }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

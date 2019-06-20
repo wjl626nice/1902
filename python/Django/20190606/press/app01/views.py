@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
 import time
 import datetime
+from manager.models import *
 
 class animal():
     def __init__(self, name, age):
@@ -76,3 +77,10 @@ def test(request):
         'zhangpengxiang': zhangpengxiang,
         'names': names
     })
+
+def test1(request):
+    author = Author.objects.get(id=3)
+    print(author)
+    print(author.name)
+    print(author.bookss.all())
+    return HttpResponse('测试！')

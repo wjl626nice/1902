@@ -13,7 +13,108 @@ iterable 可迭代的
 
 
 12、路由系统
+	URL配置（URLconf）是核心，支撑整个网站的请求。路由的本质是uri和uri调用的视图函数之间的映射.
+	URLconf配置：
+		from django.urls import path, re_path
+		urlpatterns = [
+			path('精准路由|地址转换路由', views视图函数, 参数, 别名),
+			re_path('正则表达式', views视图函数, 参数, 别名),
+		]
+		注：Django1.* 跟2.0版本的路由配置不一样
+		简单使用：
+			urlpatterns = [
+				# 精准路由
+				path('login/', views.login),
+				path('add_author/', views.add_author),
+				path('news/1/3234.html', views.news_show),
+				path('news/1/3692.html', views.news_show),
+				path('news/1/3691.html', views.news_show),
+				path('news/1/3690.html', views.news_show),
+				path('news/2016/2/10.html', views.news_shows),
+				path('news/2017/2/10.html', views.news_shows),
+				path('news/2018/4/9.html', views.news_shows),
+				path('news/2014/11/13.html', views.news_shows),
+				# 地址转换路由
+				path('news/1/<int:id>.html', views.news_show),  # 视图定义  def news_show(request, id),
+				path('news/<int:year>/<int:month>/<int:id>.html', views.news_shows),  # 视图定义  def news_shows(request, year, month, id),
+				
+				# 正则路由
+				#re_path('^news/1/\d\d\d\d.html$',views.news_show),
+				# 分组捕获 
+				re_path('^news/1/(\d+).html$',views.news_show)  # 视图定义  def news_show(request, id),
+				re_path('^news/(\d{4})/(\d{2})/(\d+).html$', views.news_shows),
+				# news_1_3693.html
+				re_path('^news_1_(\d+).html$', views.news_shows),
+				# pingguo/s11
+				re_path(r'^pingguo/s(\d+)$', views.news_shows),
+				re_path(r'^pingguo/s(?P<id>\d+)$', views.news_shows), # 视图定义  def news_show(request, id),
+			]
+			注：
+			  1、urlpatterns中的元素安照写的顺序从上往下一条一条的匹配，一旦匹配上则停止。
+			  2、正则可以通过分组的形式捕获uri中的参数，传递给视图
+			  3、每个主机名后边都会有个斜杠，例如：http://www.58pingguo.com 其实访问的是
+			  http://www.58pingguo.com/。所有的匹配都是从斜杠后边开始匹配
+			  4、如果是正则匹配建议最前边加上r,(保持原始)
+
+			通过include 引入其他应用的URLconf
+			命名URL(别名)和URL的泛解析
+			命令空间模式
+				视图：
+					from django.urls ipmort reverse
+					在函数内调用：
+						url = reverse('lpg', kwargs={'id':222})
+						url = reverse('rl')
+					在模板中调用：
+						{% url 'lpg' id=124 %}
+						{% url 'rt:l'%}  #注意在路由中要写一个 app_name="当前应用名"
+														    urlpatterns = [
+
+														    ]
+
+
 13、视图系统
+	Django视图（views.py）
+		一个视图函数（类），称为视图 其实就是一个简单的Python函数（类）,功能：接收web（http）请求并且响应web，一次请求必须有一次响应
+
+		响应：处理完http请求后 向浏览器返回内容，一个网页，一张图片，一个重定向，一个404错误，一个文档等
+
+		无论视图本身包含什么逻辑，都要有返回响应。视图文件可以随便放任何目录（只能在项目内部），只要在urls.py中引入正确就可以。还有视图文件views.py,也没有对它有规定，可以起别的名字，之所以起views 是程序员之间的约定。
+
+		CBV 和 FBV
+			CBV(class base views): 基于类的视图
+			FBV(function base views)：基于函数的视图
+
+		request对象和response对象
+
+		Request对象
+			当一个页面被请求时，Django会自动创建一个包含本次请求的http结构信息的HttpRequest对象。
+			Django会将这个对象传递给视图函数（类），一个视图函数约定使用request变量来接收这个对象。
+
+			请求相关的常用属性：
+				request.属性
+
+				path_info(request.path_info)  返回用户访问的uri
+				method						  获取请求方法					   
+				GET							  获取get请求时的所有参数  放入字典
+				POST						  获取post请求时的所有参数  放入字典
+				body						  请求主体，bety类型，request.POST
+				COOKIES						  获取所有的cookies
+				FILES 					      获取上传文件
+				session						  获取所有session
+				META				          获取请求头
+
+			方法：
+				request.方法（）
+
+				get_host()					  获取主体名
+				get_full_path()				  获取完整路径
+				is_secure()					  判断当前请求是否是https请求 True  False
+				is_ajax()					  判断是否是ajax请求
+				getlist()					  获取多个值时使用：request.POST.getlist('')
+
+
+
+
 14、模板
     Django模板
         常用的用法： 包在花括号中的都是标签
@@ -147,16 +248,6 @@ iterable 可迭代的
 					<img src="{{ myabc }}" style="width: 50px;height: 50px;">
 				自定义标签：simple_tag
 				自定义包含标签：inclusion_tag
-
-
-
-
-
-
-
-
-
-
 
 
 15、模型

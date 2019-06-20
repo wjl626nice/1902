@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'app01.apps.App01Config',
     'member.apps.MemberConfig',
     'sysAdmin.apps.SysadminConfig',
+    'retail.apps.RetailConfig'
 ]
 
 MIDDLEWARE = [

@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, re_path, include
 from app01.views import *
 from sysAdmin.views import *
+from retail import views as reViews
 from django.conf import settings
 
 
@@ -24,7 +25,7 @@ urlpatterns = [
     # 精准路由
     # path('admin/', admin.site.urls),
     path('home/', home),
-    path('pingguo/s14', pingguos),
+    path('pingguossss/s14', pingguos),
     # 地址转换路由
     path('pingguo/s<int:id>', pingguoss, {'abc': '坏苹果'}, name="lpg"),  # pingguo/s11
     path('pingguos/<str:area>/s<int:id>', pingguoss, name="hpg"),  # pingguo/zhongning/s31
@@ -45,4 +46,8 @@ urlpatterns = [
     # path('admin/login/', login)
     path('admin/', include('sysAdmin.urls')),
     path('member/', include('member.urls')),
+    path('retail/logins/', reViews.logins, {'id':123}, name="rl"),
+    path('retail/', include('retail.urls', namespace='rt')),
+
+
 ]

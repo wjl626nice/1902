@@ -1,7 +1,24 @@
 from django.shortcuts import render, HttpResponse, redirect
 from django.urls import reverse
-
+from django.views import View
 # Create your views here.
+
+
+class Login(View):
+    def get(self, request):
+        pass
+    def post(self,request):
+        pass
+
+def Loings(request):
+    # request.GET  === {'id':1,'name':'afad'}
+    if request.method == 'GET':
+        pass
+    if request.method == 'POST':
+        pass
+
+    return HttpResponse('登录')
+
 def home(request):
     return HttpResponse('首页！')
 

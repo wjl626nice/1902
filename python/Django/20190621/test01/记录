@@ -338,19 +338,14 @@ iterable 可迭代的
 				1、AutoField     ----> 自增字段
 				   AutoField(primary_key=True)
 				     ---> int 自增，必须传入参数 primary_key=True
-				2、CharField	
-					 --->varchar 字符串类型
-					 --->必须提供max_length参数
-					 max_length表示字符最大长度
+				2、CharField	    -----> varchar(n)
 				3、ForeignKey	-----> 外键	（一对多关联）
 			    4、ManyToManyField  ----> 多对多关联
 			    5、IntegerField ----->int
 			    	--> 整形（有符号） -2147483648 to 2147483647 
 			    6、DateField    ----> date
-			    	-->日期格式   YYYY-MM-DD
 			    7、DateTimeField  ---> 日期时间 datetime
-			       --> datetime    YYYY-MM-DD HH:mm[:ss[.uuuuuu]]
-   
+
 			2、ORM不常用字段 
 				BigAutoField(BigIntegerField)
 					-->bigint自增列，必须传参数 primary_key=True
@@ -363,115 +358,10 @@ iterable 可迭代的
 					-->正整形（无符号的）0-2147483647
 				BigIntegerField()
 					-->整形（有符号） -9223372036854775808 to 9223372036854775807
-				BooleanField()  ORM的布尔类型
-					-->tinyint(1)  0 False  1 True
-				NullBooleanField() ORM的可以为空的布尔类型
-					-->tinyint(1)  0 False  1 True
-				TextField()
-					-->text  文本类型
-				EmailField(CharField)
-					-->varchar(n) 可变字符串类型]
-					-->admin以ModelForm中提供了验证机制
-				GenericIPAddressField(CharField)    # 111.111.222.333
-					-->varchar(n) 字符串类型
-					-->admin以ModelForm中提供了验证机制  ipv4 和 ipv6
-					-参数：
-						protocol, 用于指定'IPV4'和'IPV6'
-						'both','IPV4' 'IPV6'
-						unpack_ipv4,如果指定为True 则输入格式: ::ffff:192.0.2.0.2
-						可以解析成192.0.2.0.2
-				URLField(CharField)
-				    -->varchar(n) 字符串类型
-				    -->admin以ModelForm中提供了验证机制
-				SlugField(CharField)
-					-->varchar(n) 字符串类型  
-					-->admin以ModelForm中提供了验证机制  字母，数字，下划线或连字符
-				UUIDField(Field)
-					-->char(n) 固定字符串类型
-					-->admin以ModelForm中提供了验证机制 uuid格式唯一性
-				FilePathField(Field)
-					-->字符串类型
-					-->admin以ModelForm中提供了读取该文件目录下所有的子文件功能
-					-参数：
-						path: 			文件夹路径
-						match：			正则匹配
-						recursive		递归下边的子文件夹
-						allow_files		允许文件
-						allow_folders   允许读取文件夹
-				FileField(Field)
-					--> 字符串类型   会把文件的路径保存到数据库中
-					-参数：
-						upload_to = ''   上传文件保存的路径
-						storage	= None	 存储方式，默认：django.core.files.storage.FileSystemStorage
-				ImageField(FileField)
-					-->字符串，  会把图片路径保存到数据库中
-					-参数：
-						upload_to = ''   上传文件保存的路径
-						storage	= None	 存储方式，默认：django.core.files.storage.FileSystemStorag
-				DecimalField(Field)
-				    -->10进制小数
-				    -参数：
-				    	max_digits	小数总长度
-				    	decimal_places  小数点后边长度
-				DurationField(Field)
-					-->长整形，时间间隔，数据中bigint保存，ORM中类型datetime.timedelta类型
+				
 
-				FloatField(Field)
-					-->浮点型
-				BinaryField(Field)
-					-->二进制类型
 
 				https://docs.djangoproject.com/zh-hans/2.2/ref/models/fields/#positiveintegerfield
-		    3、自定义字段类型
-		    	class MyField(models.Field):
-				    description = '自定义一个char字段'
-
-				    def __init__(self, max_length, *args, **kwargs):
-				        self.max_length = max_length
-				        kwargs['max_length'] = max_length
-				        # 初始化父类方法
-				        super().__init__(*args, **kwargs)
-
-				    def db_type(self, connection):
-				        # 自定义类型跟数据库字段类型对应
-				        return "varchar(%s)" % self.max_length
-			4、字段参数
-				null 			某个字段可以为空，默认不为空
-				unique			如果字段设置成 unique=True,该字段会被创建成唯一索引
-				db_index		如果字段设置成 db_index=True,该字段会被创建成普通索引
-				default			给该字段设置默认值
-
-				时间的参数
-				auto_now		当添加或者修改数据保存时，会自动更新字段的值
-				auto_now_add    当添加时会自动保存当前时间到该字段
-
-				关系字段  ForeignKey
-
-				to 				设置要关联的模型
-				on_delete		设置关联操作，（DO_NOTHING,CASCADE,PROTECT,SET_NULL,SET_DEFAULT,SET)
-				related_name    给关联关系起个名字 ,可以在反向操作时，用来代替’模型名_set‘
-				related_query_name  反向操作时，用来代替模型名
-				db_constraint	 设置关联关系，是否影响到数据库
-
-				关系字段  OneToOneField
-
-
-				关系字段  ManyToManyField
-
-			5、元信息
-				ORM对应的模型类中的包含类，Meta类封装了一些表的相关信息：
-					db_table     默认情况下ORM会用 应用名_模型名，如果db_table设置的话，那么数据库的表名就是它的值。
-					index_together   联合普通索引
-         			unique_together  联合唯一索引
-         			ordring			 指定默认按什么字段排序
-
-         	6、模型--常用的查询
-         		all  				 查询所有数据
-         		get(**kwargs)        返回符合条件的单条数据对象，如果没有查到或者条件出错 抛出异常
-         		filter(**kwargs)	 返回符合条件的所有数据对象。
-         		exclude(**kwargs)	 返回不符合条件的所有数据对象。
-
-
 
 
 

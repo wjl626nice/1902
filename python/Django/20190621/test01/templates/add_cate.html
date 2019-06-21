@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加栏目</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    栏目名称：<input name="cate_name" type="text">
+    <Br>
+    栏目描述：<textarea name="describles"></textarea><br>
+    <input type="submit" value="添加">
+</form>
+</body>
+</html>

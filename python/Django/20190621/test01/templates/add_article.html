@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加文章</title>
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="abc_file">
+        {% csrf_token %}
+        标题：<input type="text" name="title"><br>
+        栏目：<select name="cate_id">
+                {% for category in categorys %}
+                    <option value="{{ category.id }}">{{ category.cate_name }}</option>
+                {% endfor %}
+             </select><br>
+        内容：<textarea name="content"></textarea><br>
+        <input type="submit" value="添加">
+    </form>
+</body>
+</html>

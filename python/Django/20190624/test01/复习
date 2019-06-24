@@ -1,0 +1,58 @@
+1、ORM常用的字段和字段参数
+   AutoField(primary_key=True)
+   CharField(max_length=num)
+   DateField()
+   DateTimeField()
+        auto_now               ----->每次添加内容或者修改内容是自动更新该字段
+        auto_now_add           ----->添加内容时ORM对字段自动添加当前时间值
+   IntegerField()
+2、关系字段
+   ForeignKey(to='关联模型名', related_name='xx')  一对多，外键设置在多的一方。
+   OneToOneField(to='关联模型名') 一对一 可以把关系放的入查询比较频繁的模型中
+   ManyToManyField(to='关联模型名', related_name='xx') 多对多，一般关系放入重要的模型中（查询比较多的一方）
+3、ORM的一般操作
+    常用的查询（返回QuerySet）
+        all()
+        filter()
+        values()
+        values_list()
+        reverse()
+        order_by()
+        exclude()
+    返回单个对象:
+        get()
+        first()
+        last()
+    返回布尔值：
+        exists()
+    返回数：
+        count()
+4、单表的双下划线查询
+     Press.objects.filter(press_name__contains='出版社').count()   # 包含出版社关键词的出版社
+     Press.objects.filter(id__gt=2)     # id>2的出版社
+     Books.objects.filter(sales_num__gte=10, sales_num__lte=30)    # 销量大于等于10小于等于30的书
+     Press.objects.filter(id__in=(2, 3, 4)).values('press_name')    # 查询id 是2，3，4的出版社
+     Books.objects.filter(books_name__startswith='山')               # # 查询以山字 开始的所有书
+     Books.objects.filter(publish_date__year=2016).values('id', 'books_name')   # 查询2016出的所有书
+
+5、外键的跨表查询
+
+     1、正向查询
+        1、基于对象
+            book_obj = Books.objects.get(id=1)
+            book_obj.press.name
+        2、基于双下划线
+            Books.objects.filter(id=1).values('books_name','press__press_name')
+     2、反向查询
+        1、基于对象
+            press_obj = Press.objects.get(id=1)
+            默认反向查询的时候关系是 模型名小写_set
+            press_obj.books_set.all()
+            如果在外键中设置了related_name='pb'
+            press_obj.pb.all()
+        2、基于双下划线
+            # 默认情况下
+            Press.objects.filter(id=5).values('press_name', 'books__books_name')
+            # 外键中有 related_name='pb'
+            Press.objects.filter(id=5).values('press_name', 'pb__books_name')
+6、

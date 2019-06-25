@@ -2,23 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28cab03e-d0d7-4a25-8285-eed84a1de75f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/test01.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app02/migrations/0002_auto_20190621_0917.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app02/migrations/0003_books_sales_num.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app02/migrations/0004_books_us_shelf.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app02/migrations/0005_author_email.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app02/migrations/0006_books_price.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app02/migrations/0007_author_number_id.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app03/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app03/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/t02.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190620/test01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190620/test01/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190620/test01/记录" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190620/test01/记录" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../20190624/test01/app02/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/t02.py" beforeDir="false" afterPath="$PROJECT_DIR$/t02.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test01/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/test01/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190624/test01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190624/test01/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190624/test01/test01/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190624/test01/test01/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190624/test01/ts01.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190624/test01/ts01.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,18 +51,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/t01.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="134" column="13" selection-start-line="134" selection-start-column="13" selection-end-line="134" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="das://35923b1a-4309-47ba-ab8f-705f30a8059e/schema/test01/table/app02_books">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -87,8 +65,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/t02.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="242">
+              <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/debug.log">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="1" column="27" selection-start-column="4" selection-end-line="1" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -96,8 +83,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app02/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="42" column="9" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="9" />
+            <state relative-caret-position="22">
+              <caret line="10" column="17" selection-end-line="74" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app03/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="21" column="11" selection-end-line="23" selection-end-column="32" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -108,7 +107,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/记录">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
+            <state relative-caret-position="8140">
               <caret line="370" selection-start-line="370" selection-end-line="370" />
             </state>
           </provider>
@@ -117,7 +116,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3/datetime.pyi">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
+            <state relative-caret-position="3014">
               <caret line="142" column="33" selection-start-line="142" selection-start-column="28" selection-end-line="142" selection-end-column="33" />
             </state>
           </provider>
@@ -126,20 +125,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test01/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="126" column="23" lean-forward="true" selection-start-line="126" selection-start-column="23" selection-end-line="126" selection-end-column="23" />
+            <state relative-caret-position="2772">
+              <caret line="126" column="23" selection-start-line="126" selection-start-column="23" selection-end-line="126" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app03/models.py">
+        <entry file="file://$PROJECT_DIR$/app01/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="23" column="12" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="858">
+              <caret line="41" column="36" selection-start-line="37" selection-start-column="4" selection-end-line="41" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -147,7 +143,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/django/db/models/fields/related.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
+            <state relative-caret-position="21604">
               <caret line="1013" column="24" selection-start-line="1013" selection-start-column="20" selection-end-line="1013" selection-end-column="24" />
             </state>
           </provider>
@@ -183,12 +179,12 @@
         <option value="$PROJECT_DIR$/记录" />
         <option value="$PROJECT_DIR$/templates/add_article.html" />
         <option value="$PROJECT_DIR$/02.py" />
-        <option value="$PROJECT_DIR$/t02.py" />
         <option value="$PROJECT_DIR$/app03/models.py" />
-        <option value="$PROJECT_DIR$/test01/settings.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/app02/models.py" />
         <option value="$PROJECT_DIR$/t01.py" />
+        <option value="$PROJECT_DIR$/test01/settings.py" />
+        <option value="$PROJECT_DIR$/t02.py" />
       </list>
     </option>
   </component>
@@ -214,17 +210,12 @@
             <path>
               <item name="test01" type="b2602c69:ProjectViewProjectNode" />
               <item name="test01" type="462c0819:PsiDirectoryNode" />
-              <item name="app01" type="462c0819:PsiDirectoryNode" />
+              <item name="app02" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="test01" type="b2602c69:ProjectViewProjectNode" />
               <item name="test01" type="462c0819:PsiDirectoryNode" />
               <item name="app03" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test01" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test01" type="462c0819:PsiDirectoryNode" />
-              <item name="test01" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="test01" type="b2602c69:ProjectViewProjectNode" />
@@ -264,7 +255,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.01">
+  <component name="RunManager" selected="Python.t02">
     <configuration name="01" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="test01" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -357,8 +348,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.01" />
         <item itemvalue="Python.t02" />
+        <item itemvalue="Python.01" />
         <item itemvalue="Python.02" />
       </list>
     </recent_temporary>
@@ -377,23 +368,25 @@
       <workItem from="1561018975016" duration="2672000" />
       <workItem from="1561021831498" duration="1537000" />
       <workItem from="1561078687567" duration="432000" />
-      <workItem from="1561079273004" duration="18460000" />
+      <workItem from="1561079273004" duration="23166000" />
+      <workItem from="1561355874422" duration="12000" />
+      <workItem from="1561429364208" duration="24000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29652000" />
+    <option name="totallyTimeSpent" value="34394000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="26" width="1280" height="709" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2657512" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27382874" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32901135" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32901135" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3987034" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -441,9 +434,23 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/test01$t02.coverage" NAME="t02 Coverage Results" MODIFIED="1561103711318" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/test01$t02.coverage" NAME="t02 Coverage Results" MODIFIED="1561167512097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/test01$01.coverage" NAME="01 Coverage Results" MODIFIED="1561109375326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/test01$02.coverage" NAME="02 Coverage Results" MODIFIED="1561087242324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -459,13 +466,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="16" column="56" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app01/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="41" column="36" selection-start-line="37" selection-start-column="4" selection-end-line="41" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -566,31 +566,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/django/db/models/fields/related.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="1013" column="24" selection-start-line="1013" selection-start-column="20" selection-end-line="1013" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/django/db/models/query.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="1067" column="35" selection-start-line="1067" selection-start-column="24" selection-end-line="1067" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3/datetime.pyi">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="142" column="33" selection-start-line="142" selection-start-column="28" selection-end-line="142" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/t02.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
@@ -603,36 +582,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app03/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="23" column="12" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://35923b1a-4309-47ba-ab8f-705f30a8059e/schema/test01/table/app02_press">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true">
             <filter text="" />
           </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/记录">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="370" selection-start-line="370" selection-end-line="370" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test01/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="126" column="23" lean-forward="true" selection-start-line="126" selection-start-column="23" selection-end-line="126" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -645,12 +600,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app02/models.py">
+    <entry file="file://$PROJECT_DIR$/t01.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="42" column="9" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="9" />
+        <state relative-caret-position="2794">
+          <caret line="127" column="24" selection-start-line="127" selection-start-column="24" selection-end-line="127" selection-end-column="24" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -664,12 +619,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/t01.py">
+    <entry file="file://$PROJECT_DIR$/t02.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="134" column="13" selection-start-line="134" selection-start-column="13" selection-end-line="134" selection-end-column="13" />
+        <state relative-caret-position="242">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/debug.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="27" selection-start-column="4" selection-end-line="1" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/记录">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8140">
+          <caret line="370" selection-start-line="370" selection-end-line="370" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3/datetime.pyi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3014">
+          <caret line="142" column="33" selection-start-line="142" selection-start-column="28" selection-end-line="142" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test01/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2772">
+          <caret line="126" column="23" selection-start-line="126" selection-start-column="23" selection-end-line="126" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app01/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="858">
+          <caret line="41" column="36" selection-start-line="37" selection-start-column="4" selection-end-line="41" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/django/db/models/fields/related.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21604">
+          <caret line="1013" column="24" selection-start-line="1013" selection-start-column="20" selection-end-line="1013" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app02/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="10" column="17" selection-end-line="74" selection-end-column="27" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app03/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="21" column="11" selection-end-line="23" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>

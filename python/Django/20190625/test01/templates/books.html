@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>书列表</title>
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <th>编号</th>
+            <th>书名</th>
+            <th>库存</th>
+            <th>销量</th>
+        </thead>
+        <tbody>
+            {% for book in books %}
+            <tr>
+                <td>{{ book.id }}</td>
+                <td>{{ book.books_name }}</td>
+                <td>{{ book.stock }}</td>
+                <td>{{ book.sales_num }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+          {{ page_html|safe }}
+
+</div>
+</body>
+</html>

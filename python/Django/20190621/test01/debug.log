@@ -1,0 +1,3 @@
+(0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `app03_articles`.`id`, `app03_articles`.`title`, `app03_articles`.`add_time`, `app03_articles`.`click` FROM `app03_articles` WHERE `app03_articles`.`id` = 4; args=(4,)

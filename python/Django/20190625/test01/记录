@@ -1,0 +1,27 @@
+1页       60
+
+2页       60
+
+一页60条数据
+0-----59        第一页
+60----119       第二页
+120---179       第三页
+180---239       第四页
+
+一页10条数据 per_page_count = 10   current_page
+
+0-----9         第一页
+10----19        第二页
+20----29        第三页
+30----39        第四页
+.....
+
+首先需要知道当前访问的第几页
+
+(current_page - 1) * per_page_count
+
+(1-1) * per_page_count
+(2-1) * per_page_count
+(3-1) * per_page_count
+(4-1) * per_page_count
+

@@ -142,24 +142,79 @@ if __name__ == '__main__':
 
     from django.db.models import Avg, Count, Max, Min, Sum
     # 求所有书的平均价格
-    ret = Books.objects.all().aggregate(Avg('price'))
-    print(ret)
-    ret = Books.objects.all().aggregate(Max('price'))
-    print(ret)
-    ret = Books.objects.all().aggregate(minprice=Min('price'))  # 自定义字段别名
-    print(ret)
+    # ret = Books.objects.all().aggregate(Avg('price'))
+    # print(ret)
+    # ret = Books.objects.all().aggregate(Max('price'))
+    # print(ret)
+    # ret = Books.objects.all().aggregate(minprice=Min('price'))  # 自定义字段别名
+    # print(ret)
 
     # aggregate 合计聚合
 
-    ret = Books.objects.all().aggregate(maxprice=Max('price'), minprice=Min('price'), count=Count('stock'))  # 自定义字段别名
-    print(ret)
+    # ret = Books.objects.all().aggregate(maxprice=Max('price'), minprice=Min('price'), count=Count('stock'))  # 自定义字段别名
+    # print(ret)
     # 取值
-    print(ret['count'], ret.get('maxprice'))
+    # print(ret['count'], ret.get('maxprice'))
 
     # 查询邓帅写了几本书
     # count = Author.objects.get(id=5).bookss.all().count()
-    # count = Author.objects.annotate(books_num=Count('author_id'))
-    count = Books.objects.annotate(books_num=Count('author'))
-    print(count)
+    # count = Author.objects.filter(id=5).values('id', 'name').annotate(books_num=Count('bookss'))
+    # # count = Books.objects.annotate(books_num=Count('author'))
+    # print(count)
+    #
+    # # 每个作者写了几本书
+    # authors = Author.objects.values('id', 'name').annotate(books_num=Count('bookss'))
+    # print(authors)
+    # # 每本书的作者书
+    # books = Books.objects.values('id', 'books_name').annotate(author_num=Count('author'))
+    # print(books)
+    # # 查询作者数大于1的书
+    # books = Books.objects.values('id', 'books_name').annotate(author_num=Count('author')).filter(author_num__gt=1)
+    # print(books)
 
+    # 查询各个作者写的书的总价格（作业）
 
+    print('F查询和Q查询'.center(80,'*'))
+    books = Books.objects.filter(sales_num__gt=0)
+    print(books)
+
+    # 查询出 销量大于库存的所有书，（两个字段对比）通过F查询
+
+    from django.db.models import F
+
+    books = Books.objects.filter(sales_num__gt=F('stock'))
+    # 两个字段对比时使用F查询
+    print(books)
+
+    # 对单本书的销量更新
+    # books_obj = Books.objects.get(id=5)
+    # # books_obj.sales_num = books_obj.sales_num + 10
+    # books_obj.sales_num += 10
+    # books_obj.save()
+
+    # 批量更新所有书的库存
+    # Books.objects.update(stock=F('stock') + 100)
+
+    # 批量更新所有书的销量（翻两倍）
+    # Books.objects.update(sales_num=F('sales_num') * 2)
+
+    # 批量向所有书的名字后边加 第一版
+
+    # Concat 将多个字符串拼接到一起，是mysql中重要的内置函数
+    # from django.db.models.functions import Concat
+    # from django.db.models import Value
+    # Books.objects.update(books_name=Concat(F('books_name'), Value('第一版')))
+
+    # Q
+    from django.db.models import Q
+    # 求销量 大于1000 小于 2000的所有书
+    books = Books.objects.filter(sales_num__gt=1000, sales_num__lt=2000)
+    print(books)
+
+    # 求销量 小于500  或者 价格大于50的所有书
+    books = Books.objects.filter(Q(sales_num__lt=500) | Q(price__gt=50))
+    print(books)
+
+    # 求销量 小于500  或者 价格大于50的  并且以大开始的所有书
+    books = Books.objects.filter(Q(sales_num__lt=500) | Q(price__gt=50), books_name__startswith='大')
+    print(books)

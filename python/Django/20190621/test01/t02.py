@@ -15,5 +15,6 @@ if __name__ == '__main__':
     # 向文章表添加数据
     # article = Articles.objects.create(title='测试测试测试测试测试测试测试测试测试测试')
     article = Articles.objects.get(id=4)
-    print(article.Articles_Content)
+    print(Articles_Content.objects.get(article=article))
+    # print(article.Articles_Content)
     # Articles_Content.objects.create(article=article, content='测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试')

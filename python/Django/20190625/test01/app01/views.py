@@ -1,17 +1,13 @@
 from django.shortcuts import render,HttpResponse
 
 from app01.models import *
+from utils.page import Page
 # Create your views here.
 def books(request):
     # 获取当前页
     page = int(request.GET.get('page', 1))
     # 每页要显示的数据
     per_page_count = 10
-
-    # 计算取数据时的开始位置
-    start_pos = (page - 1) * per_page_count
-    # 计算取数据的结束位置
-    end_pos = page * per_page_count
 
     # 获取数据的总数
     book_count = Books.objects.count()
@@ -35,10 +31,14 @@ def books(request):
     # 控制页码开始不能出现负数
     if start_page_show <= 0:
         start_page_show = 1
+        end_page_show = page_show_count + 1
+
     # 控制页码结束不能超过总页数
     if end_page_show > page_count:
         end_page_show = page_count + 1
-        start_page_show -= avg_page_count - 1
+        start_page_show = page_count - page_show_count + 1
+        # 控制有人恶意输入很大的页码
+        page = page_count
 
     # 首页
     page_html = """<nav aria-label="Page navigation">
@@ -103,7 +103,36 @@ def books(request):
             </nav>
            """.format(page_count)
 
+    # 计算取数据时的开始位置
+    start_pos = (page - 1) * per_page_count
+    # 计算取数据的结束位置
+    end_pos = page * per_page_count
+
     books = Books.objects.values('id', 'books_name', 'stock', 'sales_num')[start_pos:end_pos]
     print(books)
     # return HttpResponse('分页' + str(page))
+    return render(request, 'books.html', {"books": books, 'page_html': page_html})
+
+def index(request):
+    # 获取当前页码
+    try:
+        page = int(request.GET.get('page', 1))
+    except Exception as e:
+        page = 1
+
+    # 获取数据的总数
+    book_count = Books.objects.count()
+    # 书的总数 除以 每页显示的数
+    page_count, m = divmod(book_count, 10)  # divmod 返回两个元素的元组， 第一个参数是商 第二个参数是余数
+    if m:
+        # 当余数不为空时 总页数加1
+        page_count += 1
+
+    # 实例化Page产生分页对象
+    page = Page(page, page_count, '/app01/index/')
+    print(page.start_pos, page.end_pos)
+    # 根据开始和结束位置  获取数据
+    books = Books.objects.values('id', 'books_name', 'stock', 'sales_num')[page.start_pos:page.end_pos]
+    # 获取分页的html代码
+    page_html = page.get_page_show()
     return render(request, 'books.html', {"books": books, 'page_html': page_html})

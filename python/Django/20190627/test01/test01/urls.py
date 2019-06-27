@@ -13,11 +13,33 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.urls import path
+from django.contrib import admin
+from django.urls import path, include
 from app01.views import *
-
-app_name = "app01"
+from app01.viewss import *
 urlpatterns = [
-    path('books/', books),
+    path('admin/', admin.site.urls),
+    path('abc/', abc),
+    path('aaa/', aaa),
+    path('login/', login),
+    path('checkLogin/', checkLogin),
     path('index/', index),
+    path('article/', article),
+    path('loginOut/', loginOut),
+
+    path('aaa/a/b/', aaa_a_b),
+    path('aaa/a/b/c/', aaa_a_b_c),
+    path('aaa/a/', aaa_a),
+
+    # 为了二级域名(wz.dongyang.com)设置url
+    path('wazi', wazi),
+    path('wazi_gc', wazi_gc),
+
+    # 为了二级域名(x.dongyang.com)设置url
+    path('x_gc', x_gc),
+
+
+    # 测试session
+    path('app02/', include('app02.urls'))
+
 ]

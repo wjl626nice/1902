@@ -15,11 +15,29 @@ Including another URLconf
 """
 from django.urls import path
 from app02.views import *
+from app02 import viewss, viewsss
 
 app_name = 'app02'
 urlpatterns = [
     # 测试session
     path('login/', login),
+    path('loginOut/', loginOut),
     path('index/', index),
+
+    # 类视图的
+    path('clogin/', viewss.Login.as_view()),
+    # 后台首页
+    path('cindex/', viewss.Cindex.as_view()),
+    # 后台栏目管理
+    path('ccate/', viewss.Ccate.as_view()),
+    # 后台文章管理
+    path('carticle/', viewss.Carticle.as_view()),
+    # 退出
+    path('cloginOut/', viewss.CloginOut.as_view()),
+
+
+    # 类视图内 formModel验证
+    path('cclogin/', viewsss.Login.as_view()),
+
 
 ]

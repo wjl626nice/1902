@@ -2,22 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8404c75-8bd5-4a50-932d-609c735f8344" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../20190625/test01/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../20190625/test01/utils/page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/test01.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app01/viewss.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app02/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app02/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/app02/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/记录" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190625/test01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190625/test01/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190625/test01/app01/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190625/test01/app01/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190625/test01/app01/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190625/test01/app01/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app02/viewss.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app02/viewsss.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app02/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app02/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app02/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app02/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/记录" beforeDir="false" afterPath="$PROJECT_DIR$/记录" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +24,7 @@
         <entry file="file://$PROJECT_DIR$/app02/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+              <caret line="39" column="17" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="17" />
               <folding>
                 <element signature="e#630#658#0" expanded="true" />
               </folding>
@@ -42,11 +32,32 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app02/viewss.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="61" column="37" lean-forward="true" selection-start-line="60" selection-start-column="8" selection-end-line="61" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#59#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app02/viewsss.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="89">
+              <caret line="79" column="34" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app02/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="43" column="34" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="34" />
+            <state relative-caret-position="220">
+              <caret line="74" column="111" selection-start-line="74" selection-start-column="78" selection-end-line="74" selection-end-column="111" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
               </folding>
@@ -57,17 +68,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test01/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="85" column="26" selection-start-line="85" selection-start-column="26" selection-end-line="85" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/app02/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="20" />
+            <state relative-caret-position="175">
+              <caret line="59" column="50" selection-start-line="59" selection-start-column="41" selection-end-line="59" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -75,8 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/记录">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="23" column="14" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="14" />
+            <state relative-caret-position="16">
+              <caret line="80" selection-start-line="80" selection-end-line="106" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -108,14 +110,16 @@
         <option value="$PROJECT_DIR$/01.py" />
         <option value="$PROJECT_DIR$/app01/viewss.py" />
         <option value="$PROJECT_DIR$/app01/views.py" />
-        <option value="$PROJECT_DIR$/记录" />
         <option value="$PROJECT_DIR$/test01/urls.py" />
         <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/test01/settings.py" />
         <option value="$PROJECT_DIR$/app02/models.py" />
-        <option value="$PROJECT_DIR$/app02/urls.py" />
         <option value="$PROJECT_DIR$/templates/app02/login.html" />
+        <option value="$PROJECT_DIR$/记录" />
         <option value="$PROJECT_DIR$/app02/views.py" />
+        <option value="$PROJECT_DIR$/app02/viewss.py" />
+        <option value="$PROJECT_DIR$/app02/urls.py" />
+        <option value="$PROJECT_DIR$/app02/viewsss.py" />
       </list>
     </option>
   </component>
@@ -152,6 +156,12 @@
             <path>
               <item name="test01" type="b2602c69:ProjectViewProjectNode" />
               <item name="test01" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="app02" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test01" type="462c0819:PsiDirectoryNode" />
               <item name="test01" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -164,14 +174,14 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/app02" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app02" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates/app02" />
       <recent name="$PROJECT_DIR$/app02" />
+      <recent name="$PROJECT_DIR$/templates/app02" />
       <recent name="$PROJECT_DIR$/app01" />
     </key>
   </component>
@@ -250,12 +260,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1561605687586</updated>
-      <workItem from="1561605690128" duration="13148000" />
+      <workItem from="1561605690128" duration="22642000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13148000" />
+    <option name="totallyTimeSpent" value="22642000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="26" width="1280" height="709" extended-state="6" />
@@ -273,7 +283,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32901135" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3306321" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -355,44 +365,75 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/django/conf/global_settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="639">
+          <caret line="472" column="53" selection-start-line="472" selection-start-column="51" selection-end-line="472" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/django/conf/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/记录">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="80" selection-start-line="80" selection-end-line="106" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/app02/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test01/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="59" column="50" selection-start-line="59" selection-start-column="41" selection-end-line="59" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app02/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="74" column="111" selection-start-line="74" selection-start-column="78" selection-end-line="74" selection-end-column="111" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app02/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+          <caret line="39" column="17" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="17" />
           <folding>
             <element signature="e#630#658#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/app02/login.html">
+    <entry file="file://$PROJECT_DIR$/app02/viewss.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/记录">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="23" column="14" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test01/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="85" column="26" selection-start-line="85" selection-start-column="26" selection-end-line="85" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app02/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="43" column="34" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="34" />
+        <state relative-caret-position="170">
+          <caret line="61" column="37" lean-forward="true" selection-start-line="60" selection-start-column="8" selection-end-line="61" selection-end-column="37" />
           <folding>
             <element signature="e#0#59#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app02/viewsss.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="79" column="34" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="34" />
         </state>
       </provider>
     </entry>

@@ -24,5 +24,110 @@ Session
     Session是什么？
         是保存在服务器端的键值对
 
-    Session 依赖于Cookie
+    Session 一般依赖于Cookie
 
+    Session创建流程：
+        当Django中操作session（request.session['is_login']='admin'）时:会生成一个32位字符串(唯一),会自动把字符串放入响应头的cookie中
+    Set-Cookie: sessionid=qn02tjuureq1bxtli0nkgzgvbu8r0w3c。并且该字符串对应一个字典{'is_login':'admin'}。
+
+    Session存储：
+    Session数据的存储是由settings的配置项决定（默认保存到数据库）。
+
+    Session值取的过程：
+         1、从请求结构体的请求头中获取 Cookie中的 sessionid(sessionid=qn02tjuureq1bxtli0nkgzgvbu8r0w3c)
+         2、拿着sessid 取对应的存储位置获取序列化的字符串，并且反序列化，转变成字典 赋值给 request.session。
+         3、咱们可以通过request.session.get('key'),获取咱们需要的值
+
+    Session的优势：
+        1、比Cookie能存更多的数据（类型）
+        2、安全性高，数据都保存在服务器
+    Session的缺点：
+        1、当Session数据量 或者 比较多时，会占用系统的资源。
+
+
+
+    Session的相关方法：
+       # 获取、设置、删除session中的数据
+           request.session['key']
+           request.session.get('key',default=None)
+           request.session['key'] = 111
+           request.session.setdefault('key',value)   # 存在不设置
+           del request.session['key']
+       # 获取键、值、键值对
+           request.session.keys()
+           request.session.values()
+           request.session.items()
+           request.session.iterkeys()
+           request.session.itervalues()
+           request.session.iteritems()
+       # 获取 会话(Session)的 key
+            request.session.session_key  (sessionid)
+
+       # 检测所有session失效日期小于当前日期的数据，删除
+           request.session.clear_expired()
+
+       # 检测会话是否还在数据库中存在
+           request.session.exists('sessionid')
+       # 删除当前会话的所有session数据
+           request.session.delete()
+
+       # 设置会话Session和Cookie的过期时间
+           request.session.set_expiry(value)
+           # 如果value是整数时，session会在多少秒失效
+           # 如果value是datetime或者timedelta，session会在这个时间后失效。
+           # 如果value是0,用户关闭浏览器session就失效
+           # 如果value是None,根据全局的session配置
+
+Django对于Session有一些默认的通用配置，这些默认配置为：
+
+SESSION_COOKIE_NAME == "sessionid"      #Session的cookie保存在浏览器上时的key
+SESSION_COOKIE_PATH == “/”              #Session的cookie保存的路径(默认)
+SESSION_COOKIE_DOMAIN = None            #Session的cookie保存的域名(默认)
+SESSION_COOKIE_SECURE = False           #是否Https传输cookie
+SESSION_COOKIE_HTTPONLY = True          #是否Session的cookie只支持http传输(默认)
+SESSION_COOKIE_AGE = 1209600            #Session的cookie失效日期(2周)(默认)
+SESSION_SAVE_EVERY_REQUEST = False      #是否设置关闭浏览器使得Session过期
+SESSION_COOKIE_AT_BROWSER_CLOSE = False #是否每次请求都保存Session，默认修改之后才能保存
+
+Django中，Session可以保存在数据库中，可以保存到缓冲中，也可以保存到文件中，默认情况下是保存在数据库中，
+数据库中有一张Sessions表。可以通过修改settings.py文件来修改session的保存方式。
+
+默认保存在数据库中：
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
+
+保存在文件中
+SESSION_ENGINE = 'django.contrib.sessions.backends.file'
+
+
+保存在缓存中
+SESSION_ENGINE =  'django.contrib.sessions.backends.cache'
+
+
+同时保存到缓存和数据库中
+SESSION_ENGINE =  'django.contrib.sessions.backends.cache_db'
+
+
+
+
+Django关于Session的操作：
+
+request.session.set_expiry(value)
+如果value是个整数， session会在这些秒后失效
+如果value是个datatime或timedelta，session就会在这个时间后失效
+如果value是0，用户关闭浏览器session就会失效
+如果value是None，session会依赖全局session失效策略
+
+request.session.delete("session_key")
+删除当前用户的所有session数据
+
+request.session.clear()
+清除所有session
+
+request.session['k1']
+request.session.get('k1',None)
+
+request.session['k1'] =123
+不存则设置，存在则更新
+
+request.session.setdefault('k1',123)
+存在则不设置

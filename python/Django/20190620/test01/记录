@@ -471,9 +471,10 @@ iterable 可迭代的
          		filter(**kwargs)	 返回符合条件的所有数据对象。
          		exclude(**kwargs)	 返回不符合条件的所有数据对象。
 
+SELECT `app01_books`.`id`, `app01_books`.`books_name`, COUNT(`app01_author_bookss`.`author_id`) AS `author_num` FROM `app01_books` LEFT OUTER JOIN `app01_author_bookss` ON (`app01_books`.`id` = `app01_author_bookss`.`books_id`) GROUP BY `app01_books`.`id` ORDER BY `app01_books`.`id` ASC  LIMIT 21; args=()
 
 
-
+select b.id,b.books_name,count(ab.author_id) from app01_books b left join app01_author_bookss ab on b.id=ab.books_id group by b.id;
 
 
 

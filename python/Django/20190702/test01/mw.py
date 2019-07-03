@@ -14,10 +14,13 @@ class mw1(MiddlewareMixin):
         # uri1 = request.get_full_path_info()
         # 判断是否在白名单中。
         if uri in whiteList:
+            pass
+        else:
+            pass
             # 判断是否登录
-            if not request.session.get('is_login'):
-                # 跳转到登录页面
-                return redirect('/login')
+            # if not request.session.get('is_login'):
+            #     # 跳转到登录页面
+            #     return redirect('/login')
 
         print('来了,老弟1')
         # return HttpResponse('')

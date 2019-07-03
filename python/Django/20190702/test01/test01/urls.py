@@ -16,7 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from app01.views import *
+from app02 import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('abc/', abc, {'a': 1, 'b': 2}),
+    path('home/', home),
+    path('jisuan/', jisuan),
+    path('upload/', upload),
+    path('login/', views.login),
 ]

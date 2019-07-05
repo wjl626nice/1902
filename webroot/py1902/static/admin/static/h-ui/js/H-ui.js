@@ -4469,9 +4469,7 @@ function displaynavbar(obj){
 						return false;
 					} else {
 						$(this).next().slideUp(options.speed).end().removeClass(options.className);
-						if ($(this).find("b")) {
-							$(this).find("b").html("+");
-						}
+
 					}
 				}else {
 					if (options.type == 3) {
@@ -4481,14 +4479,25 @@ function displaynavbar(obj){
 						}
 					} else {
 						that.find(options.mainCell).slideUp(options.speed);
+						// 获取当前浏览器的请求的URI
+						current_uri = document.location.pathname
+						// 获取后台左侧菜单的所有a标签
+						that.find('a').each(function(){
+							// 移除指定标签的class
+							$(this).parent('li').removeClass('current')
+							// 获取所有 a 标签的 href
+							uri =$(this).attr('href')
+							if(current_uri == uri){
+								// 对指定标签添加class
+								$(this).parent('li').addClass('current')
+							}
+						})
 						that.find(options.titCell).removeClass(options.className);
 						if (that.find(options.titCell).find("b")) {
 							that.find(options.titCell).find("b").html("+");
 						}
 						$(this).next().slideDown(options.speed).end().addClass(options.className);
-						if ($(this).find("b")) {
-							$(this).find("b").html("-");
-						}
+
 					}
 				}
 			});

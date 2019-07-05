@@ -26,7 +26,19 @@ urlpatterns = [
     path('verify/', admin.get_verify),
 
     # 后台管理
+
     # 后台首页
     path('admin/index/', admin.index),
+    # 管理员管理
+    path('admin/manager/', admin.manager),
+    # 添加管理员
+    path('admin/manager_add/', admin.manager_add),
+    # 改变管理员状态
+    path('admin/manager_change_state/', admin.manager_change_state),
+    # 删除管理员
+    path('admin/manager_del/', admin.manager_del),
+
+    # 友情链接管理
+    path('admin/links/', admin.links),
 
 ]

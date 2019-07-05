@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="Bookmark" href="favicon.ico" >
+<link rel="Shortcut Icon" href="favicon.ico" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/static/admin/lib/html5.js"></script>
+<script type="text/javascript" src="/static/admin/lib/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="/static/admin/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="/static/admin/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="/static/admin/lib/Hui-iconfont/1.0.8/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="/static/admin/static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="/static/admin/static/h-ui.admin/css/style.css" />
+<!--[if IE 6]>
+<script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script><![endif]-->
+<!--/meta 作为公共模版分离出去-->
+
+<title>添加管理员 - 管理员管理 - H-ui.admin v3.0</title>
+<meta name="keywords" content="H-ui.admin v3.0,H-ui网站后台模版,后台模版下载,后台管理系统模版,HTML后台模版下载">
+<meta name="description" content="H-ui.admin v3.0，是一款由国人开发的轻量级扁平化网站后台模板，完全免费开源的网站后台管理系统模版，适合中小型CMS后台系统。">
+</head>
+<body>
+<article class="cl pd-20">
+	<form action="" method="post" class="form form-horizontal" id="form-manager-add">
+		{% csrf_token %}
+        <div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>账号：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" value="" placeholder="" id="account" name="account">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>密码：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="password" class="input-text" autocomplete="off" value="" placeholder="密码" id="pwd" name="pwd">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>确认密码：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="password" class="input-text" autocomplete="off"  placeholder="确认新密码" id="pwd2" name="pwd2">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>手机：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" value="" placeholder="" id="mobile" name="mobile">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>邮箱：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" placeholder="@" name="email" id="email">
+			</div>
+		</div>
+		<div class="row cl">
+			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+				<input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+			</div>
+		</div>
+	</form>
+</article>
+
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="/static/admin/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/admin/lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="/static/admin/static/h-ui/js/H-ui.js"></script>
+<script type="text/javascript" src="/static/admin/static/h-ui.admin/js/H-ui.admin.page.js"></script>
+
+<!--/_footer /作为公共模版分离出去-->
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="/static/admin/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+<script type="text/javascript" src="/static/admin/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript" src="/static/admin/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+<script type="text/javascript">
+$(function(){
+    // validate 插件 用于验证form表单 ..   validate会对form表单进行初始化操作
+	$("#form-manager-add").validate({
+		rules:{
+			account:{
+				required:true,
+				minlength:4,
+				maxlength:16
+			},
+			pwd:{
+				required:true,
+			},
+			pwd2:{
+				required:true,
+				equalTo: "#pwd"
+			},
+			mobile:{
+				required:true,
+				isPhone:true,
+			},
+			email:{
+				required:true,
+				email:true,
+			}
+		},
+		onkeyup:false,
+		focusCleanup:true,
+		success:"valid",
+		submitHandler:function(form){
+		    var formData = new FormData(form)
+		    $.ajax({
+                type:"post",
+                data: formData,
+                dataType: 'json',
+                contentType: false,
+                processData: false,
+                async: false,
+                error: function(e){},
+                success: function (data) {
+                    console.log(data)
+                    var num = 6   // 控制哭脸 或者笑脸
+                    var time = 2000  // 控制延迟
+                    if(data.code > 0){
+                        num = 5
+                        time= 4000
+                    }
+                    // 弹出提示消息
+                    // 第一个参数：弹出的消息
+                    // 第二个参数：是一个对象，设置图标和延迟时间单位毫秒
+                    // 第三个参数（函数）：当弹出结束时触发 此参数
+                    layer.msg(data.msg,{icon:num,time:time},function () {
+                        if(data.code == 0){
+                            // 获取父窗口的弹出框标识
+                            var index = parent.layer.getFrameIndex(window.name);
+                            // 刷新父窗口
+                            parent.location.reload();
+                            // 根据弹出框的标识---关闭父窗口的弹出框
+                            parent.layer.close(index);
+                        }
+                    })
+
+                }
+            });
+
+		}
+	});
+});
+</script>
+<!--/请在上方写此页面业务相关的脚本-->
+</body>
+</html>

@@ -1,0 +1,28 @@
+[
+	{"id":"menu-article","title":"文章管理","url":'#',"icon":'&#xe613;','child':[
+			{"title":"栏目管理","url":'#'},
+			{"title":"文章列表","url":'#'}
+		]
+	},
+	{"id":"menu-picture","title":"随手拍管理","url":'#',"icon":'&#xe613;','child':[
+			{"title":"图片管理","url":'#'},
+		]
+	},
+	{"id":"menu-banner","title":"轮播图管理","url":'#',"icon":'&#xe613;','child':[
+			{"title":"轮播图","url":'#'},
+		]
+	},
+	{"id":"menu-comments","title":"评论管理","url":'#',"icon":'&#xe613;','child':[
+			{"title":"评论列表","url":'#'}
+		]
+	},
+	{"id":"menu-system","title":"系统管理","url":'#',"icon":'&#xe613;','child':[
+			{"title":"系统设置","url":'#'},
+			{"title":"管理员管理","url":'#'},
+			{"title":"友情链接管理","url":'#'},
+			{"title":"留言管理","url":'#'},
+			{"title":"屏蔽词","url":'#'},
+			{"title":"操作日志","url":'#'},
+		]
+	},
+]

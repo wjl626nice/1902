@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
@@ -27,7 +26,6 @@ SECRET_KEY = '*!b8$5*w^zcz$m@875#i(u2!21k9zz9=$j_s4zhfbw*2ypeh+f'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -73,7 +71,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'py1902.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
@@ -87,7 +84,6 @@ DATABASES = {
         'PORT': '3306'
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -106,7 +102,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
@@ -127,6 +122,52 @@ SALT = 'qwsa12#'
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS=[
+STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+# 后台菜单
+MENU = [
+    {"id": "menu-article", "title": "文章管理", "url": '#', "icon": '&#xe613;', 'child': [
+        {"title": "栏目管理", "url": '#'},
+        {"title": "文章列表", "url": '#'}
+    ]
+     },
+    {"id": "menu-picture", "title": "随手拍管理", "url": '#', "icon": '&#xe613;', 'child': [
+        {"title": "图片管理", "url": '#'},
+    ]
+     },
+    {"id": "menu-banner", "title": "轮播图管理", "url": '#', "icon": '&#xe613;', 'child': [
+        {"title": "轮播图", "url": '#'},
+    ]
+     },
+    {"id": "menu-comments", "title": "评论管理", "url": '#', "icon": '&#xe613;', 'child': [
+        {"title": "评论列表", "url": '#'}
+    ]
+     },
+    {"id": "menu-system", "title": "系统管理", "url": '#', "icon": '&#xe613;', 'child': [
+        {"title": "系统设置", "url": '#'},
+        {"title": "管理员管理", "url": '/admin/manager/'},
+        {"title": "友情链接管理", "url": '/admin/links/'},
+        {"title": "留言管理", "url": '#'},
+        {"title": "屏蔽词", "url": '#'},
+        {"title": "操作日志", "url": '#'},
+    ]
+     },
+]
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}

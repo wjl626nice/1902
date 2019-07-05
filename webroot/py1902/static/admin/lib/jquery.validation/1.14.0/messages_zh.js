@@ -20,7 +20,7 @@ $.extend($.validator.messages, {
 	number: "请输入有效的数字",
 	digits: "只能输入数字",
 	creditcard: "请输入有效的信用卡号码",
-	equalTo: "你的输入不相同",
+	equalTo: "输入的两次密码不一致！",
 	extension: "请输入有效的后缀",
 	maxlength: $.validator.format("最多可以输入 {0} 个字符"),
 	minlength: $.validator.format("最少要输入 {0} 个字符"),

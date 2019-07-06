@@ -1,6 +1,7 @@
-import os
+import os, re
 from django.shortcuts import render, HttpResponse, redirect
 from django.db.models import F
+from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
 from utils import verify, common
 from manager.models import *
@@ -501,7 +502,6 @@ def article_del(request):
     return JsonResponse({'msg': '删除成功！', 'code': 0, 'data': []})
 
 
-
 def links(request):
     """
     友情链接管理
@@ -516,3 +516,25 @@ def links(request):
         "menu": menu,
     }
     return render(request, 'admin/links.html', data)
+
+
+@csrf_exempt
+def fileupload(request):
+    """
+    编辑器上传文件
+    :param request:
+    :return:
+    """
+    action = request.GET.get('action')
+    if action == 'config':
+        # 获取编辑器的初始化配置
+        with open('static/admin/lib/ueditor/1.4.3/php/config.json') as f:
+            config = f.read()
+        config = re.sub('\/\*[\s\S]+?\*\/', '', config)
+
+        return HttpResponse(config)
+    elif action == 'webupload':
+        pass
+    print(request.FILES['file'],request.FILES['file'].size)
+    return HttpResponse('saa')
+

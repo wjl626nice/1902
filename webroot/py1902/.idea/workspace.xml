@@ -2,24 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a470dc69-115e-4b64-a2f3-8a6eb4086afc" name="Default Changelist" comment="基于django的博客项目  第二天">
-      <change afterPath="$PROJECT_DIR$/manager/formModel/articleForm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/formModel/categoryForm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/migrations/0013_auto_20190706_1532.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/article.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/article_add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/category.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/category_add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/category_edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/manager_edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/common.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/lib/ueditor/1.4.3/php/config1.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/manager/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manager/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/manager/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py1902/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/py1902/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/py1902/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/py1902/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/[{&quot;title&quot;:&quot;文章管理&quot;,&quot;url&quot;:'#',&quot;icon&quot;:'&amp;#xe613;','chil" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/manager.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/manager.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/记录" beforeDir="false" afterPath="$PROJECT_DIR$/记录" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/lib/ueditor/1.4.3/ueditor.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/lib/ueditor/1.4.3/ueditor.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/article.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/article_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/article_add.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,17 +54,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/py1902/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
+            <state relative-caret-position="-20">
               <caret line="131" column="48" selection-start-line="131" selection-start-column="48" selection-end-line="131" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/py1902/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="55" column="27" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="27" />
+            <state relative-caret-position="-507">
+              <caret line="22" column="20" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="20" />
               <folding>
                 <element signature="e#630#662#0" expanded="true" />
               </folding>
@@ -86,8 +75,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manager/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="436" column="88" selection-start-line="436" selection-start-column="83" selection-end-line="436" selection-end-column="88" />
+            <state relative-caret-position="1743">
+              <caret line="537" column="29" selection-start-line="537" selection-start-column="25" selection-end-line="537" selection-end-column="29" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#353#1718#0" />
@@ -105,18 +94,32 @@
                 <element signature="e#9006#10426#0" />
                 <element signature="e#10460#10926#0" />
                 <element signature="e#10955#11405#0" />
+                <element signature="e#11438#12063#0" />
                 <element signature="e#12097#13517#0" />
                 <element signature="e#13550#14016#0" />
+                <element signature="e#14044#14293#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/admin/article_add.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="89" column="70" selection-start-line="89" selection-start-column="70" selection-end-line="89" selection-end-column="70" />
+            <state relative-caret-position="334">
+              <caret line="203" column="24" selection-start-line="203" selection-start-column="24" selection-end-line="203" selection-end-column="24" />
+              <folding>
+                <element signature="e#4615#6076#0#HTML" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/admin/lib/ueditor/1.4.3/ueditor.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="659">
+              <caret line="56" column="50" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -133,46 +136,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/admin/article.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1873">
-              <caret line="96" column="20" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="20" />
+            <state relative-caret-position="1055">
+              <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
               <folding>
                 <element signature="e#1622#1650#0#HTML" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/manager/formModel/categoryForm.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="68" selection-start-line="7" selection-start-column="4" selection-end-line="9" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/manager/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="80" column="76" selection-start-line="68" selection-start-column="4" selection-end-line="80" selection-end-column="76" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-                <element signature="e#133#377#0" />
-                <element signature="e#451#690#0" />
-                <element signature="e#130#876#0" />
-                <element signature="e#925#1541#0" />
-                <element signature="e#1584#2134#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/manager/migrations/0011_auto_20190705_1653.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="29" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -200,6 +168,8 @@
       <find>cl pd-5 bg-1 bk-gray</find>
       <find>account</find>
       <find>&lt;span class=&quot;c-red&quot;&gt;*&lt;/span&gt;</find>
+      <find>lang</find>
+      <find>upload</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -229,21 +199,21 @@
         <option value="$PROJECT_DIR$/manager/formModel/categoryForm.py" />
         <option value="$PROJECT_DIR$/templates/admin/category_add.html" />
         <option value="$PROJECT_DIR$/templates/admin/category_edit.html" />
-        <option value="$PROJECT_DIR$/py1902/urls.py" />
         <option value="$PROJECT_DIR$/manager/migrations/0015_auto_20190706_1529.py" />
         <option value="$PROJECT_DIR$/manager/models.py" />
-        <option value="$PROJECT_DIR$/templates/admin/article.html" />
         <option value="$PROJECT_DIR$/py1902/settings.py" />
         <option value="$PROJECT_DIR$/manager/formModel/ArticleForm.py" />
-        <option value="$PROJECT_DIR$/manager/views.py" />
         <option value="$PROJECT_DIR$/manager/formModel/articleForm.py" />
+        <option value="$PROJECT_DIR$/templates/admin/article.html" />
+        <option value="$PROJECT_DIR$/static/admin/lib/ueditor/1.4.3/ueditor.config.js" />
+        <option value="$PROJECT_DIR$/py1902/urls.py" />
         <option value="$PROJECT_DIR$/templates/admin/article_add.html" />
+        <option value="$PROJECT_DIR$/manager/views.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-22" />
-    <option name="y" value="248" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="709" />
   </component>
@@ -263,24 +233,47 @@
             <path>
               <item name="py1902" type="b2602c69:ProjectViewProjectNode" />
               <item name="py1902" type="462c0819:PsiDirectoryNode" />
-              <item name="manager" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="py1902" type="b2602c69:ProjectViewProjectNode" />
               <item name="py1902" type="462c0819:PsiDirectoryNode" />
-              <item name="manager" type="462c0819:PsiDirectoryNode" />
-              <item name="formModel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="py1902" type="b2602c69:ProjectViewProjectNode" />
-              <item name="py1902" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="py1902" type="b2602c69:ProjectViewProjectNode" />
-              <item name="py1902" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="py1902" type="b2602c69:ProjectViewProjectNode" />
+              <item name="py1902" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="py1902" type="b2602c69:ProjectViewProjectNode" />
+              <item name="py1902" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="ueditor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="py1902" type="b2602c69:ProjectViewProjectNode" />
+              <item name="py1902" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="ueditor" type="462c0819:PsiDirectoryNode" />
+              <item name="1.4.3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="py1902" type="b2602c69:ProjectViewProjectNode" />
+              <item name="py1902" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="ueditor" type="462c0819:PsiDirectoryNode" />
+              <item name="1.4.3" type="462c0819:PsiDirectoryNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -295,13 +288,14 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/admin/lib/ueditor/1.4.3/php" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/admin/lib/ueditor/1.4.3/php" />
       <recent name="$PROJECT_DIR$/templates/admin" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/static/font" />
@@ -361,7 +355,7 @@
       <option name="presentableId" value="Default" />
       <updated>1562201847176</updated>
       <workItem from="1562201853237" duration="62107000" />
-      <workItem from="1562393126161" duration="6650000" />
+      <workItem from="1562393126161" duration="10300000" />
     </task>
     <task id="LOCAL-00001" summary="基于django的博客项目">
       <created>1562232768755</created>
@@ -374,7 +368,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68757000" />
+    <option name="totallyTimeSpent" value="72407000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -386,11 +380,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="709" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1280" height="709" extended-state="0" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.23990306" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.28756058" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" weight="0.32901135" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.329582" />
@@ -447,18 +440,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="基于django的博客项目  第二天" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/admin/urls.py" />
-    <entry file="file://$PROJECT_DIR$/admin/views.py" />
-    <entry file="file://$PROJECT_DIR$/utils/verify.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="34" column="14" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manager/migrations/0007_auto_20190704_1511.py" />
     <entry file="file://$PROJECT_DIR$/manager/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -707,23 +688,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/py1902/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="131" column="48" selection-start-line="131" selection-start-column="48" selection-end-line="131" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py1902/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="55" column="27" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="27" />
-          <folding>
-            <element signature="e#630#662#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manager/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
@@ -763,20 +727,86 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/manager/formModel/categoryForm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="68" selection-start-line="7" selection-start-column="4" selection-end-line="9" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/admin/article.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1873">
-          <caret line="96" column="20" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="20" />
+        <state relative-caret-position="1055">
+          <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
           <folding>
             <element signature="e#1622#1650#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/web-forms.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="597" column="16" selection-start-line="597" selection-start-column="16" selection-end-line="597" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/admin/lib/ueditor/1.4.3/ueditor.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="659">
+          <caret line="56" column="50" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/admin/lib/ueditor/1.4.3/php/config1.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="11" column="37" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/admin/lib/ueditor/1.4.3/php/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2046">
+          <caret line="93" column="1" selection-start-line="93" selection-start-column="1" selection-end-line="93" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/admin/lib/ueditor/1.4.3/php/controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/django/views/decorators/csrf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py1902/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-20">
+          <caret line="131" column="48" selection-start-line="131" selection-start-column="48" selection-end-line="131" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/article_add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="203" column="24" selection-start-line="203" selection-start-column="24" selection-end-line="203" selection-end-column="24" />
+          <folding>
+            <element signature="e#4615#6076#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/manager/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="436" column="88" selection-start-line="436" selection-start-column="83" selection-end-line="436" selection-end-column="88" />
+        <state relative-caret-position="1743">
+          <caret line="537" column="29" selection-start-line="537" selection-start-column="25" selection-end-line="537" selection-end-column="29" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#353#1718#0" />
@@ -794,16 +824,11 @@
             <element signature="e#9006#10426#0" />
             <element signature="e#10460#10926#0" />
             <element signature="e#10955#11405#0" />
+            <element signature="e#11438#12063#0" />
             <element signature="e#12097#13517#0" />
             <element signature="e#13550#14016#0" />
+            <element signature="e#14044#14293#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manager/formModel/categoryForm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="68" selection-start-line="7" selection-start-column="4" selection-end-line="9" selection-end-column="68" />
         </state>
       </provider>
     </entry>
@@ -814,10 +839,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/article_add.html">
+    <entry file="file://$PROJECT_DIR$/py1902/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="89" column="70" selection-start-line="89" selection-start-column="70" selection-end-line="89" selection-end-column="70" />
+        <state relative-caret-position="-507">
+          <caret line="22" column="20" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="20" />
+          <folding>
+            <element signature="e#630#662#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

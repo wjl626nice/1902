@@ -18,6 +18,9 @@ from django.urls import path, include
 from manager import views as admin
 
 urlpatterns = [
+    # 通用路由
+    # 文件上传
+    path('fileupload/', admin.fileupload),
     # path('admin/', admin.site.urls),
     # path('admin/', include('manager.urls')),
     # 登录

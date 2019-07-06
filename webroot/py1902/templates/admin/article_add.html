@@ -17,6 +17,7 @@
 <link rel="stylesheet" type="text/css" href="/static/admin/lib/Hui-iconfont/1.0.8/iconfont.css" />
 <link rel="stylesheet" type="text/css" href="/static/admin/static/h-ui.admin/skin/default/skin.css" id="skin" />
 <link rel="stylesheet" type="text/css" href="/static/admin/static/h-ui.admin/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/static/admin/lib/webuploader/0.1.5/webuploader.css">
 <!--[if IE 6]>
 <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script><![endif]-->
@@ -37,7 +38,7 @@
 			</div>
 		</div>
         <div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>分类栏目：</label>
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>分类栏目：</label>
 			<div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
 				<select name="category_id" class="select valid" aria-required="true" aria-invalid="false">
 					<option value="0">全部栏目</option>
@@ -51,8 +52,13 @@
         <div class="row cl">
 			<label class="form-label col-xs-4 col-sm-3">图片：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="file" class="input-text" placeholder="" id="pic" name="pic">
-			</div>
+			    <!--dom结构部分-->
+                <div id="uploader-demo">
+                    <!--用来存放item-->
+                    <div id="fileList" class="uploader-list"></div>
+                    <div id="filePicker">选择图片</div>
+                </div>
+            </div>
 		</div>
         <div class="row cl">
 			<label class="form-label col-xs-4 col-sm-3">{{ articleForm.describles.label }}：</label>
@@ -92,6 +98,12 @@
 				<textarea name="seo_description" class="textarea valid" placeholder="seo描述" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！"></textarea>
 			</div>
 		</div>
+        <div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3">内容：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+                <div id="content"></div>
+            </div>
+		</div>
 		<div class="row cl">
 			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
 				<input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
@@ -112,6 +124,8 @@
 <script type="text/javascript" src="/static/admin/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
 <script type="text/javascript" src="/static/admin/lib/jquery.validation/1.14.0/validate-methods.js"></script>
 <script type="text/javascript" src="/static/admin/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+<script type="text/javascript" src="/static/admin/lib/webuploader/0.1.5/webuploader.js"></script>
+
 <script type="text/javascript">
 $(function(){
     // validate 插件 用于验证form表单 ..   validate会对form表单进行初始化操作
@@ -164,6 +178,41 @@ $(function(){
 
 		}
 	});
+});
+</script>
+<!-- 配置文件 -->
+<script type="text/javascript" src="/static/admin/lib/ueditor/1.4.3/ueditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script type="text/javascript" src="/static/admin/lib/ueditor/1.4.3/ueditor.all.js"></script>
+<!-- 实例化编辑器 -->
+<script type="text/javascript">
+    var ue = UE.getEditor('content',{
+        initialFrameWidth:"100%"
+    });
+</script>
+<script>
+// 初始化Web Uploader
+var uploader = WebUploader.create({
+
+    // 选完文件后，是否自动上传。
+    auto: true,
+
+    // swf文件路径
+    swf: '/static/admin/lib/webuploader/0.1.5/Uploader.swf',
+
+    // 文件接收服务端。
+    server: '/fileupload/?action=webupload',
+
+    // 选择文件的按钮。可选。
+    // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+    pick: '#filePicker',
+
+    // 只允许选择图片文件。
+    accept: {
+        title: 'Images',
+        extensions: 'gif,jpg,jpeg,bmp,png',
+        mimeTypes: 'image/*'
+    }
 });
 </script>
 <!--/请在上方写此页面业务相关的脚本-->

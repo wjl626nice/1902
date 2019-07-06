@@ -123,13 +123,13 @@ SALT = 'qwsa12#'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
+    os.path.join(BASE_DIR, 'static'),
 ]
 # 后台菜单
 MENU = [
     {"id": "menu-article", "title": "文章管理", "url": '#', "icon": '&#xe613;', 'child': [
-        {"title": "栏目管理", "url": '#'},
-        {"title": "文章列表", "url": '#'}
+        {"title": "栏目管理", "url": '/admin/category/'},
+        {"title": "文章列表", "url": '/admin/article/'}
     ]
      },
     {"id": "menu-picture", "title": "随手拍管理", "url": '#', "icon": '&#xe613;', 'child': [

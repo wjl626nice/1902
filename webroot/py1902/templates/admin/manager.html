@@ -40,7 +40,7 @@
 
                         </td>
 						<td class="td-manage">
-                            <a title="编辑" href="javascript:;" onclick="admin_edit('管理员编辑','admin-add.html','1','800','500')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+                            <a title="编辑" href="javascript:;" onclick="manager_edit('管理员编辑','/admin/manager_edit/?id={{ item.id }}','800','500')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
                             <a title="删除" href="javascript:;" onclick="manager_del(this,{{ item.id }})" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a></td>
 					</tr>
                     {% endfor %}
@@ -107,13 +107,13 @@ function manager_del(obj,id){
 }
 
 /*资讯-编辑*/
-function article_edit(title,url,id,w,h){
+function manager_edit(title,url,w,h){
 	var index = layer.open({
 		type: 2,
+        area:[w+'px',h+'px'],
 		title: title,
 		content: url
 	});
-	layer.full(index);
 }
 /*资讯-审核*/
 function article_shenhe(obj,id){

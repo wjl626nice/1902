@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http   import JsonResponse
-
+sys.path
 # Create your views here.
 def login(request):
     if request.is_ajax():

@@ -1,0 +1,93 @@
+{% extends 'admin/layout/layout.html' %}
+{% block title %}栏目管理-py1902博客管理系统{% endblock %}
+{% block daohang %}
+    文章管理
+    <span class="c-gray en">&gt;</span>
+    栏目列表
+{% endblock %}
+{% block article %}
+    <article class="cl pd-20">
+			<div class="cl pd-5 bg-1 bk-gray">
+				<span class="l"><a href="javascript:;" onclick="category_add('添加栏目','/admin/category_add/','600','550')" class="btn btn-primary radius"><i class="Hui-iconfont"></i> 添加栏目</a> </span>
+				<span class="r">共有数据：<strong>{{ count }}</strong> 条</span>
+			</div>
+			<table class="table table-border table-bordered table-bg">
+				<thead>
+					<tr class="text-c">
+						<th width="40">ID</th>
+						<th width="150">栏目名称</th>
+						<th width="90">栏目图片</th>
+						<th width="150">发布文章数</th>
+						<th width="100">操作</th>
+					</tr>
+				</thead>
+				<tbody>
+                    {% for item in items %}
+					<tr class="text-c">
+						<td>{{ item.id }}</td>
+						<td>{{ item.cate_name }}</td>
+						<td>{% if item.pic %}<img style="width: 50px; height: 50px;" src="/{{ item.pic }}">{% endif %}</td>
+						<td>{{ item.num }}</td>
+						<td class="td-manage">
+                            <a title="编辑" href="javascript:;" onclick="category_edit('{{ item.cate_name }}编辑','/admin/category_edit/?id={{ item.id }}','800','500')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+                            <a title="删除" href="javascript:;" onclick="category_del(this,{{ item.id }})" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a></td>
+					</tr>
+                    {% endfor %}
+				</tbody>
+			</table>
+		</article>
+{% endblock %}
+{% block autoScript %}
+<script type="text/javascript">
+
+/*栏目-添加*/
+function category_add(title,url,w,h){
+	var index = layer.open({
+		type: 2,
+        area:[w+'px',h+'px'],
+		title: title,
+		content: url
+	});
+	//layer.full(index);
+}
+
+/*栏目-删除*/
+function category_del(obj,id){
+	layer.confirm('确认要删除吗？',function(index){
+		$.ajax({
+			type: 'get',
+			url: '/admin/category_del/',
+            data: {id:id},
+			dataType: 'json',
+			success: function(data){
+			    if(data.code == 0){
+                    $(obj).parents("tr").remove();
+                    layer.msg('已删除!',{icon:6,time:1000});
+				}else{
+			        layer.msg(data.msg,{icon:5,time:1000});
+                }
+			},
+			error:function(data) {
+				console.log(data.msg);
+			},
+		});
+	});
+}
+
+/*栏目-编辑*/
+function category_edit(title,url,w,h){
+	var index = layer.open({
+		type: 2,
+        area:[w+'px',h+'px'],
+		title: title,
+		content: url
+	});
+}
+// 当页面加载完成以后触发内部的匿名函数
+$(function(){
+    //让后台左侧的系统管理 展开
+    $('#menu-article').find('dt').click();
+})
+</script>
+
+{% endblock %}

@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <link rel="Bookmark" href="/static/favicon.ico">
+    <link rel="Shortcut Icon" href="/static/favicon.ico"/>
+    <!--[if lt IE 9]>
+<script type="text/javascript" src="/static/admin/lib/html5.js"></script>
+<script type="text/javascript" src="/static/admin/lib/respond.min.js"></script>
+<![endif]-->
+    <link rel="stylesheet" type="text/css" href="/static/admin/static/h-ui/css/H-ui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/admin/static/h-ui.admin/css/H-ui.admin.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/admin/lib/Hui-iconfont/1.0.8/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/admin/static/h-ui.admin/skin/default/skin.css" id="skin"/>
+    <link rel="stylesheet" type="text/css" href="/static/admin/static/h-ui.admin/css/style.css"/>
+    <!--[if IE 6]>
+<script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+    <!--/meta 作为公共模版分离出去-->
+
+    <title>{% block title %}标题{% endblock %}</title>
+    <meta name="keywords" content="{% block keywords %}seo关键词{% endblock %}">
+    <meta name="description" content="{% block description %}seo描述{% endblock %}">
+</head>
+<body>
+<!--_header 作为公共模版分离出去-->
+<header class="navbar-wrapper">
+    <div class="navbar navbar-fixed-top">
+        <div class="container-fluid cl">
+            <span class="logo navbar-slogan f-l mr-10 hidden-xs">py1902博客管理系统</span>
+            <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:;">&#xe667;</a>
+            <nav class="nav navbar-nav">
+                <ul class="cl">
+                    <li class="dropDown dropDown_hover"><a href="javascript:;" class="dropDown_A"><i
+                            class="Hui-iconfont">&#xe600;</i> 新增 <i class="Hui-iconfont">&#xe6d5;</i></a>
+                        <ul class="dropDown-menu menu radius box-shadow">
+                            <li><a href="javascript:;" onclick="article_add('添加资讯','article-add.html')"><i
+                                    class="Hui-iconfont">&#xe616;</i> 资讯</a></li>
+                            <li><a href="javascript:;" onclick="picture_add('添加资讯','picture-add.html')"><i
+                                    class="Hui-iconfont">&#xe613;</i> 图片</a></li>
+                            <li><a href="javascript:;" onclick="product_add('添加资讯','product-add.html')"><i
+                                    class="Hui-iconfont">&#xe620;</i> 产品</a></li>
+                            <li><a href="javascript:;" onclick="member_add('添加用户','member-add.html','','510')"><i
+                                    class="Hui-iconfont">&#xe60d;</i> 用户</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <nav id="Hui-userbar" class="nav navbar-nav navbar-userbar hidden-xs">
+                <ul class="cl">
+                    {% if user.id == 1 %}
+                        <li>超级管理员</li>
+                    {% else %}
+                        <li>管理员</li>
+                    {% endif %}
+                    <li class="dropDown dropDown_hover"><a href="#" class="dropDown_A">{{ user.account }} <i
+                            class="Hui-iconfont">&#xe6d5;</i></a>
+                        <ul class="dropDown-menu menu radius box-shadow">
+                            <li><a href="javascript:;" onClick="myselfinfo()">个人信息</a></li>
+                            <li><a href="#">切换账户</a></li>
+                            <li><a href="/admin/logOut/">退出</a></li>
+                        </ul>
+                    </li>
+                    <li id="Hui-skin" class="dropDown right dropDown_hover"><a href="javascript:;" class="dropDown_A"
+                                                                               title="换肤"><i class="Hui-iconfont"
+                                                                                             style="font-size:18px">&#xe62a;</i></a>
+                        <ul class="dropDown-menu menu radius box-shadow">
+                            <li><a href="javascript:;" data-val="default" title="默认（黑色）">默认（黑色）</a></li>
+                            <li><a href="javascript:;" data-val="blue" title="蓝色">蓝色</a></li>
+                            <li><a href="javascript:;" data-val="green" title="绿色">绿色</a></li>
+                            <li><a href="javascript:;" data-val="red" title="红色">红色</a></li>
+                            <li><a href="javascript:;" data-val="yellow" title="黄色">黄色</a></li>
+                            <li><a href="javascript:;" data-val="orange" title="橙色">橙色</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<!--/_header 作为公共模版分离出去-->
+
+<!--_menu 作为公共模版分离出去-->
+<aside class="Hui-aside">
+
+    <div class="menu_dropdown bk_2">
+        {% for item in menu %}
+        <dl id="{{ item.id }}">
+            <dt><i class="Hui-iconfont">{{ item.icon|safe }}</i> {{ item.title }}<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    {% for child in item.child %}
+                        <li><a href="{{ child.url }}" title="{{ child.title }}">{{ child.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </dd>
+        </dl>
+        {% endfor %}
+    </div>
+</aside>
+<div class="dislpayArrow hidden-xs"><a class="pngfix" href="javascript:void(0);" onClick="displaynavbar(this)"></a>
+</div>
+<!--/_menu 作为公共模版分离出去-->
+
+<section class="Hui-article-box">
+    <nav class="breadcrumb">
+        <i class="Hui-iconfont"></i>
+        <a href="/" class="maincolor">首页</a>
+        <span class="c-999 en">&gt;</span>
+        {% block daohang %}
+            <span class="c-666">我的桌面</span>
+        {% endblock %}
+        <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px"
+           href="javascript:location.replace(location.href);" title="刷新"><i class="Hui-iconfont">&#xe68f;</i></a>
+    </nav>
+    <div class="Hui-article">
+        {% block article %}
+        {% endblock %}
+        {% block footer %}
+        {% endblock %}
+    </div>
+</section>
+
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="/static/admin/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/admin/lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="/static/admin/static/h-ui/js/H-ui.js"></script>
+<script type="text/javascript" src="/static/admin/static/h-ui.admin/js/H-ui.admin.page.js"></script>
+<!--/_footer /作为公共模版分离出去-->
+
+<!--请在下方写此页面业务相关的脚本-->
+{% block autoScript %}
+{% endblock %}
+<!--/请在上方写此页面业务相关的脚本-->
+</body>
+</html>

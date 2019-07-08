@@ -1,0 +1,170 @@
+{% extends 'admin/layout/layout.html' %}
+{% block title %}管理员管理-py1902博客管理系统{% endblock %}
+{% block daohang %}
+    管理员管理
+    <span class="c-gray en">&gt;</span>
+    管理员列表
+{% endblock %}
+{% block article %}
+    <article class="cl pd-20">
+			<div class="cl pd-5 bg-1 bk-gray">
+				<span class="l"><a href="javascript:;" onclick="manager_add('添加管理员','/admin/manager_add/','600','370')" class="btn btn-primary radius"><i class="Hui-iconfont"></i> 添加管理员</a> </span>
+				<span class="r">共有数据：<strong>{{ count }}</strong> 条</span>
+			</div>
+			<table class="table table-border table-bordered table-bg">
+				<thead>
+					<tr class="text-c">
+						<th width="40">ID</th>
+						<th width="150">账号</th>
+						<th width="90">手机</th>
+						<th width="150">邮箱</th>
+						<th width="130">加入时间</th>
+						<th width="100">状态</th>
+						<th width="100">操作</th>
+					</tr>
+				</thead>
+				<tbody>
+                    {% for item in admins %}
+					<tr class="text-c">
+						<td>{{ item.id }}</td>
+						<td>{{ item.account }}</td>
+						<td>{{ item.mobile }}</td>
+						<td>{{ item.email }}</td>
+						<td>{{ item.login_time }}</td>
+						<td class="td-status" id="{{ item.id }}">
+                            {% if item.state %}
+                                <span  style="cursor: pointer" class="label label-success radius">已启用</span>
+                            {% else %}
+                                <span  style="cursor: pointer" class="label label-error radius">已禁用</span>
+                            {% endif %}
+
+                        </td>
+						<td class="td-manage">
+                            <a title="编辑" href="javascript:;" onclick="manager_edit('管理员编辑','/admin/manager_edit/?id={{ item.id }}','800','500')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+                            <a title="删除" href="javascript:;" onclick="manager_del(this,{{ item.id }})" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a></td>
+					</tr>
+                    {% endfor %}
+				</tbody>
+			</table>
+		</article>
+{% endblock %}
+{% block autoScript %}
+<script type="text/javascript">
+
+/*管理员-添加*/
+function manager_add(title,url,w,h){
+	var index = layer.open({
+		type: 2,
+        area:[w+'px',h+'px'],
+		title: title,
+		content: url
+	});
+	//layer.full(index);
+}
+// 给所有的span 状态添加点击事件
+$('.td-status span').click(function () {
+    // 获取管理员id
+    var id = $(this).parent('td').attr('id')
+    if(id == ''){
+        layer.msg('请选择要操作的数据！',{icon:2,time:2000})
+        return false;
+    }
+    // 代表当前点击的span
+    var that = this
+    // 发起ajax的post请求
+    $.get('/admin/manager_change_state/',{id:id},function (data) {
+        if(data.data[0]){
+            // 启用时改变span的值和class
+            $(that).html('已启用').removeClass('label-error').addClass('label-success')
+        }else{
+            // 禁用时改变span的值和class
+            $(that).html('已禁用').removeClass('label-success').addClass('label-error')
+        }
+    },'json')
+});
+
+/*管理员删除-删除*/
+function manager_del(obj,id){
+	layer.confirm('确认要删除吗？',function(index){
+		$.ajax({
+			type: 'get',
+			url: '/admin/manager_del/',
+            data: {id:id},
+			dataType: 'json',
+			success: function(data){
+			    if(data.code == 0){
+                    $(obj).parents("tr").remove();
+                    layer.msg('已删除!',{icon:6,time:1000});
+				}else{
+			        layer.msg(data.msg,{icon:5,time:1000});
+                }
+			},
+			error:function(data) {
+				console.log(data.msg);
+			},
+		});
+	});
+}
+
+/*资讯-编辑*/
+function manager_edit(title,url,w,h){
+	var index = layer.open({
+		type: 2,
+        area:[w+'px',h+'px'],
+		title: title,
+		content: url
+	});
+}
+/*资讯-审核*/
+function article_shenhe(obj,id){
+	layer.confirm('审核文章？', {
+		btn: ['通过','不通过','取消'],
+		shade: false,
+		closeBtn: 0
+	},
+	function(){
+		$(obj).parents("tr").find(".td-manage").prepend('<a class="c-primary" onClick="article_start(this,id)" href="javascript:;" title="申请上线">申请上线</a>');
+		$(obj).parents("tr").find(".td-status").html('<span class="label label-success radius">已发布</span>');
+		$(obj).remove();
+		layer.msg('已发布', {icon:6,time:1000});
+	},
+	function(){
+		$(obj).parents("tr").find(".td-manage").prepend('<a class="c-primary" onClick="article_shenqing(this,id)" href="javascript:;" title="申请上线">申请上线</a>');
+		$(obj).parents("tr").find(".td-status").html('<span class="label label-danger radius">未通过</span>');
+		$(obj).remove();
+    	layer.msg('未通过', {icon:5,time:1000});
+	});
+}
+/*资讯-下架*/
+function article_stop(obj,id){
+	layer.confirm('确认要下架吗？',function(index){
+		$(obj).parents("tr").find(".td-manage").prepend('<a style="text-decoration:none" onClick="article_start(this,id)" href="javascript:;" title="发布"><i class="Hui-iconfont">&#xe603;</i></a>');
+		$(obj).parents("tr").find(".td-status").html('<span class="label label-defaunt radius">已下架</span>');
+		$(obj).remove();
+		layer.msg('已下架!',{icon: 5,time:1000});
+	});
+}
+
+/*资讯-发布*/
+function article_start(obj,id){
+	layer.confirm('确认要发布吗？',function(index){
+		$(obj).parents("tr").find(".td-manage").prepend('<a style="text-decoration:none" onClick="article_stop(this,id)" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a>');
+		$(obj).parents("tr").find(".td-status").html('<span class="label label-success radius">已发布</span>');
+		$(obj).remove();
+		layer.msg('已发布!',{icon: 6,time:1000});
+	});
+}
+/*资讯-申请上线*/
+function article_shenqing(obj,id){
+	$(obj).parents("tr").find(".td-status").html('<span class="label label-default radius">待审核</span>');
+	$(obj).parents("tr").find(".td-manage").html("");
+	layer.msg('已提交申请，耐心等待审核!', {icon: 1,time:2000});
+}
+// 当页面加载完成以后触发内部的匿名函数
+$(function(){
+    //让后台左侧的系统管理 展开
+    $('#menu-system').find('dt').click();
+})
+</script>
+
+{% endblock %}

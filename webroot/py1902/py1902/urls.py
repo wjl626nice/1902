@@ -23,7 +23,12 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     # 前端
+    # 首页
     path('', home.index),
+    # 列表
+    path('list/<int:id>.html', home.list),
+    # 终端
+    path('show/<int:id>.html', home.show, name='show'),
     # 通用路由
     # 文件上传
     path('fileupload/', admin.fileupload),
@@ -31,6 +36,8 @@ urlpatterns = [
     # path('admin/', include('manager.urls')),
     # 登录
     path('admin/login/', admin.login),
+    # 获取极验的预处理参数
+    path('pcgetcaptcha/', admin.pcgetcaptcha),
     path('admin/logOut/', admin.logOut),
     path('verify/', admin.get_verify),
 

@@ -11,6 +11,8 @@ from django.conf import settings
 # 验证器
 from manager.formModel.categoryForm import *
 from manager.formModel.articleForm import *
+# 加载极验模块
+from geetest import GeetestLib
 
 
 # Create your views here.
@@ -58,6 +60,19 @@ def login(request):
 
     return render(request, 'admin/login.html', {"error": error})
 
+def pcgetcaptcha(request):
+    """
+    获取极验官方的的一些参数
+    :param request:
+    :return:
+    """
+    user_id = 'test'
+    gt = GeetestLib(settings.GEETEST['id'],settings.GEETEST['key'])
+    status = gt.pre_process(user_id)
+    request.session[gt.GT_STATUS_SESSION_KEY] = status
+    request.session["user_id"] = user_id
+    response_str = gt.get_response_str()
+    return HttpResponse(response_str)
 
 def logOut(request):
     """
@@ -96,14 +111,31 @@ def _checkLogin(request):
     account = request.POST.get('account', None).strip()
     # 密码
     pwd = request.POST.get('pwd', None).strip()
-    # 验证码
-    code = request.POST.get('code').strip()
-    # 判断验证码是否存在
-    if not code:
-        return '验证码不能为空！'
-    # 验证码是否输入正确
-    if code.lower() != request.session.get('verifys').lower():
-        return '验证码不正确，请重新输入！'
+
+    # 极验 验证start
+    gt = GeetestLib(settings.GEETEST['id'],settings.GEETEST['key'])
+    challenge = request.POST.get(gt.FN_CHALLENGE, '')
+    validate = request.POST.get(gt.FN_VALIDATE, '')
+    seccode = request.POST.get(gt.FN_SECCODE, '')
+    status = request.session[gt.GT_STATUS_SESSION_KEY]
+    user_id = request.session["user_id"]
+    if status:
+        result = gt.success_validate(challenge, validate, seccode, user_id)
+    else:
+        result = gt.failback_validate(challenge, validate, seccode)
+    # 极验 验证end
+    # result： True验证通过,False 验证没有通过
+    if not result: return '验证失败！'
+
+    # # 验证码
+    # code = request.POST.get('code').strip()
+    # # 判断验证码是否存在
+    # if not code:
+    #     return '验证码不能为空！'
+    # # 验证码是否输入正确
+    # if code.lower() != request.session.get('verifys').lower():
+    #     return '验证码不正确，请重新输入！'
+
     # 账号 或者密码不能为空
     if not account or not pwd:
         return '账号或者密码不能为空！'
@@ -131,12 +163,9 @@ def index(request):
     :param request:
     :return:
     """
-    # 获取后台菜单
-    menu = settings.MENU
     # 获取信息传递到模板中
     data = {
-        "user": request.session.get('user'),
-        "menu": menu
+
     }
     return render(request, 'admin/index.html', data)
 
@@ -149,12 +178,8 @@ def manager(request):
     """
     # 获取所有管理员信息
     admins = Admin.objects.filter(id__gt=1).values('id', 'account', 'mobile', 'email', 'state', 'login_time')
-    # 获取后台菜单
-    menu = settings.MENU
     # 获取信息传递到模板中
     data = {
-        "user": request.session.get('user'),
-        "menu": menu,
         'admins': admins,
         'count': admins.count()
     }
@@ -286,13 +311,9 @@ def category(request):
     :return:
     """
     # 获取所有栏目信息
-    items = Category.objects.all().values('id', 'cate_name', 'pic', 'num')
-    # 获取后台菜单
-    menu = settings.MENU
+    items = Category.objects.all().values('id', 'cate_name', 'pic', 'num').order_by('-id')
     # 获取信息传递到模板中
     data = {
-        "user": request.session.get('user'),
-        "menu": menu,
         'items': items,
         'count': items.count()
     }
@@ -312,7 +333,8 @@ def category_add(request):
         if categoryForm.is_valid():
             # 根据验证器的字段属性 获取验证成功的数据，返回一个字典
             cate = categoryForm.cleaned_data
-            cate['pic'] = request.FILES['pic']
+            if request.FILES:
+                cate['pic'] = request.FILES.get('pic')
             #  添加栏目信息
             # cate ={
             #     "cate_name": request.POST.get('cate_name'),
@@ -323,9 +345,10 @@ def category_add(request):
             #     "seo_description": request.POST.get('seo_description')
             #
             # }
+            print(cate)
             Category.objects.create(**cate)
             return JsonResponse({'msg': '添加成功！', 'code': 0, 'data': []})
-
+        print(categoryForm.errors)
         return JsonResponse({'msg': '添加失败！', 'code': 1, 'data': []})
 
     return render(request, 'admin/category_add.html', {'categoryForm': categoryForm})
@@ -403,13 +426,8 @@ def article(request):
     """
     # 获取所有信息
     items = Article.objects.all()
-    print(items)
-    # 获取后台菜单
-    menu = settings.MENU
     # 获取信息传递到模板中
     data = {
-        "user": request.session.get('user'),
-        "menu": menu,
         'items': items,
         'count': items.count()
     }
@@ -426,18 +444,19 @@ def article_add(request):
     articleForm = ArticleForm(request.POST)
     if request.is_ajax():
         # 验证通过时返回的是True
-        if articleForm.is_valid() and request.POST['category_id']:
+        if articleForm.is_valid() and request.POST.get('category_id', ''):
             # 根据验证器的字段属性 获取验证成功的数据，返回一个字典
             data = articleForm.cleaned_data
             # data['pic'] = '',
             # 栏目id
-            data['category_id'] = request.POST['category_id']
+            data['category_id'] = request.POST.get('category_id')
             # 属性
-            data['flag'] = request.POST['flag']
+            data['flag'] = request.POST.get('flag')
+            # 图片
+            data['pic'] = request.POST.get('pic', '')
             # 发布人id
             data['admin_id'] = request.session['user']['id']
             # 发布文章基础表相关信息
-            print(data)
             article = Article.objects.create(**data)
             # 发布附加表相关信息
             Atricle_additional.objects.create(article=article, content=request.POST['content'])
@@ -451,6 +470,11 @@ def article_add(request):
 
 
 def article_edit(request):
+    """
+    修改文章
+    :param request:
+    :return:
+    """
     # get 请求,返回的都是 html
     id = request.GET.get('id')
     # id不能为空
@@ -459,38 +483,48 @@ def article_edit(request):
         return HttpResponse(html)
 
     # 表单验证器   实例化 CategoryForm类返回一个对象
-    categoryForm = CategoryForm(request.POST)
+    articleForm = ArticleForm(request.POST)
     if request.is_ajax():
-        if categoryForm.is_valid():
+        if articleForm.is_valid():
             # 获取验证成功并且要修改的内容
-            cate = categoryForm.cleaned_data
+            data = articleForm.cleaned_data
+
+            # 栏目id
+            data['category_id'] = request.POST.get('category_id')
+            # 属性
+            data['flag'] = request.POST.get('flag')
+
+            # 发布人id
+            data['admin_id'] = request.session['user']['id']
+
             # 追加要修改的图片对象
-            if request.FILES.get('pic', None):
-                cate['pic'] = request.FILES['pic']
+            if request.POST.get('pic', None):
+                data['pic'] = request.POST.get('pic')
                 # 可以删除老的图片
                 # # 获取图片的绝对物理路径
                 # pic = os.path.join(settings.BASE_DIR, request.POST.get('oldpic'))
                 # # 删除物理图片
                 # if cate.pic and os.path.isfile(pic): os.remove(pic)
 
-            else:
-                del cate['pic']
-
-            # 更新当前栏目信息
-            # Category(id=id, **cate) 创建category模型对象
+            # 更新当前文章信息
+            # Article(id=id, **data) 创建category模型对象
             # update_fields要求更新那些字段
-            Category(id=id, **cate).save(update_fields=cate.keys())
+            Article(id=id, **data).save(update_fields=data.keys())
+            # 更新了文章附加表信息
+            Atricle_additional(article_id=id, content=request.POST.get('content')).save()
             return JsonResponse({'msg': '操作成功！', 'code': 0, 'data': []})
         return JsonResponse({'msg': '操作失败！', 'code': 1, 'data': []})
 
     try:
-        # 获取指定id的栏目信息
-        cateInfo = Category.objects.get(id=id)  # 如果get查询不到数据时 会抛出异常
+        # 获取指定id的信息
+        article = Article.objects.get(id=id)  # 如果get查询不到数据时 会抛出异常
     except Exception as e:
         html = common.msg('修改异常！')
         return HttpResponse(html)
 
-    return render(request, 'admin/category_edit.html', {"cateInfo": cateInfo, "categoryForm": categoryForm})
+    # 获取所有的栏目
+    cates = Category.objects.all().values('id', 'cate_name')
+    return render(request, 'admin/article_edit.html', {"article": article, "articleForm": articleForm, 'cates': cates})
 
 
 def article_del(request):
@@ -505,12 +539,12 @@ def article_del(request):
         return JsonResponse({'msg': '请选择要操作的数据！', 'code': 1, 'data': []})
 
     # 删除指定数据
-    cate = Category.objects.get(id=id)
+    article = Article.objects.get(id=id)
     # 获取图片的绝对物理路径
-    pic = os.path.join(settings.BASE_DIR, str(cate.pic))
+    pic = os.path.join(settings.BASE_DIR, str(article.pic))
     # 删除物理图片
-    if cate.pic and os.path.isfile(pic): os.remove(pic)
-    cate.delete()
+    if article.pic and os.path.isfile(pic): os.remove(pic)
+    article.delete()
     return JsonResponse({'msg': '删除成功！', 'code': 0, 'data': []})
 
 
@@ -529,7 +563,7 @@ def links(request):
     }
     return render(request, 'admin/links.html', data)
 
-
+# 跳过csrf验证
 @csrf_exempt
 def fileupload(request):
     """

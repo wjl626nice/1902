@@ -65,6 +65,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # 模板引擎初始化参数，在模板中可以直接使用。
+                'conf.global.auto_config'
             ],
         },
     },
@@ -129,7 +131,7 @@ STATICFILES_DIRS = [
 # 媒体文件路径 别名
 MEDIA_URL = '/uploads/'
 # 指定媒体文件路径
-MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads'),
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads'),
 # 后台菜单
 MENU = [
     {"id": "menu-article", "title": "文章管理", "url": '#', "icon": '&#xe613;', 'child': [
@@ -175,4 +177,10 @@ LOGGING = {
             'propagate': True,
         },
     },
+}
+
+# 极验id和key
+GEETEST = {
+    'id': '4726b9849ea9f2493787a3fa247a9973',
+    'key': 'c264c310dbae53a1383770771408b473',
 }

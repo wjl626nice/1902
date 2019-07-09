@@ -42,6 +42,22 @@
 				<input type="file" class="input-text" placeholder="" id="pic" name="pic">
 			</div>
 		</div>
+        <div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>是否展示前台导航栏：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+                <div class="check-box skin-minimal">
+					<input type="checkbox" id="is_menu" name="is_menu" value="1" {% if cateInfo.is_menu %}checked{% endif %}>
+					<label for="checkbox-pinglun">&nbsp;</label>
+				</div>
+
+            </div>
+		</div>
+        <div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>权重（值越大排名越靠前）：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" placeholder="" value="{{ cateInfo.weight }}" id="weight" name="weight">
+			</div>
+		</div>
         <input type="hidden" name="oldpic" value="{{ cateInfo.pic }}">
         <div class="row cl">
 			<label class="form-label col-xs-4 col-sm-3">{{ categoryForm.describles.label }}：</label>

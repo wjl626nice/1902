@@ -24,6 +24,7 @@ class CustomeTimeStampField(models.Field):
 # 管理员模型
 class Admin(models.Model):
     account = models.CharField(max_length=30, unique=True, verbose_name='账号', default='')
+    nickname = models.CharField(max_length=45, default='', verbose_name='昵称')
     email = models.CharField(max_length=45, unique=True, verbose_name='邮箱', default='')
     mobile = models.CharField(max_length=11, unique=True, verbose_name='手机号', default='')
     pwd = models.CharField(max_length=32, verbose_name='密码')
@@ -58,12 +59,16 @@ class Admin_log(models.Model):
 class Category(models.Model):
     cate_name = models.CharField(max_length=25, default='', verbose_name='栏目名称')
     describles = models.CharField(max_length=200, default='', verbose_name='栏目描述')
-    pic = models.ImageField(max_length=150, upload_to='static/upload/%Y%m%d/', default='', verbose_name='栏目图片')
+    pic = models.ImageField(max_length=150, upload_to='uploads/%Y%m%d/', default='', verbose_name='栏目图片')
+    is_menu = models.BooleanField(default=True, verbose_name='是否在首页栏目中展示')
+    weight = models.PositiveSmallIntegerField(default=0, verbose_name='控制栏目排序')
     seo_title = models.CharField(max_length=50, verbose_name='seo标题')
     seo_keyword = models.CharField(max_length=60, verbose_name='seo关键词')
     seo_description = models.CharField(max_length=200, verbose_name='seo描述')
     num = models.PositiveIntegerField(default=0, verbose_name='发布文章数')
 
+    class META:
+        ordering = '-id',
 
 # 文章管理模型
 class Article(models.Model):
@@ -83,7 +88,7 @@ class Article(models.Model):
     seo_description = models.CharField(max_length=200, verbose_name='seo描述')
 
 
-# 文章管理模型
+# 文章附加管理模型
 class Atricle_additional(models.Model):
     article = models.OneToOneField(to='Article', primary_key=True, default=0, on_delete=models.CASCADE)
     content = models.TextField(verbose_name='文章内容')

@@ -27,23 +27,24 @@
 	<div id="loginform" class="loginBox">
 		<form class="form form-horizontal" method="post">
             {% csrf_token %}
+            <input type="hidden" name="geetest_challenge">
+            <input type="hidden" name="geetest_validate">
+            <input type="hidden" name="geetest_seccode">
 			<div class="row cl">
 				<label class="form-label col-xs-3"><i class="Hui-iconfont">&#xe60d;</i></label>
 				<div class="formControls col-xs-8">
-					<input name="account" type="text" placeholder="账户" class="input-text size-L">
+					<input name="account" id="account" type="text" placeholder="账户" class="input-text size-L">
 				</div>
 			</div>
 			<div class="row cl">
 				<label class="form-label col-xs-3"><i class="Hui-iconfont">&#xe60e;</i></label>
 				<div class="formControls col-xs-8">
-					<input name="pwd" type="password" placeholder="密码" class="input-text size-L">
+					<input name="pwd" id="pwd" type="password" placeholder="密码" class="input-text size-L">
 				</div>
 			</div>
 			<div class="row cl">
 				<div class="formControls col-xs-8 col-xs-offset-3">
-					<input name="code" class="input-text size-L" type="text" placeholder="验证码" style="width:150px;">
-					<img src="/verify/" onclick="$('#kanbuq').click()">
-					<a id="kanbuq" href="javascript:;">看不清，换一张</a>
+					<div id="popup-captcha"></div>
 				</div>
 			</div>
 			<div class="row cl">
@@ -55,7 +56,7 @@
 			</div>
 			<div class="row cl">
 				<div class="formControls col-xs-8 col-xs-offset-3">
-					<input type="submit" class="btn btn-success radius size-L" value="&nbsp;登&nbsp;&nbsp;&nbsp;&nbsp;录&nbsp;">
+					<input type="submit" id="popup-submit" class="btn btn-success radius size-L" value="&nbsp;登&nbsp;&nbsp;&nbsp;&nbsp;录&nbsp;">
 					<input type="reset" class="btn btn-default radius size-L" value="&nbsp;取&nbsp;&nbsp;&nbsp;&nbsp;消&nbsp;">
 				</div>
 			</div>
@@ -70,8 +71,84 @@
 <div class="footer">Copyright 你的公司名称 by H-ui.admin.page.v3.0</div>
 
 <script type="text/javascript" src="/static/admin/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/admin/lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="/static/gt.js"></script>
 <script type="text/javascript" src="/static/admin/static/h-ui/js/H-ui.js"></script>
 <script>
+    var handlerPopup = function (captchaObj) {
+        var validate = ''
+        // 将验证码加到id为captcha的元素里
+        captchaObj.appendTo("#popup-captcha");
+        // 成功的回调
+        captchaObj.onSuccess(function () {
+            validate = captchaObj.getValidate();
+            $('input[name="geetest_challenge"]').val(validate.geetest_challenge)
+            $('input[name="geetest_validate"]').val(validate.geetest_validate)
+            $('input[name="geetest_seccode"]').val(validate.geetest_seccode)
+            /*$.ajax({
+                url: "/admin/login/", // 进行二次验证
+                type: "post",
+                dataType: "json",
+                data: {
+                    account: $('#account').val(),
+                    pwd: $('#pwd').val(),
+                    csrfmiddlewaretoken: $('input[name="csrfmiddlewaretoken"]').val(),
+                    geetest_challenge: validate.geetest_challenge,
+                    geetest_validate: validate.geetest_validate,
+                    geetest_seccode: validate.geetest_seccode
+                },
+                success: function (data) {
+                    if (data && (data.status === "success")) {
+                        $(document.body).html('<h1>登录成功</h1>');
+                    } else {
+                        $(document.body).html('<h1>登录失败</h1>');
+                    }
+                }
+            });*/
+        });
+        $("#popup-submit").click(function () {
+            var account = $('#account').val()
+            if(!account){
+                layer.msg('请输入用户名！',{icon:5,time:2000},function () {
+                     // 光标聚焦到当前输入框
+                    $('#account').focus()
+                })
+                return false;
+            }
+            var pwd = $('#pwd').val()
+            if(!pwd){
+                layer.msg('请输入密码！',{icon:5,time:2000},function () {
+                    // 光标聚焦到当前输入框
+                    $('#pwd').focus()
+                })
+                return false;
+            }
+            if(!validate){
+                layer.msg('请完成验证！',{icon:5,time:2000})
+                return false;
+            }
+        });
+        // 更多接口参考：http://www.geetest.com/install/sections/idx-client-sdk.html
+    };
+    // 验证开始需要向网站主后台获取id，challenge，success（是否启用failback）
+    $.ajax({
+        url: "/pcgetcaptcha/?t=" + (new Date()).getTime(), // 加随机数防止缓存
+        type: "get",
+        dataType: "json",
+        success: function (data) {
+            // 使用initGeetest接口
+            // 参数1：配置参数
+            // 参数2：回调，回调的第一个参数验证码对象，之后可以使用它做appendTo之类的事件
+            initGeetest({
+                gt: data.gt,
+                challenge: data.challenge,
+                product: "popup", // 产品形式，包括：float，embed，popup。注意只对PC版验证码有效
+                offline: !data.success // 表示用户后台检测极验服务器是否宕机，一般不需要关注
+                // 更多配置参数请参见：http://www.geetest.com/install/sections/idx-client-sdk.html#config
+            }, handlerPopup);
+        }
+    });
+
     $('#kanbuq').click(function () {
         // 获取验证码图片的 url,   $(this).prev('img')获取同辈元素的上个
         var verify_url = $(this).prev('img').attr('src');

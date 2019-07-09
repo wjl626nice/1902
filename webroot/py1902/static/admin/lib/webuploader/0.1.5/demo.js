@@ -87,7 +87,16 @@ jQuery(function() {
         fileSizeLimit: 5 * 1024 * 1024,    // 200 M
         fileSingleSizeLimit: 1 * 1024 * 1024    // 50 M
     });
-
+    uploader.on( 'uploadSuccess', function( file, response ) {
+        // console.log(response.result)
+        // 获取已经存在的pic图片
+        var pic = $('#pic').val()
+        var character = ','
+        if(pic == ''){
+            character = ''
+        }
+        $('#pic').val(pic + character + response.result)
+    });
     // 添加“添加文件”的按钮，
     uploader.addButton({
         id: '#filePicker2',

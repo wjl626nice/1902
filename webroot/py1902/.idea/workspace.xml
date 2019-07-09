@@ -2,174 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a470dc69-115e-4b64-a2f3-8a6eb4086afc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/conf/global.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/migrations/0015_auto_20190709_1512.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/migrations/0016_auto_20190709_1531.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/migrations/0017_auto_20190709_1531.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/migrations/0018_auto_20190709_1541.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/migrations/0019_auto_20190709_1623.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/migrations/0020_auto_20190709_1653.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/gt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/css/._base.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/css/._m.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/css/base.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/css/m.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._abbg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._ad.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._ad02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._aliyun.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._aliyun.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._avatar.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._avatar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._b01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._b02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._b03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._b04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._b05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._h1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._h2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._hline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._huangguan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._jinniuyun.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._joinwx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._joinwxqun.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._jt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._lm01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._lm02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._lm03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._lm04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._longad.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._mian.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._qq1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._qq2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._quote-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._star.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._text01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._text02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._text03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._text04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._text05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._text06.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._text07.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._top.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._top1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._top10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._top11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._top12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._top13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._top14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._top2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._top3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._top4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._top6.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._top7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._top8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._top9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._v.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._wx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._wxgzh.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._未标题-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/._栏目封面.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/abbg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/ad.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/ad02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/aliyun.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/aliyun.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/avatar.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/avatar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/b01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/b02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/b03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/b04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/b05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/h1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/h2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/hline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/huangguan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/jinniuyun.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/joinwx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/joinwxqun.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/jt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/lm01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/lm02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/lm03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/lm04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/longad.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/mian.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/qq1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/qq2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/quote-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/star.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/text01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/text02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/text03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/text04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/text05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/text06.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/text07.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/top.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/top1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/top10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/top11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/top12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/top13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/top14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/top2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/top3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/top4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/top6.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/top7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/top8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/top9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/v.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/wx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/wxgzh.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/未标题-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/images/栏目封面.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/js/._comm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/js/._jquery-1.8.3.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/js/._modernizr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/js/._page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/js/._page2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/js/comm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/js/jquery-1.8.3.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/js/modernizr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/js/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/js/page2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/article_edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/login-back.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home/public/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/formModel/categoryForm.py" beforeDir="false" afterPath="$PROJECT_DIR$/manager/formModel/categoryForm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/manager/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/manager/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py1902/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/py1902/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py1902/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/py1902/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/lib/webuploader/0.1.5/demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/lib/webuploader/0.1.5/demo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/article.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/article_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/article_add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/category_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/category_add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/category_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/category_edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/login.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -281,7 +114,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/home/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="230">
@@ -311,11 +144,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/py1902/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="30" column="48" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
+            <state relative-caret-position="192">
+              <caret line="31" column="10" lean-forward="true" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -426,9 +259,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="221" />
-    <option name="y" value="304" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-5" />
+    <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="709" />
   </component>
@@ -555,7 +388,7 @@
       <workItem from="1562393126161" duration="11956000" />
       <workItem from="1562556292608" duration="17062000" />
       <workItem from="1562639987696" duration="85000" />
-      <workItem from="1562641872509" duration="13424000" />
+      <workItem from="1562641872509" duration="13628000" />
     </task>
     <task id="LOCAL-00001" summary="基于django的博客项目">
       <created>1562232768755</created>
@@ -575,7 +408,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106143000" />
+    <option name="totallyTimeSpent" value="106347000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -587,7 +420,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-5" y="23" width="1280" height="709" extended-state="6" />
+    <frame x="-5" y="23" width="1280" height="709" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -601,7 +434,7 @@
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.3987034" />
+      <window_info anchor="bottom" id="Run" order="8" weight="0.3987034" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.3987034" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -1026,13 +859,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/py1902/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="30" column="48" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/home/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -1044,6 +870,13 @@
             <element signature="n#div#1;n#div#1;n#article#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#2;n#div#1;n#article#0;n#body#0;n#html#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py1902/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="31" column="10" lean-forward="true" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
         </state>
       </provider>
     </entry>

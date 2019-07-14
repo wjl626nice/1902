@@ -1,0 +1,16 @@
+使用Django自带管理系统步骤
+1、运行  makemigrations    migrate 、创建自带后台需要的表
+2、创建一个超级管理员：
+   通过终端进入项目根目录执行以下命令
+   python3 manage.py createsuperuser
+   按命令提示输入对应内容。
+3、启动Django
+   再浏览器中输入 http://127.0.0.1:8000/admin/
+
+4、配置settings
+   本地化语言配置
+   LANGUAGE_CODE = 'zh-hans'
+   配置时区
+   TIME_ZONE = 'Asia/Shanghai'
+   禁用django时区
+   USE_TZ = False

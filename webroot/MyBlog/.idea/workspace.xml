@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="81f012df-a458-467f-bc01-edd600c46bc0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/MyBlog.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/upload/20190712/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/upload/20190712/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/upload/20190712/4_jxEw9ha.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/记录" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/controller/common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/controller/console.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/controller/contlist.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/controller/forum.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/controller/sample.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/controller/senior.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/controller/set.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/controller/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/controller/useradmin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/controller/workorder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/lib/admin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/lib/extend/echarts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/lib/extend/echartsTheme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/lib/view.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/style/admin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/style/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/style/res/bg-none.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/style/res/layui-logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/style/res/logo-black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/style/res/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/style/res/template/character.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/style/res/template/huge.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/style/res/template/portrait.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/style/template.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/app/content/comment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/app/content/contform.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/app/content/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/app/content/listform.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/app/content/tags.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/app/content/tagsform.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/app/forum/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/app/forum/listform.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/app/forum/replys.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/app/forum/replysform.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/app/mall/category.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/app/mall/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/app/mall/specs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/app/message/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/app/message/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/app/workorder/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/app/workorder/listform.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/app/说明.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/anim/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/auxiliar/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/badge/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/button/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/carousel/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/code/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/colorpicker/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/flow/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/form/element.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/form/group.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/grid/all.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/grid/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/grid/mobile-pc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/grid/mobile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/grid/speed-dial.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/grid/stack.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/laydate/demo1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/laydate/demo2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/laydate/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/laydate/special-demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/laydate/theme.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/layer/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/layer/special-demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/layer/theme.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/laypage/demo1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/laypage/demo2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/laypage/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/laytpl/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/nav/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/panel/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/progress/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/rate/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/slider/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/table/auto.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/table/cellEdit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/table/cellEvent.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/table/checkbox.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/table/data.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/table/fixed.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/table/form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/table/height.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/table/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/table/initSort.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/table/onrow.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/table/operate.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/table/page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/table/parseData.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/table/radio.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/table/reload.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/table/resetPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/table/simple.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/table/static.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/table/style.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/table/thead.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/table/toolbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/table/tostatic.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/table/totalRow.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/tabs/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/timeline/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/upload/demo1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/upload/demo2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/upload/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/util/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/component/说明.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/home/homepage1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/home/homepage2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/iframe/layer/iframe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/iframe/link/baidu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/iframe/link/layui.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/iframe/link/layuiAdmin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/iframe/说明.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/senior/echarts/bar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/senior/echarts/line.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/senior/echarts/map.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/senior/im/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/senior/im/kefu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/senior/说明.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/set/system/email.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/set/system/website.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/set/user/info.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/set/user/password.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/set/说明.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/system/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/system/get.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/system/more.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/system/theme.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/system/说明.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/temp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/template/addresslist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/template/caller.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/template/goodslist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/template/msgboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/template/personalpage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/template/search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/template/tips/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/template/tips/error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/template/tips/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/template/user/forget.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/template/user/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/template/user/reg.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/template/说明.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/user/administrators/adminform.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/user/administrators/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/user/administrators/role.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/user/administrators/roleform.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/user/forget.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/user/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/user/reg.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/user/user/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/user/user/userform.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/static/src/views/user/说明.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lsputao/templates/admin/admin_login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../py1902/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../py1902/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../py1902/manager/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py1902/manager/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../py1902/manager/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py1902/manager/views.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="myblog@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="myblog@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="myblog@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="myblog: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/记录">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="298">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyBlog/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="130" column="22" selection-start-line="130" selection-start-column="22" selection-end-line="130" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyBlog/wsgi.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyBlog/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="265">
+              <caret line="23" column="84" selection-start-line="23" selection-start-column="78" selection-end-line="23" selection-end-column="84" />
+              <folding>
+                <element signature="e#630#636#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="9" column="10" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/blog/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="28">
+              <caret line="11" column="15" lean-forward="true" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog/apps.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/django/contrib/admin/migrations/0001_initial.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-931">
+              <folding>
+                <element signature="e#0#34#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/记录" />
+        <option value="$PROJECT_DIR$/blog/models.py" />
+        <option value="$PROJECT_DIR$/blog/apps.py" />
+        <option value="$PROJECT_DIR$/MyBlog/settings.py" />
+        <option value="$PROJECT_DIR$/MyBlog/urls.py" />
+        <option value="$PROJECT_DIR$/blog/admin.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/MyBlog.iml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/.idea/dataSources.xml" />
+        <option value="$PROJECT_DIR$/../lsputao/.idea/lsputao.iml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="123" />
+    <option name="y" value="51" />
+    <option name="width" value="1280" />
+    <option name="height" value="709" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="MyBlog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="MyBlog" type="Python.DjangoServer" factoryName="Django server">
+      <module name="MyBlog" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="MyBlog.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="81f012df-a458-467f-bc01-edd600c46bc0" name="Default Changelist" comment="" />
+      <created>1562893058308</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1562893058308</updated>
+      <workItem from="1562893066318" duration="5171000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="5171000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="123" y="51" width="1280" height="709" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24959612" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="manage.py@MyBlog" weight="0.5202593" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Terminal" weight="0.636953" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Database Console" weight="0.32901135" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32901135" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="SciView" />
+      <window_info anchor="right" id="Database" weight="0.32956383" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24959612" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="4" />
+      <window_info anchor="bottom" id="Python Console" order="5" />
+      <window_info anchor="bottom" id="Message" order="6" />
+      <window_info anchor="bottom" id="Find" order="7" />
+      <window_info anchor="bottom" id="Run" order="8" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="12" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info anchor="right" id="SciView" order="1" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/django/contrib/admin/options.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-144">
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/django/contrib/admin/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2108">
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/django/contrib/admin/migrations/0003_logentry_add_action_flag_choices.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-37">
+          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/django/contrib/admin/migrations/0002_logentry_remove_auto_add.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="7" column="15" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/django/contrib/admin/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-931">
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/040d1808-6b93-4ebc-aae6-c4f289c89c38/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://040d1808-6b93-4ebc-aae6-c4f289c89c38/schema/myblog/table/auth_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/记录">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/upload/20190712/4.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/upload/20190712/2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/upload/20190712/4_jxEw9ha.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/django/contrib/admin/templates/admin/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-840">
+          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyBlog/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="130" column="22" selection-start-line="130" selection-start-column="22" selection-end-line="130" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyBlog/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyBlog/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="23" column="84" selection-start-line="23" selection-start-column="78" selection-end-line="23" selection-end-column="84" />
+          <folding>
+            <element signature="e#630#636#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="11" column="15" lean-forward="true" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -1,0 +1,154 @@
+1、写个路由展示后台入口页面
+2、admin_login执行框架代码加载 index.js 模块
+  // 配置config
+  layui.config({
+    base: '/static/src/' //指定 layuiAdmin 项目路径，本地开发用 src，线上用 dist
+    ,version: '1.2.1'
+  }).use('index');
+  然后执行 index模块   index.js在static/src中存放
+3、index模块重要地方：
+
+  //初始主体结构
+  layui.link(
+    setter.base + 'style/admin.css?v='+ (admin.v + '-1')
+    ,function(){
+      entryPage()
+    }
+    ,'layuiAdmin'
+  );
+  以上代码会加载/static/src/views/layout.html代码，放入到 admin_login.html的<div id="LAY_app"></div>
+  并且插入一个style/admin.css文件。
+
+  会检测当前操作的用户是否登录，如果没有登录js自动获取/static/src/views/user/login.html 插入到 <div id="LAY_app"></div>
+
+  //监听Hash改变
+  window.onhashchange = function(){
+    entryPage();
+     //执行 {setter.MOD_NAME}.hash 下的事件
+    layui.event.call(this, setter.MOD_NAME, 'hash({*})', layui.router());
+  };
+
+  会根据左侧菜单的访问变化，而加载不同的html内容，插入到 admin_login.html中。
+
+4、static/src/lib/admin.js 重要：
+
+  //页面跳转
+  $body.on('click', '*[lay-href]', function(){
+    var othis = $(this)
+    ,href = othis.attr('lay-href')
+    ,router = layui.router();
+
+    admin.tabsPage.elem = othis;
+    //admin.prevRouter[router.path[0]] = router.href; //记录上一次各菜单的路由信息
+
+    //执行跳转
+    location.hash = admin.correctRouter(href);
+  });
+  控制后台左侧菜单的点击。最后改变当前浏览器地址栏url,然后 index.js中的window.onhashchange监听事件触发。
+
+
+
+5、在layui框架中定义模块
+
+   layui.define('view', function(exports){
+     当前模块的业务逻辑，
+     一些js程序
+     exports('模块名称',要暴露内部的属性和方法（对象）);
+   });
+
+   当前定义的模块 依赖于view模块，在当前模块的回调函数（ function(exports){}）中
+   可以使用view模块暴露的属性和方法。
+
+6、修改框架的/static/src/config.js
+
+   interceptor: false //是否开启未登入拦截, 改成true
+
+7、http://127.0.0.1:8000/lspt20!(/#/user/login
+  js会找到 /static/src/views/user/login.html文件，并且获取到文件的html内容，
+  把内容插入到 admin_login.html中（<div id="LAY_app"></div>）
+
+8、layui.use(['admin', 'form', 'user', 'gt'], function(){业务代码});
+
+   layui会把 数组（['admin', 'form', 'user', 'gt']）包含的模块下载下来，让浏览器
+   执行，并且layui会获取他们执行后的模块。相当于：
+   layui.admin = admin.js执行的结果（暴露的属性和方法）
+   layui.form = form.js执行的结果
+   layui.user = user.js执行的结果
+   layui.gt = gt.js执行的结果
+
+   layui.use 执行后会自动调用 它的第二个参数（匿名函数），在第二个参数（匿名函数）中
+   就可以使用   layui.admin、layui.form、layui.user、layui.gt
+
+   一般由use的地方都是要操作页面的，也是我们写js的地方（匿名函数内）
+
+9、layui.extend({
+      setter: 'config' //配置文件   /static/src/config.js
+      ,admin: 'lib/admin' //核心模块 /static/src/lib/admin.js
+      ,view: 'lib/view' //核心模块 /static/src/lib/view.js
+              //['setter', 'admin'] 需要什么模块在数组中写什么模块，在第二个参数中使用
+      //define 定义一个模块，第一个参数是引入别的模块，第二个参数是当前模块的核心方法
+    }).define(['setter', 'admin'], function(exports){
+        js业务逻辑代码
+    })
+
+    layui.extend().define()
+    layui.extend 执行后返回一个layui对象。
+    layui对象再调 define()函数
+
+
+    layui.extend  改变layui的默认配置，给对应的文件起别名。
+
+    setter: 'config'，给config (/static/src/config.js) 起个 setter别名
+
+    admin: 'lib/admin'  给 lib/admin (/static/src/lib/admin.js) 起个 admin别名
+
+    define(['setter', 'admin'], function(){写业务逻辑})
+
+    define会自动下载 setter代表的的那个js文件，并且会让浏览器执行。
+
+    layui.setter = /static/src/config.js的执行结果
+    。。。。。
+
+
+    在define函数的第二个参数中 可以使用 layui对象的相关属性。
+
+10、/static/src/lib/view.js
+
+    对框架原生的ajax请求进行修改，
+    //Ajax请求
+    view.req = function(options){
+    var that = this
+    ,success = options.success
+    ,error = options.error
+
+    让我们在外部可以指定请求方式
+    ,type = options.type ? options.type : 'get'
+
+11、设置后台默认主页
+    settings的控制台链接设置成
+         "title": "控制台"
+         , "jump": "home/homepage2"
+    在index.js中
+        //默认读取主页
+        if(!path.length) path = [''];
+        改成下边
+        if(!path.length) path = ['home/homepage2'];
+
+12、template 表示是一个模板标签， lay-type="post"设置ajax请求时post,lay-url规定ajax请求的地址
+    lay-done="layui.element.render  当上边ajax请求完成以后把获取到的数据渲染到
+    当前模板标签的中间内容中。
+    <script type="text/html"  template lay-type="post" lay-url="/static/json/user/session.js"
+        lay-done="layui.element.render('nav', 'layadmin-layout-right');">
+          <a href="javascript:;">
+            <cite>{{ d.data.username }}</cite>
+          </a>
+          <dl class="layui-nav-child">
+            <dd><a lay-href="set/user/info">基本资料</a></dd>
+            <dd><a lay-href="set/user/password">修改密码</a></dd>
+            <hr>
+            <dd layadmin-event="logout" style="text-align: center;"><a>退出</a></dd>
+          </dl>
+   </script>
+
+13、layui.use('set', layui.factory('set'));
+    会主动触发 set模块中的代码

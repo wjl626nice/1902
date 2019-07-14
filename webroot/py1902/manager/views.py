@@ -28,7 +28,7 @@ def login(request):
     # print(request.META)
     if request.method == 'POST':
         # 登陆时做检测验证
-        adminInfo = _checkLogin(request)  # _checkLogin该名字自定义的，以后所有带下划线的都作为内部调用。
+        adminInfo =  _checkLogin(request)  # _checkLogin该名字自定义的，以后所有带下划线的都作为内部调用。
         # 判断返回值是否是 字符串
         if isinstance(adminInfo, str):
             return render(request, 'admin/login.html', {'error': adminInfo})

@@ -1,0 +1,930 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="623305cf-c869-4260-ae4f-9a9bfead656d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../MyBlog/.idea/MyBlog.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyBlog/blog/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyBlog/upload/20190712/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyBlog/upload/20190712/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyBlog/upload/20190712/4_jxEw9ha.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyBlog/记录" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/putao/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/controller/common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/controller/console.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/controller/contlist.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/controller/forum.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/controller/sample.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/controller/senior.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/controller/set.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/controller/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/controller/useradmin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/controller/workorder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/lib/admin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/lib/extend/echarts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/lib/extend/echartsTheme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/lib/extend/gt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/lib/view.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/style/admin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/style/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/style/res/bg-none.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/style/res/layui-logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/style/res/logo-black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/style/res/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/style/res/template/character.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/style/res/template/huge.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/style/res/template/portrait.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/style/template.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/app/content/comment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/app/content/contform.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/app/content/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/app/content/listform.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/app/content/tags.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/app/content/tagsform.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/app/forum/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/app/forum/listform.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/app/forum/replys.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/app/forum/replysform.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/app/mall/category.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/app/mall/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/app/mall/specs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/app/message/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/app/message/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/app/workorder/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/app/workorder/listform.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/app/说明.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/anim/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/auxiliar/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/badge/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/button/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/carousel/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/code/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/colorpicker/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/flow/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/form/element.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/form/group.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/grid/all.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/grid/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/grid/mobile-pc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/grid/mobile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/grid/speed-dial.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/grid/stack.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/laydate/demo1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/laydate/demo2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/laydate/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/laydate/special-demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/laydate/theme.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/layer/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/layer/special-demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/layer/theme.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/laypage/demo1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/laypage/demo2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/laypage/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/laytpl/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/nav/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/panel/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/progress/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/rate/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/slider/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/table/auto.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/table/cellEdit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/table/cellEvent.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/table/checkbox.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/table/data.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/table/fixed.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/table/form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/table/height.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/table/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/table/initSort.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/table/onrow.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/table/operate.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/table/page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/table/parseData.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/table/radio.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/table/reload.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/table/resetPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/table/simple.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/table/static.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/table/style.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/table/thead.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/table/toolbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/table/tostatic.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/table/totalRow.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/tabs/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/timeline/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/upload/demo1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/upload/demo2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/upload/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/util/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/component/说明.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/home/homepage1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/home/homepage2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/iframe/layer/iframe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/iframe/link/baidu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/iframe/link/layui.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/iframe/link/layuiAdmin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/iframe/说明.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/senior/echarts/bar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/senior/echarts/line.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/senior/echarts/map.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/senior/im/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/senior/im/kefu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/senior/说明.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/set/system/email.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/set/system/website.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/set/user/info.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/set/user/password.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/set/说明.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/system/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/system/get.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/system/more.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/system/theme.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/system/说明.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/temp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/template/addresslist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/template/caller.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/template/goodslist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/template/msgboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/template/personalpage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/template/search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/template/tips/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/template/tips/error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/template/tips/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/template/user/forget.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/template/user/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/template/user/reg.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/template/说明.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/user/administrators/adminform.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/user/administrators/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/user/administrators/role.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/user/administrators/roleform.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/user/forget.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/user/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/user/reg.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/user/user/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/user/user/userform.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/src/views/user/说明.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/admin_login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/common.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/记录" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../py1902/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../py1902/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../py1902/manager/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py1902/manager/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../py1902/manager/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py1902/manager/views.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="lsputao@127.0.0.1" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="lsputao@127.0.0.1" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="lsputao@127.0.0.1" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="lsputao: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/src/views/set/user/password.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1122">
+              <caret line="51" column="37" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/src/controller/set.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3366">
+              <caret line="153" column="38" selection-start-line="153" selection-start-column="38" selection-end-line="153" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/src/lib/admin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="8206">
+              <caret line="791" column="61" selection-start-line="789" selection-start-column="4" selection-end-line="791" selection-end-column="61" />
+              <folding>
+                <element signature="e#1010#1197#0" />
+                <element signature="e#1249#1330#0" />
+                <element signature="e#1420#1809#0" />
+                <element signature="e#1863#3577#0" />
+                <element signature="e#3617#3860#0" />
+                <element signature="e#3912#4824#0" />
+                <element signature="e#4880#5233#0" />
+                <element signature="e#5279#7862#0" />
+                <element signature="e#7911#8126#0" />
+                <element signature="e#8225#8301#0" />
+                <element signature="e#8354#8423#0" />
+                <element signature="e#8480#8667#0" />
+                <element signature="e#8715#9078#0" />
+                <element signature="e#9123#9252#0" />
+                <element signature="e#9279#9312#0" />
+                <element signature="e#9368#9504#0" />
+                <element signature="e#9546#9847#0" />
+                <element signature="e#9891#10300#0" />
+                <element signature="e#10355#10556#0" />
+                <element signature="e#10971#11817#0" />
+                <element signature="e#17319#18014#0" />
+                <element signature="e#18119#20352#0" />
+                <element signature="e#20713#20807#0" />
+                <element signature="e#20859#21064#0" />
+                <element signature="e#21165#21542#0" />
+                <element signature="e#21628#21809#0" />
+                <element signature="e#22399#22908#0" />
+                <element signature="e#23075#23362#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/src/controller/common.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="31" column="21" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/src/views/layout.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="59" column="84" selection-start-line="59" selection-start-column="75" selection-end-line="59" selection-end-column="84" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/src/views/user/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2266">
+              <caret line="104" column="11" selection-start-line="104" selection-start-column="11" selection-end-line="104" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/putao/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1806">
+              <caret line="121" selection-start-line="121" selection-end-line="122" />
+              <folding>
+                <element signature="e#0#49#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/src/lib/extend/gt.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="499">
+              <caret line="185" column="23" lean-forward="true" selection-start-line="185" selection-start-column="23" selection-end-line="185" selection-end-column="23" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lsputao/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="314">
+              <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+              <folding>
+                <element signature="e#631#663#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>ech</find>
+      <find>echats</find>
+      <find>view =</find>
+      <find>indPage</find>
+      <find>admin</find>
+      <find>Class</find>
+      <find>renderPage</find>
+      <find>layadmin-system-side-menu</find>
+      <find>menu</find>
+      <find>top-</find>
+      <find>setter.interceptor</find>
+      <find>echar</find>
+      <find>req</find>
+      <find>lay-href</find>
+      <find>lay-url</find>
+      <find>set_website</find>
+      <find>set_system_email</find>
+      <find>setmyinfo</find>
+      <find>LAY_avatarSrc</find>
+      <find>setmypass</find>
+      <find>layadmin-event</find>
+      <find>退出</find>
+    </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/static</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/templates/admin/admin_login.html" />
+        <option value="$PROJECT_DIR$/static/src/controller/console.js" />
+        <option value="$PROJECT_DIR$/static/json/menu.js" />
+        <option value="$PROJECT_DIR$/static/layui/layui.js" />
+        <option value="$PROJECT_DIR$/static/src/lib/extend/gt.js" />
+        <option value="$PROJECT_DIR$/static/src/lib/admin.js" />
+        <option value="$PROJECT_DIR$/static/src/config.js" />
+        <option value="$PROJECT_DIR$/utils/common.py" />
+        <option value="$PROJECT_DIR$/putao/models.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/static/src/views/user/login.html" />
+        <option value="$PROJECT_DIR$/static/src/index.js" />
+        <option value="$PROJECT_DIR$/lsputao/settings.py" />
+        <option value="$PROJECT_DIR$/static/src/views/index.html" />
+        <option value="$PROJECT_DIR$/static/src/views/layout.html" />
+        <option value="$PROJECT_DIR$/static/src/lib/view.js" />
+        <option value="$PROJECT_DIR$/记录" />
+        <option value="$PROJECT_DIR$/lsputao/urls.py" />
+        <option value="$PROJECT_DIR$/static/src/controller/common.js" />
+        <option value="$PROJECT_DIR$/static/src/controller/set.js" />
+        <option value="$PROJECT_DIR$/putao/views.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/lsputao.iml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/.idea/dataSources.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="64" />
+    <option name="y" value="39" />
+    <option name="width" value="1171" />
+    <option name="height" value="674" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="lsputao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lsputao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lsputao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lsputao" type="462c0819:PsiDirectoryNode" />
+              <item name="lsputao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lsputao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lsputao" type="462c0819:PsiDirectoryNode" />
+              <item name="putao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lsputao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lsputao" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lsputao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lsputao" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lsputao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lsputao" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lsputao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lsputao" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="extend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lsputao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lsputao" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lsputao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lsputao" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/src/lib/extend" />
+      <recent name="$PROJECT_DIR$/static" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="lsputao" type="Python.DjangoServer" factoryName="Django server">
+      <module name="lsputao" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="lsputao.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="623305cf-c869-4260-ae4f-9a9bfead656d" name="Default Changelist" comment="" />
+      <created>1562898811297</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1562898811297</updated>
+      <workItem from="1562898816612" duration="33378000" />
+      <workItem from="1563001908064" duration="1293000" />
+      <workItem from="1563003873855" duration="2176000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="36847000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="64" y="39" width="1171" height="674" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.20017715" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" order="0" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.67423016" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="3" />
+      <window_info anchor="bottom" id="Python Console" order="4" />
+      <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="6" />
+      <window_info anchor="bottom" id="Find" order="7" />
+      <window_info anchor="bottom" id="Run" order="8" weight="0.32901135" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="12" />
+      <window_info anchor="bottom" id="manage.py@lsputao" order="13" weight="0.32901135" />
+      <window_info anchor="bottom" id="Database Console" order="14" weight="0.32901135" />
+      <window_info anchor="right" id="Database" order="0" weight="0.32949513" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="SciView" order="2" weight="0.32956383" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/common.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-52">
+          <caret line="121" column="18" selection-start-line="121" selection-start-column="18" selection-end-line="121" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/json/message/new.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/json/说明.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="11" lean-forward="true" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/json/console/top-card.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1212" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/json/menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="71" column="1" selection-end-line="71" selection-end-column="1" />
+          <folding>
+            <element signature="e#6984#7067#0" />
+            <element signature="e#7069#7178#0" />
+            <element signature="e#7180#7288#0" />
+            <element signature="e#7378#7590#0" />
+            <element signature="e#7464#7524#0" />
+            <element signature="e#7525#7583#0" />
+            <element signature="e#7591#7801#0" />
+            <element signature="e#7675#7732#0" />
+            <element signature="e#7733#7794#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lsputao/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/src/views/user/说明.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/layui/layui.all.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1139" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/src/lib/extend/echarts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="34" column="29567" selection-start-line="34" selection-start-column="29567" selection-end-line="34" selection-end-column="29567" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/src/lib/extend/echartsTheme.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/admin_login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/json/user/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/putao/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="34" column="16" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/5d3d838c-d8a7-4cdb-8250-86ed8ec7f523/console.sql" />
+    <entry file="file://$PROJECT_DIR$/static/src/views/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/json/user/session.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/src/views/temp.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/src/lib/view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="241" column="22" selection-start-line="241" selection-start-column="22" selection-end-line="241" selection-end-column="22" />
+          <folding>
+            <element signature="e#566#730#0" />
+            <element signature="e#876#1054#0" />
+            <element signature="e#3239#3922#0" />
+            <element signature="e#3977#4159#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lsputao/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="133" column="38" lean-forward="true" selection-start-line="132" selection-start-column="11" selection-end-line="133" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/src/controller/workorder.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/src/controller/useradmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding>
+            <element signature="e#301#1017#0" />
+            <element signature="e#1082#2105#0" />
+            <element signature="e#2134#2767#0" />
+            <element signature="e#2837#3892#0" />
+            <element signature="e#3920#4365#0" />
+            <element signature="e#4433#5307#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/src/controller/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-172">
+          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/src/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="28" column="30" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/src/controller/console.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="44" column="42" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/src/controller/contlist.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/src/controller/forum.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/src/controller/sample.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#style#0;n#del#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/src/controller/senior.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="6410" column="4" selection-start-line="6410" selection-start-column="4" selection-end-line="6410" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/layui/layui.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="674">
+          <caret line="37" column="35" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="37" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-728">
+          <caret line="31" column="47" selection-start-line="30" selection-start-column="4" selection-end-line="31" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/记录">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/src/views/set/user/password.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1122">
+          <caret line="51" column="37" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/src/controller/set.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3366">
+          <caret line="153" column="38" selection-start-line="153" selection-start-column="38" selection-end-line="153" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/src/lib/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8206">
+          <caret line="791" column="61" selection-start-line="789" selection-start-column="4" selection-end-line="791" selection-end-column="61" />
+          <folding>
+            <element signature="e#1010#1197#0" />
+            <element signature="e#1249#1330#0" />
+            <element signature="e#1420#1809#0" />
+            <element signature="e#1863#3577#0" />
+            <element signature="e#3617#3860#0" />
+            <element signature="e#3912#4824#0" />
+            <element signature="e#4880#5233#0" />
+            <element signature="e#5279#7862#0" />
+            <element signature="e#7911#8126#0" />
+            <element signature="e#8225#8301#0" />
+            <element signature="e#8354#8423#0" />
+            <element signature="e#8480#8667#0" />
+            <element signature="e#8715#9078#0" />
+            <element signature="e#9123#9252#0" />
+            <element signature="e#9279#9312#0" />
+            <element signature="e#9368#9504#0" />
+            <element signature="e#9546#9847#0" />
+            <element signature="e#9891#10300#0" />
+            <element signature="e#10355#10556#0" />
+            <element signature="e#10971#11817#0" />
+            <element signature="e#17319#18014#0" />
+            <element signature="e#18119#20352#0" />
+            <element signature="e#20713#20807#0" />
+            <element signature="e#20859#21064#0" />
+            <element signature="e#21165#21542#0" />
+            <element signature="e#21628#21809#0" />
+            <element signature="e#22399#22908#0" />
+            <element signature="e#23075#23362#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/src/views/user/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2266">
+          <caret line="104" column="11" selection-start-line="104" selection-start-column="11" selection-end-line="104" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/src/controller/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="31" column="21" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/src/views/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="59" column="84" selection-start-line="59" selection-start-column="75" selection-end-line="59" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lsputao/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+          <folding>
+            <element signature="e#631#663#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/putao/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1806">
+          <caret line="121" selection-start-line="121" selection-end-line="122" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://5d3d838c-d8a7-4cdb-8250-86ed8ec7f523/schema/lsputao/table/putao_admin">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/src/lib/extend/gt.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="185" column="23" lean-forward="true" selection-start-line="185" selection-start-column="23" selection-end-line="185" selection-end-column="23" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -14,7 +14,6 @@ from manager.formModel.articleForm import *
 # 加载极验模块
 from geetest import GeetestLib
 
-
 # Create your views here.
 
 

@@ -1,0 +1,102 @@
+<!--pages/list/list.wxml-->
+<view class="section">
+  <view class="section__title">flex-direction: row</view>
+  <view class="flex-wrp" style="flex-direction:row;">
+    <view class="flex-item bc_green">1</view>
+    <view class="flex-item bc_red">2</view>
+    <view class="flex-item bc_blue">3</view>
+  </view>
+</view>
+<scroll-view scroll-y="true" bindscroll="asaaa" style="height:50px;" scroll-into-view="blue">
+  <view style="background-color:green; height:50px;width:100%">1</view>
+  <view style="background-color:red; height:50px;width:100%">1</view>
+  <view style="background-color:blue; height:50px;width:100%" id="blue">1</view>
+  <view style="background-color:pink; height:50px;width:100%">1</view>
+</scroll-view>
+<scroll-view scroll-x="true" bindscroll="asaaa" style="height:100px;width:100%;">
+  <view style="width:800px">
+    <view style="float:left;background-color:green; height:50px;width:200px">1</view>
+    <view style="float:left;background-color:red; height:50px;width:200px;">1</view>
+    <view style="float:left;background-color:blue; height:50px;width:200px">1</view>
+    <view style="float:left;background-color:pink; height:50px;width:200px">1</view>
+  </view>
+</scroll-view>
+
+<!--是否显示圆点，自动播放，间隔时间，监听滚动和点击事件-->
+ <swiper indicator-dots="true" autoplay="true" duration="1000" bindchange="listenSwiper" >
+     <!--注意：其中只可放置<swiper-item/>组件，否则会导致未定义的行为--> <!--swiper-item只能包含一个节点再多会自动删除--> 
+    <swiper-item> 
+        <view style="background: red; height: 150px"></view>
+    </swiper-item>
+    <swiper-item> 
+        <view style="background: green; height: 150px"></view>
+    </swiper-item>
+    <swiper-item> 
+        <view style="background: blue; height: 150px"></view>
+    </swiper-item>
+ </swiper>
+<view class="group">
+  <block wx:for="{{iconSize}}">
+    <icon type="success" size="{{item}}"/>
+  </block>
+</view>
+
+<view class="group">
+  <block wx:for="{{iconType}}">
+    <icon type="{{item}}" size="40"/>
+  </block>
+</view>
+
+<view class="group">
+  <block wx:for="{{iconColor}}">
+    <icon type="success" size="40" color="{{item}}"/>
+  </block>
+</view>
+
+<view class="btn-area">
+  <view class="body-view">
+    <text>{{text}}</text>
+    <button bindtap="add">add line</button>
+    <button bindtap="remove">remove line</button>
+  </view>
+</view>
+
+<button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="default" hover-class="other-button-hover"> default </button>
+<button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="primary"> primary </button>
+<button type="warn" size="{{warnSize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="warn"> warn </button>
+<button bindtap="setDisabled">点击设置以上按钮disabled属性</button>
+<button bindtap="setPlain">点击设置以上按钮plain属性</button>
+<button bindtap="setLoading">点击设置以上按钮loading属性</button>
+<button open-type="contact">进入客服会话</button>
+<button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">获取用户信息</button>
+<button open-type="openSetting">打开授权设置页</button>
+
+
+<view class="section">
+  <view class="section__title">地区选择器</view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      当前选择：{{array[index]}}
+    </view>
+  </picker>
+</view>
+<view class="section">
+  <view class="section__title">时间选择器</view>
+  <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+    <view class="picker">
+      当前选择: {{time}}
+    </view>
+  </picker>
+</view>
+<view class="section">
+  <view class="section__title">日期选择器</view>
+  <picker mode="date" value="{{date}}" start="2018-01-01" end="2018-09-01" bindchange="bindDateChange">
+    <view class="picker">
+      当前选择: {{date}}
+    </view>
+  </picker>
+</view>
+<navigator url="/pages/show/show?id=" hover-class="navigator-hover">跳转到新页面</navigator>

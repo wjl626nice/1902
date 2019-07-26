@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from manager import views as admin
 from Home import views as home
+from api import  views as api
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -78,6 +79,9 @@ urlpatterns = [
 
     # 友情链接管理
     path('admin/links/', admin.links),
+
+    # api 接口（小程序）
+    path('get_cate_articles/', api.cate_articles)
 
 ] + static(settings.MEDIA_URL, document_root=os.path.join(settings.BASE_DIR, 'uploads'))
     # 配置上传文件访问路径

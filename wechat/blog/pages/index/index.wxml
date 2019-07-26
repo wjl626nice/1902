@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<view class="search">
+    <view class="search-container">
+      <icon type="search" size="20"></icon>
+      <input type="text" placeholder="请输入关键词！" bindconfirm="searchPage"></input>
+    </view>
+</view>
+<swiper class="swiper" indicator-color="#fff" indicator-active-color="red" indicator-dots="true" autoplay="true" interval="1000">
+  <swiper-item wx:key="{{index}}" wx:for="{{imageList}}">
+    <image bindtap="showDetail" data-id="{{item.id}}" src="{{item.imageUrl}}" class="swiper-image" mode="aspectFill" bindload=""></image>
+  </swiper-item>
+</swiper>
+
+<view class="category">
+    <view class="{{ index == currentTab ? 'active':''}}" data-index="{{index}}" bindtap="changeTab" wx:key="{{index}}" wx:for="{{category}}">{{item}}</view>
+</view>
+<swiper current="{{currentTab}}" style="height:1000rpx">
+  <swiper-item wx:for="{{all_cate_articles}}" wx:for-item="cate_articles">
+    <view wx:if="{{cate_articles.length <= 0}}">暂无内容</view>
+    <view wx:else>
+      <view class="article" bindtap="showDetail" data-id="{{index}}" wx:for="{{cate_articles}}" wx:for-item="article">
+        <image class = "article-image" src="{{article.pic}}" mode="aspectFill"></image>
+        <view class="article-attr">
+            <view>{{article.title}}</view>
+            <view>
+              {{article.describles}}
+            </view>
+            <view>
+              <text style="margin-right:20rpx;">阅读 ({{article.click}})</text>
+              <text>评论（{{article.comment}}）</text>
+            </view>
+        </view>
+    
+      </view>
+    </view>
+  </swiper-item>
+</swiper>

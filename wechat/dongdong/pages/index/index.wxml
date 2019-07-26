@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  <button bindtap="changeDD">点击改名字</button>
+  <text>{{dd}}</text>
+  <view id="aaa-{{id}}">组件属性id-{{id}}</view>
+  <text wx:if="{{2 < 4}}">abc</text>
+  <view>{{a+b}}+{{a}}+b</view>
+    <view>{{dd + "aaaa"}}</view>
+  <view wx:for="{{['a',2,3,4,65,67]}}"><text>{{item}}---{{index}}</text></view>
+  <view class="students">
+    <view wx:for="{{students}}" hover-class="aabb">{{item.name}}</view>
+  </view>
+</view>

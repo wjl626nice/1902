@@ -1,0 +1,81 @@
+/**index.wxss**/
+page{
+  background-color: #F0F0F0;
+}
+.search{
+  width: 100vw;
+  background-color: #F0F0F0;
+  margin-top: 20rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  border-top: 1px solid #C8C8C8;
+}
+.search .search-container{
+  background-color: #fff;
+  height: 80rpx;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+}
+.search-container icon{
+  margin-left: 20rpx;
+}
+.search-container input{
+  margin-left: 20rpx;
+}
+
+.swiper{
+  height: 150px;
+  /*按百分比设置宽度*/
+  width:100vw; 
+}
+.swiper-image{
+  width: 100vw;
+}
+.category{
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-around;
+  background-color: #1C2327;
+  color: white;
+  padding-bottom: 4rpx;
+}
+.category view{
+  height: 90rpx;
+  line-height: 90rpx;
+  width: 20%;
+  text-align: center;
+}
+.category .active{
+  border-bottom: 8rpx solid red;
+  color: red
+}
+
+.article{
+  box-sizing: border-box;
+  margin: 10rpx;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+.article-image{
+  width: 200rpx;
+  height: 200rpx;
+  margin: 10rpx;
+}
+.article-attr{
+  font-size: 30rpx;
+  color: #999;
+  box-sizing: border-box;
+  padding-top: 10rpx;
+}
+.article-attr view:nth-of-type(1){
+  color: #000;
+  font-size: 36rpx;
+  padding-bottom: 15rpx;
+}
+.article-attr view:last-of-type{
+  padding-top: 17rpx;
+}

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <h1>学生个人界面</h1>
+        <p>欢迎回来</p>
+        <a href="{% url 'study:student_sign' 0 %}">前往签到</a>
+        <a href="{% url 'study:qianweek' %}">周末总结</a>
+        <a href="{% url 'study:qian_selfshow' %}">自我评价</a>
+        <a href="">退出</a>
+    </body>
+</html>

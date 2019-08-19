@@ -1,0 +1,65 @@
+/* pages/personalEdit/personalEdit.wxss */
+page{
+  background-color:#FAFAFA;
+}
+.headimg{
+  height: 140rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 2rpx #eee solid;
+  background-color: white;
+}
+.text{
+  width: 72rpx;
+  font-size: 36rpx;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: row;
+  
+}
+.img{
+  height: 100rpx;
+  width: 100rpx;
+  margin-left: 124rpx;
+}
+.mine-line{
+  height: 90rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 2rpx #eee solid;
+  background-color: white;
+  flex-direction: row;
+}
+.line-input{
+  width: 390rpx;
+  height: 52rpx;
+  margin-left: 126rpx;
+  font-size:34rpx;
+}
+.picker{
+  margin-left: 126rpx;
+  height: 52rpx;
+  width: 376rpx;
+}
+.picker-text{
+  font-size: 34rpx;
+  height: 52rpx;
+  width: 370rpx;
+}
+.line-arrow{
+  margin-left: 106rpx;
+  height: 26rpx;
+  width: 16rpx;
+}
+.button{
+  margin-top: 582rpx;
+  background-color: #389E0D;
+  height: 94rpx;
+  width: 686rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36rpx;
+  color: white;
+}

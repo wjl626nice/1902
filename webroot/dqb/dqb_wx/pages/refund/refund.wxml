@@ -1,0 +1,6 @@
+<view class="text"> 
+    <textarea class="textarea" placeholder="退款说明" maxlength='100' placeholder-style="color:#999999; font-size:34rpx;"  bindinput='userInput' />
+    <view class="flex-end">
+     <view class="counter">{{num}}/100</view>
+   </view></view>
+<view class="button">提交申请</view>

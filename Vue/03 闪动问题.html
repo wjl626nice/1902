@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		[v-cloak] {
+		  display: none;
+		}
+	</style>
+</head>
+<body onclick="">
+
+	<div id="app">
+		<div v-cloak>{{msg}}</div>
+
+	</div>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript">
+		/*
+			Vue的模板语法：
+			v-cloak指令用法：
+			1、提供样式
+				[v-cloak] {
+				  display: none;
+				}
+			2、在插值表达式所在的标签加上自定义属性 v-cloak 指令
+			原理：先通过样式隐藏，然后再内存中进行替换，替换好在显示。
+		*/
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				msg: "Hello Vue!"
+			}
+		});
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'study/css/stuweek.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static "h-ui/css/H-ui.min.css" %}" />
+<link rel="stylesheet" type="text/css" href="{% static "h-ui.admin/css/H-ui.admin.css" %}" />
+<link rel="stylesheet" type="text/css" href="{% static "lib/Hui-iconfont/1.0.8/iconfont.css" %}" />
+<link rel="stylesheet" type="text/css" href="{% static "h-ui.admin/skin/default/skin.css" %}" id="skin" />
+<link rel="stylesheet" type="text/css" href="{% static "h-ui.admin/css/style.css" %}" />
+    </head>
+    <body>
+    <div class="cl pd-5 bg-1 bk-gray mt-20 qian_sign">
+        <span class="l">
+            <a class="btn {% if expire == 0 %}btn-primary{% else %}disabled{% endif %} radius"  href='{% url 'study:stuweek_add' %}'><i class="Hui-iconfont">&#xe600;</i> 添加总结</a>
+            <a class="btn btn-primary radius" href="{% url 'study:stu_main' %}">返回主页面</a>
+
+        </span>
+        <span class="r">共有数据：<strong>{{ stuweeks.count}}</strong> 条</span>
+    </div>
+        <table class="table table-border table-bordered table-hover table-bg table-sort">
+            <thead>
+                <tr class="text-c">
+                    <th width="10">序号</th>
+                    <th width="50">内容</th>
+                    <th width="20">发布日期</th>
+                    <th width="20">分数</th>
+                    <th width="20">修改</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for stuweek in stuweeks %}
+                <tr class="text-c">
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ stuweek.content|slice:'50' }}</td>
+                    <td class="pub_date">{{ stuweek.publish_date|date:'Y-m-d h:i:s' }}</td>
+                    <td>{% if stuweek.score %}{{ stuweek.score }}{% endif %}</td>
+                   <td class="f-14"> {% if stuweek.is_expire %}<a title="编辑" href='{% url "study:stuweek_modify" %}?c_id={{ stuweek.id }}'  style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>{% else %}不可编辑{% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>
+<script src="{% static 'study/js/jquery-3.3.1.js' %}"></script>
+<script>
+    {% if messages %}
+        {% for message in messages %}
+            alert('{{ message }}', 1000);
+        {% endfor %}
+    {% endif %}
+</script>

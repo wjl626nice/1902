@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+    {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'h-ui/css/H-ui.min.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'h-ui.admin/css/H-ui.admin.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'lib/Hui-iconfont/1.0.8/iconfont.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'h-ui.admin/skin/default/skin.css' %}" id="skin" />
+<link rel="stylesheet" type="text/css" href="{% static 'h-ui.admin/css/style.css' %}" />
+<title>柱状图统计</title>
+</head>
+<body>
+<div class="page-container">
+	<div id="container" style="min-width:700px;height:400px"></div>
+</div>
+<div class="page-container">
+	<div id="containers" style="min-width:700px;height:400px"></div>
+</div>
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="{% static 'lib/jquery/1.9.1/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'lib/layer/2.4/layer.js' %}"></script>
+<script type="text/javascript" src="{% static 'h-ui/js/H-ui.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'h-ui.admin/js/H-ui.admin.js' %}"></script> <!--/_footer 作为公共模版分离出去-->
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="{% static 'lib/hcharts/Highcharts/5.0.6/js/highcharts.js' %}"></script>
+<script type="text/javascript" src="{% static 'lib/hcharts/Highcharts/5.0.6/js/modules/exporting.js' %}"></script>
+<script type="text/javascript">
+$(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: '{{ ex.realname }}的周考成绩统计'
+        },
+        xAxis: {
+            categories: [
+                {% for exam in exams %}{% if exam.category == 0 %}
+                    "{{ exam.exam_time|date:"Y-m-d" }}",
+                {% endif %}{% endfor %}
+            ]
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Score (分)'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:.1f} 分</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: '周考',
+            data: [{% for exam in exams %}{% if exam.category == 0 %}
+            {{ exam.score }},{% endif %}{% endfor %}]
+        }]
+    });
+});
+$(function () {
+    $('#containers').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: '{{ ex.realname }}的阶段考试成绩统计'
+        },
+        xAxis: {
+            categories: [
+                {% for exam in exams %}{% if exam.category == 1 %}
+                    "{{ exam.exam_time|date:"Y-m-d" }}",
+                {% endif %}{% endfor %}
+            ]
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Score (分)'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:.1f} 分</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: '阶段考',
+            data: [{% for exam in exams %}{% if exam.category == 1 %}
+            {{ exam.score }},{% endif %}{% endfor %}]
+
+        }]
+    });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <!--[if lt IE 9]>
+<script type="text/javascript" src="lib/html5shiv.js"></script>
+<script type="text/javascript" src="lib/respond.min.js"></script>
+<![endif]-->
+    <link rel="stylesheet" type="text/css" href="{% static "h-ui/css/H-ui.min.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "h-ui.admin/css/H-ui.admin.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "lib/Hui-iconfont/1.0.8/iconfont.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "h-ui.admin/skin/default/skin.css" %}" id="skin" />
+    <link rel="stylesheet" type="text/css" href="{% static "h-ui.admin/css/style.css" %}" />
+    <!--[if IE 6]>
+<script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+    <title>宿舍管理</title>
+</head>
+<body>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页
+    <span class="c-gray en">&gt;</span>
+    系统管理
+    <span class="c-gray en">&gt;</span>
+    宿舍管理
+    <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a>
+</nav>
+<div class="page-container">
+    <form action="{% url 'new_admin:dormitory' %}" method="post">
+        {% csrf_token %}
+        <div class="text-c">
+            <input type="text" name="search" id="" placeholder="宿舍名称、id" style="width:250px" class="input-text">
+            <button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜索</button>
+        </div>
+    </form>
+    <div class="cl pd-5 bg-1 bk-gray mt-20">
+		<span class="l">
+		<a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a>
+		<a class="btn btn-primary radius" onclick="system_category_add('添加宿舍','{% url 'new_admin:dorm_add' %}')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加宿舍</a>
+		</span>
+        <span class="r">共有数据：<strong>{{ dorm.count}}</strong> 条</span>
+    </div>
+    <div class="mt-20">
+        <table class="table table-border table-bordered table-hover table-bg table-sort">
+            <thead>
+            <tr class="text-c">
+                <th width="25"><input type="checkbox" name="" value=""></th>
+                <th width="80">ID</th>
+                <th width="250">宿舍名称</th>
+                <th width="250">添加时间</th>
+                <th>最大人数</th>
+                <th>添加人</th>
+                <th width="100">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for dorm in dorm %}
+                <tr class="text-c">
+                    <td><input type="checkbox" name="" value="{{ dorm.id }}"></td>
+                    <td>{{ dorm.id }}</td>
+                    <td>{{ dorm.dorm_name }}</td>
+                    <td>{{ dorm.add_time|date:'Y-m-d H:i' }}</td>
+                    <td>{{ dorm.max_stu }}</td>
+                    <td>{{ dorm.add_user.realname }}</td>
+                    <td class="f-14"><a title="编辑" href="javascript:;" onclick="system_category_edit('宿舍编辑','{% url 'new_admin:dorm_modify' %}?dorm_id={{ dorm.id }}','1','700','480')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+                        <a title="删除" href="javascript:;" onclick="dorm_del(this,'{{ dorm.id }}')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="{% static "lib/jquery/1.9.1/jquery.min.js" %}"></script>
+<script type="text/javascript" src="{% static "lib/layer/2.4/layer.js" %}"></script>
+<script type="text/javascript" src="{% static "h-ui/js/H-ui.min.js" %}"></script>
+<script type="text/javascript" src="{% static "h-ui.admin/js/H-ui.admin.js" %}"></script> <!--/_footer 作为公共模版分离出去-->
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="{% static "lib/My97DatePicker/4.8/WdatePicker.js" %}"></script>
+<script type="text/javascript" src="{% static "lib/datatables/1.10.0/jquery.dataTables.min.js" %}"></script>
+<script type="text/javascript" src="{% static "lib/laypage/1.2/laypage.js" %}"></script>
+<script type="text/javascript">
+
+    {% if messages %}
+        {% for message in messages %}
+            $.Huimodalalert('{{ message }}', 1000);
+        {% endfor %}
+    {% endif %}
+
+
+    $('.table-sort').dataTable({
+        "aaSorting": [[ 1, "desc" ]],//默认第几个排序
+        "bStateSave": true,//状态保存
+        "aoColumnDefs": [
+            //{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
+            {"orderable":false,"aTargets":[0,4]}// 制定列不参与排序
+        ]
+    });
+    /*系统-宿舍-添加*/
+    function system_category_add(title,url,w,h){
+        layer_show(title,url,w,h);
+    }
+    /*系统-宿舍-编辑*/
+    function system_category_edit(title,url,id,w,h){
+        layer_show(title,url,w,h);
+    }
+    /*系统-宿舍-删除*/
+    function dorm_del(obj,id){
+        layer.confirm('确认要删除吗？',function(index){
+            $.ajax({
+                type: 'GET',
+                url: '{% url 'new_admin:dorm_delete' %}?d_id='+id,
+                dataType: 'json',
+                success: function(data){
+                    console.log(data.status);
+                    if (data.status == 1){
+                        console.log(data.status);
+                        $(obj).parents("tr").remove();
+                        layer.msg('已删除!',{icon:1,time:1000});
+                    }else {
+                        layer.msg("删除失败!!!",{icon:6,time:1000});
+                    }
+                },
+                error:function(data) {
+                    console.log(data.status);
+                },
+            });
+        });
+    }
+    // 批量删除
+    function datadel(){
+        layer.confirm('确认要删除吗？',function(index){
+            var id_str = '';
+            $('tbody input:checked').each(function (i ,e) {
+                id_str += $(e).val() + ',';
+            });
+            id_str = id_str.replace(/,$/, '');
+            console.log(id_str);
+
+            $.ajax({
+                type: 'get',
+                url: '{% url "new_admin:dorm_delete_many" %}?id_str='+ id_str,
+                success: function (data) {
+                    $('tbody input:checked').parents('tr').remove();
+                    if (data.status == 1) {
+                        layer.msg(data.msg,{icon:1,time:1000}, function () {
+                             // 走路由
+                            location.reload();
+                        });
+
+                    }else{
+                        layer.msg(data.msg,{icon:6,time:1000});
+                    }
+                }
+            });
+        });
+    }
+
+</script>
+</body>
+</html>

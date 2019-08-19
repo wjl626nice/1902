@@ -1,0 +1,13 @@
+<form bindsubmit="formSubmit">
+<view class='head'>
+  <text class='head-text'>回复</text>
+  <button class='button' formType="submit">回复</button>
+</view>
+<view class='text'>
+  <textarea  name="text" maxlength='80' placeholder="回复:" 
+  value="{{textareaVal}}"
+placeholder-class='placeholder' bindinput='textInput'></textarea>
+  <view class='text-index'>{{num}}/80</view>
+</view>
+
+</form>

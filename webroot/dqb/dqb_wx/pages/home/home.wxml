@@ -1,0 +1,111 @@
+
+  <view class="homePage">
+   <!-- 个人信息  -->
+    <view class="person_info">
+      <!--头像 -->
+      <image class="avatar" src="{{person_info['avatar']}}"></image>
+      <!--具体信息  -->
+      <view class="info">
+        <view class='info_left'>
+          <text class="name">{{person_info['nickname']}}</text>
+          <text class="signature">我的踢球足迹</text>
+        </view>
+         <view class='info_right' bindtap='active_history'>
+          <text>历史活动</text>
+          <image class='arrow' src='/assets/imgs/G-arrow.png'></image>
+        </view>
+      </view>
+    </view>
+    <!--活动统计  -->
+    <view class="active_statistics">
+    <!--组织的  -->
+      <view class="organization" bindtap='listMyActivity'>
+        <text style='font-size:20rpx;color:#999999;'>组织活动</text>
+        <text>{{active_num}}<text style='font-size:20rpx;padding-left:6rpx;'>次</text></text>
+      </view>
+      <!--踢过球  -->
+      <view class="kicked" bindtap='listMyballFriends'>
+       <text style='font-size:20rpx;color:#999999;'>踢过球的人</text>
+        <text>{{footballnum}}<text style='font-size:20rpx;padding-left:6rpx;'>人</text></text>
+      </view>
+      <!-- 踢球总此时 -->
+      <view class="totals" bindtap='activityMyList'>
+        <text style='font-size:20rpx;color:#999999;'>踢球总次数</text>
+        <text>{{history_num}}<text style='font-size:20rpx;padding-left:6rpx;'>次</text></text>
+        </view>
+    </view>
+    <view class="mine-active">
+     <text>我的活动</text>
+    </view>
+<view style='height:{{myheight}}rpx;overflow:hidden;' wx:if='{{mylist.length!=0}}'>
+<block wx:for="{{mylist}}" wx:key="{{index}}">
+    <view class="active-list" bindtap='activeDetail' id="{{item.id}}">
+      <view class="img-box">
+      <image src='{{item.originator_id.avatar}}'></image>
+      </view>
+      <view class="active-introduce">
+        <text class="active-list-title">{{item.address_detailed}}</text>
+        <text class="active-list-singure" wx:if='{{item.notice==null || item.notice==""}}'>暂无公告</text>
+        <text class="active-list-singure" wx:else>{{item.notice}}</text>
+       <view class="active-list-detail">
+          <text class="signUp">报名: {{item.participant.length}}</text>
+          <text class='leave'>请假: {{item.leave.length}}</text>
+          <text style='color:#999999'>待定: {{item.undetermined.length}}</text>
+          <text style='color:#999999'><text wx:if="{{item.formater!=0}}">{{item.formater+4}}人制</text><text wx:else>待定</text><text wx:if="{{checkIsShow}}"style="margin-left:6rpx;margin-right:6rpx;">|</text> <text wx:if="{{checkIsShow}}" style='color:#FF5050;margin-left:6rpx;'>{{item.price}}元/人</text></text>
+        </view>
+      </view>
+      <view class="img-low" wx:if='{{item.activity_state==0}}' catchtap='deleteActivity' id='{{item.id}}'>
+      <image src="../../assets/imgs/xxx.png"></image>
+      </view>
+    </view>
+</block>
+</view>
+
+<view class="lookMore" wx:else>
+<text>暂无活动</text>
+</view>
+
+      <view class="lookMore" bindtap="lookMoreMineActive" wx:if="{{isshow}}">
+
+      <text>查看更多</text>
+      </view>
+    
+  </view>
+
+
+  <view class="mine-active">
+     <text>推荐更多</text>
+  </view>
+    <view class="fliter-fun">
+      <view bindtap='autoSort'>智能排序</view>
+      <view bindtap='splaceSort'>区域</view>
+       <picker bindchange="bindPickerChange" value="{{index}}" range="{{race_format}}">
+         <view class="picker">{{race_format[formater] || '赛制'}}</view>
+       </picker>
+      <!-- <view bindtap='typeSort'>赛制</view> -->
+      <!-- <view bindtap='timeSort'>时间</view> -->
+      <picker mode="date" bindchange="dateChange">时间</picker>
+    </view>
+<view style='height:{{fetchheight}}rpx;overflow:hidden;' wx:if='{{fetchlist.length!=0}}'>
+<block wx:for="{{fetchlist}}" wx:key="{{index}}">
+    <view class="active-list" bindtap='activeDetail' id="{{item.id}}">
+      <view class="img-box">
+      <image src='{{item.originator_id.avatar}}'></image>
+      </view>
+      <view class="active-introduce">
+        <text class="active-list-title">{{item.address_detailed}}</text>
+        <text class="active-list-singure" wx:if='{{item.notice==null||item.notice==""}}'>暂无公告</text>
+        <text class="active-list-singure" wx:else>{{item.notice}}</text>
+        <view class="active-list-detail">
+          <text class="signUp">报名: {{item.participant.length}}</text>
+          <text class='leave'>请假: {{item.leave.length}}</text>
+          <text style='color:#999999'>待定: {{item.undetermined.length}} </text>
+          <text style='color:#999999'><text wx:if="{{item.formater!=0}}">{{item.formater+4}}人制</text><text wx:else>待定</text><text wx:if="{{checkIsShow}}" style="margin-left:6rpx;margin-right:6rpx;">|</text> <text wx:if="{{checkIsShow}}" style='color:#FF5050;margin-left:6rpx;'>{{item.price}}元/人</text></text>
+        </view>
+      </view>
+    </view>
+</block>
+</view>
+<view class="lookMore" wx:else>
+<text>暂无活动</text>
+</view>

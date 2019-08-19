@@ -1,0 +1,45 @@
+.none {
+    display: none;
+}
+.nav0 {
+    width: 500px;
+    height: 30px;
+    margin-top: 30px;
+}
+.nav0 span {
+    color: black;
+}
+.nav0>ul {
+    float: left;
+}
+.nav0>form {
+    float: left;
+    margin-left: 50px;
+}
+.nav0>form>input {
+    height: 30px;
+    width: 60px;
+}
+.nav0>ul>li {
+    display: inline-block;
+}
+.nav0>ul>li>a {
+    width: 60px;
+    height: 30px;
+    color: black;
+}
+.nav0>ul>.active>.pg{
+    background: #259eff;
+    color: black;
+}
+.nav0>ul>li>.pg {
+    display: inline-block;
+    width: 30px;
+    height:30px;
+    margin-left: 10px;
+    background: rgba(0, 0, 0, 0.22);
+    color: black;
+    font-size: 16px;
+    text-align: center;
+    line-height: 30px;
+}

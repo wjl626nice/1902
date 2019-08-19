@@ -1,0 +1,35 @@
+/* pages/transDetail/transDetail.wxss */
+.trade{
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom: 2rpx;
+  border-bottom: 1rpx solid #f4f4f4f4;
+  background: #FFFFFF;
+}
+.trade-left{
+  display: flex;
+  flex-flow: column;
+}
+.trade-status{
+  display: flex;
+  flex-direction: row;
+  color: #333333;
+  font-size: 34rpx;
+  margin: 16rpx 0 0 30rpx;
+} 
+.trade-time{
+  color: #999999;
+  font-size: 24rpx;
+   margin: 34rpx 0 10rpx 30rpx;
+}
+.trade-money1{
+  color: #FF6600;
+  font-size: 30rpx;
+  margin-right: 30rpx;
+}
+.trade-money2{
+  color: #389E0D;
+  font-size: 30rpx;
+  margin-right: 30rpx;
+}

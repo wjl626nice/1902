@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body onclick="">
+
+	<div id="app">
+		<ul>
+			<li v-for="item in names">{{item}}</li>
+			<li v-for="(item, index) in names">{{item + "-------" + index}}</li>
+			<!-- <li :key="index" v-for="(item, index) in names">{{item + "-------" + index}}</li> -->
+			<li :key="item.id" v-for="(item, index) in namess">{{item.name + "-------" + index}}</li>
+			<li v-if=" key == 'age' && value >= 20" v-for="(value, key, index) in obj">{{value + '----' + key + '----' + index}}</li>
+			<li v-else>{{value + '----' + key + '----' + index}}</li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript">
+		/*
+			Vue的模板语法：
+			v-model原理分析
+		*/
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				names: ['张恒', '邓帅', '宋瑜', '许鑫', '张冲'],
+				namess: [
+					{name:'张恒',id:1}, 
+					{name:'邓帅',id:2}, 
+					{name:'宋瑜',id:3}, 
+					{name:'许鑫',id:4}, 
+					{name:'张冲',id:5}
+				],
+				obj: {
+					name: '邓帅',
+					age: 18,
+					money: -20000
+				}
+			},
+			methods: {
+				handle(){
+					this.isFlag =  !this.isFlag
+				}
+			}
+		});
+
+	</script>
+</body>
+</html>

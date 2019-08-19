@@ -1,0 +1,188 @@
+ <scroll-view  class='top' scroll-y="true">
+ <!--轮播图-->
+  <view class="swiper">
+    <swiper indicator-dots="{{indicatordots}}" autoplay='{{autoplay}}' interval='{{interval}}' duration='{{duration}}' circular='{{circular}}' class='swiper1'>
+    <block wx:for="{{imgs}}" >
+      <swiper-item>
+        <image mode='aspectFit' src="{{item}}" class="slide-image"></image>
+      </swiper-item>
+    </block>
+    </swiper>
+  </view>
+
+  <view class="introduce">
+    <view class="everyin">
+      <view>
+      <image src="../../assets/imgs/time@3x.png"></image>
+      </view>
+      <view class="mess">{{activityTime}}</view>
+    </view>
+    <view class="everyin">
+      <view class="img"> 
+      <image src="../../assets/imgs/space@3x.png"></image>
+      </view>
+      <view class="mess">{{detail}}{{formater}}</view>
+    </view>
+    <view class="everyin">
+      <view class="img">  
+      <image src="../../assets/imgs/act-people.png"></image>
+      </view>
+      <view class="mess">{{originator.nickname}}</view>
+    </view>
+    <view class="message">
+       <view class="img">
+        <image src="../../assets/imgs/message@3x.png"></image>
+      </view>
+      <view class="mess" wx:if='{{notice!=""}}'>{{notice}}</view>
+      <view class="mess" wx:else>暂无公告</view>
+    </view>
+  </view>
+
+  <view class="sign-up">
+    <view class="sign-nav">
+      <view class="img1">
+      <image src="../../assets/imgs/signup@3x.png"></image></view>
+      <view class="lable">报名（<view class="num">{{participant.length}}</view> / {{allNum}}）</view>
+      <view class="img2">
+      <image  src="../../assets/imgs/down-arrow.png"></image></view>
+    </view>
+    <view class="sign-contain">
+      <view class="people">
+         <block wx:for="{{participantimgs}}" wx:key="{{index}}"> 
+           <image class='imgs' src="{{item}}"></image> 
+  </block>
+      </view>
+      <view class="mess">
+        <view class="mess1">1、活动开始前{{limit_time}}小时停止报名</view>
+        <view class="mess2">2、报名后活动开始前{{irres_time}}小时无责取消</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="sign-up">
+    <view class="sign-nav">
+      <view class="img1">
+      <image src="../../assets/imgs/signup@3x.png"></image></view>
+      <view class="lable">请假 / 待定 ({{undetermined.length+leave.length}})</view>
+      <view class="img2">
+      <image  src="../../assets/imgs/down-arrow.png"></image></view>
+    </view>
+    <view class="sign-contain1">
+      <view class="people">
+         <block wx:for="{{leaveimgs}}" wx:key="{{index}}">
+         <view class="people-imgs">
+           <image class='imgs' src="{{item}}"></image>
+           <view class="img-status" >请假</view> 
+          </view>
+        </block>
+        <block wx:for="{{undeterminedimgs}}" wx:key="{{index}}">
+         <view class="people-imgs">
+           <image class='imgs' src="{{item}}"></image>
+           <view class="img-status1" >待定</view> 
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+
+  <view class="re-nav">
+      <image src="../../assets/imgs/recommend@3x.png"></image>
+      <view class="lable">留言（{{leaveword.length}}）</view>
+    </view>
+  <view class="re-lable" bindtap='leaveword'>
+      <image src="{{useravatar}}"></image>
+    <view class="mess">用文字和图片，记录踢球的每个瞬间</view>
+    </view>
+  <block wx:for="{{leaveword}}" wx:key="{{index}}">
+  <view class="recommend">
+    <view class="re-top">
+    <view class="left-right">
+      <view class="re-top-left">
+        <image src="{{item.member_id.avatar}}"></image>
+      </view>
+      <view class="re-top-center">
+        <view class="center-name">{{item.member_id.nickname}}</view>
+        <view class="center-time">{{item.add_time}}</view>
+      </view>
+      </view>
+      <view class="re-top-rightAll">
+      <view class="re-top-right replyBtn" id="{{item.id}}" data-memberid="{{item.member_id.id}}" catchtap='replyMess' wx:if="{{checkIsShow}}">回复
+      </view>
+      <view class="re-top-right" id="{{item.id}}" wx:if="{{activeOpenid == openId}}" catchtap='deleteLeaveWord'>删除
+      </view>
+      </view>
+    </view>
+    <view class="re-contain">
+     <view class="re-contain-mess">{{item.message_content}}</view>
+     <view class="imgs">
+      <block wx:for="{{item.message_img}}" wx:key="{{index}}" wx:for-item="dayItem"> 
+        <image class='img' src="{{dayItem}}"></image> 
+       </block>
+     </view>
+     <view class="reply" wx:if="{{item.replay.length!=0}}">
+     <block wx:for="{{item.replay}}" wx:key="{{index}}" wx:for-item="replyItem">
+      <view class="once-reply">
+      
+        <view class="reply-prople">{{replyItem.reply_member.nickname}}</view> 回复 <view class="reply-prople">{{replyItem.to_reply_member.nickname}}</view> : {{replyItem.reply_content}}
+        </view>
+
+
+     </block>
+    </view>
+    </view>
+  </view>
+
+ 
+  </block>
+  </scroll-view>
+
+
+  <view class="tabbar" wx:if='{{isOriginator==true&&activityStatus==1}}'>
+    <view class="ta-one" bindtap='gohome'>
+      <image src="../../assets/imgs/act-home.png"></image>
+      <view class="tab-mess">首页</view>
+    </view>
+    <view class="ta-one" bindtap='control'>
+      <image src="../../assets/imgs/setting.png"></image>
+      <view class="tab-mess">管理</view>
+    </view>
+    <button open-type="share">
+     <view class="ta-one zhuanfa">
+      <image src="../../assets/imgs/zhuanfa.png"></image>
+      <view class="tab-mess">转发</view>
+    </view>
+    </button>
+    <view class="ta-right" wx:if='{{activityStatus==1}}' bindtap='signUp'>
+    可参加
+    </view>
+    <view class="ta-right1" wx:elif='{{activityStatus==2}}'>
+    已结束
+    </view>
+    <view class="ta-right1" wx:elif='{{activityStatus==0}}'>
+    已取消
+    </view>
+
+  
+  </view>
+   <view class="tabbar" wx:else>
+    <view class="ta-one1"  bindtap='gohome'>
+      <image src="../../assets/imgs/act-home.png"></image>
+      <view class="tab-mess">首页</view>
+    </view>
+    <button open-type="share">
+     <view class="ta-one1 zhuanfa">
+      <image src="../../assets/imgs/zhuanfa.png"></image>
+      <view class="tab-mess">转发</view>
+    </view>
+    </button>
+    <view class="ta-right" wx:if='{{activityStatus==1}}' bindtap='signUp'>
+    可参加
+    </view>
+    <view class="ta-right1" wx:elif='{{activityStatus==2}}'>
+    已结束
+    </view>
+    <view class="ta-right1" wx:elif='{{activityStatus==0}}'>
+    已取消
+    </view>
+  
+  </view>

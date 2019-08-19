@@ -1,0 +1,60 @@
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">冬冬的博客</view>
+</cu-custom>
+<view class="cu-bar search bg-white">
+  <view class="search-form round">
+    <text class="cuIcon-search"></text>
+    <input type="text" placeholder="搜索图片、文章、视频" confirm-type="search"></input>
+  </view>
+  <view class="action">
+    <button class="cu-btn bg-green shadow-blur round">搜索</button>
+  </view>
+</view>
+
+
+
+<swiper class="card-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff">
+  <swiper-item wx:for="{{swiperList}}" wx:key class="{{cardCur==index?'cur':''}}">
+    <view class="swiper-item">
+      <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+      <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+    </view>
+  </swiper-item>
+</swiper>
+
+
+<scroll-view scroll-x class="bg-white nav">
+  <view class="flex text-center">
+    <view class="cu-item flex-sub {{index==TabCur?'text-orange cur':''}}" wx:for="{{4}}" wx:key bindtap="tabSelect" data-id="{{index}}">
+      Tab{{index}}
+    </view>
+  </view>
+</scroll-view>
+<swiper style="height:800px;">
+</swiper>
+
+<view style="position:fixed;left:0px;bottom:-28px;width:100%;" class="cu-bar tabbar margin-bottom-xl bg-black">
+    <view class="action text-orange">
+      <view class="cuIcon-homefill"></view> 首页
+    </view>
+    <view class="action text-gray">
+      <view class="cuIcon-similar"></view> 分类
+    </view>
+    <view class="action text-gray">
+      <view class="cuIcon-recharge"></view>
+      积分
+    </view>
+    <view class="action text-gray">
+      <view class="cuIcon-cart">
+        <view class="cu-tag badge">99</view>
+      </view>
+      购物车
+    </view>
+    <view class="action text-gray">
+      <view class="cuIcon-my">
+        <view class="cu-tag badge"></view>
+      </view>
+      我的
+    </view>
+  </view>

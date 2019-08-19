@@ -1,0 +1,33 @@
+textarea{
+  margin: 24rpx 32rpx 7rpx;
+  height: 450rpx;
+  width: 686rpx;
+  background:#fff;
+  font-size: 34rpx;
+}
+.text{
+  position: relative;
+}
+.text .flex-end{
+  color: #999999;
+  font-size: 30rpx;
+  /*display: flex;
+  justify-content:flex-end;*/
+   position: absolute;
+   right:0rpx;
+   top: 416rpx;
+  margin: 0 32rpx 24rpx 0;
+}
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90rpx;
+  width: 220rpx;
+  background: #389E0D;
+  color: #FFFFFF;
+  font-size: 34rpx;
+  margin: 70rpx auto 0;
+  border-radius:6rpx;
+
+}

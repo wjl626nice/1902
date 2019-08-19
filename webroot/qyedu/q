@@ -1,0 +1,1911 @@
+[33mcommit 4507d322f95198385a1675828b2770f7d9f2e600[m[33m ([m[1;36mHEAD -> [m[1;32mppx[m[33m, [m[1;31morigin/five[m[33m, [m[1;32mfive[m[33m)[m
+Author: lmq_python <1936264145@qq.com>
+Date:   Tue Dec 11 10:18:02 2018 +0800
+
+    modifymodels'
+
+[33mcommit c8887d5c6e3bce82b900155aea5dacce568cde09[m
+Author: lmq_python <1936264145@qq.com>
+Date:   Tue Dec 11 10:04:12 2018 +0800
+
+    modifymodels
+
+[33mcommit 824e2b7e15297e7ed4d39b6d0fafc3f964385dcf[m
+Author: lmq_python <1936264145@qq.com>
+Date:   Mon Dec 10 16:48:05 2018 +0800
+
+    字段修改
+
+[33mcommit 8767d5db20ed9bb05b996451d56e3e48684db3a5[m
+Author: Ren <1124118402@qq.com>
+Date:   Sat Dec 8 15:14:23 2018 +0800
+
+    优化
+
+[33mcommit fc80d41930706dfb45bec3b1d19ff260de9ad58d[m[33m ([m[1;31morigin/one[m[33m)[m
+Author: kamihati <dream928@gmail.com>
+Date:   Sat Dec 8 09:35:03 2018 +0800
+
+    合并第一组项目。管理员管理和宿舍管理
+
+[33mcommit 601f7c41be3208d8ba49f2ebd9942d7bba88a22a[m
+Author: kamihati <dream928@gmail.com>
+Date:   Sat Dec 8 09:04:51 2018 +0800
+
+    change .idea
+
+[33mcommit 1680e44d9e1807f414b71a7671ebfcd5908095d8[m
+Merge: 4d78f0a e4e9a4f
+Author: kamihati <dream928@gmail.com>
+Date:   Sat Dec 8 09:02:53 2018 +0800
+
+    Merge branch 'one' of gitee.com:gnadream/qyedu into one
+
+[33mcommit 4d78f0a4fee273dd6dac156959ff3d66c6e08d4c[m
+Author: kamihati <dream928@gmail.com>
+Date:   Sat Dec 8 09:01:55 2018 +0800
+
+    ignore .idea/
+
+[33mcommit e4e9a4ffda2f1e0d33e880693a06224a516c8280[m
+Author: fox <2388823752@qq.com>
+Date:   Sat Dec 8 08:38:15 2018 +0800
+
+    save
+
+[33mcommit 525cb1bacc04124ba149233fe7d7d207b2138eab[m
+Merge: 7fba41b 7d45f36
+Author: fox <2388823752@qq.com>
+Date:   Fri Dec 7 21:35:18 2018 +0800
+
+    Merge branch 'one' into hu
+
+[33mcommit 7d45f36a2806db9cd7b73851d0a090e1a5782882[m
+Merge: 736f930 43cc6d1
+Author: fox <2388823752@qq.com>
+Date:   Fri Dec 7 20:51:39 2018 +0800
+
+    student
+
+[33mcommit 43cc6d1dd97854a0349ab1372f1e99c23c777b89[m
+Merge: be4d0da 51d4e7f
+Author: fox <2388823752@qq.com>
+Date:   Fri Dec 7 20:01:33 2018 +0800
+
+    class
+
+[33mcommit 51d4e7fde92c230a9f6a38914e829b7f0f45f28d[m
+Author: kamihati <dream928@gmail.com>
+Date:   Fri Dec 7 19:55:33 2018 +0800
+
+    合并第四组班级管理。班级管理。学员管理
+
+[33mcommit 7fba41b3fbfcb1f2d9b843872062a8d0032727ae[m
+Author: fox <2388823752@qq.com>
+Date:   Fri Dec 7 19:03:48 2018 +0800
+
+    update1
+
+[33mcommit 736f9308e364e65637f56882c45ba9e9343a6d51[m
+Author: fox <2388823752@qq.com>
+Date:   Fri Dec 7 17:36:23 2018 +0800
+
+    po
+
+[33mcommit 0893c189bff014c610ef131e4085df5033df212a[m
+Author: fox <2388823752@qq.com>
+Date:   Fri Dec 7 17:21:02 2018 +0800
+
+    pl
+
+[33mcommit 523f353a9f0251820e88fce072d051a1792fda63[m
+Author: fox <2388823752@qq.com>
+Date:   Fri Dec 7 16:52:12 2018 +0800
+
+    o
+
+[33mcommit 5e8713b318eb22d36fd7abfb56ffc962ab2e98b8[m
+Merge: 435a6d0 34f640a
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Fri Dec 7 16:44:45 2018 +0800
+
+    Merge branch 'zhuangge' into four
+
+[33mcommit 34f640a344edf1072058cae70a70a1b243f03ecf[m
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Fri Dec 7 16:44:34 2018 +0800
+
+    优化
+
+[33mcommit 9129f5006d477b53e16438e280d4d28c52e4e038[m
+Author: fox <2388823752@qq.com>
+Date:   Fri Dec 7 16:14:39 2018 +0800
+
+    page
+
+[33mcommit 0cf8b89675c09c1f9d33e0ec78da47aefdacb242[m
+Author: fox <2388823752@qq.com>
+Date:   Fri Dec 7 14:17:13 2018 +0800
+
+    po
+
+[33mcommit 802bcece5c312d4a1873bb969f7099f7f195bf6e[m
+Author: fox <2388823752@qq.com>
+Date:   Fri Dec 7 13:59:09 2018 +0800
+
+    9
+
+[33mcommit 435a6d0892f75068fe098ac35565d764c64ae99a[m
+Merge: 48f557d ce0ccec
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Fri Dec 7 13:49:20 2018 +0800
+
+    'mergefour'
+
+[33mcommit 48f557d5f728b6c9202f6ed266861e12818954e4[m
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Fri Dec 7 13:42:43 2018 +0800
+
+    modifyhtml
+
+[33mcommit ce0ccec363d8a6f8d3545e42fe3ea794b290a096[m
+Merge: f6e973a 4079447
+Author: YX <1462251498@qq.com>
+Date:   Fri Dec 7 13:23:26 2018 +0800
+
+    21
+
+[33mcommit f6e973a790d1ac6c5cd14b98517ec44039864fb7[m
+Author: YX <1462251498@qq.com>
+Date:   Fri Dec 7 13:19:46 2018 +0800
+
+    12
+
+[33mcommit 1d54abe547646979aa730145b883f7611961796a[m
+Author: fox <2388823752@qq.com>
+Date:   Fri Dec 7 11:49:59 2018 +0800
+
+    fish
+
+[33mcommit 2e6d78c83d6a184cfc10328ff393b0d353480f94[m
+Author: fox <2388823752@qq.com>
+Date:   Fri Dec 7 11:36:41 2018 +0800
+
+    o
+
+[33mcommit 4079447ed7a016931dda9212793e080cf65c544d[m
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Fri Dec 7 11:01:29 2018 +0800
+
+    'delete*'
+
+[33mcommit 6c36af13b4a49152b3a73a8115a3b9cc58e8ac5f[m
+Merge: 6f606f2 3615825
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Fri Dec 7 10:59:16 2018 +0800
+
+    Merge branch 'four' into zhuangge
+
+[33mcommit 6f606f20ccf618063a9c777f0bbc56e32cb28c8c[m
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Fri Dec 7 10:57:50 2018 +0800
+
+    id_card regexp
+
+[33mcommit 3615825e1d6ec8c0af36281c1d719cfdcb99ba15[m
+Author: YX <1462251498@qq.com>
+Date:   Fri Dec 7 10:33:05 2018 +0800
+
+    gx
+
+[33mcommit 962448ab2161ba8c72f2c5de66b39c0f55160019[m
+Merge: 92bc84d 463e474
+Author: YX <1462251498@qq.com>
+Date:   Fri Dec 7 10:13:56 2018 +0800
+
+    Merge branch 'four' of gitee.com:gnadream/qyedu into lyx
+
+[33mcommit 463e474554d34cfade1abb8d6fadfc267f2e2ce1[m
+Merge: 05456c3 16c1b92
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Fri Dec 7 10:12:20 2018 +0800
+
+    merge five
+
+[33mcommit 05456c35d8b9b7d0355025e7c215b3e45f32049c[m
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Fri Dec 7 08:39:54 2018 +0800
+
+    x
+
+[33mcommit c8965caf6832ac676fb94288a2b63274e9e82dfa[m
+Author: fox <2388823752@qq.com>
+Date:   Fri Dec 7 08:28:57 2018 +0800
+
+    lk
+
+[33mcommit f3afc3b463d3677dc824c019700046dd5a2bb507[m
+Author: fox <2388823752@qq.com>
+Date:   Thu Dec 6 21:36:48 2018 +0800
+
+    p
+
+[33mcommit 693ff394f62016da0df1292faee6749d07871b94[m
+Author: fox <2388823752@qq.com>
+Date:   Thu Dec 6 20:51:26 2018 +0800
+
+    p
+
+[33mcommit 16c1b92efaaa2b7da1015520b7e3d7c239b0842d[m
+Author: Ren <1124118402@qq.com>
+Date:   Thu Dec 6 20:41:47 2018 +0800
+
+    学员管理修改
+
+[33mcommit a3da8a4774b6d782c71375fef1ca8970651bddcb[m
+Author: fox <2388823752@qq.com>
+Date:   Thu Dec 6 20:24:04 2018 +0800
+
+    m
+
+[33mcommit 15892396da9087c734cbb0a6200bcfb9d4fdfd17[m
+Merge: 508fdcb 03fceab
+Author: fox <2388823752@qq.com>
+Date:   Thu Dec 6 16:11:59 2018 +0800
+
+    l
+
+[33mcommit 508fdcbd5eacb7746331901ccaa1f046959f1a8d[m
+Author: fox <2388823752@qq.com>
+Date:   Thu Dec 6 16:09:33 2018 +0800
+
+    p
+
+[33mcommit 03fceab27222d65c400735a76f0ef5f904c30403[m
+Author: fox <2388823752@qq.com>
+Date:   Thu Dec 6 16:05:24 2018 +0800
+
+    op
+
+[33mcommit ef8e3f6989994eef588bf08b968a474cce85cb4c[m
+Author: fox <2388823752@qq.com>
+Date:   Thu Dec 6 16:03:26 2018 +0800
+
+    m
+
+[33mcommit 7d9855f22614b5f105196c57ba7cf40be92cc232[m
+Author: fox <2388823752@qq.com>
+Date:   Thu Dec 6 16:00:25 2018 +0800
+
+    adp
+
+[33mcommit 53a4082037f1764cd5041fc5f2a1f6166fad9129[m
+Author: 2483748098 <2483748098@qq.com>
+Date:   Thu Dec 6 15:34:33 2018 +0800
+
+    apap
+
+[33mcommit 26d61071bd6d8ca1cf49c8478b81723ec3e5d096[m
+Merge: 8a59d1f c5a4537
+Author: 2483748098 <2483748098@qq.com>
+Date:   Thu Dec 6 14:32:24 2018 +0800
+
+    op
+
+[33mcommit 8a59d1f0652417a05b049f0b524eb601e319143a[m
+Author: 2483748098 <2483748098@qq.com>
+Date:   Thu Dec 6 14:29:26 2018 +0800
+
+    uw
+
+[33mcommit c5a4537974ea9e107e81283474bbe1a02362eb2d[m
+Author: fox <2388823752@qq.com>
+Date:   Thu Dec 6 14:19:42 2018 +0800
+
+    v
+
+[33mcommit 92bc84d9556252a491db8088b4feb82c84922c98[m
+Merge: 3a36b02 2ee0347
+Author: YX <1462251498@qq.com>
+Date:   Thu Dec 6 14:16:27 2018 +0800
+
+    Merge branch 'four' of gitee.com:gnadream/qyedu into lyx
+
+[33mcommit 134c0a4f75d4a742d7ce4cf3f291285e07b46977[m
+Merge: 36ec35a 031c1a2
+Author: fox <2388823752@qq.com>
+Date:   Thu Dec 6 13:58:30 2018 +0800
+
+    Merge branch 'one' of gitee.com:gnadream/qyedu into one
+
+[33mcommit 36ec35aea2286d414267a3545d3c420835a03b80[m
+Author: fox <2388823752@qq.com>
+Date:   Thu Dec 6 13:56:01 2018 +0800
+
+    c
+
+[33mcommit 2ee03478ce02136bc72dffb94ac1f2954eefc9ef[m
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Thu Dec 6 13:27:39 2018 +0800
+
+    merge menu
+
+[33mcommit a3456b93349fa6e59899154b465244ad4f617c89[m
+Merge: bd09791 bc1eafe
+Author: fox <2388823752@qq.com>
+Date:   Thu Dec 6 11:56:33 2018 +0800
+
+    Merge branch 'fox' into one
+
+[33mcommit bc1eafec2b88b128ef46041891d4d2bbfffd6481[m
+Author: fox <2388823752@qq.com>
+Date:   Thu Dec 6 11:55:35 2018 +0800
+
+    df
+
+[33mcommit 031c1a2008befa68524575ba6749d67cafb4674c[m
+Merge: a1ef3d7 bd09791
+Author: 2483748098 <2483748098@qq.com>
+Date:   Thu Dec 6 11:46:41 2018 +0800
+
+    Merge branch 'one' of gitee.com:gnadream/qyedu into one
+
+[33mcommit a1ef3d775f06e463297e53724bfe0cf1f58b6135[m
+Merge: 40da13b 3a606f9
+Author: 2483748098 <2483748098@qq.com>
+Date:   Thu Dec 6 11:46:28 2018 +0800
+
+    add
+
+[33mcommit bd0979170a326d9bef1066b105899097cb6887ad[m
+Merge: 3a606f9 6f139f4
+Author: fox <2388823752@qq.com>
+Date:   Thu Dec 6 11:42:17 2018 +0800
+
+    zx
+
+[33mcommit 6f139f4cd2df4b27565ff7f2d61d939ff08708e9[m
+Author: fox <2388823752@qq.com>
+Date:   Thu Dec 6 11:37:50 2018 +0800
+
+    x
+
+[33mcommit 40da13b6b74b50392aa27f39a94e5f613f502985[m
+Merge: 7cb1a4f 93a8162
+Author: 2483748098 <2483748098@qq.com>
+Date:   Thu Dec 6 11:07:36 2018 +0800
+
+    s
+
+[33mcommit 30982a395f31ca111958cb0571a614512f308b3e[m
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Thu Dec 6 11:05:32 2018 +0800
+
+    'delete批量删除'
+
+[33mcommit 3a606f9cae7f5d1f2aabc4f5208b235e245c02f7[m
+Merge: 93a8162 be4d0da
+Author: fox <2388823752@qq.com>
+Date:   Thu Dec 6 11:03:21 2018 +0800
+
+    ad
+
+[33mcommit 5acb9d61387860707e2f4ba2ffe710a10e572ce1[m
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Thu Dec 6 10:55:53 2018 +0800
+
+    班级搜索添加保存搜索记录
+
+[33mcommit e545ee1f6454950ee6473901b38ffb1a39c7a99d[m
+Merge: 4964d68 c7b5693
+Author: Ren <1124118402@qq.com>
+Date:   Thu Dec 6 10:53:59 2018 +0800
+
+    修改
+
+[33mcommit be4d0da88b0faea9879e1a295066147a3b673a37[m
+Merge: 26ef827 c7b5693
+Author: fox <2388823752@qq.com>
+Date:   Thu Dec 6 10:43:25 2018 +0800
+
+    Merge branch 'master' of gitee.com:gnadream/qyedu
+
+[33mcommit 551b24ad8f9be9cd71f983f0c9119264f8cc8598[m
+Author: fox <2388823752@qq.com>
+Date:   Thu Dec 6 10:42:49 2018 +0800
+
+    admin
+
+[33mcommit 3a36b02ead1f10287878d27de53a62d1d2a4e199[m
+Merge: bba7038 a252736
+Author: YX <1462251498@qq.com>
+Date:   Thu Dec 6 10:41:48 2018 +0800
+
+    Merge branch 'four' of gitee.com:gnadream/qyedu into lyx
+
+[33mcommit a2527369e80f548f201efb40cc570d64c0666380[m
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Thu Dec 6 10:39:43 2018 +0800
+
+    班级管理增删查改
+
+[33mcommit c7b56931020c0451fd045c92ecf13c21e3ff54b3[m
+Author: kamihati <dream928@gmail.com>
+Date:   Thu Dec 6 10:39:10 2018 +0800
+
+    alter table
+
+[33mcommit 62b9bb7935c154137ae82f2757dd37f222425350[m
+Merge: 7d6cc1d 34b4ea0
+Author: kamihati <dream928@gmail.com>
+Date:   Thu Dec 6 10:24:50 2018 +0800
+
+    Merge branch 'two'
+
+[33mcommit 34b4ea03811433dd2caa0c6e560d27ab5b58b5ed[m
+Author: LDF <285601372@qq.com>
+Date:   Thu Dec 6 10:13:19 2018 +0800
+
+    菜单栏目优化
+
+[33mcommit 7273212d1d4b2fa1c5f6e92659d400d36f27f826[m
+Author: adu <864613930@qq.com>
+Date:   Thu Dec 6 08:38:59 2018 +0800
+
+    change mysql ip
+
+[33mcommit eb0b7a14b175b1c1cc19c89309a5598ab93d282a[m
+Merge: fb0758a 6f70560
+Author: LDF <285601372@qq.com>
+Date:   Thu Dec 6 08:38:03 2018 +0800
+
+    Merge branch 'ldf' into two
+
+[33mcommit 6f70560513099c8e6e415112664f5c24358580ed[m
+Author: LDF <285601372@qq.com>
+Date:   Thu Dec 6 08:37:37 2018 +0800
+
+    优化修改栏目
+
+[33mcommit 44242e6f82ca6b1c96ea7c7cde0018e002212aa2[m
+Merge: 147029d 957a0db
+Author: adu <864613930@qq.com>
+Date:   Wed Dec 5 21:26:28 2018 +0800
+
+    Merge branch 'four' of gitee.com:gnadream/qyedu into four
+
+[33mcommit bba7038459e94f68b77d3248129bd5be91b75f44[m
+Merge: ee54800 957a0db
+Author: YX <1462251498@qq.com>
+Date:   Wed Dec 5 21:26:25 2018 +0800
+
+    Merge branch 'four' of gitee.com:gnadream/qyedu into lyx
+
+[33mcommit 147029d294b46a605fb55aca1d8de3738f289a67[m
+Author: adu <864613930@qq.com>
+Date:   Wed Dec 5 21:26:18 2018 +0800
+
+    add admin daia
+
+[33mcommit 957a0dbf16937a1d82e221b7899c206998e084e1[m
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Wed Dec 5 21:24:11 2018 +0800
+
+    添加班级管理功能
+
+[33mcommit fb0758a35c6a7dc2f55b69adbb9f811090c83aef[m
+Author: wyx <173400430@qq.com>
+Date:   Wed Dec 5 21:08:04 2018 +0800
+
+    'm'
+
+[33mcommit c0dbf4c424bf44d4b8c83e3b8f2f7567ef1d5ed8[m
+Merge: 3f87dc3 5fb78c5
+Author: wyx <173400430@qq.com>
+Date:   Wed Dec 5 20:39:27 2018 +0800
+
+    ''
+
+[33mcommit 3f87dc38864ba9bf36138b75a5c9625ef4f8cc68[m
+Author: wyx <173400430@qq.com>
+Date:   Wed Dec 5 20:36:00 2018 +0800
+
+    'aaaa'
+
+[33mcommit 5fb78c55d6b715eb2c6f51a89fc282296be8e20e[m
+Author: LZY <1342022456@qq.com>
+Date:   Wed Dec 5 20:33:42 2018 +0800
+
+    解决错误
+
+[33mcommit 69d3f34ba89d6feec9f152e4fc1d5a5838c0c509[m
+Author: LZY <1342022456@qq.com>
+Date:   Wed Dec 5 20:18:42 2018 +0800
+
+    youhua
+
+[33mcommit 5f55dddd7c81fc2cd0bb9f8c62a2cab31267d883[m
+Merge: ea15a31 0cf2148
+Author: wyx <173400430@qq.com>
+Date:   Wed Dec 5 19:50:01 2018 +0800
+
+    Merge branch 'two' of gitee.com:gnadream/qyedu into two
+
+[33mcommit ea15a31c4d40b1d55a842f122068e49b09604b8e[m
+Author: wyx <173400430@qq.com>
+Date:   Wed Dec 5 19:49:39 2018 +0800
+
+    'xiugai'
+
+[33mcommit 0cf21489cfb18a1937b97f41454a957ebab3b1ea[m
+Merge: 34126ae a7d2ceb
+Author: LDF <285601372@qq.com>
+Date:   Wed Dec 5 19:44:17 2018 +0800
+
+    冲突解决
+
+[33mcommit 34126ae8a69202bcb6356f7034fc54447bd1a3c0[m
+Merge: 8396205 136cbb3
+Author: LDF <285601372@qq.com>
+Date:   Wed Dec 5 19:42:05 2018 +0800
+
+    添加栏目修改功能和不同用户登录看到不同菜单功能
+
+[33mcommit a7d2ceb76be8e01297ea76ea3e9e203eab725799[m
+Author: LZY <1342022456@qq.com>
+Date:   Wed Dec 5 19:39:56 2018 +0800
+
+    冲突
+
+[33mcommit 83962059c71ab486d039f4d384b746ecb39578ac[m
+Merge: b3d2727 fa50c40
+Author: LZY <1342022456@qq.com>
+Date:   Wed Dec 5 19:36:12 2018 +0800
+
+    dorm_delete
+
+[33mcommit 136cbb38c3d04db3bde92e666e0acd0e8824f1e0[m
+Author: LDF <285601372@qq.com>
+Date:   Wed Dec 5 19:33:44 2018 +0800
+
+    加入栏目修改，不同用户登录看到不同菜单
+
+[33mcommit fa50c404fafc2f41fb59070ba3dea5876929a416[m
+Merge: ee472a5 4558676
+Author: wyx <173400430@qq.com>
+Date:   Wed Dec 5 19:24:50 2018 +0800
+
+    'dormitory'
+
+[33mcommit b3d27277bab7064a6fe9b2d828aeb5166ec9e6e8[m
+Author: LZY <1342022456@qq.com>
+Date:   Wed Dec 5 19:19:50 2018 +0800
+
+    delete
+
+[33mcommit ee472a509182a2c71dcb85edc1753aca702812dc[m
+Author: wyx <173400430@qq.com>
+Date:   Wed Dec 5 19:19:10 2018 +0800
+
+    'dormitory'
+
+[33mcommit 486d7483af559b7a3d18c854ace953f3b3967b84[m
+Author: LZY <1342022456@qq.com>
+Date:   Wed Dec 5 17:36:24 2018 +0800
+
+    dorm_delte
+
+[33mcommit 9a5bb7585cc449ed0b19dc44d275dc3f9996ce25[m
+Author: LZY <1342022456@qq.com>
+Date:   Wed Dec 5 17:35:04 2018 +0800
+
+    dorm_delte
+
+[33mcommit 7d6cc1d947538b94eb6796fbf8f5d251c6267406[m
+Author: kamihati <dream928@gmail.com>
+Date:   Wed Dec 5 16:45:20 2018 +0800
+
+    修改班级的开班时间类型为DateField
+
+[33mcommit 7cb1a4f1b91ad79cbed1d42709ebc85b0d9fa40c[m
+Author: 2483748098 <2483748098@qq.com>
+Date:   Wed Dec 5 15:24:08 2018 +0800
+
+    l
+
+[33mcommit 93a8162ee81bc10f57558f863a6913274b475c2e[m
+Merge: b18b9dc 95c57b5
+Author: fox <2388823752@qq.com>
+Date:   Wed Dec 5 15:11:30 2018 +0800
+
+    z
+
+[33mcommit 95c57b5305049259bdc4d3ee3550045e786fb6d0[m
+Author: fox <2388823752@qq.com>
+Date:   Wed Dec 5 14:58:28 2018 +0800
+
+    x
+
+[33mcommit 455867653cb7c2ffcd22a9facb78e318955e71d2[m
+Merge: 9a8a2fc 221bd72
+Author: admin <email@example.com>
+Date:   Wed Dec 5 14:12:30 2018 +0800
+
+    合并冲突解决
+
+[33mcommit 221bd721416277a58e17c0c7a5def6f104407357[m
+Author: admin <email@example.com>
+Date:   Wed Dec 5 14:09:55 2018 +0800
+
+    添加管理员页面
+
+[33mcommit 9a8a2fc40004fb2c50754a21989333376dffa36d[m
+Author: LDF <285601372@qq.com>
+Date:   Wed Dec 5 14:08:08 2018 +0800
+
+    管理员添加页面
+
+[33mcommit 94195b50f44060a0795193c6e03042a948d19cb1[m
+Author: kamihati <dream928@gmail.com>
+Date:   Wed Dec 5 13:58:55 2018 +0800
+
+    remove root app models
+
+[33mcommit ee548004b3bc818f9bd8f576cac59adf9fb12b69[m
+Merge: d3d6a1e 4d7fbae
+Author: YX <1462251498@qq.com>
+Date:   Wed Dec 5 13:48:20 2018 +0800
+
+    Merge branch 'four' of gitee.com:gnadream/qyedu into lyx
+
+[33mcommit 33307d720ac73829064cb680a2f09ef9acd9d889[m
+Author: LDF <285601372@qq.com>
+Date:   Wed Dec 5 13:38:44 2018 +0800
+
+    修改栏目添加时出现子栏目问题
+
+[33mcommit 4d7fbae4650896724be33bf6616d5137999e9a09[m
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Wed Dec 5 13:32:36 2018 +0800
+
+    '解决父级栏目添加问题'
+
+[33mcommit d3d6a1edba17c45539206dad2d2e690211f858b5[m
+Author: YX <1462251498@qq.com>
+Date:   Wed Dec 5 11:46:32 2018 +0800
+
+    123
+
+[33mcommit 74bc6491fb8ebee289c19df94231c25d2d393c2a[m
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Wed Dec 5 11:44:23 2018 +0800
+
+    modifycss
+
+[33mcommit 7c601825ce198995172c9aac7be0f3b513c9401c[m
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Wed Dec 5 11:29:12 2018 +0800
+
+    'modifycss'
+
+[33mcommit ebaba3150632c007a7dc2069e3d122f40d1f9f8f[m
+Merge: 294a424 26ef827
+Author: fox <2388823752@qq.com>
+Date:   Wed Dec 5 11:29:03 2018 +0800
+
+    update8
+
+[33mcommit 4964d68bd79bbd9285fea6a4d416b3b976541ee6[m
+Author: pangpengxin <pangpengxin>
+Date:   Wed Dec 5 11:15:53 2018 +0800
+
+    merge master
+
+[33mcommit a5da34b48a1caf2c6be3c30eb6ce1ede0abb6d3c[m
+Author: pangpengxin <pangpengxin>
+Date:   Wed Dec 5 11:11:51 2018 +0800
+
+    merge master
+
+[33mcommit 4225d41da08abf1323a6c62eafd0cb7b33dfa4c3[m
+Author: pangpengxin <pangpengxin>
+Date:   Wed Dec 5 11:09:42 2018 +0800
+
+    merge master
+
+[33mcommit ffb3600527eec44e549eb93e1a15e2d4c66f4c79[m
+Merge: e0f018f 434de36
+Author: pangpengxin <pangpengxin>
+Date:   Wed Dec 5 10:52:59 2018 +0800
+
+    merge two
+
+[33mcommit e0f018ffc13646b2b6924b14993868a8b1bd77df[m
+Author: pangpengxin <pangpengxin>
+Date:   Wed Dec 5 10:49:18 2018 +0800
+
+    dd
+
+[33mcommit a2e75e261e857257bcee1ff164dc4469c484c1aa[m
+Merge: aaec789 434de36
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Wed Dec 5 10:40:55 2018 +0800
+
+    merge master
+
+[33mcommit aaec789ec299cf76511e13d5bb9688bae053d600[m
+Merge: fb4444a 5ff6775
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Wed Dec 5 10:38:16 2018 +0800
+
+    Merge branch 'four' of gitee.com:gnadream/qyedu into four
+
+[33mcommit fb4444a46a5d20930f2571b6a12caa24e64bf527[m
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Wed Dec 5 10:31:58 2018 +0800
+
+    菜单
+
+[33mcommit 2c4bf4c8ade84509ec0ce902e1dc18803f82193e[m
+Author: LZY <1342022456@qq.com>
+Date:   Wed Dec 5 10:18:12 2018 +0800
+
+    mysql
+
+[33mcommit 26ef8274314e3a0d0718442f99918dc3a400e077[m
+Merge: a074926 434de36
+Author: fox <2388823752@qq.com>
+Date:   Wed Dec 5 10:11:05 2018 +0800
+
+    a
+
+[33mcommit b18b9dc3b6640828be33535692eb18e7a4dc5084[m
+Author: fox <2388823752@qq.com>
+Date:   Wed Dec 5 10:03:10 2018 +0800
+
+    update7
+
+[33mcommit 5ff6775996d8a0d132abb2c87b52c6f0c137b90a[m
+Merge: a7b2c37 4ed9a91
+Author: zhuangzhuang <git@gitee.com:gnadream/qyedu.git qyedu_four>
+Date:   Wed Dec 5 09:58:14 2018 +0800
+
+    Merge branch 'four' of gitee.com:gnadream/qyedu into four
+
+[33mcommit a7b2c374bb7b3ae34a5a6a584e2856fd03e91b97[m
+Author: zhuangzhuang <git@gitee.com:gnadream/qyedu.git qyedu_four>
+Date:   Wed Dec 5 09:57:19 2018 +0800
+
+    退出登录
+
+[33mcommit 434de36ece3db133a9035bdd2511bfe17462b3de[m
+Merge: 7d82852 a9cfbea
+Author: kamihati <dream928@gmail.com>
+Date:   Wed Dec 5 09:57:13 2018 +0800
+
+    Merge branch 'two'
+
+[33mcommit 7d828527ddb21f7d969f689d15c7e51a01f81260[m
+Author: kamihati <dream928@gmail.com>
+Date:   Wed Dec 5 09:56:32 2018 +0800
+
+    增加数据初始化文件。依赖包文文件
+
+[33mcommit a9cfbeab627846ee3af85573bfcd883cb6b8f781[m
+Merge: 20a33d1 aeaacf1
+Author: wyx <173400430@qq.com>
+Date:   Wed Dec 5 09:49:13 2018 +0800
+
+    'login'
+
+[33mcommit aeaacf1413e0bf0f717b8e545321bcae50c3deea[m
+Author: wyx <173400430@qq.com>
+Date:   Wed Dec 5 09:47:14 2018 +0800
+
+    'login'
+
+[33mcommit 4ed9a91a44191955b26bbc8bafb8a9680bfe1c60[m
+Author: adu <864613930@qq.com>
+Date:   Wed Dec 5 09:33:25 2018 +0800
+
+    删除欢迎页面的心形代码,优化登录视图登录代码
+
+[33mcommit 384f5053c288dcd2f93d2b6a9096e733f61ed562[m
+Author: adu <864613930@qq.com>
+Date:   Wed Dec 5 08:58:06 2018 +0800
+
+    修改登录 重定向页面
+
+[33mcommit bbbe54b6dfd351628493df66e000ea81a581f56a[m
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Wed Dec 5 08:52:40 2018 +0800
+
+    添加登录装饰器进行页面跳转
+
+[33mcommit 93c83fcf88f0e4bbf7c22704ce5f21599207d68a[m
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Wed Dec 5 08:43:57 2018 +0800
+
+    添加装饰器限制匿名访问
+
+[33mcommit 20a33d147b76e659b14337df7dae0df46957a101[m
+Merge: cabe384 0d0c7bc
+Author: wyx <173400430@qq.com>
+Date:   Wed Dec 5 08:36:08 2018 +0800
+
+    Merge branch 'wyx' into two
+
+[33mcommit 0d0c7bc445202d6e18395e131198197b033399b3[m
+Author: wyx <173400430@qq.com>
+Date:   Wed Dec 5 08:35:46 2018 +0800
+
+    'shal'
+
+[33mcommit a727069a9cb5e0d3f4a10d67492f6aba626c8c96[m
+Author: adu <864613930@qq.com>
+Date:   Wed Dec 5 08:28:49 2018 +0800
+
+    add setting mysql ip
+
+[33mcommit cabe384027a045cbfe8896f0c18009275207afd6[m
+Merge: 4db5057 60f9604
+Author: wyx <173400430@qq.com>
+Date:   Tue Dec 4 21:41:56 2018 +0800
+
+    Merge branch 'two' of gitee.com:gnadream/qyedu into two
+
+[33mcommit 4db505719318b6e8f9e889fc799afd6ce62475d6[m
+Author: wyx <173400430@qq.com>
+Date:   Tue Dec 4 21:41:27 2018 +0800
+
+    '222'
+
+[33mcommit 60f9604241df34bc0e5daf918b3315886fb749c5[m
+Author: LZY <1342022456@qq.com>
+Date:   Tue Dec 4 20:56:12 2018 +0800
+
+    弹框
+
+[33mcommit 591cc354227ce7963bc96f6922bbb4050b06c775[m
+Merge: be63cef 2d8b59c
+Author: adu <864613930@qq.com>
+Date:   Tue Dec 4 20:48:53 2018 +0800
+
+    Merge branch 'four' of gitee.com:gnadream/qyedu into four
+
+[33mcommit be63cefff18596c87b7c6991f3432c90e1aac423[m
+Author: adu <864613930@qq.com>
+Date:   Tue Dec 4 20:48:31 2018 +0800
+
+    add a logo.png
+
+[33mcommit 8221555d8c3c9df419a43fb38e1dde1c8e2a7b62[m
+Merge: cb9aa23 2feda81
+Author: LZY <1342022456@qq.com>
+Date:   Tue Dec 4 20:44:28 2018 +0800
+
+    Merge branch 'two' into lzy
+
+[33mcommit 2feda81a65e6fa74c512eb92cae1ed22bf633ced[m
+Merge: 2d19424 2c354fb
+Author: LZY <1342022456@qq.com>
+Date:   Tue Dec 4 20:43:47 2018 +0800
+
+    nothing
+
+[33mcommit 2c354fbc9035d4dc82d086f04dfd207e8675c960[m
+Author: LDF <285601372@qq.com>
+Date:   Tue Dec 4 20:37:21 2018 +0800
+
+    补充冲突
+
+[33mcommit cb9aa23ba115e217be33e5bb7b8ca0702aa55f06[m
+Merge: e22bf37 2d19424
+Author: LZY <1342022456@qq.com>
+Date:   Tue Dec 4 20:35:17 2018 +0800
+
+    Merge branch 'two' into lzy
+
+[33mcommit 2d1942446cd1a4ce56ba0c4f14f113f6bb59c990[m
+Merge: 7ac5357 c32dc6d
+Author: LZY <1342022456@qq.com>
+Date:   Tue Dec 4 20:34:30 2018 +0800
+
+    Merge branch 'two' of gitee.com:gnadream/qyedu into two
+
+[33mcommit 186c3843ff0c43eb864d4b20002d738e626b19ce[m
+Merge: ed60ae7 c32dc6d
+Author: wyx <173400430@qq.com>
+Date:   Tue Dec 4 20:33:48 2018 +0800
+
+    Merge branch 'two' into wyx
+
+[33mcommit c32dc6dd64c3041413b409697360395e00f3c401[m
+Merge: 07c4afa 9e12e33
+Author: admin <email@example.com>
+Date:   Tue Dec 4 20:32:46 2018 +0800
+
+    解决冲突,空格
+
+[33mcommit 9e12e333de9ef0c8092d3adf74b674b1e8faec7d[m
+Author: admin <email@example.com>
+Date:   Tue Dec 4 20:30:31 2018 +0800
+
+    优化修改权限用户选择
+
+[33mcommit 07c4afa199cf28cee8b32dbb310a7349713015a7[m
+Author: admin <email@example.com>
+Date:   Tue Dec 4 20:25:51 2018 +0800
+
+    优化权限选择
+
+[33mcommit 2d8b59cb1c92a3e20ced7759e450238dd0f598a2[m
+Author: YX <1462251498@qq.com>
+Date:   Tue Dec 4 20:19:12 2018 +0800
+
+    xiugai
+
+[33mcommit e22bf37fe48c9b9f43949c4d518442991b355e9a[m
+Merge: 53f3864 7ac5357
+Author: LZY <1342022456@qq.com>
+Date:   Tue Dec 4 20:11:47 2018 +0800
+
+    Merge branch 'two' into lzy
+
+[33mcommit 7ac53577c22148098cee68aaa79c9f4d95fa6f27[m
+Merge: 6e0bf3c 7341a22
+Author: LZY <1342022456@qq.com>
+Date:   Tue Dec 4 20:10:01 2018 +0800
+
+    Merge branch 'two' of gitee.com:gnadream/qyedu into two
+
+[33mcommit 53f3864c33142bb722f82187bcadc3baea9d0bf3[m
+Author: LZY <1342022456@qq.com>
+Date:   Tue Dec 4 20:09:43 2018 +0800
+
+    something
+
+[33mcommit ed60ae7ac424b7241ce7a0ce60c59f633b441ed3[m
+Merge: 7155c9d 7341a22
+Author: wyx <173400430@qq.com>
+Date:   Tue Dec 4 20:08:58 2018 +0800
+
+    Merge branch 'two' into wyx
+
+[33mcommit 7341a22b090f6f198020f5c17a637686481eeaf0[m
+Author: admin <email@example.com>
+Date:   Tue Dec 4 20:04:53 2018 +0800
+
+    权限用户样式修改
+
+[33mcommit c92ca23acfe1f5b68f991203372bddfba6c063e9[m
+Merge: d708df8 7506e55
+Author: adu <864613930@qq.com>
+Date:   Tue Dec 4 19:58:34 2018 +0800
+
+    删除冲突
+
+[33mcommit d708df86ff47c555509599fbe37acf8a47930266[m
+Author: adu <864613930@qq.com>
+Date:   Tue Dec 4 19:55:23 2018 +0800
+
+    删除更新
+
+[33mcommit 7506e5525920aec37ef404c91c11fc5760c0ac56[m
+Author: zhuangzhuang <git@gitee.com:gnadream/qyedu.git qyedu_four>
+Date:   Tue Dec 4 19:52:03 2018 +0800
+
+    添加背景特效
+
+[33mcommit 7155c9d98feff9119ae98b8d4a3b7089826f4385[m
+Author: wyx <173400430@qq.com>
+Date:   Tue Dec 4 19:44:52 2018 +0800
+
+    'www'
+
+[33mcommit 41be07abb9f1822f5725968c83e187f8a398fb95[m
+Merge: a86ea0c 35ee34c
+Author: zhuangzhuang <git@gitee.com:gnadream/qyedu.git qyedu_four>
+Date:   Tue Dec 4 19:42:37 2018 +0800
+
+    Merge branch 'four' into dev
+
+[33mcommit 35ee34c6109555eb743ffc149a7b121206bfbd65[m
+Merge: f438f31 2b7e95b
+Author: zhuangzhuang <git@gitee.com:gnadream/qyedu.git qyedu_four>
+Date:   Tue Dec 4 19:42:09 2018 +0800
+
+    Merge branch 'four' of gitee.com:gnadream/qyedu into four
+
+[33mcommit a50561d62ff57a0ec316f012c6af69c39edb62e1[m
+Merge: f438f31 2b7e95b
+Author: adu <864613930@qq.com>
+Date:   Tue Dec 4 19:40:35 2018 +0800
+
+    Merge branch 'four' of gitee.com:gnadream/qyedu into four
+
+[33mcommit a86ea0c8532e2ff8b54a63bf9741b817fb49d49a[m
+Merge: a207e40 f438f31
+Author: zhuangzhuang <git@gitee.com:gnadream/qyedu.git qyedu_four>
+Date:   Tue Dec 4 19:40:33 2018 +0800
+
+    删除冲突
+
+[33mcommit 2b7e95b87d6dfd25cbf93364c4e7079a819b86dd[m
+Author: YX <1462251498@qq.com>
+Date:   Tue Dec 4 19:39:53 2018 +0800
+
+    beijing
+
+[33mcommit a9bd9634eb736e4bac6a9a73d1b6700b0f9f9dd6[m
+Author: YX <1462251498@qq.com>
+Date:   Tue Dec 4 19:39:01 2018 +0800
+
+    up
+
+[33mcommit f438f31c6f83c65cc1922744016d5f4feaf99e37[m
+Merge: 675befa aaa0fdf
+Author: adu <864613930@qq.com>
+Date:   Tue Dec 4 19:23:52 2018 +0800
+
+    修改冲突
+
+[33mcommit aaa0fdfaef3e9a6a72a3cc2fa6029066add60227[m
+Author: adu <864613930@qq.com>
+Date:   Tue Dec 4 19:21:16 2018 +0800
+
+    修改验证码代码
+
+[33mcommit a207e40e7007a6be4a9ca770d82fa3c54992df10[m
+Merge: 43df9d1 675befa
+Author: zhuangzhuang <git@gitee.com:gnadream/qyedu.git qyedu_four>
+Date:   Tue Dec 4 17:26:47 2018 +0800
+
+    Merge branch 'four' into dev
+
+[33mcommit 294a424e8e989e5cb703fea196e0e664e2878769[m
+Merge: 864e30f 995cb3c
+Author: fox <2388823752@qq.com>
+Date:   Tue Dec 4 17:24:31 2018 +0800
+
+    update8
+
+[33mcommit 675befab876b85107205192c7369f97cfcbe3313[m
+Merge: c62b5b9 d036fed
+Author: YX <1462251498@qq.com>
+Date:   Tue Dec 4 17:24:11 2018 +0800
+
+    Merge branch 'four' of gitee.com:gnadream/qyedu into four
+
+[33mcommit c62b5b9a708842063bfaf8fa5e299e5a89ef3b8d[m
+Author: YX <1462251498@qq.com>
+Date:   Tue Dec 4 17:23:52 2018 +0800
+
+    login背景样式
+
+[33mcommit 864e30f0e592e8c030326ba7fcc523880cf9a5a4[m
+Author: fox <2388823752@qq.com>
+Date:   Tue Dec 4 17:23:40 2018 +0800
+
+    a
+
+[33mcommit 995cb3c84529c88c0b30ba2783b81d4b87cf3be2[m
+Author: fox <2388823752@qq.com>
+Date:   Tue Dec 4 17:22:21 2018 +0800
+
+    update7
+
+[33mcommit d036feda84cd94310b988c0a45d8a006a20c1116[m
+Merge: cb96256 0a6d36e
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Tue Dec 4 17:05:51 2018 +0800
+
+    Merge branch 'four' of gitee.com:gnadream/qyedu into four
+
+[33mcommit 43df9d1306cc2ae8ce7e56fba9c4aa9c64d4d67a[m
+Merge: 03f300f 0a6d36e
+Author: zhuangzhuang <git@gitee.com:gnadream/qyedu.git qyedu_four>
+Date:   Tue Dec 4 17:04:51 2018 +0800
+
+    Merge branch 'four' into dev
+
+[33mcommit cb9625646a31819134414a52c1debcff81aec7d7[m
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Tue Dec 4 17:04:44 2018 +0800
+
+    菜单优化
+
+[33mcommit fa84546e4af52afb853c3ea8a61e94aaf82ba50a[m
+Author: Ren <1124118402@qq.com>
+Date:   Tue Dec 4 17:02:53 2018 +0800
+
+    菜单管理修改
+
+[33mcommit 0a6d36e7bba4482c55efc82e4d815e8bd74a1718[m
+Merge: e8df381 300f1a5
+Author: YX <1462251498@qq.com>
+Date:   Tue Dec 4 16:59:55 2018 +0800
+
+    Merge branch 'four' of gitee.com:gnadream/qyedu
+
+[33mcommit e8df381b4cf7badc3d730c17a639e9b713afc109[m
+Author: YX <1462251498@qq.com>
+Date:   Tue Dec 4 16:57:52 2018 +0800
+
+    背景粒子样式
+
+[33mcommit 6e0bf3c599d0d4ee5ea37edc187a1854f4e81c02[m
+Merge: b16392b 1346457
+Author: LZY <1342022456@qq.com>
+Date:   Tue Dec 4 16:37:08 2018 +0800
+
+    chongtu
+
+[33mcommit 1346457d048c6d29ae08cf4150b0dce19556d0b3[m
+Merge: faae936 a04e914
+Author: admin <email@example.com>
+Date:   Tue Dec 4 16:32:36 2018 +0800
+
+    菜单删除功能冲突解决
+
+[33mcommit e4913d8498f38fcebe26bab8085c0a29ff7c778e[m
+Author: fox <2388823752@qq.com>
+Date:   Tue Dec 4 16:30:24 2018 +0800
+
+    update6
+
+[33mcommit faae9360f8e95b26dab684cff88720e34f132c2a[m
+Merge: 73b5074 44bea37
+Author: wyx <173400430@qq.com>
+Date:   Tue Dec 4 16:29:21 2018 +0800
+
+    '记住密码'
+
+[33mcommit a04e9140a1e78156f24d755f4320f2b570eb3373[m
+Author: admin <email@example.com>
+Date:   Tue Dec 4 16:29:20 2018 +0800
+
+    菜单删除
+
+[33mcommit 03f300fa96e385311fd959f3fa5c8e11975f6c2f[m
+Merge: feeec72 300f1a5
+Author: zhuangzhuang <git@gitee.com:gnadream/qyedu.git qyedu_four>
+Date:   Tue Dec 4 16:26:54 2018 +0800
+
+    Merge branch 'four' into dev
+
+[33mcommit 73b5074d89bcda0d71d845caa753968e34d1c7d1[m
+Author: wyx <173400430@qq.com>
+Date:   Tue Dec 4 16:25:08 2018 +0800
+
+    '记住密码'
+
+[33mcommit 300f1a5b3d4f166e7aaafa6c69c679dc8277c9a7[m
+Author: adu <864613930@qq.com>
+Date:   Tue Dec 4 16:24:30 2018 +0800
+
+    修改login.html
+
+[33mcommit b16392b50e4aa3d8b0ab03ccd0fd085ed8dc017c[m
+Author: LZY <1342022456@qq.com>
+Date:   Tue Dec 4 16:22:52 2018 +0800
+
+    xiaoxiugai
+
+[33mcommit feeec728e1ba70ccb5b5740d31347c974b4ab6be[m
+Merge: 01d6d33 ba94dc0
+Author: zhuangzhuang <git@gitee.com:gnadream/qyedu.git qyedu_four>
+Date:   Tue Dec 4 16:22:18 2018 +0800
+
+    Merge branch 'four' into dev
+
+[33mcommit ba94dc08cb8d38def3e0b9b20206840eb01cfa27[m
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Tue Dec 4 16:20:45 2018 +0800
+
+    登录人性化验证
+
+[33mcommit 01d6d336a7ca572ee60ec276934cbd151721d707[m
+Merge: 6605a88 652fa5a
+Author: zhuangzhuang <git@gitee.com:gnadream/qyedu.git qyedu_four>
+Date:   Tue Dec 4 16:07:06 2018 +0800
+
+    a
+
+[33mcommit 6605a88350b8c0355a60ef4d36972e6fb5cf9abb[m
+Merge: 85492d8 66ff3d2
+Author: zhuangzhuang <git@gitee.com:gnadream/qyedu.git qyedu_four>
+Date:   Tue Dec 4 16:04:37 2018 +0800
+
+    a
+
+[33mcommit 652fa5a9f00e054ef1561be045ffa497c5b50edc[m
+Merge: 53b3122 66ff3d2
+Author: adu <864613930@qq.com>
+Date:   Tue Dec 4 16:00:31 2018 +0800
+
+    删除冲突
+
+[33mcommit 85492d8de9c90992c03115ef9ba499df2f9beb64[m
+Author: zhuangzhuang <git@gitee.com:gnadream/qyedu.git qyedu_four>
+Date:   Tue Dec 4 16:00:18 2018 +0800
+
+    a
+
+[33mcommit 53b31223b5ac39a753bdffe3eba9862e03ca4245[m
+Merge: 531526e d552c6f
+Author: adu <864613930@qq.com>
+Date:   Tue Dec 4 15:56:15 2018 +0800
+
+    添加登录验证码
+
+[33mcommit b923ae05125b04aa155d41a26ee1ff04a0cf2702[m
+Author: fox <2388823752@qq.com>
+Date:   Tue Dec 4 15:55:58 2018 +0800
+
+    update6
+
+[33mcommit 66ff3d2321a4bccf3a5c9932899208692c67d987[m
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Tue Dec 4 15:32:05 2018 +0800
+
+    解决冲突
+
+[33mcommit b63f1a20037824655627b30360bcf48bb6d25a44[m
+Merge: 4b79352 1e54fe6
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Tue Dec 4 15:27:26 2018 +0800
+
+    添加所有菜单
+
+[33mcommit a24e06e19fe7ec585f66bdb660122c8b391781cf[m
+Author: fox <2388823752@qq.com>
+Date:   Tue Dec 4 15:26:21 2018 +0800
+
+    update5
+
+[33mcommit 1e54fe68d5762e8e671da0b850bff29e1e6877d4[m
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Tue Dec 4 15:22:06 2018 +0800
+
+    添加所有菜单
+
+[33mcommit 4b79352e17d8da157e3ec872ba2f1482703d11e7[m
+Author: YX <1462251498@qq.com>
+Date:   Tue Dec 4 15:03:49 2018 +0800
+
+    geshi
+
+[33mcommit 44bea3711b1d79b5c9314b1d9310f7f1dd27de14[m
+Merge: e00c974 e1e039d
+Author: admin <email@example.com>
+Date:   Tue Dec 4 15:02:53 2018 +0800
+
+    Merge branch 'wsj' into two
+
+[33mcommit e1e039d9795a5644c23113c367b77a16e5073395[m
+Author: admin <email@example.com>
+Date:   Tue Dec 4 15:01:32 2018 +0800
+
+    菜单冲突问题解决
+
+[33mcommit 6eb49c9fbedbed4fbc53d35ae482b998005a91ae[m
+Author: LZY <1342022456@qq.com>
+Date:   Tue Dec 4 15:00:40 2018 +0800
+
+    confilt
+
+[33mcommit d79f2b55bc383e52699b78a1946633b5c7ab8b0f[m
+Merge: 1f0f786 e00c974
+Author: LZY <1342022456@qq.com>
+Date:   Tue Dec 4 14:58:53 2018 +0800
+
+    many
+
+[33mcommit 531526e60f45845563f983341f9aa0131d8aa63a[m
+Author: adu <864613930@qq.com>
+Date:   Tue Dec 4 14:58:34 2018 +0800
+
+    登录 验证
+
+[33mcommit 1f0f78602427fbb7c84b1d2ba3099ef488925982[m
+Author: LZY <1342022456@qq.com>
+Date:   Tue Dec 4 14:56:30 2018 +0800
+
+    al
+
+[33mcommit e00c974bfdfa9bbc578ba3c7ebd3cbc64e8552d6[m
+Merge: 30ebad1 0f099fb
+Author: wyx <173400430@qq.com>
+Date:   Tue Dec 4 14:47:34 2018 +0800
+
+    'aaa'
+
+[33mcommit 30ebad114ce98651ac169a0a095e22192d149af8[m
+Author: wyx <173400430@qq.com>
+Date:   Tue Dec 4 14:44:56 2018 +0800
+
+    'alllogin'
+
+[33mcommit 0f099fbabcb6a5e4ce487a55a35e930b79aac605[m
+Merge: 4f71668 665d273
+Author: admin <email@example.com>
+Date:   Tue Dec 4 14:42:22 2018 +0800
+
+    菜单冲突解决
+
+[33mcommit 665d27328f3e7104e591ad7c93956e39d6a3691d[m
+Author: admin <email@example.com>
+Date:   Tue Dec 4 14:27:26 2018 +0800
+
+    菜单1.0
+
+[33mcommit 4f71668976d038461c99f3d90d5372c87947f74a[m
+Author: LZY <1342022456@qq.com>
+Date:   Tue Dec 4 14:21:45 2018 +0800
+
+    修改menu
+
+[33mcommit 1a145935def19cabdd2772aac0e80c30e7b155f8[m
+Author: LZY <1342022456@qq.com>
+Date:   Tue Dec 4 13:52:01 2018 +0800
+
+    解决冲突
+
+[33mcommit 9adfa031ba7de7d5537f1ef2e277324f02972f7b[m
+Merge: 4cac6cc 00c1f09
+Author: LZY <1342022456@qq.com>
+Date:   Tue Dec 4 13:39:07 2018 +0800
+
+    hebing
+
+[33mcommit d552c6f2b8468699de0d001c5b1211aeb0f34068[m
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Tue Dec 4 11:40:07 2018 +0800
+
+    修改footer样式
+
+[33mcommit 4cac6cccfee605c992eed55ec68679bf40b91b01[m
+Author: LZY <1342022456@qq.com>
+Date:   Tue Dec 4 11:39:20 2018 +0800
+
+    logout
+
+[33mcommit 133afc2aa66203fd6f08c411588e8b4917ce7293[m
+Author: LZY <1342022456@qq.com>
+Date:   Tue Dec 4 11:31:51 2018 +0800
+
+    add
+
+[33mcommit 00c1f092fb924c077b2d3766f7307a27af329dad[m
+Merge: 4683599 fa5fadb
+Author: wyx <173400430@qq.com>
+Date:   Tue Dec 4 11:28:01 2018 +0800
+
+    'mmm'
+
+[33mcommit 924dee324c1b69fce7df9f2aee2268c69f2d100a[m
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Tue Dec 4 11:27:21 2018 +0800
+
+    修改login.html
+
+[33mcommit 1f6b724332cd3d6b31b5da5192a950172364416a[m
+Author: 2483748098 <2483748098@qq.com>
+Date:   Tue Dec 4 11:25:33 2018 +0800
+
+    c
+
+[33mcommit fa5fadb5b360f827545f18840185a9247bc67d89[m
+Author: wyx <173400430@qq.com>
+Date:   Tue Dec 4 11:23:52 2018 +0800
+
+    'login补充'
+
+[33mcommit 5b7a818be8829fc274b6022d661fa17327330c11[m
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Tue Dec 4 11:19:09 2018 +0800
+
+    修改就业models
+
+[33mcommit db855ae9b383209b22f88e58810a8ef10663d20c[m
+Merge: 83ac18b 8095250
+Author: 2483748098 <2483748098@qq.com>
+Date:   Tue Dec 4 11:10:35 2018 +0800
+
+    Merge branch 'one' of gitee.com:gnadream/qyedu into one
+
+[33mcommit 83ac18b75af39fddb8d4cbd5a7e18919e50cba6e[m
+Author: 2483748098 <2483748098@qq.com>
+Date:   Tue Dec 4 11:09:57 2018 +0800
+
+    b
+
+[33mcommit 8095250d0d52069e829312b62a295bed9d282610[m
+Merge: 8415acb 390230d
+Author: fox <2388823752@qq.com>
+Date:   Tue Dec 4 10:59:31 2018 +0800
+
+    Merge branch 'fox' into one
+
+[33mcommit 8415acb17aed0cfe24b35f905b6fc3ef307f5f25[m
+Author: fox <2388823752@qq.com>
+Date:   Tue Dec 4 10:59:13 2018 +0800
+
+    settings.py
+
+[33mcommit 390230d675ec53d86108347a58136c4857997dfe[m
+Author: fox <2388823752@qq.com>
+Date:   Tue Dec 4 10:58:08 2018 +0800
+
+    check_login
+
+[33mcommit 0f735eb38c86c5267d7cf6f7709181cb2ac44df3[m
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Tue Dec 4 10:49:17 2018 +0800
+
+    解决冲突
+
+[33mcommit 3dac9e9aa017102ff11faac9ed42824a0f879023[m
+Merge: 74e13cc e8dcd37
+Author: 1078533832@qq.com <1078533832@qq.com>
+Date:   Tue Dec 4 10:20:02 2018 +0800
+
+    修改login
+
+[33mcommit 74e13ccb6edd2776f3153055048377c36dadcd24[m
+Author: 1078533832@qq.com <1078533832@qq.com>
+Date:   Tue Dec 4 10:16:07 2018 +0800
+
+    修改简化login.html
+
+[33mcommit e8dcd37f9fc3bcfe98d7f2b8d600339a64c450a1[m
+Merge: 011e815 36b80bb
+Author: 1078533832@qq.com <1078533832@qq.com>
+Date:   Tue Dec 4 09:44:40 2018 +0800
+
+    s
+
+[33mcommit 36b80bb55a763334f0a2b5983ee65f7105aee0ae[m
+Author: 1078533832@qq.com <1078533832@qq.com>
+Date:   Tue Dec 4 09:43:45 2018 +0800
+
+    修改bug
+
+[33mcommit 9839f9fa6227ed7733dd51fea890c3f9afbb9490[m
+Merge: 6be09b4 be455a8
+Author: 1078533832@qq.com <1078533832@qq.com>
+Date:   Tue Dec 4 09:23:53 2018 +0800
+
+    新加载
+
+[33mcommit 011e81516363b5292029857b574e636113c357af[m
+Merge: 77a3ed8 6be09b4
+Author: 1078533832@qq.com <1078533832@qq.com>
+Date:   Tue Dec 4 09:18:57 2018 +0800
+
+    添加
+
+[33mcommit be455a80c9b9dfa9854e19d94b1dd2593781ddb7[m
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Tue Dec 4 09:11:01 2018 +0800
+
+    对招生models进行修改
+
+[33mcommit 4683599f3ac45ad747b04a29189e0be4de23fd71[m
+Author: LDF <285601372@qq.com>
+Date:   Tue Dec 4 08:51:20 2018 +0800
+
+    修改自己代码
+
+[33mcommit 1aefb6fde1c70b4448bb934fab1da5fae28634bc[m
+Author: fox <2388823752@qq.com>
+Date:   Tue Dec 4 08:47:15 2018 +0800
+
+    upsettings.py
+
+[33mcommit 6be09b4c59102308ddee226eb909628a76ad76dc[m
+Author: 1078533832@qq.com <1078533832@qq.com>
+Date:   Tue Dec 4 08:40:11 2018 +0800
+
+    重新加载
+
+[33mcommit 77a3ed8ed06942a7bad2c89b22199c681ffb15a7[m
+Author: adu <864613930@qq.com>
+Date:   Tue Dec 4 08:33:01 2018 +0800
+
+    修改冲突和更改数据库设置
+
+[33mcommit 7d89891d6cb18ffd80e6c0b4d4e464f58f94c2c9[m
+Author: fox <2388823752@qq.com>
+Date:   Mon Dec 3 21:38:30 2018 +0800
+
+    update3
+
+[33mcommit 004834ab250830febb7972e70f99a14790bf7bb9[m
+Author: LZY <1342022456@qq.com>
+Date:   Mon Dec 3 21:33:13 2018 +0800
+
+    l
+
+[33mcommit f6e17daa87e1e992d002a21bbeb35b803f1500ab[m
+Merge: f160211 de36270
+Author: LZY <1342022456@qq.com>
+Date:   Mon Dec 3 21:02:18 2018 +0800
+
+    o
+
+[33mcommit f1602116d3f0402d375581dc2b7cb3cfeb990c43[m
+Author: LZY <1342022456@qq.com>
+Date:   Mon Dec 3 20:59:41 2018 +0800
+
+    modify
+
+[33mcommit de36270cd1da75ddeca79a0378b979c552c7529f[m
+Author: wyx <173400430@qq.com>
+Date:   Mon Dec 3 20:54:22 2018 +0800
+
+    '登录'
+
+[33mcommit eafdbc6f26402cb601d981bc687cd3923a6a9da1[m
+Author: Ren <1124118402@qq.com>
+Date:   Mon Dec 3 20:47:31 2018 +0800
+
+    lib
+
+[33mcommit 991e5ca0765598f2c16c3c7c5a4af5ce0f9b474a[m
+Merge: d6aaa12 f160403
+Author: Ren <1124118402@qq.com>
+Date:   Mon Dec 3 20:45:26 2018 +0800
+
+    Merge branch 'five' into dev
+
+[33mcommit f92bf20b57b116ac5adab19f287517636cf0f984[m
+Author: wyx <173400430@qq.com>
+Date:   Mon Dec 3 20:19:22 2018 +0800
+
+    'gaihaole'
+
+[33mcommit b68dafa594eb9884c06a42be60f97c2f974617dd[m
+Merge: 9f0fc1d 72b24b5
+Author: LZY <1342022456@qq.com>
+Date:   Mon Dec 3 20:15:29 2018 +0800
+
+    Merge branch 'lzy' into two
+
+[33mcommit f160403fbf439795b6c91b74d822e0a1655194f1[m
+Author: lining_name <3354831645@qq.com>
+Date:   Mon Dec 3 20:15:18 2018 +0800
+
+    html
+
+[33mcommit 9f0fc1dcd3d1d2b99cb2a971ab1f8427ab3f0456[m
+Merge: dbc5961 14a927f
+Author: LZY <1342022456@qq.com>
+Date:   Mon Dec 3 20:12:04 2018 +0800
+
+    Merge branch 'two' of gitee.com:gnadream/qyedu into two
+
+[33mcommit 14a927f4e673c507b73be11b21a3b5aed15b95e7[m
+Merge: 3ae6cc4 c603372
+Author: LDF <285601372@qq.com>
+Date:   Mon Dec 3 19:45:23 2018 +0800
+
+    页面
+
+[33mcommit 72b24b593baabfb9cc1c1a9c0b969bc810046b59[m
+Author: LZY <1342022456@qq.com>
+Date:   Mon Dec 3 19:36:47 2018 +0800
+
+    login
+
+[33mcommit 9efaf05b8577887fa32e6c2769734d29c13d82f8[m
+Author: lining_name <3354831645@qq.com>
+Date:   Mon Dec 3 19:35:49 2018 +0800
+
+    '访谈表'
+
+[33mcommit c603372667ea88f707b2b5121929de8ccadc5f0f[m
+Author: LDF <285601372@qq.com>
+Date:   Mon Dec 3 19:34:03 2018 +0800
+
+    页面未完成
+
+[33mcommit dbc5961fd3a4959157cdc6360b8ddca26d718a6a[m
+Author: LZY <1342022456@qq.com>
+Date:   Mon Dec 3 19:33:04 2018 +0800
+
+    login
+
+[33mcommit c70a337e076175d2de2e84597c686f3514a22d4f[m
+Author: LZY <1342022456@qq.com>
+Date:   Mon Dec 3 19:28:38 2018 +0800
+
+    login
+
+[33mcommit a4b21099203aaf4f920e0be202954c5f56f1129b[m
+Merge: 8a9c2f0 3ae6cc4
+Author: LZY <1342022456@qq.com>
+Date:   Mon Dec 3 19:26:58 2018 +0800
+
+    login
+
+[33mcommit 8a9c2f08dec29d40f4a24e9cbd52f905cb65c4de[m
+Author: LZY <1342022456@qq.com>
+Date:   Mon Dec 3 19:21:53 2018 +0800
+
+    login
+
+[33mcommit 3ae6cc49585bcbb49b4a6a7504b37e74e9ca705d[m
+Author: wyx <173400430@qq.com>
+Date:   Mon Dec 3 19:18:38 2018 +0800
+
+    'login'
+
+[33mcommit 86a792ec4e6026bf324122a8bb39c58f83460049[m
+Merge: 0b90766 4b69637
+Author: wyx <173400430@qq.com>
+Date:   Mon Dec 3 19:14:37 2018 +0800
+
+    Merge branch 'wyx' into two
+
+[33mcommit 4b69637aae8d2c2b9e7fe75af940337ab768e40b[m
+Author: wyx <173400430@qq.com>
+Date:   Mon Dec 3 19:14:17 2018 +0800
+
+    'login'
+
+[33mcommit 82bc5255c1950ac0e9cc76fa5539e0ab3d245472[m
+Author: LDF <285601372@qq.com>
+Date:   Mon Dec 3 19:10:23 2018 +0800
+
+    菜单
+
+[33mcommit ba9814b43b77597c9fb3ed20c539d06555a28241[m
+Merge: c11c019 0b90766
+Author: LZY <1342022456@qq.com>
+Date:   Mon Dec 3 18:54:07 2018 +0800
+
+    合并
+
+[33mcommit c11c0192fc7a71eb5c84740a67af62884ce0d449[m
+Author: LZY <1342022456@qq.com>
+Date:   Mon Dec 3 18:46:44 2018 +0800
+
+    修改
+
+[33mcommit c72c43410dd8bf4b2e741cc56b4f29b2cc949c8a[m
+Merge: 18e3c75 d058fa7
+Author: adu <864613930@qq.com>
+Date:   Mon Dec 3 18:31:57 2018 +0800
+
+    删除冲突
+
+[33mcommit 18e3c75a5464b1069fa840959029d9ebfc7648c7[m
+Author: adu <864613930@qq.com>
+Date:   Mon Dec 3 18:26:03 2018 +0800
+
+    合并及修改代码
+
+[33mcommit d058fa7fe8ece6ef0d841e52954e4fb47ec88796[m
+Merge: 218bca7 a499727
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Mon Dec 3 18:17:38 2018 +0800
+
+    sdd 添加招生models
+
+[33mcommit 218bca7d8a679877cab90cd23fa27b263ab344b8[m
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Mon Dec 3 18:14:13 2018 +0800
+
+    add招生models
+
+[33mcommit 0b90766b8b1328148f9f60ac89eaa9ed92dc2144[m
+Merge: 1bde066 ee91e39
+Author: wyx <173400430@qq.com>
+Date:   Mon Dec 3 17:44:12 2018 +0800
+
+    '增加登录功能'
+
+[33mcommit 1bde066982f3fba066f4cefcfdea38bc754dc076[m
+Author: wyx <173400430@qq.com>
+Date:   Mon Dec 3 17:36:42 2018 +0800
+
+    '登录'
+
+[33mcommit a4997278616e166400d08bd19fcd61ca86df89a6[m
+Merge: 7441727 26fbc1c
+Author: 1078533832@qq.com <1078533832@qq.com>
+Date:   Mon Dec 3 15:45:44 2018 +0800
+
+    Merge branch 'four' of gitee.com:gnadream/qyedu into four
+
+[33mcommit 7441727de1b7b4c9db963797b011ccf139cd614a[m
+Merge: d6aaa12 2fb22b2
+Author: 1078533832@qq.com <1078533832@qq.com>
+Date:   Mon Dec 3 15:44:55 2018 +0800
+
+    修改
+
+[33mcommit 26fbc1c7c4a0c0bfaa1ad24b35556bf956d7fb09[m
+Merge: 861ed30 2fb22b2
+Author: adu <864613930@qq.com>
+Date:   Mon Dec 3 15:42:56 2018 +0800
+
+    merge self to four
+
+[33mcommit 861ed309f31d18529b6b72403d4971ce225c8845[m
+Author: adu <864613930@qq.com>
+Date:   Mon Dec 3 15:28:06 2018 +0800
+
+    修改了models,logi.html等代码
+
+[33mcommit 2fb22b230e6e2a104fa919cc35a3a7deea396652[m
+Author: XingY <1462251498@qq.com>
+Date:   Mon Dec 3 14:36:00 2018 +0800
+
+    更新 settings.py
+
+[33mcommit bc032aaf0c9858a548dd7f65b51b8ee5eb273a8b[m
+Merge: 2a75620 f30b9b9
+Author: python_feng <1522740317@qq.com>
+Date:   Mon Dec 3 14:27:41 2018 +0800
+
+    recruit_students
+
+[33mcommit ee91e390d074a03f8bc06c6c327a60afa102371c[m
+Author: LDF <285601372@qq.com>
+Date:   Mon Dec 3 14:24:29 2018 +0800
+
+    updete two
+
+[33mcommit 2a75620b14e9749138bbb124a6e934f214306d74[m
+Author: python_feng <1522740317@qq.com>
+Date:   Mon Dec 3 14:19:33 2018 +0800
+
+    'recruit_students'
+
+[33mcommit 83694cdab0958b73e973662a11a8d17fe5802d3f[m
+Merge: 55a31c2 fbe7ab8
+Author: fox <2388823752@qq.com>
+Date:   Mon Dec 3 14:12:43 2018 +0800
+
+    update1
+
+[33mcommit f30b9b9836bf115e985400e31682a56d56d4c8cf[m
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Mon Dec 3 13:52:10 2018 +0800
+
+    添加就业模块models
+
+[33mcommit 059e70c85378cd83ecec880dffd4cc13f14737d9[m
+Merge: fbe7ab8 42c273d
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Mon Dec 3 11:35:10 2018 +0800
+
+    Merge branch 'four' into zhuangge
+
+[33mcommit 42c273d61c16d94c2ee3b20c43ef85464b7e56a6[m
+Author: AnRan1807 <1289440535@qq.com>
+Date:   Mon Dec 3 11:32:46 2018 +0800
+
+    添加app创建models“
+
+[33mcommit 4259c04ac6dce6e52e93f7cac38bdad4973f3422[m
+Merge: 72d30e2 fbe7ab8
+Author: wyx <173400430@qq.com>
+Date:   Mon Dec 3 11:23:38 2018 +0800
+
+    Merge branch 'master' of gitee.com:gnadream/qyedu into wyx
+
+[33mcommit 72d30e27d5089ddd065d453b6f729115a340e0dc[m
+Author: wyx <173400430@qq.com>
+Date:   Mon Dec 3 11:23:01 2018 +0800
+
+    qyedu
+
+[33mcommit 55a31c25e40ae2197967ad89c77ecdedc7000b76[m
+Author: fox <2388823752@qq.com>
+Date:   Mon Dec 3 11:21:33 2018 +0800
+
+    update
+
+[33mcommit b61001c5eafcb9830d2353aec41556b30bf8e0d0[m
+Merge: a4ccd60 fbe7ab8
+Author: LZY <1342022456@qq.com>
+Date:   Mon Dec 3 11:20:01 2018 +0800
+
+    Merge branch 'master' of gitee.com:gnadream/qyedu into lzy
+
+[33mcommit fbe7ab883140f59b95a96c99d5e791474bdd9290[m
+Author: kamihati <dream928@gmail.com>
+Date:   Mon Dec 3 11:15:50 2018 +0800
+
+    '修改外键引用的model'
+
+[33mcommit a4ccd6049994a5a5bd194ef2a95b1f2616234ddf[m
+Author: LZY <1342022456@qq.com>
+Date:   Mon Dec 3 10:47:46 2018 +0800
+
+    qyedu
+
+[33mcommit d6aaa12b8e378b09b8ead44d19e1a3d979a356ae[m[33m ([m[1;31morigin/dev[m[33m)[m
+Merge: 2491f64 ce4eeef
+Author: kamihati <dream928@gmail.com>
+Date:   Mon Dec 3 10:32:21 2018 +0800
+
+    merge master
+
+[33mcommit 488de87306db51e67ddade179584b346e97ff9e0[m
+Merge: e5a582b a074926
+Author: fox <2388823752@qq.com>
+Date:   Mon Dec 3 09:58:23 2018 +0800
+
+    merge master
+
+[33mcommit a074926d9713448f730a553c508a89503f7778e9[m
+Merge: e3afcd6 ce4eeef
+Author: fox <2388823752@qq.com>
+Date:   Mon Dec 3 09:54:13 2018 +0800
+
+    merge master
+
+[33mcommit e5a582bf70cfd97f61629bf5e861b66bc6fc74c8[m
+Author: fox <2388823752@qq.com>
+Date:   Mon Dec 3 09:38:21 2018 +0800
+
+    workspace.xml
+
+[33mcommit e3afcd6ea3a82c17bb62283d721217f6b9411874[m
+Author: fox <2388823752@qq.com>
+Date:   Mon Dec 3 09:25:48 2018 +0800
+
+    add
+
+[33mcommit ce4eeefa8172dddcaf99419df0e0daa1f4291a0c[m
+Author: kamihati <dream928@gmail.com>
+Date:   Mon Dec 3 09:19:13 2018 +0800
+
+    'edirignore'
+
+[33mcommit c7bc94e70e2d6c2996e725902315cc1e1e0ef84a[m
+Author: kamihati <dream928@gmail.com>
+Date:   Mon Dec 3 09:14:27 2018 +0800
+
+    '把h-uiadmin的lib资源库加入仓库'
+
+[33mcommit 18cfce437684702e9476520724951b4459e77a67[m
+Author: kamihati <1265466@qq.com>
+Date:   Sun Dec 2 22:47:22 2018 +0800
+
+    青云后台增加H-ui Admin框架.登录页面。框架页面，欢迎页面
+
+[33mcommit 2491f64ae92cacef9b276c3dd667e580d55307fb[m
+Author: kamihati <dream928@gmail.com>
+Date:   Fri Nov 30 16:06:10 2018 +0800
+
+     add static and media set
+
+[33mcommit 91dcc15434503b5932a7b36ebc9a481ba633a46f[m
+Author: 姬乙亥 <18537160262@qq.com>
+Date:   Fri Nov 30 15:04:12 2018 +0800
+
+    更新 README.md
+
+[33mcommit e70164e7c36981d648df73350d9845b66cc83445[m
+Author: kamihati <dream928@gmail.com>
+Date:   Fri Nov 30 14:59:07 2018 +0800
+
+    alter field name
+
+[33mcommit cd1b79dfadac343b1a8cfede47d3ec82a13642dd[m
+Author: kamihati <dream928@gmail.com>
+Date:   Fri Nov 30 14:56:54 2018 +0800
+
+    add app account,new_admin
+
+[33mcommit f6deff0d289f21124a261a2c04edf11d3815a795[m
+Author: 姬乙亥 <18537160262@qq.com>
+Date:   Wed Nov 28 08:27:51 2018 +0800
+
+    Initial commit

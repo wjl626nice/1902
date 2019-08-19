@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	
+	</style>
+</head>
+<body onclick="">
+
+	<div id="app">
+		<span>用户名：</span><input type="text" v-model.lazy='uname'><span>{{tip}}</span>
+	</div>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript">
+		/*
+			Vue的模板语法：
+			侦听器案例
+		*/
+
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				uname: '',
+				tip: ''
+			},
+			methods: {
+				// 负责跟后台接口交互，
+				checkUName(val){
+					// 模拟网络请求，请求时有延迟。
+					setTimeout(()=>{
+						if(val == 'admin'){
+							this.tip = '用户名已经存在，请重新输入！';
+						}else{
+							this.tip = '用户名可以使用！';
+						}	
+					}, 2000)
+					
+				}
+			},
+		
+			// 侦听器
+			watch: {
+				uname: function(val){
+					// 调用用户名验证方法
+					this.checkUName(val);
+					this.tip = '正在验证中...'
+				}
+			}
+		});
+
+	</script>
+</body>
+</html>

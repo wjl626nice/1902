@@ -1,0 +1,163 @@
+<!--_meta 作为公共模版分离出去-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+    {% load static %}
+<link rel="Bookmark" href="/favicon.ico" >
+<link rel="Shortcut Icon" href="/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="{% static 'h-ui/css/H-ui.min.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'h-ui.admin/css/H-ui.admin.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'lib/Hui-iconfont/1.0.8/iconfont.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'h-ui.admin/skin/default/skin.css' %}" id="skin" />
+<link rel="stylesheet" type="text/css" href="{% static 'h-ui.admin/css/style.css' %}" />
+<!--/meta 作为公共模版分离出去-->
+
+<title>班级添加</title>
+</head>
+<body>
+<article class="page-container">
+
+	<form  action="{% url 'six_group:student_mod_check' %}" target="_parent"  class="form form-horizontal" id="form-article-add"  method="POST">
+        {% csrf_token %}
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">学员名字：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+                {{ form.realname }}
+			</div>
+		</div>
+        <div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">手机号：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+                {{ form.mobile_number }}
+                <span id="checkExistPhone" style="color: red"></span>
+			</div>
+		</div>
+        <div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">身份证号：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+                {{ form.id_card }}
+                <span id="checkExistID" style="color: red"></span>
+			</div>
+		</div>
+        <div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">性别：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+                {{ form.gender }}
+			</div>
+		</div>
+        <div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">出生日期：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+                {{ form.birthday }}
+			</div>
+		</div>
+        <div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">学历：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+                {{ form.edu_level }}
+			</div>
+		</div>
+        <div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">家庭住址：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+                {{ form.home_address }}
+			</div>
+		</div>
+        <div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">学员状态：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+                {{ form.state }}
+			</div>
+		</div>
+        <input type="hidden" value="{{ n_id }}" name="n_id">
+        <div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">是否为人才库成员：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+                {{ form.is_goodman }}
+			</div>
+		</div>
+        <div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">个人简介：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+                {{ form.info }}
+			</div>
+		</div>
+
+			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+				<button type="submit" class="btn btn-success radius" id="admin-role-save" name="admin-role-save"><i class="icon-ok"></i> 提交</button>
+			</div>
+
+	</form>
+</article>
+
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="{% static 'lib/jquery/1.9.1/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'lib/layer/2.4/layer.js' %}"></script>
+<script type="text/javascript" src="{% static 'h-ui/js/H-ui.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'h-ui.admin/js/H-ui.admin.js' %}"></script> <!--/_footer /作为公共模版分离出去-->
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="{% static 'lib/My97DatePicker/4.8/WdatePicker.js' %}"></script>
+<script type="text/javascript" src="{% static 'lib/jquery.validation/1.14.0/jquery.validate.js' %}"></script>
+<script type="text/javascript" src="{% static 'lib/jquery.validation/1.14.0/validate-methods.js' %}"></script>
+<script type="text/javascript" src="{% static 'lib/jquery.validation/1.14.0/messages_zh.js' %}"></script>
+<script type="text/javascript" src="{% static 'lib/webuploader/0.1.5/webuploader.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'lib/ueditor/1.4.3/ueditor.config.js' %}"></script>
+<script type="text/javascript" src="{% static 'lib/ueditor/1.4.3/ueditor.all.min.js' %}"> </script>
+<script type="text/javascript" src="{% static 'lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js' %}"></script>
+<script type="text/javascript">
+
+// 验证身份证
+function isCardNo(card) {
+    var pattern = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
+    return pattern.test(card);
+}
+
+// 验证手机号
+function isPhoneNo(phone) {
+    var pattern = /^((13[0-9])|(14[5,7])|(15[0-3,5-9])|(17[0,3 5-8])|(18[0-9])|166|198|199|(147))\d{8}$/;
+    return pattern.test(phone);
+}
+
+/*身份证判断*/
+function userID(inputid, spanid) {
+    $(inputid).blur(function() {
+        if ($.trim($(inputid).val()).length == 0) {
+            $(spanid).html("× 身份证号码没有输入");
+        } else {
+            if (!isCardNo($.trim($(inputid).val()))) {
+                $(spanid).html("× 身份证号不正确");
+            }
+        }
+    });
+    $(inputid).focus(function() {
+        $(spanid).html("");
+    });
+};
+userID('#identity', "#checkExistID");
+
+/*手机号判断*/
+function userTel(inputid, spanid) {
+    $(inputid).blur(function() {
+        if ($.trim($(inputid).val()).length == 0) {
+            $(spanid).html("× 手机号没有输入");
+        } else {
+            if (!isPhoneNo($.trim($(inputid).val()))) {
+                $(spanid).html("× 手机号码不正确");
+            }
+        }
+        $(inputid).focus(function() {
+            $(spanid).html("");
+        });
+    });
+};
+userTel('#telephone', "#checkExistPhone");
+</script>
+<!--/请在上方写此页面业务相关的脚本-->
+</body>
+</html>

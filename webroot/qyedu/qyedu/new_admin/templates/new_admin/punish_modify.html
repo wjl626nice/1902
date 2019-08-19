@@ -1,0 +1,161 @@
+<!--_meta 作为公共模版分离出去-->
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="Bookmark" href="/favicon.ico" >
+<link rel="Shortcut Icon" href="/favicon.ico" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="lib/html5shiv.js"></script>
+<script type="text/javascript" src="lib/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="{% static 'h-ui/css/H-ui.min.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'h-ui.admin/css/H-ui.admin.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'lib/Hui-iconfont/1.0.8/iconfont.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'h-ui.admin/skin/default/skin.css' %}" id="skin" />
+<link rel="stylesheet" type="text/css" href="{% static 'h-ui.admin/css/style.css' %}" />
+<!--[if IE 6]>
+<script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<!--/meta 作为公共模版分离出去-->
+
+<title>班级设置</title>
+</head>
+<body>
+<div class="page-container">
+	<form action="{% url 'new_admin:punish_save' %}" target="_parent" method="POST" class="form form-horizontal" id="form-classgrade-add">
+	{% csrf_token %}
+		<div id="tab-category" class="HuiTab">
+			<div class="tabBar cl">
+				<span>基本设置</span>
+			</div>
+			<div class="tabCon">
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-3">
+						<span class="c-red">*</span>
+						班级名称：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+					 {{form.classes}}
+					</div>
+					<div class="col-3">
+					</div>
+				</div>
+			<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-3">
+						<span class="c-red">*</span>
+						讲师：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<span class="select-box">
+							{{form.teacher}}
+						</span>
+					</div>
+					<div class="col-3">
+					</div>
+				</div>
+				 <div class="row cl">
+					<label class="form-label col-xs-4 col-sm-3">
+						<span class="c-red">*</span>
+						学生：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<span class="select-box">
+							{{form.student}}
+						</span>
+					</div>
+					<div class="col-3">
+					</div>
+				</div>
+				<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">违纪处罚内容：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				{{form.violate_content}}
+			</div>
+		</div>
+
+                <div class="row cl">
+					<label class="form-label col-xs-4 col-sm-3">
+						<span class="c-red">*</span>
+						审核状态：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<span class="select-box">
+                            {{ form.state }}
+						</span>
+					</div>
+					<div class="col-3">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row cl">
+			<div class="col-9 col-offset-3">
+				<input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+			</div>
+		</div>
+		<input type="hidden" value="{{a_id}}" name="a_id">
+	</form>
+</div>
+
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="{% static 'lib/jquery/1.9.1/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'lib/layer/2.4/layer.js' %}"></script>
+<script type="text/javascript" src="{% static 'h-ui/js/H-ui.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'h-ui.admin/js/H-ui.admin.js' %}"></script> <!--/_footer 作为公共模版分离出去-->
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="{% static 'lib/My97DatePicker/4.8/WdatePicker.js' %}"></script>
+<script type="text/javascript" src="{% static 'lib/jquery.validation/1.14.0/jquery.validate.js' %}"></script>
+<script type="text/javascript" src="{% static 'lib/jquery.validation/1.14.0/validate-methods.js' %}"></script>
+<script type="text/javascript" src="{% static 'lib/jquery.validation/1.14.0/messages_zh.js' %}"></script>
+<script type="text/javascript">
+$(function(){
+	$('.skin-minimal input').iCheck({
+		checkboxClass: 'icheckbox-blue',
+		radioClass: 'iradio-blue',
+		increaseArea: '20%'
+	});
+
+	$("#tab-category").Huitab({
+		index:0
+	});
+});
+</script>
+
+<script>
+
+// $("form").submit(function (e) {
+// 	if ($('#classname').val() == ' '){
+// 		alert('班级名称不能为空!');
+// 		$('#classname').focus();
+// 		return false;
+// 	}
+// 	 if ($('#class_type').val() == ' '){
+// 		alert('请选择班级类型!');
+// 		$('#class_type').focus();
+// 		return false;
+// 	}
+// 	 if ($('#add_user').val() == ' '){
+// 		alert('请选择添加人!');
+// 		$('#add_user').focus();
+// 		return false;
+// 	}
+// 	 if ($('#manager_user').val() == ' '){
+// 		alert('请选择班主任!');
+// 		$('#manager_user').focus();
+// 		return false;
+// 	}
+// 	 if ($('#teacher_user').val() == ' '){
+// 		alert('请选择讲师!');
+// 		$('#teacher_user').focus();
+// 		return false;
+// 	}
+//
+// });
+</script>
+<!--/请在上方写此页面业务相关的脚本-->
+</body>
+</html>

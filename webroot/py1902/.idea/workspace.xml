@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a470dc69-115e-4b64-a2f3-8a6eb4086afc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyBlog/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyBlog/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyBlog/MyBlog/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../MyBlog/MyBlog/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyBlog/MyBlog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../MyBlog/MyBlog/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyBlog/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../MyBlog/blog/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py1902/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/py1902/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py1902/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/py1902/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/记录" beforeDir="false" afterPath="$PROJECT_DIR$/记录" afterDir="false" />
-    </list>
+    <list default="true" id="a470dc69-115e-4b64-a2f3-8a6eb4086afc" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +58,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
+            <state relative-caret-position="264">
               <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
@@ -407,7 +397,7 @@
       <workItem from="1562921222163" duration="6712000" />
       <workItem from="1563758870486" duration="4242000" />
       <workItem from="1563843832366" duration="17958000" />
-      <workItem from="1564132896881" duration="1409000" />
+      <workItem from="1564132896881" duration="1737000" />
     </task>
     <task id="LOCAL-00001" summary="基于django的博客项目">
       <created>1562232768755</created>
@@ -427,7 +417,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141538000" />
+    <option name="totallyTimeSpent" value="141866000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -440,7 +430,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.23182553" />
@@ -453,7 +442,7 @@
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.39708266" />
+      <window_info anchor="bottom" id="Run" order="8" weight="0.39708266" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.3987034" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -845,7 +834,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
+        <state relative-caret-position="264">
           <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />

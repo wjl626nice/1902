@@ -1,0 +1,67 @@
+/* pages/recharge/recharge.wxss */
+.recharge{
+  height: 1206rpx;
+  background-color: #F5F5F5;
+}
+.lable{
+  color: #333333;
+  font-size: 30rpx;
+  margin-left: 30rpx;
+  padding-top: 20rpx;
+}
+.con_main{
+  margin: 0 7rpx 0 7rpx;
+  display: flex;
+  flex-wrap:wrap;
+
+}
+.con_main_choose{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 199rpx;
+  height: 59rpx;
+  border: 1rpx solid #389E0D;
+  font-size: 28rpx;
+  color: #389E0D;
+  margin: 20rpx 22.5rpx 0 23.5rpx;
+}
+.con_main_choose.active{
+  color: #FFFFFF;
+  background-color:  #389E0D;
+
+}
+
+.input{
+  display: flex;
+  margin-top: 20rpx;
+  height: 88rpx;
+  background-color: #FFFFFF;
+  flex-flow: row;
+  align-items: center;
+}
+.input .linkman{
+  font-size: 30rpx;
+   margin: 0 20rpx 0 30rpx;
+  color: #389E0D;
+  height: 42rpx;
+  width: 30rpx;
+}
+.input input{
+   font-size: 28rpx;
+   height: 40rpx;
+  
+}
+.con_button{
+  display: flex;
+   align-items: center;
+  justify-content: center;
+   width: 300rpx;
+  height: 76rpx;
+  background-color:  #389E0D;
+  font-size: 30rpx;
+  color: #FFFFFF;
+  margin: 120px 226rpx 0;
+}
+
+

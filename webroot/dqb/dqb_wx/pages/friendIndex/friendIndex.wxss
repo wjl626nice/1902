@@ -1,0 +1,38 @@
+/* pages/friendIndex/friendIndex.wxss */
+page{
+  background-color: #FAFAFA
+}
+.line-row{
+  height: 104rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 34rpx;
+  border-bottom:2rpx  solid #eee; 
+  background-color: white;
+  border-radius: 0rpx;
+}
+.left-line{
+  display: flex;
+  align-items: center;
+  margin-left: 32rpx;
+}
+.left-img{
+  height: 60rpx;
+  width: 60rpx;
+}
+.left-line>text{
+  margin-left: 32rpx;
+}
+.right-line{
+  display: flex;
+  align-items: center;
+  margin-right: 32rpx;
+}
+
+
+.arrow{
+  height: 30rpx;
+  width:  30rpx;
+  margin-left: 20rpx;
+}

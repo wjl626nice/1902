@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+<body onclick="">
+
+	<div id="app">
+		<alert-box>
+			<template slot="header">
+				<p>我是标题1</p>
+				<p>我是标题2</p>
+			</template>
+			<p>主体内容1</p>
+			<p>主体内容2</p>
+			<template slot="footer">
+				<p>我是底部1</p>
+				<p>我是底部2</p>
+			</template>
+		</alert-box>
+	</div>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript">
+		/*
+			Vue的模板语法：
+			命名插槽基本使用
+		*/
+		Vue.component('alert-box',{
+			data: function(){
+				return {
+					
+				}
+			},
+			template: `
+				<div>
+					<header>
+						<slot name="header"></slot>
+					</header>
+					<main>
+						<slot></slot>
+					</main>
+					<footer>
+						<slot name="footer"></slot>
+					</footer>
+				</div>
+			`
+		});
+		var vm = new Vue({
+			el: '#app',
+			data: {
+			}
+		});
+
+	</script>
+</body>
+</html>

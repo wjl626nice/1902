@@ -1,0 +1,27 @@
+<!--pages/bindCard/bindCard.wxml-->
+<form bindsubmit='bindButton'>
+<view class='top'>
+  <view class='top-text'>注：银行卡只支持一次绑定，绑定成功后不能修改，请注意填写正确信息！</view>
+</view>
+<view class='mine-line'>
+  <view class='text' style='font-size:34rpx;'>持卡人:</view>
+  <input class='line-input' value='{{cardName}}' name="cardName" placeholder='请填写持卡人姓名' placeholder-class='ft'></input>
+</view>
+<view class='mine-line'>
+  <view class='text' style='font-size:34rpx;'>开户行:</view>
+  <input class='line-input' value='{{cardBank}}' name="cardBank" placeholder='请填写开户行名称' placeholder-class='ft'></input>
+</view>
+<view class='mine-line'>
+  <view class='text' style='font-size:34rpx;'>银行卡号:</view>
+  <input class='line-input' type="number" style='margin-left:92rpx;' name="cardNumber" value='{{cardNumber}}' placeholder='请填写银行卡号' placeholder-class='ft'></input>
+</view>
+<view class='mine-line'>
+  <view class='text' style='font-size:34rpx;'>身份证号:</view>
+  <input class='line-input' type="idcard" style='margin-left:92rpx;' name="idCard" value='{{idCard}}' placeholder='请填写身份证号' placeholder-class='ft'></input>
+</view>
+<view class='mine-line'>
+  <view class='text' style='font-size:34rpx;'>手机号:</view>
+  <input class='line-input' type="number" value='{{pretel}}' name="pretel" placeholder='请填写银行预留手机号' placeholder-class='ft'></input>
+</view>
+<button formType="submit" class='button'>完成</button>
+</form>

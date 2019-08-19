@@ -1,0 +1,14 @@
+<!--banner-->
+<view class='swiper_banner'>
+  <swiper class="swiper-box" style="height:400rpx" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActivecolor}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image bindtap='goUrl' data-url="{{item.url}}" src="{{item.pic}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<navigator url="http://www.baidu.com" open-type="switchTab">
+adsfasdf
+</navigator>
+

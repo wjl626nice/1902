@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		form div{
+			height: 40px;
+			line-height: 40px;
+		}
+		form div:nth-child(4){
+			height: auto;
+		}
+	</style>
+</head>
+<body onclick="">
+
+	<div id="app">
+		<form>
+			<div>
+				<span>用户名：</span>
+				<span>
+					<input type="text" v-model="uname">
+				</span>
+			</div>
+			<div>
+				<span>性别：</span>
+				<span>
+					<input type="radio" id="man" v-model="sex" value="1">
+					<label for="man">男</label>
+					<input type="radio" id="woman" v-model="sex" value="2">
+					<label for="woman">女</label>
+				</span>
+			</div>
+			<div>
+				<span>爱好：</span>
+				<span>
+					<input type="checkbox" id="Basketball" v-model="hobby" value="1">
+					<label for="Basketball">篮球</label>
+					<input type="checkbox" id="sing" value="2" v-model="hobby">
+					<label for="sing">唱歌</label>
+					<input type="checkbox" id="code" value="3" v-model="hobby">
+					<label for="code">写代码</label>
+				</span>
+			</div>
+			<div>
+				<span>职业：</span>
+				<!-- <select v-model='occupation'>
+					<option value="0">请选择职业...</option>
+					<option value="1">程序员</option>
+					<option value="2">Python软件工程师</option>
+					<option value="3">前端工程师</option>
+					<option value="4">DBA</option>
+					<option value="5">SEO</option>
+				</select> -->
+				<select v-model='occupation' multiple>
+					<option value="0">请选择职业...</option>
+					<option value="1">程序员</option>
+					<option value="2">Python软件工程师</option>
+					<option value="3">前端工程师</option>
+					<option value="4">DBA</option>
+					<option value="5">SEO</option>
+				</select>
+			</div>
+			<div>
+				<span>个人简介</span>
+				<textarea v-model="describles"></textarea>
+			</div>
+			<div>
+				<button @click.prevent="submit">提交</button>
+			</div>
+		</form>
+	</div>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript">
+		/*
+			Vue的模板语法：
+			表单操作
+		*/
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				uname: '',
+				sex: 1,
+				hobby: [2,3],
+				// occupation: 3 
+				occupation: [2,3],
+				describles: '323423'
+			},
+			methods: {
+				submit(){
+					console.log(this.uname,this.sex,this.hobby,this.occupation, this.describles)
+					console.log(this.hobby.toString())
+				}
+			}
+		});
+
+	</script>
+</body>
+</html>

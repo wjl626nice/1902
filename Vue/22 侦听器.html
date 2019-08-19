@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	
+	</style>
+</head>
+<body onclick="">
+
+	<div id="app">
+		<span>姓:</span>
+		<input type="text" v-model="firstName"><br>
+		<span>名:</span>
+		<input type="text" v-model='lastName'><br>
+		{{fullName}}
+	</div>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript">
+		/*
+			Vue的模板语法：
+			侦听器
+		*/
+
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				firstName: '',
+				lastName: '',
+				// fullName: ''
+			},
+			methods: {
+				
+			},
+			// 计算属性
+			computed: {
+				fullName: function(){
+					return this.firstName + ' ' + this.lastName;
+				}
+			}
+			// 侦听器
+			watch: {
+				// 被侦听的数据
+				firstName: function(val){
+					this.fullName = val + ' ' + this.lastName;
+				},
+				lastName: function(val){
+					// console.log(val)
+					this.fullName = this.firstName + ' ' + val;
+				}
+			}
+		});
+
+	</script>
+</body>
+</html>

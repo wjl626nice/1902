@@ -1,0 +1,150 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+    {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static "h-ui/css/H-ui.min.css" %}" />
+<link rel="stylesheet" type="text/css" href="{% static "h-ui.admin/css/H-ui.admin.css" %}" />
+<link rel="stylesheet" type="text/css" href="{% static "lib/Hui-iconfont/1.0.8/iconfont.css" %}" />
+<link rel="stylesheet" type="text/css" href="{% static "h-ui.admin/skin/default/skin.css" %}" id="skin" />
+<link rel="stylesheet" type="text/css" href="{% static "h-ui.admin/css/style.css" %}" />
+<title>资讯列表</title>
+</head>
+<body>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 学员管理 <span class="c-gray en">&gt;</span> 学员列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<div class="page-container">
+{#    <form action="{% url 'new_admin:student_query' %}" method="post" >#}
+{#        {% csrf_token %}#}
+	<div class="text-c">
+		<button onclick="removeIframe()" class="btn btn-primary radius">关闭选项卡</button>
+{#        日期范围：#}
+{#		<input type="text" onfocus="WdatePicker({ maxDate:'#F{$dp.$D(\'logmax\')||\'%y-%M-%d\'}' })" id="logmin" class="input-text Wdate" style="width:120px;">#}
+{#		-#}
+{#		<input type="text" onfocus="WdatePicker({ minDate:'#F{$dp.$D(\'logmin\')}',maxDate:'%y-%M-%d' })" id="logmax" class="input-text Wdate" style="width:120px;">#}
+		<input type="text" name="realname" id="" placeholder=" 学员名称" style="width:250px" class="input-text" value="{{ realname }}">
+		<button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜索学员信息</button>
+	</div>
+{#    </form>#}
+	<div class="mt-20">
+		<table class="table table-border table-bordered table-bg table-hover table-sort table-responsive">
+			<thead>
+				<tr class="text-c">
+					<th width="25"><input type="checkbox" name="" value=""></th>
+					<th width="40">ID</th>
+					<th width="50">学员姓名</th>
+					<th width="60">手机号</th>
+					<th width="90">身份证</th>
+					<th width="50">出生日期</th>
+					<th width="50">性别</th>
+					<th width="50">学历</th>
+                   <th width="140">家庭住址</th>
+                   <th width="50">学员状态</th>
+                   <th width="50">人才库成员</th>
+                   <th width="50">是否分配班级</th>
+					<th width="60">操作</th>
+				</tr>
+			</thead>
+			<tbody>
+                {% for stu in stu_class %}
+{#                    {{ stu.student }}#}
+                    {% if stu.student.role.role_name == '学员' and stu.student.is_del == 0 %}
+				<tr class="text-c">
+					<td><input type="checkbox" value="" name=""></td>
+					<td>{{ stu.student.id }}</td>
+					<td>{{ stu.student.realname }}</td>
+					<td>{{ stu.student.mobile_number }}</td>
+					<td>{{ stu.student.id_card }}</td>
+                    <td>{{ stu.student.birthday|date:"Y-m-d" }}</td>
+					<td>{{ stu.student.get_gender_display }}</td>
+					<td>{{ stu.student.edu_level }}</td>
+                    <td>{{ stu.student.home_address }}</td>
+                    <td>{{ stu.student.get_state_display }}</td>
+                    <td>{{ stu.student.get_is_goodman_display }}</td>
+                    <td>否{{ stu.student.count }}</td>
+                    <td class="td-manage"> <a title="编辑"  href="javascript:;" onclick="member_edit('栏目编辑','{% url 'new_admin:member_mod' %}?s_id={{ u.id }}','4','','510')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>  <a title="删除" href="javascript:;" a="{{ u.id }}" id="a" onclick="member_del(this,'1')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+				</tr>
+                    {% endif %}
+                {% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="{% static "lib/jquery/1.9.1/jquery.min.js" %}"></script>
+<script type="text/javascript" src="{% static "lib/layer/2.4/layer.js" %}"></script>
+<script type="text/javascript" src="{% static "h-ui/js/H-ui.min.js" %}"></script>
+<script type="text/javascript" src="{% static "h-ui.admin/js/H-ui.admin.js" %}"></script> <!--/_footer 作为公共模版分离出去-->
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="{% static "lib/My97DatePicker/4.8/WdatePicker.js" %}"></script>
+<script type="text/javascript" src="{% static "lib/datatables/1.10.0/jquery.dataTables.min.js" %}"></script>
+<script type="text/javascript" src="{% static "lib/laypage/1.2/laypage.js" %}"></script>
+<script type="text/javascript">
+        {% if messages %}
+        {% for message in messages %}
+            $.Huimodalalert('{{ message }}',2000);
+        {% endfor %}
+
+    {% endif %}
+$('.table-sort').dataTable({
+	"aaSorting": [[ 1, "desc" ]],//默认第几个排序
+	"bStateSave": true,//状态保存
+	"pading":false,
+	"aoColumnDefs": [
+	  //{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
+	  {"orderable":false,"aTargets":[0,8]}// 不参与排序的列
+	]
+});
+function system_category_edit(title,url,id,w,h){
+	layer_show(title,url,w,h);
+}
+/*资讯-添加*/
+function article_add(title,url,w,h){
+	var index = layer.open({
+		type: 2,
+		title: title,
+		content: url
+	});
+	layer.full(index);
+}
+/*资讯-编辑*/
+function article_edit(title,url,id,w,h){
+	var index = layer.open({
+		type: 2,
+		title: title,
+		content: url
+	});
+	layer.full(index);
+}
+function system_category_del(obj,id){
+        layer.confirm('确认要删除吗？',function(index){
+            var s_id = $('#a').attr('a');
+            $.ajax({
+                type: 'GET',
+                url: '{% url 'new_admin:member_del' %}',
+                data: {'s_id': s_id},
+                dataType: 'json',
+                success: function(data){
+                    if (data.status == 1){
+                    $(obj).parents("tr").remove();
+                        layer.msg(data.msg,{icon:1,time:1000});
+                        {#function (){#}
+                        {#    location.reload();#}
+                        //});
+                    }else {
+                        layer.msg(data.msg,{icon:6,time:1000});
+                    }
+                },
+                error:function(data) {
+                    console.log(data.msg);
+                },
+            });
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!--pages/personalEdit/personalEdit.wxml-->
+<form bindsubmit='sumbit'>
+<view class='headimg'>
+  <text class='text'>头像</text>
+  <image class='img' src='{{img}}' bindtap='Uploadimg'></image>
+</view>
+<view class='mine-line'>
+  <text class='text' style='font-size:34rpx;'>名称</text>
+  <view class='line-input' name='nickname'>{{nickname}}</view>
+</view>
+
+<view class='mine-line'>
+  <text class='text' style='font-size:34rpx;'>年龄</text>
+  <picker class='picker' bindchange="bindPickerChange" value='{{index}}' range="{{array}}">
+     <view class='picker-text'>{{array[index]}}<text wx:if="{{is_age}}">{{age}}</text></view>
+  </picker>
+  <image src='/assets/imgs/B-arrow.png' class='line-arrow'></image>
+</view>
+
+<view class='mine-line'>
+  <text class='text' style='font-size:34rpx;'>行业</text>
+  <picker class='picker' bindchange="hyPickerChange" value='{{hy_index}}' range="{{hy_array}}">
+     <view class='picker-text'>{{hy_array[hy_index]}}<text wx:if="{{is_profession}}">{{profession}}</text></view>
+  </picker>
+  <image src='/assets/imgs/B-arrow.png' class='line-arrow'></image>
+</view>
+
+<view class='mine-line'>
+  <view class='text' style='font-size:34rpx;'>电话</view>
+  <input class='line-input' value='{{tel}}' name='tel'></input>
+</view>
+
+<button formType="submit" class='button'>保存</button>
+</form>

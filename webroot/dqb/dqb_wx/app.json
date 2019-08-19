@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/login/login",
+    "pages/bindCard/bindCard",
+    "pages/leaveWord/leaveWord",
+    "pages/friendDetail/friendDetail",
+    "pages/personalEdit/personalEdit",
+    "pages/mine/mine",
+    "pages/myWallet/myWallet",
+    "pages/friendIndex/friendIndex",
+    "pages/historyActive/historyActive",
+    "pages/addActive/addActive",
+    "pages/ballFriend/ballFriend",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/tradeDetail/tradeDetail",
+    "pages/recharge/recharge",
+    "pages/addFriend/addFriend",
+    "pages/refund/refund",
+    "pages/activeDetail/activeDetail",
+    "pages/myActivity/myActivity",
+    "pages/activityMyList/activityMyList",
+    "pages/putAddActive/putAddActive",
+    "pages/replyMess/replyMess",
+    "pages/feedback/feedback"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "点球吧",
+    "navigationBarTextStyle": "#282828"
+  },
+  "tabBar": {
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "selectedIconPath": "/assets/imgs/home-select@3x.png",
+        "iconPath": "/assets/imgs/act-home.png",
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "/assets/imgs/add-activity.png",
+        "iconPath": "/assets/imgs/active@3x.png",
+        "pagePath": "pages/addActive/addActive",
+        "text": "添加活动"
+      },
+      {
+        "iconPath": "/assets/imgs/ball-friend.png",
+        "selectedIconPath": "/assets/imgs/ball-friend-select.png",
+        "pagePath": "pages/friendIndex/friendIndex",
+        "text": "球友"
+      },
+      {
+        "iconPath": "/assets/imgs/mine.png",
+        "selectedIconPath": "/assets/imgs/minein.png",
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  }
+}

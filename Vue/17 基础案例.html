@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.tab ul{
+			border-bottom: 1px solid #CCCCCC;
+			width: 300px;
+			overflow: hidden;
+			margin: 0px;
+			padding: 0px;
+		}
+		.tab li{
+			width: 100px;
+			height: 40px;
+			text-align: center;
+			float: left;
+			list-style: none;
+			line-height: 40px;
+			
+		}
+		.tab .active{
+			border-bottom: 1px solid orange;
+		}
+		.tab div{
+			width: 300px;
+			height: 300px;
+			text-align: center;
+			border: 1px solid #ccc;
+			display: none;
+		}
+		.tab div img{
+			width: 300px;
+			height: 300px;
+		}
+		.tab div.current{
+			display: block;
+		}
+	</style>
+</head>
+<body onclick="">
+
+	<div id="app">
+		<div class="tab">
+			<ul>
+				<li :class="currentIndex==index?'active':''" v-on:click="changeTab(index)" :key="item.id" v-for="(item, index) in tabs">{{item.title}}</li>
+			</ul>
+			<div v-for="(item,index) in tabs" :class="currentIndex==index ?'current':''">
+				<img :src="item.img">
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript">
+		/*
+			Vue的模板语法：
+			v-model原理分析
+		*/
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				currentIndex: 0,
+				tabs: [
+					{id:1, title: '公告', img: 'https://f12.baidu.com/it/u=3384294796,3461763058&fm=72'},
+					{id:2, title: '决定', img: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564995518753&di=3c4a143fd858e01614575cf73fdd7756&imgtype=0&src=http%3A%2F%2Fphotocdn.sohu.com%2F20150725%2Fmp24231574_1437783764392_5.jpeg'},
+					{id:3, title: '会议', img: 'http://photocdn.sohu.com/20160229/mp60974222_1456708341841_4.gif'}
+				]
+			},
+			methods: {
+				changeTab(index){
+					console.log(index)
+					this.currentIndex = index
+				}
+			}
+		});
+
+	</script>
+</body>
+</html>

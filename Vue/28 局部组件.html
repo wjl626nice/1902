@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+<body onclick="">
+
+	<div id="app">
+		<hello-chen></hello-chen>
+		<hello-wang></hello-wang>
+	</div>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript">
+		/*
+			Vue的模板语法：
+			局部组件注册
+		*/
+		var helloChen = {
+			data: function(){
+				return {
+					msg: 'hello chen!'
+				}
+			},
+			template: '<div>{{msg}}</div>'
+		};
+		var helloWang = {
+			data: function(){
+				return {
+					msg: 'hello wang!'
+				}
+			},
+			template: '<div>{{msg}}</div>'
+		};
+		var vm = new Vue({
+			el: '#app',
+			data: {
+			},
+			methods: {
+			},
+			// 注册局部组件
+			components: {
+				'hello-chen': helloChen,
+				'hello-wang': helloWang
+			}
+		});
+
+	</script>
+</body>
+</html>

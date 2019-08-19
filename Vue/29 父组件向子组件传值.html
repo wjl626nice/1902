@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+<body onclick="">
+
+	<div id="app">
+		<div>{{pmsg}}</div>
+		<menu-item title="来自父组件的值"></menu-item>
+		<menu-item :title="ptitle" content="abcd" test-hello="22"></menu-item>
+	</div>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript">
+		/*
+			Vue的模板语法：
+			父组件向子组件传值
+		*/
+		Vue.component('menu-item',{
+			props: ['title','content','testHello'],
+			data: function(){
+				return {
+					msg: '子组件内容'
+				}
+			},
+			template: '<div>{{msg+"-----"+title+"-----"+content}}</div>'
+		});
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				pmsg: '父组件内容',
+				ptitle: '父组件动态向子组件传递的数据'
+			},
+			methods: {
+			}
+		});
+
+	</script>
+</body>
+</html>

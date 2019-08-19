@@ -1,0 +1,51 @@
+<template>
+    <view>
+        列表页面
+        <view>
+            {{msg}}
+        </view>
+    </view>
+    <button type="primary" size="mini" bindtap="changeMsg">点击改变msg值</button>
+</template>
+
+<style lang="less">
+view {
+  color: red;
+}
+</style>
+
+<script>
+// 导入wepy框架
+import wepy from 'wepy'
+// 导出暴露 default   extends 继承
+export default class list extends wepy.page {
+  // 页面配置对象 最终生成list.json
+  config = {}
+  // 页面组件引入对象
+  components = {}
+  // 页面初始化
+  data = {
+    msg: 'aaa'
+  }
+  // 事件对象
+  methods = {
+    //   changeMsg: function(){
+
+    //   }
+    changeMsg() {
+      // 改变data属性的值
+      this.msg = 'abcd'
+      // 调外层的函数，但是不能调 methods 内部的方法。
+      console.log(this.getNum(2, 3))
+    }
+  }
+  // 小程序初始化执行（生命周期函数）
+  onload() {}
+  // 自定义函数
+  getNum(a, b) {
+    return a + b
+  }
+  // 自定义属性
+  ab = 2122
+}
+</script>

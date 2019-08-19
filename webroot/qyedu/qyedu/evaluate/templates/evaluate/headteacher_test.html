@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        li{
+            list-style: decimal;
+        }
+    </style>
+</head>
+<body>
+<form action="{% url 'evaluate:evaluate_headteacher_test_submit' %}" method="post">
+    {% csrf_token %}
+
+    <ul>
+        {#   正向查询   #}
+        <h2>{{ headteacher_test.review_test.test_name }}</h2>
+        <span>{{ headteacher_test.get_test_category_display }}</span>
+        {% for test in headteacher_test1 %}
+            <li>
+                <h4>{{ test.test_question_content }}</h4>
+                {% for answer in test.a_question.all  %}
+                    <input type="radio" name="answer_{{ test.id }}" id="answer{{ answer.id }}" value="{{ answer.answer_content }}">
+                    <label for="answer{{ answer.id }}">{{ answer }}</label>
+                {% endfor %}
+            </li>
+        {% endfor %}
+        {% for test in headteacher_test2 %}
+            <li>
+                <h4>{{ test.test_question_content }}</h4>
+                {% for answer in test.a_question.all  %}
+                    <input type="radio" name="answer_{{ test.id }}" id="answer{{ answer.id }}" value="{{ answer.answer_content }}">
+                    <label for="answer{{ answer.id }}">{{ answer }}</label>
+                {% endfor %}
+            </li>
+        {% endfor %}
+        {% for test in headteacher_test3 %}
+            <li>
+                <h4>{{ test.test_question_content }}</h4>
+                {% for answer in test.a_question.all  %}
+                    <textarea name="answer_{{ test.id }}" id="answer{{ answer.id }}" cols="120" rows="10"></textarea>
+                {% endfor %}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <input type="submit" value="提交">
+</form>
+
+</body>
+</html>
+<script>
+</script>

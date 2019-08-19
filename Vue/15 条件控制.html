@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body onclick="">
+
+	<div id="app">
+		<div v-if='score >= 90'>优秀</div>
+		<div v-else-if='score >=80 && score < 90'>良好</div>
+		<div v-else>差</div>
+		<div v-show="isFlag">测试v-show</div>
+		<button @click='handle'>显示</button>
+	</div>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript">
+		/*
+			Vue的模板语法：
+			v-model原理分析
+		*/
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				score: 30,
+				isFlag: true
+			},
+			methods: {
+				handle(){
+					this.isFlag =  !this.isFlag
+				}
+			}
+		});
+
+	</script>
+</body>
+</html>

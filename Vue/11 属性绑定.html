@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onclick="">
+
+	<div id="app">
+		<a href="http://www.baidu.com">跳转</a>
+		<a v-bind:href="url">跳转</a>
+		<a :href="url">跳转</a>
+		<button @click="handle">切换网址</button>
+	</div>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript">
+		/*
+			Vue的模板语法：
+			属性绑定
+			实现属性值的动态控制
+		*/
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				url: 'http://www.baidu.com'
+			},
+			methods: {
+				handle: function(){
+					this.url = 'http://www.jd.com'
+				}
+			}
+		});
+
+	</script>
+</body>
+</html>

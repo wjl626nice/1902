@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.box{
+			border: 1px solid pink;
+			width: 200px;
+			height: 200px;
+		}
+		.boxClass{
+			background-color: orange
+		}
+		.fontColor{
+			color: red
+		}
+		.font{
+			font-size: 39px;
+		}
+	</style>
+</head>
+<body onclick="">
+
+	<div id="app">
+		<!-- <div v-bind:class="{box: isActive, bgClass: isBg}">我是测试div</div> -->
+		<div v-bind:class="[box, boxClass]">我是测试div1</div>
+		<div v-bind:class="[box, boxClass, {fontColor: isActive}]">我是测试div2</div>
+		<div v-bind:class="arrStyle">我是测试div3</div>
+		<div class="font" v-bind:class="objStyle">我是测试div4</div>
+		<input type="button" v-on:click="handle" value="点击改变样式">
+	</div>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript">
+		/*
+			Vue的模板语法：
+			v-model原理分析
+		*/
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				box: 'box',
+				boxClass: 'boxClass',
+				isActive: true,
+				arrStyle: ['box', 'boxClass'],
+				objStyle: {
+					box: true,
+					boxClass: true
+				}
+			},
+			methods: {
+				handle: function(){
+					// 对象操作
+					// 通过控制isActive的值改变是否呈现
+					// this.isActive = !this.isActive
+					// this.isBg = !this.isBg
+
+					// 数组操作
+					// this.box = ''
+					// this.boxClass = ''
+
+					this.isActive = !this.isActive
+				}
+			}
+		});
+
+	</script>
+</body>
+</html>

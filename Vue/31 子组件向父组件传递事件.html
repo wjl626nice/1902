@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+<body onclick="">
+
+	<div id="app">
+		<div :style="{fontSize: fontSize + 'px'}">{{msg}}</div>
+		<menu-item :lists="lists" v-on:font-big="handle($event)"></menu-item>
+	</div>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript">
+		/*
+			Vue的模板语法：
+			父组件向子组件传值
+		*/
+		Vue.component('menu-item',{
+			props: ['lists'],
+			data: function(){
+				return {
+					msg: '子组件内容'
+				}
+			},
+			template: `
+				<div>
+					<ul>
+						<li :key="index" v-for="(item,index) in lists">{{item}}</li>
+					</ul>
+					<button v-on:click="$emit('font-big')">放大字体</button>
+					<button v-on:click="$emit('font-big',10)">放大字体</button>
+				</div>
+			`,
+			methods: {
+			}
+		});
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				fontSize: 15,
+				msg: 'hello Vue!',
+				lists: ['blue', 'red', 'pink', 'yellow']
+			},
+			methods: {
+				handle: function(val=2){
+					console.log(val)
+					this.fontSize += val
+				}
+			}
+		});
+
+	</script>
+</body>
+</html>

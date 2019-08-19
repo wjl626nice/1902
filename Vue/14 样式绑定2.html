@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body onclick="">
+
+	<div id="app">
+		<div v-bind:style="{border: borderStyle, width: widths,height: heights}"></div>
+		<div v-bind:style="[objStyle, coverObjStyle]"></div>
+		<input type="button" v-on:click="handle" value="点击改变样式">
+		<input type="button" v-on:click="handles" value="放大">
+	</div>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript">
+		/*
+			Vue的模板语法：
+			v-model原理分析
+		*/
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				borderStyle: "1px solid pink",
+				widths: '200px',
+				heights: '200px',
+				objStyle: {
+					border: '1px solid blue',
+					width: '100px',
+					height: '100px'
+				},
+				coverObjStyle: {
+					border: '5px solid blue',
+					backgroundColor: 'pink'
+				}
+			},
+			methods: {
+				handle: function(){
+					
+				},
+				handles(){
+					this.widths = '300px';
+					this.heights = '300px';
+				}
+			}
+		});
+
+	</script>
+</body>
+</html>

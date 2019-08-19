@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>
+        <h2>{{ student_answer1.review_test.test_name }}</h2>
+        <span>{{ student_answer1.question.get_test_category_display }}</span>
+        {% for answer in student_answer %}
+            <ul>
+                <h4>{{ answer.question }} 最高分:({{  answer.question.max_score }})</h4>
+                <li>
+                    {% if answer.question.get_test_question_category_display == 3%}
+                        <textarea name="" id="" cols="30" rows="10">
+                        {{ answer.answer }}
+                        </textarea>
+                    {% else %}
+                        <span>{{ answer.answer }}</span>
+                    {% endif %}
+                    {% for answer1 in answer.question.a_question.all %}
+                        {% if answer1.answer_content == answer.answer %}
+                            ({{ answer1.answer_score }})
+                        {% endif %}
+                    {% endfor %}
+                </li>
+            </ul>
+        {% endfor %}
+    </li>
+</ul>
+<span>非主观题 : {{ sum_score }}</span> + (主观题分数) :<input type="text" class="sum">
+<br>
+<span>总分: </span> <span class="sum">____</span>  <button>提交</button>
+
+</body>
+</html>
+<script src="{% static 'js/jquery.min.js' %}"></script>
+
+<script>
+    $('button').click(function () {
+        sum = $('.sum').val();
+        var test_name = '{{ student_answer1.review_test.test_name }}';
+        var test_category = '{{ student_answer1.question.get_test_category_display }}';
+        sum = parseInt(sum) + parseInt({{ sum_score }});
+        $.ajax({
+            url : '{% url 'evaluate:evaluate_headteacher_test_sum' %}',
+            data: {'sum':sum, 's_id': {{ student_answer1.student.id }}, 'test_name': test_name, 'test_category': test_category},
+            success: function(data) {
+                console.log(data.data);
+                $('.sum').text(data.data);
+            }
+        })
+    })
+</script>

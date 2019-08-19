@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+<body onclick="">
+
+	<div id="app">
+		<alert-box></alert-box>
+		<alert-box>有bug发生</alert-box>
+		<alert-box>有一个警告</alert-box>
+	</div>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript">
+		/*
+			Vue的模板语法：
+			插槽基本使用
+		*/
+		Vue.component('alert-box',{
+			data: function(){
+				return {
+					
+				}
+			},
+			template: `
+				<div>
+					<strong>ERROR:</strong>
+					<slot>默认内容</slot>
+				</div>
+			`
+		});
+		var vm = new Vue({
+			el: '#app',
+			data: {
+			}
+		});
+
+	</script>
+</body>
+</html>

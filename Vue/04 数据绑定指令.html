@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onclick="">
+
+	<div id="app">
+		<div>{{msg}}</div>
+		<!--可以解决闪动问题-->
+		<div v-text='msg'></div>
+		<div v-html="msg1"></div>
+		<div v-pre>{{msg1}}</div>
+	</div>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript">
+		/*
+			Vue的模板语法：
+			
+		*/
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				msg: "Hello Vue!",
+				msg1: '<h1>哈啊哈哈哈哈</h1>'
+			}
+		});
+
+	</script>
+</body>
+</html>

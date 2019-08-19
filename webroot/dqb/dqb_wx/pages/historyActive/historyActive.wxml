@@ -1,0 +1,30 @@
+<!--pages/historyActive/historyActive.wxml-->
+<view wx:if='{{list.length!=0}}'>
+<block wx:for="{{list}}" wx:key="{{index}}">
+ <view class="active-list" bindtap='activeDetail' id="{{item.id}}">
+      <view class="active-introduce">
+        <text class="active-list-title" decode="{{true}}">{{item.activity_time}}&ensp;{{item.address_detailed}}</text>
+        <view wx:if='{{item.notice==null||item.notice==""}}'>
+        <text class="active-list-singure" decode="{{true}}">{{item.originator_id.nickname}}:&ensp;暂无公告</text>
+        </view>
+        <view wx:else>
+        <text class="active-list-singure">{{item.originator_id.nickname}}: {{item.notice}}</text>
+        </view>
+        <view class="active-list-detail">
+          <view class='detail-left'>
+            <text class="signUp">留言: （0）</text>
+            <view class='updata_img' catchtap='leaveword' id="{{item.id}}">上传活动照片</view>
+          </view>
+          <view class='time'>
+            <text>{{time[0][0]}}年{{time[0][1]}}月{{time[0][2]}}日</text>
+          </view>
+        </view>
+      </view>
+  </view>
+</block>
+</view>
+<view class="lookMore" wx:else>
+<text>暂无数据</text>
+</view>
+  
+   

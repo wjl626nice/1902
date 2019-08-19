@@ -1,0 +1,36 @@
+<!--pages/mine/mine.wxml-->
+<view class='edit' bindtap='bindEdit'>
+  <image src='/assets/imgs/edit.png' style='height:100%;width:100%'></image>
+</view>
+
+<view class='top'>
+  <image class='top-img' src='{{headimg}}'></image>
+  <text  style='color:#333333'>{{nickname}}</text>
+</view>
+
+<view class='line-row' wx:if="{{checkIsShow}}" bindtap='myWallet' style='margin-top:40rpx;border-top:2rpx  solid #eee;'>
+  <view class='left-line' >
+    <text style='color:#333333'>我的钱包</text>
+  </view>
+  <view class='right-line'>
+    <image class='arrow' src='/assets/imgs/B-arrow.png' mode="aspectFit"></image>
+  </view>
+</view>
+
+<view class='line-row' bindtap='ballFriend'>
+  <view class='left-line'>
+    <text  style='color:#333333'>关乎点球吧</text>
+  </view>
+  <view class='right-line'>
+    <image class='arrow' src='/assets/imgs/B-arrow.png' mode="aspectFit"></image>
+  </view>
+</view>
+
+<view class='line-row' bindtap='feedback'>
+  <view class='left-line'>
+    <text  style='color:#333333'>帮助与反馈</text>
+  </view>
+  <view class='right-line'>
+    <image class='arrow' src='/assets/imgs/B-arrow.png' mode="aspectFit"></image>
+  </view>
+</view>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <div id="app">
+        <!--切换组件的选项卡--->
+        <a href="#zhuye">主页</a>
+        <a href="#keji">科技</a>
+        <a href="#caijing">财经</a>
+        <a href="#yule">娱乐</a>
+        <!--根据 :is 属性指定的组件名称，把对应的组件渲染到component标签所在位置,咱们可以认为component标签 是组件的占位符。-->
+        <component :is="comName"></component>
+    </div>
+    <script type="text/javascript" src="js/vue.js"></script>
+    <script type="text/javascript">
+        const zhuye = {
+            template: '<h1>主页信息</h1>'
+        }
+        const keji = {
+            template: '<h1>科技信息</h1>'
+        }
+        const caijing = {
+            template: '<h1>财经信息</h1>'
+        }
+        const yule = {
+            template: '<h1>娱乐信息</h1>'
+        }
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                comName: 'yule'
+            },
+            // 注册局部组件
+            components: {
+                zhuye,
+                keji,
+                caijing,
+                yule
+            }
+        });
+        // 监听window的onhashchange事件，根据window对象的location对象的hash 属性获取hash值，然后可以根据不同的hash来改变vm 中的comName
+        window.onhashchange = function() {
+            // console.log(11) 
+            // 获取最新的hash值
+            console.log(location.hash)
+            switch (location.hash.slice(1)) {
+                case 'zhuye':
+                    vm.comName = 'zhuye';
+                    break;
+                case 'keji':
+                    vm.comName = 'keji';
+                    break;
+                case 'caijing':
+                    vm.comName = 'caijing';
+                    break;
+                case 'yule':
+                    vm.comName = 'yule';
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>

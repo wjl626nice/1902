@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<view>是否同意？</view>
+<view bindtap='accept'>YES</view>
+<view>NO</view>

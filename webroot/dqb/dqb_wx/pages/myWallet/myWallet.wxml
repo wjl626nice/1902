@@ -1,0 +1,56 @@
+<!--pages/myWallet/myWallet.wxml-->
+<view class='top'>
+  <image class='top-img' src='/assets/imgs/money-2@3x.png'></image>
+  <text class='top-text'>余额</text>
+  <text class='top-balance'>{{userBalance}}</text>
+</view>
+<view class='line-row' bindtap='myWallet'>
+  <view class='left-line'>
+    <text style='color:#333333'>提现</text>
+  </view>
+  <view class='right-line'>
+    <image class='arrow' src='/assets/imgs/B-arrow.png' mode="aspectFit"></image>
+  </view>
+</view>
+<view class='line-row' bindtap='recharge'>
+  <view class='left-line'>
+    <text style='color:#333333'>充值</text>
+  </view>
+  <view class='right-line'>
+    <image class='arrow' src='/assets/imgs/B-arrow.png' mode="aspectFit"></image>
+  </view>
+</view>
+<view class='line-row' bindtap='tradeDetail'>
+  <view class='left-line'>
+    <text style='color:#333333'>交易明细</text>
+  </view>
+  <view class='right-line'>
+    <image class='arrow' src='/assets/imgs/B-arrow.png' mode="aspectFit"></image>
+  </view>
+</view>
+
+
+<!-- 遮罩蒙版 -->
+<view class="mask" wx:if="{{isShow}}"></view> 
+
+<!--  -->
+<view id="confirm_view" wx:if="{{isShow}}">
+  <view class='person'>
+    <text>持卡人:</text>
+    <text style='color:#999999'>{{cardholder}}</text>
+  </view>
+  <view class='person' style='margin-top:46rpx;'>
+    <text>银行卡:</text>
+    <text style='color:#999999'>尾号{{bank_card_number}}</text>
+  </view>
+  <view class='person' style='margin-top:46rpx;'>
+    <text>身份证号:</text>
+    <text style='color:#999999'>{{ID_number}}</text>
+  </view>
+  <input class='money-input' placeholder='请输入提现金额' placeholder-style='font-size:30rpx;' value="{{withdraw}}" bindinput='changeInputVal' ></input>
+
+  <view class='confirm_bt'>
+      <button class='zh_bt' style='background:white;color:#389E0D' bindtap='cancelButton'>取消</button>
+      <button class='zh_bt' style='background:#389E0D;color:white' bindtap='confirmButton'>确认</button>
+  </view>
+</view>  

@@ -1,0 +1,30 @@
+<!--pages/transDetail/transDetail.wxml-->
+<view class="pages">
+  <view class="trade" wx:for ="{{listData}}" wx:key="{{index}}">
+    <view class="trade-left">
+      <view class="trade-status" wx:if="{{item['pay_type'] === 1}}">充值
+        <view wx:if="{{item['pay_state'] === 1}}">失败</view>
+        <view wx:if="{{item['pay_state'] === 2}}">中</view>
+        <view wx:if="{{item['pay_state'] === 3}}">成功</view>
+      </view>
+      <view class="trade-status" wx:if="{{item['pay_type'] ===2}}">提现
+        <view wx:if="{{item['pay_state'] === 1}}">失败</view>
+        <view wx:if="{{item['pay_state'] === 2}}">中</view>
+        <view wx:if="{{item['pay_state'] === 3}}">成功</view>
+      </view>
+      <view class="trade-status" wx:if="{{item['pay_type'] === 3}}">退款
+        <view wx:if="{{item['pay_state'] === 1}}">失败</view>
+        <view wx:if="{{item['pay_state'] === 2}}">中</view>
+        <view wx:if="{{item['pay_state'] === 3}}">成功</view>
+      </view>
+      <view class="trade-status" wx:if="{{item['pay_type'] === 4}}">支付
+        <view wx:if="{{item['pay_state'] === 1}}">失败</view>
+        <view wx:if="{{item['pay_state'] === 2}}">中</view>
+        <view wx:if="{{item['pay_state'] === 3}}">成功</view>
+      </view>
+      <view class="trade-time">{{item['deal_add_time']}}</view>
+    </view>
+      <view class="trade-money2" wx:if="{{item['pay_type'] === 3 || item['pay_type'] === 1}}">+{{item['pay_amount']}}</view>
+      <view class="trade-money1" wx:if="{{item['pay_type'] === 2 || item['pay_type'] === 4}}">-{{item['pay_amount']}}</view>
+  </view>
+</view>

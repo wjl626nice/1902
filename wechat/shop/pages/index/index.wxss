@@ -1,0 +1,17 @@
+.swiper-item {
+    position: relative;
+    width: 100%;
+}
+
+.swiper_banner swiper-item image {
+    width: 100%;
+    height: 400rpx;
+}
+
+.swiper-box .wx-swiper-dots.wx-swiper-dots-horizontal {
+    width: 100%;
+    padding-right: 30rpx;
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+}

@@ -1,0 +1,55 @@
+/* pages/bindCard/bindCard.wxss */
+.top{
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FDFCEC;
+}
+.top-text{
+  height: 60rpx;
+  width: 690rpx;
+  font-size: 28rpx;
+  color: #F86E21;
+  line-height: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mine-line{
+  height: 90rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 2rpx #eee solid;
+  background-color: white;
+  flex-direction: row;
+}
+.line-input{
+  width: 400rpx;
+  height: 52rpx;
+  margin-left: 126rpx;
+  font-size:34rpx;
+}
+.text{
+  font-size: 36rpx;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: row
+}
+.ft{
+  font-size:34rpx;
+  color: #ccc;
+}
+.button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80rpx;
+  width: 300rpx;
+  margin-top: 546rpx;
+  color: white;
+  background-color: #389E0D;
+  font-size: 30rpx;
+  border-radius: 10rpx;
+  margin-left: 226rpx;
+}

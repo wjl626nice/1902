@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+	/*
+		前后端交互 -- 异步编程与Promise
+		Promise解决回调地狱
+	*/
+	// 原生ajax请求
+
+	function queryData(url){
+		return new Promise(function(resolve, reject){
+			// 实例化一个ajax对象
+			var xhr = new XMLHttpRequest();
+			// 判断ajax在请求过程中的状态
+			xhr.onreadystatechange = function(){
+				if(xhr.readyState != 4) return;
+				if(xhr.readyState == 4 && xhr.status == 200){
+					// 获取ajax请求成功的内容
+					resolve(xhr.responseText);
+				}else{
+					reject('服务器错误！');
+				}
+			};
+			// open(请求类型,请求地址,异步|同步  默认异步 true)
+			xhr.open('get', url,true);
+			xhr.send(null)
+		});
+	}
+	queryData('http://127.0.0.1:5000/api/getdata')
+	.then(function(data){
+		console.log(data);
+		return queryData('http://127.0.0.1:5000/api/getdata2');
+	})
+	.then(function(data){
+		console.log(data);
+		return queryData('http://127.0.0.1:5000/api/getdata3');
+	})
+	.then(function(data){
+		console.log(data)
+		return 111;
+	})
+	.then(function(data){
+		console.log(data)
+	});
+</script>
+</body>
+</html>

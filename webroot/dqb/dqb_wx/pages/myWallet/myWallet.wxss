@@ -1,0 +1,109 @@
+/* pages/myWallet/myWallet.wxss */
+page{
+  background-color: #FAFAFA
+}
+.top{
+  height: 400rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #676F79;
+}
+.top-img{
+  height: 120rpx;
+  width: 120rpx;
+  margin-top: 80rpx;
+}
+.top-text{
+  color: white;
+  font-size: 30rpx;
+  margin-top: 30rpx;
+}
+.top-balance{
+  color: white;
+  font-size:64rpx;
+  margin-top: 20rpx;
+}
+
+.line-row{
+  height: 104rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 34rpx;
+  border-bottom:2rpx  solid #eee; 
+  background-color: white;
+}
+.left-line{
+  display: flex;
+  align-items: center;
+  margin-left: 32rpx;
+}
+.right-line{
+  display: flex;
+  align-items: center;
+  margin-right: 32rpx;
+}
+.arrow{
+  height: 30rpx;
+  width:  30rpx;
+  margin-left: 20rpx;
+}
+
+
+
+#confirm_view{
+   width: 600rpx; height: 500rpx;
+   position: fixed;
+   left:76rpx;
+   top:290rpx;
+   border-radius: 6rpx;
+   text-align: center;
+   background-color: #fff;
+   z-index: 100;
+  box-shadow:0rpx 1rpx 3rpx 3rpx #eee;
+}
+#confirm_view text{
+  font-size: 30rpx;
+}
+.confirm_title{
+
+  border-bottom: 1px solid #eeeeee; height: 110rpx;
+}
+.zh_bt{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50rpx;
+  width: 120rpx;
+  font-size: 24rpx;
+}
+.confirm_bt{
+  display: flex;
+  height: 50rpx; 
+  align-content: center;  
+  margin-top: 44rpx;
+}
+.person{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 42rpx;
+  width: 498rpx;
+  margin-left: 52rpx;
+  margin-top: 24rpx;
+  font-size: 30rpx;
+}
+.money-input{
+  width: 496rpx;
+  height: 70rpx;
+  border: 2rpx solid #ccc;
+  border-radius: 6rpx;
+  margin-top: 54rpx;
+  margin-left: 50rpx;
+  font-size: 30rpx;
+}
+
+.mask{
+   width:100%;height:100%;  position: fixed; left:0; top:0; opacity:1; z-index: 99;
+}

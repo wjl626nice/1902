@@ -1,0 +1,59 @@
+[33ma207e40e7007a6be4a9ca770d82fa3c54992df10[m[33m ([m[1;36mHEAD -> [m[1;32mdev[m[33m)[m Merge branch 'four' into dev
+[33m675befab876b85107205192c7369f97cfcbe3313[m Merge branch 'four' of gitee.com:gnadream/qyedu into four
+[33mc62b5b9a708842063bfaf8fa5e299e5a89ef3b8d[m login背景样式
+[33md036feda84cd94310b988c0a45d8a006a20c1116[m Merge branch 'four' of gitee.com:gnadream/qyedu into four
+[33m43df9d1306cc2ae8ce7e56fba9c4aa9c64d4d67a[m Merge branch 'four' into dev
+[33mcb9625646a31819134414a52c1debcff81aec7d7[m 菜单优化
+[33m0a6d36e7bba4482c55efc82e4d815e8bd74a1718[m Merge branch 'four' of gitee.com:gnadream/qyedu
+[33me8df381b4cf7badc3d730c17a639e9b713afc109[m 背景粒子样式
+[33m03f300fa96e385311fd959f3fa5c8e11975f6c2f[m Merge branch 'four' into dev
+[33m300f1a5b3d4f166e7aaafa6c69c679dc8277c9a7[m 修改login.html
+[33mfeeec728e1ba70ccb5b5740d31347c974b4ab6be[m Merge branch 'four' into dev
+[33mba94dc08cb8d38def3e0b9b20206840eb01cfa27[m 登录人性化验证
+[33m01d6d336a7ca572ee60ec276934cbd151721d707[m a
+[33m6605a88350b8c0355a60ef4d36972e6fb5cf9abb[m a
+[33m652fa5a9f00e054ef1561be045ffa497c5b50edc[m 删除冲突
+[33m85492d8de9c90992c03115ef9ba499df2f9beb64[m a
+[33m53b31223b5ac39a753bdffe3eba9862e03ca4245[m 添加登录验证码
+[33m66ff3d2321a4bccf3a5c9932899208692c67d987[m 解决冲突
+[33mb63f1a20037824655627b30360bcf48bb6d25a44[m 添加所有菜单
+[33m1e54fe68d5762e8e671da0b850bff29e1e6877d4[m 添加所有菜单
+[33m4b79352e17d8da157e3ec872ba2f1482703d11e7[m geshi
+[33m531526e60f45845563f983341f9aa0131d8aa63a[m 登录 验证
+[33md552c6f2b8468699de0d001c5b1211aeb0f34068[m 修改footer样式
+[33m924dee324c1b69fce7df9f2aee2268c69f2d100a[m 修改login.html
+[33m5b7a818be8829fc274b6022d661fa17327330c11[m 修改就业models
+[33m0f735eb38c86c5267d7cf6f7709181cb2ac44df3[m 解决冲突
+[33m3dac9e9aa017102ff11faac9ed42824a0f879023[m 修改login
+[33m74e13ccb6edd2776f3153055048377c36dadcd24[m 修改简化login.html
+[33me8dcd37f9fc3bcfe98d7f2b8d600339a64c450a1[m s
+[33m36b80bb55a763334f0a2b5983ee65f7105aee0ae[m 修改bug
+[33m9839f9fa6227ed7733dd51fea890c3f9afbb9490[m 新加载
+[33m011e81516363b5292029857b574e636113c357af[m 添加
+[33mbe455a80c9b9dfa9854e19d94b1dd2593781ddb7[m 对招生models进行修改
+[33m6be09b4c59102308ddee226eb909628a76ad76dc[m 重新加载
+[33m77a3ed8ed06942a7bad2c89b22199c681ffb15a7[m 修改冲突和更改数据库设置
+[33mc72c43410dd8bf4b2e741cc56b4f29b2cc949c8a[m 删除冲突
+[33m18e3c75a5464b1069fa840959029d9ebfc7648c7[m 合并及修改代码
+[33md058fa7fe8ece6ef0d841e52954e4fb47ec88796[m sdd 添加招生models
+[33m218bca7d8a679877cab90cd23fa27b263ab344b8[m add招生models
+[33ma4997278616e166400d08bd19fcd61ca86df89a6[m Merge branch 'four' of gitee.com:gnadream/qyedu into four
+[33m7441727de1b7b4c9db963797b011ccf139cd614a[m 修改
+[33m26fbc1c7c4a0c0bfaa1ad24b35556bf956d7fb09[m merge self to four
+[33m861ed309f31d18529b6b72403d4971ce225c8845[m 修改了models,logi.html等代码
+[33m2fb22b230e6e2a104fa919cc35a3a7deea396652[m 更新 settings.py
+[33mbc032aaf0c9858a548dd7f65b51b8ee5eb273a8b[m recruit_students
+[33m2a75620b14e9749138bbb124a6e934f214306d74[m 'recruit_students'
+[33mf30b9b9836bf115e985400e31682a56d56d4c8cf[m 添加就业模块models
+[33m059e70c85378cd83ecec880dffd4cc13f14737d9[m Merge branch 'four' into zhuangge
+[33m42c273d61c16d94c2ee3b20c43ef85464b7e56a6[m 添加app创建models“
+[33mfbe7ab883140f59b95a96c99d5e791474bdd9290[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m '修改外键引用的model'
+[33md6aaa12b8e378b09b8ead44d19e1a3d979a356ae[m[33m ([m[1;31morigin/dev[m[33m)[m merge master
+[33mce4eeefa8172dddcaf99419df0e0daa1f4291a0c[m 'edirignore'
+[33mc7bc94e70e2d6c2996e725902315cc1e1e0ef84a[m '把h-uiadmin的lib资源库加入仓库'
+[33m18cfce437684702e9476520724951b4459e77a67[m 青云后台增加H-ui Admin框架.登录页面。框架页面，欢迎页面
+[33m2491f64ae92cacef9b276c3dd667e580d55307fb[m  add static and media set
+[33m91dcc15434503b5932a7b36ebc9a481ba633a46f[m 更新 README.md
+[33me70164e7c36981d648df73350d9845b66cc83445[m[33m ([m[1;31morigin/six[m[33m)[m alter field name
+[33mcd1b79dfadac343b1a8cfede47d3ec82a13642dd[m add app account,new_admin
+[33mf6deff0d289f21124a261a2c04edf11d3815a795[m Initial commit

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	
+	</style>
+</head>
+<body onclick="">
+
+	<div id="app">
+		<input type="number" v-focus v-color="color">
+		<!-- <input type="number" v-focus v-color="{color: 'blue'}"> -->
+		<!-- <input type="number" v-focus v-color="'blue'">
+		<input type="number" v-focus v-color="[2,3,4]"> -->
+		
+	</div>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript">
+		/*
+			Vue的模板语法：
+			自定义指令
+		*/
+		// 自定义全局指令
+		// Vue.directive('focus', {
+		// 	inserted: function(el){
+		// 		// el表示指令所绑定的元素
+		// 		el.focus()
+		// 	}
+		// })
+		Vue.directive('color', {
+			inserted: function(el, binding){
+				// el.style.backgroundColor = 'orange'
+				console.log(binding)
+				// 获取页面传进来的参数值
+				el.style.backgroundColor = binding.value.color
+			}
+		});
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				color: {
+					color: 'pink'
+				}
+			},
+			methods: {
+			},
+			directives:{
+				// 注册局部自定义指令
+				focus: {
+					inserted: function(el){
+						el.focus()
+					}
+				}
+			}
+		});
+
+	</script>
+</body>
+</html>

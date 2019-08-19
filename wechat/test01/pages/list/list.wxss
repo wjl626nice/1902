@@ -1,0 +1,8 @@
+/* pages/list/list.wxss */
+text{
+  font-weight: bold;
+  background-color: pink;
+}
+#aaa{
+  font-size: 10px;
+}

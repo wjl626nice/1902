@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onclick="">
+
+	<div id="app">
+		<div v-text="msg"></div>
+		<!--$event.target 代表正在发生事件的标签-->
+		<!--就是v-model执行的过程。先通过v-bind:value绑定数据，在通过 v-on:input 事件改变msg,实现了数据的双向绑定-->
+		<input type="text" v-bind:value="msg" v-on:input="msg=$event.target.value">
+		<input type="text" v-model="msg 	">
+	</div>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript">
+		/*
+			Vue的模板语法：
+			v-model原理分析
+		*/
+		var vm = new Vue({
+			el: '#app', 
+			data: {
+				msg: '李苏晨 真胖！！'
+			},
+			methods: {
+				
+			}
+		});
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!--pages/friendIndex/friendIndex.wxml-->
+<!-- 我的球友 -->
+<view class='line-row' bindtap='ballFriend'>
+  <view class='left-line'>
+    <image class='left-img' src='/assets/imgs/ballFriend.png'></image>
+    <text >我的球友</text>
+  </view>
+  <view class='right-line'>
+    <text style='color:#999999'>{{ball_num}}</text>
+    <image class='arrow' src='/assets/imgs/B-arrow.png' mode="aspectFit"></image>
+  </view>
+</view>
+<!-- 新球友申请 -->
+<view class='line-row' bindtap='addFriend'>
+  <view class='left-line'>
+    <image class='left-img' src='/assets/imgs/apply.png'></image>
+    <text >新球友申请</text>
+  </view>
+  <view class='right-line'>
+    <text style='color:#999999'></text>
+    <image class='arrow' src='/assets/imgs/B-arrow.png' mode="aspectFit"></image>
+  </view>
+</view>
+<!-- 微信添加球友 -->
+<button class='line-row'style='border:0rpx solid #eee;padding:0rpx; border-bottom:2rpx solid #eee;background-color: white;' plain='true' open-type="share" wx:if="{{checkIsShow}}">
+  <view class='left-line'>
+    <image class='left-img' src='/assets/imgs/weixin.png'></image>
+    <text>去微信添加球友</text>
+  </view>
+  <view class='right-line'>
+    <text style='color:#999999'></text>
+    <image class='arrow' src='/assets/imgs/B-arrow.png' mode="aspectFit"></image>
+  </view>
+</button>

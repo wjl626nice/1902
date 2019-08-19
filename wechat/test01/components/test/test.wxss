@@ -1,0 +1,7 @@
+/* components/test/test.wxss */
+text{
+  color: red
+}
+#aaa{
+  font-size: 19px;
+}

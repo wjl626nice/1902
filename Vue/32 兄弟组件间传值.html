@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+<body onclick="">
+
+	<div id="app">
+		<div>父组件</div>
+		<cat :title='true'></cat>
+		<mouse></mouse>
+	</div>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript">
+		/*
+			Vue的模板语法：
+			兄弟组件间传值
+		*/
+		// 事件中心
+		var hub = new Vue();
+
+		Vue.component('cat',{
+			props: ['title'],
+			data: function(){
+				return {
+					num: 0
+				}
+			},
+			template: `
+				<div>
+					<div>cat点击：{{num}}次</div>
+					<button @click="handle">点击</button>
+				</div>
+			`,
+			methods: {
+				handle(){
+					// 触发 老鼠组件在事件中心注册的事件
+					hub.$emit('mouse-handle')
+				}
+			},
+			mounted: function(){
+				// 监听事件
+				hub.$on('cat-handle',(val)=>{
+					this.num += val;
+				})
+			}
+		});
+		Vue.component('mouse',{
+			data: function(){
+				return {
+					num: 0
+				}
+			},
+			template: `
+				<div>
+					<div>mouse点击：{{num}}次</div>
+					<button @click="handle">点击</button>
+				</div>
+			`,
+			methods: {
+				handle(){
+					hub.$emit('cat-handle', 10)
+				}
+			},
+			mounted: function(){
+				// 监听事件
+				hub.$on('mouse-handle',()=>{
+					this.num++
+				})
+			}
+		});
+		var vm = new Vue({
+			el: '#app',
+			data: {
+			}
+		});
+
+	</script>
+</body>
+</html>

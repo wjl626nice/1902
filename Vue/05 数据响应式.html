@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onclick="">
+
+	<div id="app">
+		<div>{{msg}}</div>
+		<div v-once>{{msg}}</div>
+		<button v-on:click="changeMsg">点击改变msg值</button>
+	</div>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript">
+		/*
+			Vue的模板语法：
+			
+		*/
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				msg: "Hello Vue!",
+			},
+			methods: {
+				changeMsg: function(event){
+					console.log(event)
+					console.log(this == vm)
+					this.msg = 'aaaa'
+				}
+			}
+		});
+
+	</script>
+</body>
+</html>

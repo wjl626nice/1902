@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* 你自己的样式 */
+
+#cuowu{
+    margin-left: 164px;
+    color: red;
+}
+.table .text-c .fankui{
+    background-color: #fff;
+}
+.table .text-c .fankui:hover{
+    background-color: rgba(221,221,221,0.3);
+
+}

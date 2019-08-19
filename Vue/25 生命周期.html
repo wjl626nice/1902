@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	
+	</style>
+</head>
+<body onclick="">
+
+	<div id="app">
+		{{msg}}
+		<button @click="change">更新数据</button>
+		<button @click="dies">销毁</button>
+	</div>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript">
+		/*
+			Vue的模板语法：
+			生命周期函数
+		*/
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				msg: 'hi 长朋'
+			},
+			methods: {
+				change: function(){
+					this.msg += ' 你吃饭了么？';
+				},
+				dies: function(){
+					this.$destroy();
+				}
+			},
+			beforeCreate: function(){
+				console.log('beforeCreate')
+			},
+			created: function(){
+				console.log('create')
+			},
+			beforeMount: function(){
+				console.log('beforeMount')
+			},
+			mounted: function(){
+				console.log('mounted')
+			},
+			beforeUpdate: function(){
+				console.log('beforeUpdate')
+			},
+			updated: function(){
+				console.log('update')
+			},
+			beforeDestroy: function(){
+				console.log('beforeDestroy')
+			},
+			destroyed: function(){
+				console.log('destroyed')
+			},
+		});
+
+	</script>
+</body>
+</html>

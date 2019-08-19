@@ -1,0 +1,57 @@
+/* pages/ballFriend/ballFriend.wxss */
+page{
+  background: rgba(250,250,250,1);
+}
+.list-box{
+  width: 100%;
+  display: flex;
+  background: white;
+  align-items: center;
+  justify-content: space-between;
+}
+.list{
+  background: white;
+  margin-bottom: 2rpx;
+  display: flex;
+  padding-left: 30rpx;
+  align-items: center;
+  height: 140rpx;
+}
+.list> image {
+  border-radius: 6rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+.list > .introduce{
+  display: flex;
+  height: 80rpx;
+  margin-left: 30rpx;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.introduce>.name{
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+}
+.name>.relation{
+  padding:0 10rpx;
+  height: 32rpx;
+  background: rgba(56,158,13,0.3);
+  color:#389E0D;
+  margin-left: 30rpx;
+  text-align: center;
+  line-height: 32rpx;
+  font-size: 20rpx;
+}
+.introduce>.relative{
+   font-size: 20rpx;
+   color:#BBBBBB;
+}
+
+.lookMore{
+  font-size: 32rpx;
+  color:#666666;
+  margin-top: 25rpx; 
+  text-align:center;
+}

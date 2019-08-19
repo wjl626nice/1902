@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'study/css/stuweek.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static "h-ui/css/H-ui.min.css" %}" />
+<link rel="stylesheet" type="text/css" href="{% static "h-ui.admin/css/H-ui.admin.css" %}" />
+<link rel="stylesheet" type="text/css" href="{% static "lib/Hui-iconfont/1.0.8/iconfont.css" %}" />
+<link rel="stylesheet" type="text/css" href="{% static "h-ui.admin/skin/default/skin.css" %}" id="skin" />
+<link rel="stylesheet" type="text/css" href="{% static "h-ui.admin/css/style.css" %}" />
+    </head>
+    <body>
+	<div class="cl pd-5 bg-1 bk-gray mt-20 qian_sign">
+		<span class="l">
+			<a class="btn radius sign" href="{% url 'study:stu_add' %}?cli_date={% now 'H:i:s'%}"><i class="Hui-iconfont">&#xe600;</i> 签到</a>
+			<a class="btn btn-primary radius" href="{% url 'study:stu_main' %}">返回主页面</a>
+		</span>
+		<span class="r">共有数据：<strong>{{ stu_signs.count}}</strong> 条</span>
+	</div>
+	<div class="mt-20">
+		<table class="table table-border table-bordered table-hover table-bg table-sort">
+			<thead>
+				<tr class="text-c">
+					<th width="25"><input type="checkbox" name="" value=""></th>
+                    <th width="50">序号</th>
+                    <th width="150">签到</th>
+					<th width="200">签到时间</th>
+				</tr>
+			</thead>
+			<tbody>
+            {% for sign in stu_signs %}
+                <tr class="text-c">
+                    <td><input type="checkbox" name="" value=""></td>
+                    <td>{{ forloop.counter }}</td>
+                    <td>
+                    {{ sign.get_sign_in_display }}
+                    </td>
+                    <td >{{ sign.date_time|date:'Y-m-d H:i:s' }}</td>
+                </tr>
+            {% endfor %}
+			</tbody>
+		</table>
+	</div>
+    </body>
+</html>
+<script src="{% static 'study/js/jquery-3.3.1.js' %}"></script>
+<script>
+    {% if messages %}
+        {% for message in messages %}
+            alert('{{ message }}', 1000);
+        {% endfor %}
+    {% endif %}
+
+    // var myDate = new Date();
+    // myTime = myDate.getHours() + ":" + myDate.getMinutes() + ":" + myDate.getSeconds();
+    // if((myTime >= '08:00:00' && myTime <= '08:30:00')
+    //  || (myTime >= '13:00:00' && myTime <= '13:30:00')
+    //  || (myTime >= '18:30:00' && myTime <= '19:00:00')
+    //  || (myTime >= '21:00:00' && myTime <= '22:00:00')) {
+    //     $('.sign').toggleClass('disabled btn-primary');
+    // } else {
+    //     $('.sign').removeClass('btn-primary');
+    // }
+
+    if('{{ id_juge }}' == '1') {
+        $('.sign').addClass('disabled').removeClass('btn-primary');
+    }
+
+
+</script>

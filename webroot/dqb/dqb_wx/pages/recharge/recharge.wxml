@@ -1,0 +1,18 @@
+<!--pages/recharge/recharge.wxml-->
+<view class="recharge">
+  <view class='contain'>
+  <view class="lable">充值金额</view>
+  <view class='con_main'>
+    <block wx:for="{{numArray}}" wx:key="{{index}}">
+      <view class="con_main_choose {{activeIndex == index ? 'active':''}}" bindtap='activethis' data-index='{{index}}'>
+      {{item}}元      
+      </view>
+    </block>
+  </view>
+   <view class='input'>
+    <view class="linkman">￥</view>
+    <input  value="{{price}}" bindinput="inputeidt" type="text" placeholder="其他金额" placeholder-style="color: #999999; font-size:28rpx;" />
+  </view>
+  <view class='con_button' bindtap="recharge">去充值</view>
+</view>
+</view>

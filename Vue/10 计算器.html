@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onclick="">
+
+	<div id="app">
+		<h1>计算器</h1>
+		<div>数值A:<input type="text" v-model="a"></div>
+		<div>数值B:<input type="text" v-model='b'></div>
+		<div><button type="button" @click="submitHandler">计算</button></div>
+		<div>计算结果：{{c}}</div>
+	</div>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript">
+		/*
+			Vue的模板语法：
+			计算器案例
+		*/
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				a: '',
+				b: '',
+				c: ''
+			},
+			methods: {
+				// 提交事件
+				submitHandler: function(event){
+					// 计算
+					this.c = parseInt(this.a) + parseInt(this.b)
+				}
+			}
+		});
+
+	</script>
+</body>
+</html>

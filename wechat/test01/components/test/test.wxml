@@ -1,0 +1,12 @@
+<!--components/test/test.wxml-->
+<view id="aaa">这是<text>test</text>自定义组件</view>
+<view>这是test组件的属性count：<text>{{count}}</text></view>
+<view>这是test组件的属性number：<text>{{number}}</text></view>
+<view>这是test组件的属性newName：<text>{{newName}}</text></view>
+<view>这是test组件的属性总价：{{number}} * {{price}} = {{totalPrice? totalPrice : number * price}}</view>
+<view bindtap="changeNum">改变test组件属性count、number</view>
+<view bindtap="triggerMyevent">触发myevent</view>
+--------插槽------------
+
+<slot name="aa"></slot>
+<slot name="bb"></slot>

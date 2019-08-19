@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <!--[if lt IE 9]>
+<script type="text/javascript" src="lib/html5shiv.js"></script>
+<script type="text/javascript" src="lib/respond.min.js"></script>
+<![endif]-->
+    <link rel="stylesheet" type="text/css" href="{% static "h-ui/css/H-ui.min.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "h-ui.admin/css/H-ui.admin.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "lib/Hui-iconfont/1.0.8/iconfont.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "h-ui.admin/skin/default/skin.css" %}" id="skin" />
+    <link rel="stylesheet" type="text/css" href="{% static "h-ui.admin/css/style.css" %}" />
+    <link rel="stylesheet" href="{% static 'new_admin/css/new_admin.css' %}">
+    <!--[if IE 6]>
+<script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+    <title>宿舍问题处理</title>
+</head>
+<body>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页
+    <span class="c-gray en">&gt;</span>
+    宿舍管理
+    <span class="c-gray en">&gt;</span>
+    宿舍问题处理
+    <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a>
+</nav>
+<div class="page-container">
+    <div class="text-c">
+        <form action="{% url 'dormitory:stu_dorm_problem' %}" method="post">
+        {% csrf_token %}
+        <div class="text-c"> 问题录入日期范围：
+            <input type="text" value="{{ start_time }}" name="start_time" onfocus="WdatePicker({ dateFmt: 'yyyy-MM-dd HH:mm:ss' })" id="datemin" class="input-text Wdate" style="width:120px;" autocomplete="off">
+            -
+            <input type="text" name="stop_time" value="{{ stop_time }}" onfocus="WdatePicker({ dateFmt: 'yyyy-MM-dd HH:mm:ss' })" id="datemax" class="input-text Wdate" style="width:120px;" autocomplete="off">
+            <input type="text" class="input-text" value="{{ dorm_name }}" style="width:250px" placeholder="输入宿舍名称" id="" name="dorm_name">
+            <input type="hidden" name="search" value="true">
+            <button type="submit" class="btn btn-success" id="" name=""><i class="Hui-iconfont">&#xe665;</i> 搜索</button>
+	    </div>
+    </form>
+    </div>
+    <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"> <a href="javascript:;" onclick="pro_add('添加宿舍','add/','800','500')" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加问题</a></span> <span class="r">共有数据：<strong>{{ dorm_list.count }}</strong> 条</span> </div>
+    <table class="table table-border table-bordered table-hover table-bg table-sort">
+        <thead>
+        <tr class="text-c">
+            <th width="50">序号</th>
+            <th width="150">宿舍名称</th>
+            <th>问题描述</th>
+            <th>提交人</th>
+            <th>录入人</th>
+            <th>录入时间</th>
+            <th width="100">处理结果</th>
+            <th>处理时间</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for dorm in d_list %}
+            {% if dorm.is_del == 0 %}
+                <tr class="text-c">
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ dorm.dormitory_name }}</td>
+                    <td title="{{ dorm.dor_problem }}">{{ dorm.dor_problem|truncatechars:15 }}</td>
+                    <td>{{ dorm.user_name }}</td>
+                    <td>{{ dorm.add_user.realname  }}</td>
+                    <td>{{ dorm.add_date|date:'Y-m-d H:i' }}</td>
+                    <td>{% if dorm.result == 2 %}<span class="label label-success radius">已解决</span>{% elif dorm.result == 1 %}<span class="label label-default radius">待解决</span>{% endif %}</td>
+                    <td>{% if dorm.result == 1 or dorm.result == 0 %}未解决{% else %}{{ dorm.handle_date|date:'Y-m-d H:i' }}{% endif %}</td>
+                    <td class="td-manage">
+                        {% if dorm.result == 1 or dorm.result == 0 %}
+                            <a onClick="resolve(this,{{ dorm.id }})" href="javascript:;" title="待解决" style="text-decoration:none"><i class="Hui-iconfont">&#xe631;</i></a>
+                        {% else %}
+                            <a onClick="to_resolve(this,{{ dorm.id }})" href="javascript:;" title="已解决" style="text-decoration:none"><i class="Hui-iconfont">&#xe615;</i></a>
+                        {% endif %}
+                        <a title="编辑" href="javascript:;" onclick="pro_edit('问题编辑','{% url 'dormitory:pro_modify' %}?d_id={{ dorm.id }}','800','500')" class="ml-5" style="text-decoration:none">
+                            <i class="Hui-iconfont">&#xe6df;</i>
+                        </a>
+                        <a title="删除" href="javascript:;" onclick="pro_del(this,'{{ dorm.id }}')" class="ml-5" style="text-decoration:none">
+                            <i class="Hui-iconfont">&#xe6e2;</i>
+                        </a>
+                    </td>
+                </tr>
+            {% endif %}
+            {% empty %}
+                <tr class="odd"><td colspan="10" class="dataTables_empty">没有数据</td></tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <nav aria-label="Page navigation" class="nav0">
+        <ul class="pagination">
+            {% if d_list.has_previous %}
+                <li>
+                    <a href="?page={{ d_list.previous_page_number }}" aria-label="Previous">
+                        <span aria-hidden="true" >上一页</span>
+                    </a>
+                </li>
+            {% endif %}
+            {% for pg in d_list.paginator.page_range %}
+                {% if d_list.number == pg %}
+                    <li class="active" ><a href="?page={{ pg }}" class="pg">{{ pg }}</a></li>
+                {% else %}
+                    <li><a href="?page={{ pg }}" class="pg">{{ pg }}</a></li>
+                {% endif %}
+            {% endfor %}
+            {% if d_list.has_next %}
+                <li>
+                    <a href="?page={{ d_list.next_page_number }}" aria-label="Next">
+                        <span aria-label="ture" >下一页</span>
+                    </a>
+                </li>
+            {% endif %}
+        </ul>
+        <form action="{% url 'dormitory:stu_dorm_problem' %}" method="get">
+            <input type="number" name="page">
+            <input type="submit" value="跳转">
+        </form>
+    </nav>
+</div>
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="{% static "lib/jquery/1.9.1/jquery.min.js" %}"></script>
+<script type="text/javascript" src="{% static "lib/layer/2.4/layer.js" %}"></script>
+<script type="text/javascript" src="{% static "h-ui/js/H-ui.min.js" %}"></script>
+<script type="text/javascript" src="{% static "h-ui.admin/js/H-ui.admin.js" %}"></script> <!--/_footer 作为公共模版分离出去-->
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="{% static "lib/My97DatePicker/4.8/WdatePicker.js" %}"></script>
+<script type="text/javascript" src="{% static "lib/datatables/1.10.0/jquery.dataTables.min.js" %}"></script>
+<script type="text/javascript" src="{% static "lib/laypage/1.2/laypage.js" %}"></script>
+<script type="text/javascript">
+
+    {% if messages %}
+        {% for message in messages %}
+            $.Huimodalalert('{{ message }}', 1000);
+        {% endfor %}
+    {% endif %}
+
+    /*系统-问题-添加*/
+    function pro_add(title,url,w,h){
+        layer_show(title,url,w,h);
+    }
+    /*系统-问题-编辑*/
+    function pro_edit(title,url,w,h){
+        layer_show(title,url,w,h);
+    }
+    /*系统-问题-删除*/
+    function pro_del(obj,id){
+        layer.confirm('确认要删除吗？',function(index){
+            $.ajax({
+                type: 'GET',
+                url: '{% url 'dormitory:pro_del' %}?d_id='+id,
+                dataType: 'json',
+                success: function(data){
+                    if (data.status == 1){
+                       $(obj).parents("tr").remove();
+				        layer.msg('已删除!',{icon:1,time:1000});
+                            location.reload();
+                    }else {
+                        layer.msg("删除失败!!!",{icon:6,time:1000});
+                        location.reload();
+                    }
+                },
+                error:function(data) {
+
+                },
+            });
+        });
+    }
+
+    //已解决
+    function resolve(obj,id){
+        layer.confirm('确认已解决？',function(index){
+            $.ajax({
+                type: 'GET',
+                url : '{% url "dormitory:pro_resolve" %}?e=' + id,
+                dateType: 'json',
+                success: function(data){
+                    if (data.status == 1){
+                        $(obj).parents("tr").find(".td-manage").prepend('<a onClick="to_resolve(this,'+ id + ')" href="javascript:;" title="未解决" style="text-decoration:none"><i class="Hui-iconfont">&#xe615;</i></a>');
+                        $(obj).parents("tr").find(".td-status").html('<span class="label label-success radius">已启用</span>');
+                        $(obj).remove();
+                        layer.msg('已解决!', {icon: 6,time:1000}, function () {
+                            location.reload();
+                        });
+                    }
+                    else{
+                        layer.msg('失败', {icon: 2, time:1000});
+                    }
+                },
+                error: function (error) {
+                    console.log(error)
+                },
+            });
+        });
+    }
+
+    //待解决
+    function to_resolve(obj,id){
+        layer.confirm('确认未解决吗？',function(index){
+            //此处请求后台程序，下方是成功后的前台处理……
+            $.ajax({
+                type: 'GET',
+                url : '{% url "dormitory:pro_to_resolve" %}?e=' + id,
+                dateType: 'json',
+                success: function(data){
+                    if (data.status == 1){
+                        $(obj).parents("tr").find(".td-manage").prepend('<a onClick="admin_start(this,'+ id  +' )" href="javascript:;" title="已解决" style="text-decoration:none"><i class="Hui-iconfont">&#xe606;</i></a>');
+                        $(obj).parents("tr").find(".td-status").html('<span class="label label-default radius">未解决</span>');
+                        $(obj).remove();
+                        layer.msg('未解决!',{icon: 5,time:1000},function () {
+                            location.reload();
+                        });
+                    }
+                    else{
+                        layer.msg('失败', {icon: 2, time:1000}, );
+                    }
+                },
+                error: function (error) {
+                    console.log(error)
+                }
+            });
+
+        });
+    }
+
+</script>
+</body>
+</html>

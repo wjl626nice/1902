@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onclick="">
+
+	<div id="app">
+		<div>{{msg}}</div>
+		<!--通过v-model实现双向数据绑定-->
+		<input type="text" v-model="msg">
+	</div>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript">
+		/*
+			Vue的模板语法：
+			双向数据绑定
+		*/
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				msg: "Hello Vue!",
+			}
+		});
+
+	</script>
+</body>
+</html>

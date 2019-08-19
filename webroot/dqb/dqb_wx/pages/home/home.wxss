@@ -1,0 +1,202 @@
+/* pages/home/home.wxss */
+/*页面最大块  */
+page{
+  background:rgba(250,250,250,1);
+}
+.homePage{
+  /* padding: 30rpx 30rpx; */
+  padding-top:30rpx; 
+}
+/*个人信息  */
+.person_info{
+  margin-left: 30rpx;
+  height: 120rpx;
+  display: flex;
+}
+/*头像  */
+.avatar{
+  width: 120rpx;
+  height:120rpx;
+}
+.info{
+  margin-left: 27rpx;
+  display: flex;
+  justify-content: space-between;
+  width: 543rpx;
+}
+.info_left{
+  display: flex;
+   flex-direction: column; 
+   justify-content: space-between;
+}
+.info_right{
+  display: flex;
+  align-items: center;
+  color: #389E0D;
+  font-size: 30rpx;
+}
+.name{
+  color: #333333;
+  font-size: 34rpx;
+}
+.signature{
+  color:#999999;
+  font-size: 30rpx;
+}
+/*活动统计  */
+.active_statistics{
+  border-radius: 10rpx;
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+  width:690rpx;
+  height: 150rpx;
+  display: flex;
+  background: white;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow:0px 1px 3px 3px #eee;
+}
+.organization, .kicked, .totals{
+ height: 90rpx; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size:34rpx;
+  color: #333333;
+}
+.mine-active{
+  padding-left: 30rpx;
+  height: 102rpx;
+  font-size: 30rpx;
+  color:#333333;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 30rpx;
+ align-items: center;
+}
+.fliter-fun{
+  height: 80rpx;
+  background: white;
+  display: flex;
+  font-size: 30rpx;
+  color:#999999;
+  justify-content: space-around;
+  align-items: center;
+}
+.active-list{
+  border-radius: 10rpx;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  height: 190rpx;
+  background: white;
+  display: flex;
+  align-items: center;
+  box-shadow:0px 1px 3px 3px #eee;
+  position: relative;
+}
+.img-box{
+  display: flex;
+  width: 130rpx;
+  height: 130rpx;
+  margin-left: 30rpx;
+  background: #FFFFFF;
+}
+.img-box image{
+  width: 100%;
+  height: 100%;
+
+}
+
+.active-introduce{
+  width: 470rpx;
+  height: 130rpx;
+  margin-left: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.active-list-title{
+  font-size: 30rpx;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #333333;
+}
+.active-list-singure{
+  font-size: 20rpx;
+  width: 100%;
+  overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+  color: #999999;
+}
+.active-list-detail{
+  font-size: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.signUp{
+  color:#389E0D;
+}
+.leave{
+  color: #FF5050;
+}
+.arrow{
+  height: 30rpx;
+  width: 30rpx;
+}
+
+/* 授权弹窗 */
+.userAlert{
+   width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.4);
+    z-index: 100;
+}
+.userAlertBox{
+    width: 540rpx;
+    height: 170rpx;
+    position: absolute;
+    top:calc(50% - 134rpx);
+    left: calc(50% - 270rpx);
+    z-index: 110;
+    background-color: #fff;
+    border-radius: 20rpx;
+    border: 2rpx rgb(255, 255, 255) solid;
+    color: #000;
+    text-align: center;
+    padding: 36rpx 20rpx;
+}
+.userAlertBox text{
+  font-size: 32rpx;
+}
+.userAlert_button{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 47rpx;
+}
+.lookMore{
+  font-size: 32rpx;
+  color:#666666;
+  margin-top: 25rpx; 
+  text-align:center;
+}
+
+.img-low{
+  position: absolute;
+  right: -16rpx;
+  top: 0rpx;
+}
+
+.img-low image{
+  width:40rpx;
+  height: 40rpx;
+}

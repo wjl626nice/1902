@@ -1,0 +1,146 @@
+<!--pages/addActive/addActive.wxml-->
+<view class="active">
+<form  bindsubmit="formSubmit" >
+  <!--时间-->
+  <view class="time list"> 
+    <view class="lable">时间</view>
+    <picker class='time-picker' mode="multiSelector" bindchange="bindStartMultiPickerChange" bindtap='pickerTap' bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+    <view class="content">  
+      <view class="choose">
+         <view class="choose-left" style='display:{{display[0][0]}};'>
+         请选择时间
+         </view>  
+          <input name="time" value='{{startDate}}' class="choose-right input1" style='display:{{display[0][1]}};'/>
+          
+      </view>
+      <image src="../../assets/imgs/jiantou1.png"></image>
+      
+    </view> 
+    </picker>
+
+  </view>
+  <!--地点-->
+  <view class="place list" bindtap="getLocation"> 
+    <view class="lable">地点</view>
+    <view class="content">  
+      <view class="choose">
+         <view class="choose-left" style='display:{{display[1][0]}};'>
+         请选择地点
+         </view>  
+          <input name="place" value='{{address}}' class="choose-right input1" style='display:{{display[1][1]}};'/>   
+      </view>
+      <image src="/assets/imgs/jiantou1.png"></image>
+      
+    </view> 
+  </view>
+  <!--活动类型-->
+  <view class="type list"> 
+    <view class="lable">活动类型</view>
+    <picker bindchange="bindPickerType" value="{{index}}" range="{{arrayType}}" bindtap='activeType'>
+    <view class="content">  
+      <view class="choose">
+         <view class="choose-left" style='display:{{display[2][0]}};'>
+         请选择活动类型
+         </view>  
+          <input name="type" value='{{arrayType[index]}}' class="choose-right input1" style='display:{{display[2][1]}};'/>
+              
+      </view>
+      <image src="../../assets/imgs/jiantou1.png"></image>
+      
+    </view> </picker>
+  </view>
+  <!--赛制-->
+  <view class="rule list" > 
+    <view class="lable">赛制</view>
+     <picker bindchange="bindPickerRule" value="{{index1}}" range="{{arrayRule}}" bindtap='activeRule'>
+    <view class="content">  
+      <view class="choose">
+         <view class="choose-left" style='display:{{display[3][0]}};'>
+         请选择赛制
+         </view>  
+          <input value='{{arrayRule[index1]}}' name="rule" class="choose-right input1" style='display:{{display[3][1]}};'/>
+               
+      </view>
+      <image src="../../assets/imgs/jiantou1.png"></image>
+      
+    </view> </picker>
+  </view>
+  <!--人数下限-->
+  <view class="num-low list"> 
+    <view class="lable">人数下限</view>
+    <view class="content">
+
+      <input name="numLow"  class="input" type="number" placeholder="请输入人数下限" placeholder-style="color:#999999; font-size:32rpx;" value='{{numLow}}'/>
+    </view>
+  </view>
+  <!--人数上限-->
+  <view class="num-up list"> 
+    <view class="lable">人数上限</view>
+    <view class="content">
+      <input name="numUp" class="input" type="number" placeholder="请输入人数上限" placeholder-style="color:#999999; font-size:32rpx;"  value='{{numUp}}'/>
+    </view>
+  </view>
+  <!--限时报名-->
+  <view class="time-limit list"> 
+    <view class="lable">限时报名</view>
+    <view class="content">
+      <switch name="timeLimit"  bindchange="switchChange1"/>
+    </view>
+  </view>
+  <!--限时报名 活动前几小时-->
+  <view class="time-limit-time list" wx:if="{{status1==true}}"> 
+    <view class="lable">时间</view>
+    <view class="content" >
+
+      <input name="timeLimitTime" class="input" type="number" placeholder="活动开始前几小时" placeholder-style="color:#999999; font-size:32rpx;" value='{{timeLimitTime}}'/>
+    </view>
+  </view>
+  <!--限时取消-->
+  <view class="time-quit list"> 
+    <view class="lable">限时取消无责</view>
+    <view class="content">
+      <switch  name="timeQuit"   bindchange="switchChange2"/>
+    </view>
+  </view>
+  <!--限时取消 活动前几小时-->
+   <view class="time-quit-time list" wx:if="{{status2==true}}"> 
+    <view class="lable">时间</view>
+    <view class="content" >
+
+      <input name="timeQuitTime"  class="input" type="number" placeholder="活动开始前几小时" placeholder-style="color:#999999; font-size:32rpx;" value='{{timeQuitTime}}'/>
+    </view>
+  </view>
+  <!--费用-->
+  <view class="money list" wx:if="{{checkIsShow}}"> 
+    <view class="lable">费用</view>
+    <view class="content">
+       <input name="money" class="input" type="number" placeholder="请输入费用" placeholder-style="color:#999999; font-size:32rpx;" value='{{money}}'/>
+      
+    </view>
+  </view>
+ 
+   <view class="text"> 
+    <textarea name="text" class="textarea" placeholder="请输入活动公告" maxlength='100' placeholder-style="color:#999999; font-size:34rpx;"  bindinput='userInput' value='{{text}}'/>
+    <view class="flex-end">
+     <view class="counter">{{num}}/100</view>
+   </view></view>
+  
+   <view class="picture"> 
+    <view class="lable">上传图片</view>
+    <view name="picture" class='updata-img'>
+  <block wx:for="{{items}}" wx:key="{{index}}"> 
+  <view class='imgs'>
+    <image class='imgs' src="{{item}}"></image>
+    <image class="img-low" src="../../assets/imgs/xxx.png" bindtap='deleteImg' data-index="{{index}}"></image>  
+  </view>
+  </block>
+  <image class='imgs add-image' src='/assets/imgs/add-img@3x.png' catchtap='Uploadimg'></image>
+ 
+</view>
+  </view>
+  <view class='button' bindtap='bindButton'>
+  <button  class='button1' formType="submit">提交</button>
+  </view>
+ 
+</form>
+</view>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onclick="">
+
+	<div id="app">
+		<form>
+			<div>
+				<span>用户名：</span><span><input type="text" name="username" v-model="username" v-on:keyup.delete="clearCotent"></span>
+			</div>
+			<div>
+				<span>密码：</span><span><input type="password" name="pwd" v-model="pwd" v-on:keyup.enter="submitHandler"></span>
+			</div>
+			<div>
+				<button type="button" v-on:click="submitHandler">登录</button>
+			</div>
+		</form>
+	</div>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript">
+		/*
+			Vue的模板语法：
+			按键修饰符
+		*/
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				username: '',
+				pwd: ''
+			},
+			methods: {
+				// 提交事件
+				submitHandler: function(event){
+					console.log(event)
+					// 打印用户名和 密码
+					console.log(this.username,this.pwd);
+					// 可以发起ajax请求
+				},
+				clearCotent: function(){
+					// 设置用户名为空
+					this.username = ''
+				}
+			}
+		});
+
+	</script>
+</body>
+</html>

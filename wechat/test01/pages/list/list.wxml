@@ -1,0 +1,10 @@
+<!--pages/list/list.wxml-->
+<view>这是列表页</view>
+-----------组件内容start----------
+<component-tag-name class="test" id="test" new-name="{{'aaaa'}}" number="{{num}}" bind:myevent="getNumber">
+<view slot="aa">这是要放入到test组件插槽的内容aa</view>
+<view slot="bb">这是要放入到test组件插槽的内容bb</view>
+</component-tag-name>
+------------组件内容end--------
+<view bindtap="changeAb">点击改变名字: {{ab}}</view>
+<view bindtap="changeNum">点击改变页面num值</view>

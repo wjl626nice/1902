@@ -1,0 +1,75 @@
+/* pages/leaveWord/leaveWord.wxss */
+page{
+  background-color: #FAFAFA
+}
+.head{
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+.head-text{
+  margin-left: 30rpx;
+  font-size: 34rpx;
+}
+textarea{
+  font-size: 30rpx;
+}
+.button{
+  height: 70rpx;
+  width: 150rpx;
+  margin: 30rpx auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rpx;
+  color: white;
+  background-color: #389E0D;
+  border-radius: 6rpx;
+}
+.text{
+  background-color: white;
+  position:relative;
+  height: 300rpx;
+  padding:0 30rpx 30rpx 30rpx;
+}
+.text>textarea{
+  border:10rpx solid #FAFAFA;
+  height:220rpx;
+  width: 670rpx;
+  background-color: #FAFAFA;
+}
+.placeholder{
+  font-size: 30rpx;
+  padding:10rpx;
+}
+.text-index{
+  font-size: 24rpx;
+  height: 24rpx;
+  position: absolute;
+  bottom:40rpx;
+  right:40rpx;
+}
+.updata-img{
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  width:720rpx;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+}
+.imgs{
+  position:relative; 
+  height: 210rpx;
+  width: 210rpx;
+  margin-right: 30rpx;
+  margin-bottom: 20rpx;
+}
+.img-low{
+  width: 32rpx;
+  height: 32rpx;
+  position: absolute;
+  right: -16rpx;
+  top: -16rpx;
+}

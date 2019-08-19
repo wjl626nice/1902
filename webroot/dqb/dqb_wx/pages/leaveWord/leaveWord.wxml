@@ -1,0 +1,26 @@
+<!--pages/leaveWord/leaveWord.wxml-->
+<form bindsubmit="formSubmit" >
+<view class='head'>
+  <text class='head-text'>留言</text>
+  <button class='button' formType="submit">发布</button>
+</view>
+<view class='text'>
+  <textarea  name="text" maxlength='80' placeholder="用传图新功能，记录活动精彩瞬间" placeholder-class='placeholder'  bindinput='textInput'></textarea>
+  <view class='text-index'>{{num}}/80</view>
+</view>
+
+<view class='head'>
+  <text class='head-text'>上传图片</text>
+</view>
+<!-- 上传图像 demo-->
+<view class='updata-img'>
+  <block wx:for="{{items}}" wx:key="{{index}}"> 
+  <view class='imgs'>
+    <image class='imgs' src="{{item}}"></image>
+    <image class="img-low" src="../../assets/imgs/xxx.png" bindtap='deleteImg'></image>  
+  </view>
+  </block>
+  <image class='imgs' src='/assets/imgs/add-img@3x.png' catchtap='Uploadimg'></image>
+ 
+</view>
+</form>

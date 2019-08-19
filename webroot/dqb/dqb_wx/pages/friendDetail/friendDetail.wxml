@@ -1,0 +1,54 @@
+<!--pages/friendDetail/friendDetail.wxml-->
+<view class='top'>
+  <view class='top-head'>
+    <image src='{{user.avatar}}' class='top-head-img'></image>
+    <view class='top-head-right'>
+      <text class='right-text-top'>{{user.nickname}}</text>
+      <text class='right-text-bottom' wx:if='{{user.profession!=""}}'>{{user.age}}后 | {{user.profession}}</text>
+      <text class='right-text-bottom' wx:else>{{user.age}}后 | 暂无行业</text>
+    </view>
+    <view class='top-head-tip' bindtap='tipEdit' wx:if="{{isgroup}}">{{group}}</view>
+  </view>
+  <view class='top-foot'>
+    <view class='top-foot-text'>
+      <text style=' width: 150rpx;'>踢球总次数</text>
+      <text style='color:#333333;margin-left:30rpx; '>{{football}}次</text>
+    </view>
+    <view class='top-foot-text' style='margin-top:10rpx'>
+      <text style=' width: 150rpx;'>球友总数</text>
+      <text style='color:#333333;margin-left:30rpx; '>{{friend}}人</text>
+    </view>
+  </view>
+</view>
+<view class='mid-text'>TA和我</view>
+<view class='bottom'>
+  <view class='bottom-line'>
+    <text class='line-left'>共同球友</text>
+    <text class='line-right'>{{together}}人</text>
+  </view>
+    <view class='bottom-line' style='border-top:#EAEAEA 2rpx solid;'>
+    <text class='line-left' style='margin-top: 20rpx;margin-bottom: 30rpx;'>一起踢过球</text>
+    <text class='line-right' style='margin-top: 20rpx;margin-bottom: 30rpx;'>{{toball}}次</text>
+  </view>
+</view>
+<view class="button" wx:if="{{isgroup}}" bindtap='deleteFriend'>
+<button>已是好友(点击解除)</button>
+</view>
+
+
+
+<!-- 遮罩蒙版 -->
+<view class="mask" wx:if="{{isShow}}"></view> 
+
+<!--  -->
+<view id="confirm_view" wx:if="{{isShow}}">
+  <view class='person'>
+    <text>请输入分组名:</text> 
+  </view>
+  <input class='money-input' placeholder-style='font-size:30rpx;' value="{{xgroup}}" bindinput='changeInputVal' ></input>
+
+  <view class='confirm_bt'>
+      <button class='zh_bt' style='background:white;color:#389E0D' bindtap='cancelButton'>取消</button>
+      <button class='zh_bt' style='background:#389E0D;color:white' bindtap='confirmButton'>确认</button>
+  </view>
+</view>  

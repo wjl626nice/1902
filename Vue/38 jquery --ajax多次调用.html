@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquery--ajax</title>
+</head>
+<body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+	/*
+		前后端交互 -- 异步编程与Promise
+	*/
+	
+	$.ajax({
+		url: 'http://127.0.0.1:5000/firstTest1',
+		success: function(data){
+			console.log(data);
+			$.ajax({
+				url: 'http://127.0.0.1:5000/firstTest2',
+				success: function(data){
+					console.log(data);
+					$.ajax({
+						url: 'http://127.0.0.1:5000/firstTest3',
+						success: function(data){
+							console.log(data)
+						}
+					});
+				}
+			});
+		}
+	});
+	
+</script>
+</body>
+</html>

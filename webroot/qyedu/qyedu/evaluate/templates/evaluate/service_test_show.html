@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            li{
+                list-style: decimal;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="{% url 'evaluate:evaluate_service_test_submit' %}" method="post">
+            {% csrf_token %}
+            <ul>
+                <h2>{{ question_list.get_test_category_display }}----{{ question_list.review_test.test_name }}</h2>
+                {% for type in type_list1 %}
+                    <li>
+                        <h4>{{ type.test_question_content }}</h4>
+                        {% for answer in type.a_question.all %}
+                            <input type="radio" value="{{ answer }}" id="answer{{ answer.id }}" name="answer_{{ type.id }}">
+                            <label for="answer{{ answer.id }}">{{ answer }}</label>
+                        {% endfor %}
+                    </li>
+                {% endfor %}
+                {% for type in type_list2 %}
+                    <li>
+                        <h4>{{ type.test_question_content }}</h4>
+                        {% for answer in type.a_question.all %}
+                            <input type="radio" value="{{ answer }}" id="answer{{ answer.id }}" name="answer_{{ type.id }}">
+                            <label for="answer{{ answer.id }}">{{ answer }}</label>
+                        {% endfor %}
+                    </li>
+                {% endfor %}
+                {% for type in type_list3 %}
+                    <li>
+                        <h4>{{ type.test_question_content }}</h4>
+                        {% for answer in type.a_question.all %}
+                            <textarea name="answer_{{ type.id }}" id="" cols="30" rows="10"></textarea>
+                        {% endfor %}
+                    </li>
+                {% endfor %}
+            </ul>
+            <input type="submit" value="提交">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<view wx:if='{{list.length!=0}}'>
+<view wx:if='{{isuser==true}}'>
+<block wx:for="{{list}}" wx:key="{{index}}">
+<view class="list" bindtap='friendDetail' id="{{index}}">
+ <image  src="{{item.member_b_id.avatar}}"></image>
+ <view class="introduce">
+ <view class="name">{{item.member_b_id.nickname}}<view class="relation">{{item.group}}</view></view>
+ <text class="relative">从未和TA踢过球</text>
+ </view>
+</view>
+</block>
+</view>
+<view wx:else>
+<block wx:for="{{list}}" wx:key="{{index}}">
+<view class="list" bindtap='friendDetailUser' id="{{index}}">
+ <image  src="{{item.avatar}}"></image>
+ <view class="introduce">
+ <view class="name">{{item.nickname}}</view>
+ <text class="relative">和TA踢过球</text>
+ </view>
+</view>
+</block>
+</view>
+</view>
+<view class="lookMore" wx:else>
+<text>暂无数据</text>
+</view>
+
+
+

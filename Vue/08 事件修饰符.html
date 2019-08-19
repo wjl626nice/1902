@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onclick="">
+
+	<div id="app">
+		<div v-on:click="changeNum">
+			<div>{{num}}</div>
+			<!--Vue阻止冒泡-->
+			<button type="button" @click.stop="handler">点击2</button>
+		</div>
+		<a href="http://www.baidu.com" v-on:click.prevent="handler2">跳转</a>
+	</div>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript">
+		/*
+			Vue的模板语法：
+			事件修饰符
+			阻止冒泡 v-on:click.stop
+			阻止默认行文 v-on:click.prevent
+		*/
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				num: "",
+			},
+			methods: {
+				// event 代表当前点击事件的对象。如果事件函数不传参，默认声明
+				// 的第一个函数参数就是事件对象。
+				handler: function(event){
+					this.num++;
+					// 阻止事件冒泡
+					// event.stopPropagation()
+				},
+				changeNum: function(){
+					this.num *= 2
+				},
+				handler2: function(event){
+					// 阻止默认行为
+					// event.preventDefault()
+				}
+			}
+		});
+
+	</script>
+</body>
+</html>

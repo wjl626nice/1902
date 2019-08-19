@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+<body onclick="">
+
+	<div id="app">
+		<alert-box :list="list">
+			<template slot-scope="slotProps">
+				<span :style="{color:slotProps.info}">{{slotProps.info}}</span>
+			</template>
+		</alert-box>
+	</div>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript">
+		/*
+			Vue的模板语法：
+			命名插槽基本使用
+		*/
+		Vue.component('alert-box',{
+			props: ['list'],
+			data: function(){
+				return {
+					
+				}
+			},
+			template: `
+				<div>
+					<ul>
+						<li :key="index" v-for='(item,index) in list'>
+							<slot :info='item'>{{item}}</slot>
+						</li>
+					</ul>
+				</div>
+			`
+		});
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				list: ['blue', 'green', 'pink']
+			}
+		});
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!--pages/addFriend/addFriend.wxml-->
+<block wx:for="{{list}}" wx:key="{{index}}" >
+<view class="list">
+  <view class="list-left">
+    <view class="img">
+      <image src="{{item.applicant.avatar}}"></image>
+    </view>
+    <view class="introduce">
+    <view class="name">{{item.applicant.nickname}}</view>
+    <view class="play">共同踢球0次，共同好友0人</view>
+    <view class="mess">{{item.content}}</view>
+    </view>
+  </view>
+  
+  <view class="list-right" style='background: {{length[index]?"#FFFFFF":"#389E0D"}}; color:{{length[index]?"#999999":"#FFFFF"}}' bindtap="changestatus" id="{{index}}" data-sqid="{{item.id}}">
+    <view class="{{length[index]?'tbox':'box'}}">{{length[index]?"已添加":"添加"}}</view>
+  </view>
+</view>
+</block>

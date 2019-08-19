@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.books{
+			width: 600px;
+			text-align: center;
+			margin: auto;
+		}
+		.books table{
+			width: 100%;
+			border-collapse: collapse;
+		}
+		.books table th,td{
+			border: 1px dashed orange;
+			height: 35px;
+			line-height: 35px;
+		}
+		.books table th{
+			background-color: orange;
+			border: 1px solid orange;
+		}
+		.books div{
+			height: 35px;
+			line-height: 35px;
+			width: 100%;
+			background-color: orange;
+			border-bottom: 1px blue solid;
+		}
+
+	</style>
+</head>
+<body onclick="">
+
+	<div id="app">
+		<div class="books">
+			<div>
+				<span>编号：</span><input type="text" :disabled="isFlag" v-model="id" v-focus>
+				<span>名称：</span><input type="text" v-model.lazy="title">
+				<button @click="submit" :disabled="flagSubmit">提交</button>
+			</div>
+			<div>
+				<span>书的总数：{{total}}本</span>
+			</div>
+			<table>
+				<thead>
+					<tr>
+						<th>编号</th>
+						<th>名称</th>
+						<th>时间</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr :key="item.id" v-for="item in books">
+						<td>{{item.id}}</td>
+						<td>{{item.title}}</td>
+						<td>{{item.date | format('yyyy-MM-dd hh:mm:ss')}}</td>
+						<td>
+							<a href="" @click.prevent='edit(item.id)'>修改</a>
+							<span>|</span>
+							<a href="" @click.prevent="delBook(item.id)">删除</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>	
+		</div>
+	</div>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript">
+		/*
+			Vue的模板语法：
+			生命周期函数
+		*/
+		// import {dateFormat as aaa} from './js/common.js'
+		Vue.directive('focus', {
+			inserted: function(el){
+				el.focus();
+			}
+		});
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				id: '',
+				title: '',
+				// 开始编号输入框是否可以输入
+				isFlag: false,
+				// 控制按钮是否可以点击
+				flagSubmit: false,
+				books: []
+			},
+			methods: {
+				submit: function(){
+					// isFlag true修改，false 添加
+					if(this.isFlag){
+						this.books.some((item) => {
+							// 循环遍历 要修改的书
+							if(item.id ==  this.id){
+								this.isFlag = false;
+								// 修改书名
+								item.title = this.title;
+								// 结束some 循环遍历
+								return true
+							}
+						});
+					}else{
+						// 新书
+						var book = {
+							id: this.id,
+							title: this.title,
+							date: ''
+						};
+						// 向列表中添加新的数据
+						this.books.push(book);
+						
+					}
+					// 清空input值
+					this.id = '';
+					this.title = '';
+				},
+				edit: function(id){
+					this.isFlag = true;
+					console.log(id);
+					// 根据书的id查询书的信息
+					var book = this.books.filter(function(item){
+						// if(item.id == id){
+						// 	return true;
+						// }
+						return item.id == id;
+					});
+					// 把获取到的数据填充到页面中
+					this.id = book[0].id;
+					this.title = book[0].title;
+					// console.log(book)
+				},
+				delBook: function(id){
+					// 获取要删除书的索引
+					// var index = this.books.findIndex(function(item){
+					// 	return item.id == id
+					// });
+					// // 删除数组中指定的元素
+					// this.books.splice(index, 1);
+
+					// 方法2  通过filter过滤的方式实现删除
+					this.books = this.books.filter(function(item){
+						return item.id != id
+					});
+				}
+			},
+			filters: {
+				format: function(date, format='yyyy-MM-dd'){
+					function dateFormat(date, format) {
+					    if (typeof date === "string") {
+					        var mts = date.match(/(\/Date\((\d+)\)\/)/);
+					        if (mts && mts.length >= 3) {
+					            date = parseInt(mts[2]);
+					        }
+					    }
+					    date = new Date(date);
+					    if (!date || date.toUTCString() == "Invalid Date") {
+					        return "";
+					    }
+					    var map = {
+					        "M": date.getMonth() + 1, //月份 
+					        "d": date.getDate(), //日 
+					        "h": date.getHours(), //小时 
+					        "m": date.getMinutes(), //分 
+					        "s": date.getSeconds(), //秒 
+					        "q": Math.floor((date.getMonth() + 3) / 3), //季度 
+					        "S": date.getMilliseconds() //毫秒 
+					    };
+
+					    format = format.replace(/([yMdhmsqS])+/g, function(all, t) {
+					        var v = map[t];
+					        if (v !== undefined) {
+					            if (all.length > 1) {
+					                v = '0' + v;
+					                v = v.substr(v.length - 2);
+					            }
+					            return v;
+					        } else if (t === 'y') {
+					            return (date.getFullYear() + '').substr(4 - all.length);
+					        }
+					        return all;
+					    });
+					    return format;
+					}
+					return dateFormat(date, format)
+				}
+			},
+			computed: {
+				total: function(){
+					return this.books.length;
+				}
+			},
+			watch: {
+				title: function(title){
+					// 验证图书是否已经添加过了
+					var flag = this.books.some(function(item){
+						return item.title == title;
+					});
+					if(flag){
+						this.flagSubmit = true;
+					}else{
+						this.flagSubmit = false;
+					}
+				}
+			},
+			mounted: function(){
+				// 该生命周期钩子函数被触发时，模板已经可以被使用，data里的数据对象已经被创建，也可以操作了。那么我们可以发起api接口请求获取到所有书的信息。然后把信息填充到 data.books中。
+
+				var  data = [
+					{id:1,title:'三国演义', date: 1525070197000},
+					{id:2,title:'水浒传', date: 1568070197000},
+					{id:3,title:'封神榜', date: 1562070197000},
+					{id:4,title:'西游记', date: 1569070197000},
+					{id:5,title:'坏蛋是怎么练成的', date: 1565270197000}
+				];
+				this.books = data;
+			}
+		});
+
+	</script>
+</body>
+</html>

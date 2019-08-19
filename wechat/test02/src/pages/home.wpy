@@ -1,0 +1,32 @@
+<template>
+  <view>首页</view>
+  <text>{{ab}}</text>
+  <input @input="inputHandler" placeholder="{{ab}}" />
+</template>
+
+<script>
+import wepy from 'wepy'
+export default class home extends wepy.page {
+  config = {}
+  data = {
+    ab: ''
+  }
+  methods = {
+    inputHandler(e) {
+      console.log(e)
+      // 获取输入框的值
+      this.ab = e.detail.value
+    }
+  }
+  onload() {}
+}
+</script>
+
+<style lang="less">
+input {
+  border: 1px solid #999999;
+  margin: 10rpx;
+  padding: 10rpx;
+  border-radius: 10rpx;
+}
+</style>

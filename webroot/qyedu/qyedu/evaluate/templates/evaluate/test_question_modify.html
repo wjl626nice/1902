@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <!--[if lt IE 9]>
+<script type="text/javascript" src="lib/html5shiv.js"></script>
+<script type="text/javascript" src="lib/respond.min.js"></script>
+<![endif]-->
+    <link rel="stylesheet" type="text/css" href="{% static "h-ui/css/H-ui.min.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "h-ui.admin/css/H-ui.admin.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "lib/Hui-iconfont/1.0.8/iconfont.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "h-ui.admin/skin/default/skin.css" %}" id="skin" />
+    <link rel="stylesheet" type="text/css" href="{% static "h-ui.admin/css/style.css" %}" />
+    <!--[if IE 6]>
+<script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+    <title>添加问题 - 问题管理 - H-ui.admin v3.1</title>
+    <meta name="keywords" content="H-ui.admin v3.1,H-ui网站后台模版,后台模版下载,后台管理系统模版,HTML后台模版下载">
+    <meta name="description" content="H-ui.admin v3.1，是一款由国人开发的轻量级扁平化网站后台模板，完全免费开源的网站后台管理系统模版，适合中小型CMS后台系统。">
+</head>
+<body>
+<article class="page-container">
+    <form class="form form-horizontal" id="form-admin-add" method="post" action="{% url 'evaluate:evaluate_test_question_modify_check' %}?t_id={{ test.id }}">
+        {% csrf_token %}
+        <div id="tab-category" class="HuiTab">
+            <div class="tabBar cl">
+                <span>基本设置</span>
+            </div>
+
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-3">
+                        <span class="c-red">*</span>
+                        测试名称：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+						<span class="select-box">
+						<select class="select" id="test_id" name="test_id">
+                            {% for t in test_list %}
+                                <option value="{{ t.id }}" {% if test.review_test.id == t.id %} selected{% endif %} >
+                                    &nbsp;&nbsp;{{ t.test_name }}
+                                </option>
+                            {% endfor %}
+						</select>
+						</span>
+                    </div>
+                    <div class="col-3">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-3">
+                        <span class="c-red">*</span>
+                        测试类型：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+						<span class="select-box">
+						<select class="select" id="test_type_id" name="test_type_id">
+                                <option value="1" {% if test.test_category == 1 %} selected{% endif %}>&nbsp;&nbsp;讲师评测</option>
+                                <option value="2" {% if test.test_category == 2 %} selected{% endif %}> &nbsp;&nbsp;班主任评测</option>
+                                <option value="3" {% if test.test_category == 3 %} selected{% endif %}>&nbsp;&nbsp;后勤评测</option>
+                                <option value="4" {% if test.test_category == 4 %} selected{% endif %}>&nbsp;&nbsp;职业素养测评</option>
+						</select>
+						</span>
+                    </div>
+                    <div class="col-3">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-3">
+                        <span class="c-red">*</span>
+                        题目类型：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+						<span class="select-box">
+						<select class="select" id="question_type_id" name="question_type_id">
+                                <option value="1" {% if test.test_question_category == 1 %} selected{% endif %}>&nbsp;&nbsp;单选题</option>
+                                <option value="2" {% if test.test_question_category == 2 %} selected{% endif %}>&nbsp;&nbsp;是非题</option>
+                                <option value="3" {% if test.test_question_category == 3 %} selected{% endif %}>&nbsp;&nbsp;主观题</option>
+						</select>
+						</span>
+                    </div>
+                    <div class="col-3">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-3">
+                        <span class="c-red">*</span>
+                        考试内容：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        <input type="text" class="input-text" value="{{ test.test_question_content }}" placeholder="输入考试题目内容" id="test_content" name="test_content" required>
+                    </div>
+                    <div class="col-3">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-3">
+                        <span class="c-red">*</span>
+                        最高分数：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        <input type="text" value="{{ test.max_score }}" class="input-text" placeholder="输入该题最高分数" id="test_score" name="test_score" required>
+                    </div>
+                    <div class="col-3">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <div class="col-9 col-offset-3">
+                        <input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+                    </div>
+                </div>
+            </div>
+
+
+    </form>
+</article>
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="{% static "lib/jquery/1.9.1/jquery.min.js" %}"></script>
+<script type="text/javascript" src="{% static "lib/layer/2.4/layer.js" %}"></script>
+<script type="text/javascript" src="{% static "h-ui/js/H-ui.min.js" %}"></script>
+<script type="text/javascript" src="{% static "h-ui.admin/js/H-ui.admin.js" %}"></script> <!--/_footer 作为公共模版分离出去-->
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="{% static "lib/jquery.validation/1.14.0/jquery.validate.js" %}"></script>
+<script type="text/javascript" src="{% static "lib/jquery.validation/1.14.0/validate-methods.js" %}"></script>
+<script type="text/javascript" src="{% static "lib/jquery.validation/1.14.0/messages_zh.js" %}"></script>
+<script type="text/javascript">
+    {% if messages %}
+        {% for message in messages %}
+            $.Huimodalalert('{{ message }}', 1000);
+        {% endfor %}
+    {% endif %}
+    $(function(){
+        $('.skin-minimal input').iCheck({
+            checkboxClass: 'icheckbox-blue',
+            radioClass: 'iradio-blue',
+            increaseArea: '20%'
+        });
+
+        $("#form-admin-add").validate({
+            rules:{
+                adminName:{
+                    required:true,
+                    minlength:4,
+                    maxlength:16
+                },
+                password:{
+                    required:true,
+                },
+                password2:{
+                    required:true,
+                    equalTo: "#password"
+                },
+                sex:{
+                    required:true,
+                },
+                mobile_number:{
+                    required:true,
+                    isPhone:true,
+                },
+                email:{
+                    required:true,
+                    email:true,
+                },
+                id_card: {
+                    required: true,
+                },
+                home_address: {
+                    required:true,
+                },
+                realname: {
+                    required: true,
+                },
+                birthday: {
+                    required: true,
+                },
+                edu_level: {
+                    required: true,
+                },
+                adminRole:{
+                    required:true,
+                },
+            },
+            onkeyup:false,
+            focusCleanup:true,
+            success:"valid",
+            {#submitHandler:function(form){#}
+            {#	$(form).ajaxSubmit({#}
+            {#		type: 'post',#}
+            {#		url: "{% url 'admin' %}" ,#}
+            {#		success: function(data){#}
+            {#			layer.msg('添加成功!',{icon:1,time:1000});#}
+            {#		},#}
+            {#        error: function(XmlHttpRequest, textStatus, errorThrown){#}
+            {#			layer.msg('error!',{icon:1,time:1000});#}
+            {#		}#}
+            {#	});#}
+            {#	var index = parent.layer.getFrameIndex(window.name);#}
+            {#	parent.$('.btn-refresh').click();#}
+            {#	parent.layer.close(index);#}
+        });
+    });
+</script>
+<!--/请在上方写此页面业务相关的脚本-->
+</body>
+</html>

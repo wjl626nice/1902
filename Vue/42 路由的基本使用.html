@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>路由基本使用</title>
+</head>
+
+<body>
+    <div id="app">
+        <!--router-link 是vue中提供的标签，默认会被渲染为a标签-->
+        <!--to 属性会被渲染为 href属性-->
+        <!--to 属性的值被渲染为 包含#开头的hash地址-->
+        <router-link to="/user">User</router-link>
+        <!--<a href="#/user">User</a>-->
+        <router-link to="/register">Register</router-link>
+        <!--路由填充位（也叫路由占位符）-->
+        <!--将来通过路由规则匹配到的组件，将会被渲染到 router-view 所在的位置-->
+        <router-view></router-view>
+    </div>
+    <script type="text/javascript" src="js/vue.js"></script>
+    <script type="text/javascript" src="js/vue-router.js"></script>
+    <script type="text/javascript">
+        const User = {
+            template: '<div>User</div>'
+        }
+        const Register = {
+                template: '<div>Register</div>'
+            }
+            // 创建路由实例对象
+        const router = new VueRouter({
+            // routes 是路由规则数组
+            routes: [
+                // 每个路由规则都是一个配置对象，其中至少包含 path和 component两个属性：
+                // path  表示当前路由规则匹配的hash地址
+                {
+                    path: '/',
+                    redirect: '/user'
+                }, {
+                    path: '/user',
+                    component: User
+                }, {
+                    path: '/register',
+                    component: Register
+                },
+            ]
+        });
+        var vm = new Vue({
+            el: '#app',
+            data: {},
+            // 为了让路由规则生效，必须把路由对象挂载到vue实例对象上。
+            router
+        });
+    </script>
+</body>
+
+</html>

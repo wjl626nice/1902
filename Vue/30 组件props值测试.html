@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+<body onclick="">
+
+	<div id="app">
+		<div>{{pmsg}}</div>
+		<menu-item :str="ptitle" :num='12' :bool="true" :arr="parr" :obj="pobj"></menu-item>
+	</div>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript">
+		/*
+			Vue的模板语法：
+			父组件向子组件传值
+		*/
+		Vue.component('menu-item',{
+			props: ['str','num','bool','arr','obj'],
+			data: function(){
+				return {
+					msg: '子组件内容'
+				}
+			},
+			template: `
+				<div>
+					{{msg}}
+					<div>{{str + '----' + typeof str}}</div>
+					<div>{{num + 12}}</div>
+					<div>{{num + '----' + typeof num}}</div>
+					<div>{{bool + '----' + typeof bool}}</div>
+					<ul>
+						<li :key="index" v-for="(item,index) in arr">{{item}}</li>
+					</ul>
+					<div>{{obj.name}}</div>
+					<div>{{obj.age}}</div>
+					<button @click="handle"></button>
+				</div>
+			`,
+			methods: {
+				handle(){
+					this.num = 1
+				}
+			}
+		});
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				pmsg: '父组件内容',
+				ptitle: '父组件内容',
+				parr: [1,2,3,4,5],
+				pobj: {
+					name: '张恒',
+					age: 12
+				}
+			},
+			methods: {
+			}
+		});
+
+	</script>
+</body>
+</html>

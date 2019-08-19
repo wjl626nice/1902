@@ -1,0 +1,70 @@
+/* pages/historyActive/historyActive.wxss */
+page{
+  margin-bottom: 30rpx;
+}
+.active-list{
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  height: 190rpx;
+  background: white;
+  display: flex;
+  align-items: center;
+  box-shadow:0px 1px 3px 3px #eee;
+}
+
+.active-introduce{
+  width: 630rpx;
+  height: 130rpx;
+  margin-left: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.active-list-title{
+  font-size: 30rpx;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #333333;
+}
+.active-list-singure{
+  font-size: 20rpx;
+  width: 100%;
+  overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+  color: #999999;
+}
+.active-list-detail{
+  font-size: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.detail-left{
+  display: flex;
+  flex-direction: row;
+}
+.updata_img{
+  height: 28rpx;
+  padding: 2rpx 16rpx; 
+  border-radius: 20rpx;
+  display: flex;
+  align-items: center;
+  background-color: #c0ddab;
+  color: #4e9b00;
+  margin-left: 30rpx;
+}
+
+.signUp{
+  color: #38ABFF;
+}
+
+.lookMore{
+  font-size: 32rpx;
+  color:#666666;
+  margin-top: 25rpx; 
+  text-align:center;
+}

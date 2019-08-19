@@ -1,0 +1,148 @@
+/* pages/addActive/addActive.wxss */
+
+.list{
+  display: flex;
+  justify-content: space-between;
+  height: 104rpx;
+  font-size:34rpx;
+  width: 100%;
+  border-bottom: 2rpx #eee solid;
+}
+.list .lable{
+  margin-left: 32rpx;
+  display: flex;
+  align-items: center;
+}
+picker{
+   display: flex;
+  align-items: center;
+}
+.content{
+  font-size: 32rpx;
+  color: #999999;
+  display: flex;
+  align-items: center;
+  margin-right: 32rpx;
+  flex-direction: row;
+}
+.content .choose{
+  display: inline-block;
+}
+.choose-left{
+  color: #999999;
+  
+}
+.choose-right{
+  color: black;
+}
+
+.content image{
+  height:26rpx;
+  width: 16rpx;
+  display: flex;
+  align-items: center;
+  margin-left: 20rpx;
+  
+} 
+.input1{
+  text-align:right;
+   width: 500rpx;
+}
+
+.content .input{
+  width: 500rpx;
+  color: black;
+  text-align:right;
+}
+
+textarea{
+  margin: 24rpx 32rpx 7rpx;
+  height: 130rpx;
+  width: 686rpx;
+}
+.text .flex-end{
+  color: #999999;
+  font-size: 34rpx;
+  display: flex;
+  justify-content:flex-end;
+  margin: 0 32rpx 24rpx 0;
+}
+.picture .lable{
+  font-size: 34rpx;
+  margin: 10rpx 20rpx;
+}
+.button{
+  height:94rpx; 
+  width: 686rpx;
+  margin: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button1{
+  font-size: 36rpx;
+  height:100%;
+  width:100%;                   background-color:#389E0D;
+ color:white;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+/*对话框 */
+.commodity_attr_box {
+  height: 300rpx;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background: #fff;
+  padding-top: 20rpx;
+}
+
+.updata-img{
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  width:720rpx;
+  margin-left: 30rpx;
+  margin-top: 40rpx;
+}
+.imgs{
+  position:relative; 
+  height: 209rpx;
+  width: 209rpx;
+  margin-right: 30rpx;
+  margin-bottom: 20rpx;
+}
+.img-low{
+  width: 32rpx;
+  height: 32rpx;
+  position: absolute;
+  right: -16rpx;
+  top: -16rpx;
+}
+
+.add-image{
+  border: dashed 0.1rpx #999999;
+
+}
+
+
+/**margin: 24rpx 32rpx 7rpx;
+  font-size: 34rpx;
+  height: 130rpx;
+  width: 686rpx;**/

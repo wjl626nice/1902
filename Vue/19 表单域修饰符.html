@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		
+		
+	</style>
+</head>
+<body onclick="">
+
+	<div id="app">
+		<input type="number" v-model.number="age">
+		<input type="text" v-model.trim="test">
+		<input type="text" v-model.lazy="uname">
+		{{uname}}
+		<button @click="submit">提交</button>
+	</div>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript">
+		/*
+			Vue的模板语法：
+			表单操作
+		*/
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				age: '',
+				test: '',
+				uname: ''
+			},
+			methods: {
+				submit(){
+					console.log(this.age + 1, typeof this.age)
+					console.log(this.test.length)
+				},
+				handle(event){
+					console.log(event.target.value)
+				}
+			}
+		});
+
+	</script>
+</body>
+</html>

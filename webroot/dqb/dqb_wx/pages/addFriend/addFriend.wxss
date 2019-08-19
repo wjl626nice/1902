@@ -1,0 +1,57 @@
+.list{
+  display: flex;
+  justify-content:space-between;
+  height: 178rpx;
+  margin-bottom: 2rpx;
+
+}
+.list-left{
+  display: flex;
+  direction: row;
+  margin: 30rpx 0 0 30rpx;
+
+}
+.introduce{
+  margin-left: 30rpx;
+
+}
+image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius:6rpx;
+}
+.name{
+  font-size: 30rpx;
+  color: #333333;
+  margin-bottom: 10rpx;
+}
+.img image{
+
+}
+.play{
+  font-size: 20rpx;
+  color: #BBBBBB;
+  margin-bottom: 10rpx;
+}
+.mess{
+  font-size: 20rpx;
+  color: #333333;
+}
+.list-right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 104rpx;
+  height: 54rpx;
+  margin-top: 62rpx;
+  margin-right: 30rpx;
+  color: #FFFFFF;
+}
+.box{
+  font-size: 28rpx;
+}
+.tbox{
+  font-size: 28rpx;
+}
+
+

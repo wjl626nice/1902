@@ -1,0 +1,20 @@
+后端：
+django+xadmin
+系统设置、幻灯片管理、商品管理、栏目管理、文章管理、会员管理、订单管理
+接口：
+flask ,文档规范已经写好。
+
+前端：
+Vue + elementui | bootstrap
+
+
+数据库：
+sh_system
+sh_banner
+sh_goods
+sh_category
+sh_article
+sh_member
+sh_order
+sh_order_googs
+sh_order_userinfo

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	
+	</style>
+</head>
+<body onclick="">
+
+	<div id="app">
+		{{msg}}<br>
+		{{reverseMsg}}<br>
+		{{reverseMsg}}<br>
+		{{reverseString()}}<br>
+		{{reverseString()}}<br>
+	</div>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript">
+		/*
+			Vue的模板语法：
+			计算属性
+		*/
+
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				msg: 'ni好沉'
+			},
+			methods: {
+				reverseString(){
+					console.log('方法反转调用')
+					// 对msg实现拆分成数组并且反转元素，在把数组拼接成字符串。
+					return this.msg.split('').reverse().join('')
+				}
+			},
+			// 计算属性
+			computed: {
+				reverseMsg: function(){
+					console.log('计算属性反转')
+					// 对msg实现拆分成数组并且反转元素，在把数组拼接成字符串。
+					return this.msg.split('').reverse().join('')
+				}
+			}
+		});
+
+	</script>
+</body>
+</html>

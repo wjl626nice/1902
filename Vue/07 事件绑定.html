@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onclick="">
+
+	<div id="app">
+		<div>{{num}}</div>
+		<button type="button" v-on:click="num++">点击num自增</button>
+		<button type="button" @click="num++">点击1</button>
+		<button type="button" @click="handler">点击2</button>
+		<button type="button" @click="handler()">点击3</button>
+		<button type="button" @click="handler2('aa',$event)">点击4</button>
+	</div>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript">
+		/*
+			Vue的模板语法：
+			事件绑定
+		*/
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				num: "",
+			},
+			methods: {
+				// event 代表当前点击事件的对象。如果事件函数不传参，默认声明
+				// 的第一个函数参数就是事件对象。
+				handler: function(event){
+					console.log(event)
+					// 这里的this 是Vue实例化的对象
+					console.log(this);
+					this.num++;
+				},
+				// $event是固定写法，代表事件对象。如果事件函数传参了 又想传递事件对象，那么只能在调用时传递$event
+				handler2: function(param,$event){
+					console.log(param)
+					console.log($event)
+				}
+			}
+		});
+
+	</script>
+</body>
+</html>

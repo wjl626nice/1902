@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <ul>
+            <h2>{{ answer_list1.review_test.test_name }}---{{ answer_list1.question.get_test_category_display }}</h2>
+            <span>姓名: {{ student.realname }}</span>
+            {% for s_answer in answer_list %}
+                <li>
+                    <h4>{{ s_answer.question.test_question_content }}({{ s_answer.question.max_score }})</h4>
+                    <span>{{ s_answer.answer }}</span>
+                    {% for answer in s_answer.question.a_question.all %}
+                        {% if answer.answer_content == s_answer.answer %}
+                            ({{ answer.answer_score }})
+                        {% endif %}
+                    {% endfor %}
+                </li>
+            {% endfor %}
+        </ul>
+        <p>总分:{{ sum_score }}(未计入主观题分数)</p>
+    </body>
+</html>

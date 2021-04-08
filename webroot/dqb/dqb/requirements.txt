@@ -1,5 +1,5 @@
 conf==0.4.1
-Django==2.2.4
+Django==2.2.20
 django-cors-headers==3.1.0
 djangorestframework==3.10.2
 mysqlclient==1.4.4
